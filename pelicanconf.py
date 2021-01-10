@@ -30,8 +30,6 @@ DEFAULT_PAGINATION = 10
 #### Paths
 ARTICLE_PATHS = ['posts']
 PAGE_PATHS = ['pages']
-# TODO: 404
-# TEMPLATE_PAGES = {'404.html': '494.html'}
 
 STATIC_PATHS = ['extras/robots.txt', 'extras/favicon.ico', 'extras/CNAME']
 EXTRA_PATH_METADATA = {
@@ -54,6 +52,7 @@ LINK_YOUTUBE = 'https://www.youtube.com/channel/UC_l__vniqJ028Hhee0aR2yg'
 THEME = '../Flex-tofu'
 PYGMENTS_STYLE = "monokai"
 SITETITLE = SITENAME
+TEMPLATE_PAGES = {'404.html' : '404.html'}
 
 DISABLE_URL_HASH = True # why even have this ?
 # SITESUBTITLE = ''
