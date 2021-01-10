@@ -1,9 +1,7 @@
 # tofu-code
 TofuCode.com
 
-# TODO
-* search functionality 
-* 404 pages
-* https
-* google analytics 
+# stuff
+* local development: `invoke reserve`
+* use separate page for website output
 

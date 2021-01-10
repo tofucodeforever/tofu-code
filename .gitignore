@@ -1,5 +1,6 @@
 # pelican output 
 output/
+plugins/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

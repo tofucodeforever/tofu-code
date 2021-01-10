@@ -82,3 +82,11 @@ SOCIAL = (
 FOOTER_MESSAGE = 'Eat Tofu and be true'
 COPYRIGHT_YEAR = datetime.datetime.now().year
 COPYRIGHT_NAME = 'TofuCode.com'
+
+
+#### plugin
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['tipue_search']
+DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
+
+
