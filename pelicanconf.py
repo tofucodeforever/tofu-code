@@ -33,6 +33,14 @@ PAGE_PATHS = ['pages']
 # TODO: 404
 # TEMPLATE_PAGES = {'404.html': '494.html'}
 
+STATIC_PATHS = ['extras/robots.txt', 'extras/favicon.ico', 'extras/CNAME']
+EXTRA_PATH_METADATA = {
+    'extras/robots.txt': {'path': 'robots.txt'},
+    'extras/favicon.ico': {'path': 'favicon.ico'},
+    'extras/CNAME': {'path': 'CNAME'}
+}
+
+
 ARTICLE_URL = 'posts/{slug}.html'
 ARTICLE_SAVE_AS = 'posts/{slug}.html'
 ARTICLE_LANG_URL = 'posts/{slug}-{lang}.html'
