@@ -39,6 +39,8 @@ ARTICLE_LANG_URL = 'posts/{slug}-{lang}.html'
 ARTICLE_LANG_SAVE_AS = 'posts/{slug}-{lang}.html'
 
 
+####
+LINK_YOUTUBE = 'https://www.youtube.com/channel/UC_l__vniqJ028Hhee0aR2yg'
 
 #### THEME
 THEME = '../Flex-tofu'
@@ -59,16 +61,16 @@ DISABLE_URL_HASH = True # why even have this ?
 # sidebar
 DISPLAY_PAGES_ON_MENU = False
 LINKS = (
-    ("Interview Questions", "/index.html"),
+    ("Interview Questions", "/pages/interview-questions.html"),
     ("Recent Questions", "/category/leetcode.html"),
     ("Tags", "/tags.html"),
 )
 
 SOCIAL = (
-    ("youtube", "https://youtube.com"),
+    ("youtube", LINK_YOUTUBE),
 )
 
 
-FOOTER_MESSAGE = 'Eat Tofu and be True'
+FOOTER_MESSAGE = 'Eat Tofu and be true'
 COPYRIGHT_YEAR = datetime.datetime.now().year
 COPYRIGHT_NAME = 'TofuCode.com'
