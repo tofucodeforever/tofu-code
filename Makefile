@@ -68,6 +68,7 @@ devserver:
 ifdef PORT
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)
 else
+	@echo 'serving site at: http://localhost:8000'
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 endif
 
