@@ -8,5 +8,6 @@ TofuCode.com
 
 # stuff
 * local development: `make devserver`
+* upload to github: `make github`
 * use separate page for website output
 
