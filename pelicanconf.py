@@ -46,7 +46,8 @@ ARTICLE_LANG_SAVE_AS = 'posts/{slug}-{lang}.html'
 
 
 ####
-LINK_YOUTUBE = 'https://www.youtube.com/channel/UC_l__vniqJ028Hhee0aR2yg'
+# TODO: reenable when ready
+# LINK_YOUTUBE = 'https://www.youtube.com/channel/UC_l__vniqJ028Hhee0aR2yg'
 
 #### THEME
 THEME = '../Flex-tofu'
@@ -73,9 +74,9 @@ LINKS = (
     ("Tags", "/tags.html"),
 )
 
-SOCIAL = (
-    ("youtube", LINK_YOUTUBE),
-)
+#SOCIAL = (
+#    ("youtube", LINK_YOUTUBE),
+#)
 
 
 FOOTER_MESSAGE = 'Eat Tofu and be true'
