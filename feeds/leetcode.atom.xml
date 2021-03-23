@@ -27,7 +27,7 @@ Explanation: Originallay it needs to be "1(2(4)())(3()())", but you need to omit
 &lt;p&gt;Output: "1(2()(4))(3)"
 Explanation: Almost the same as the first example, except we can't omit the first parenthesis pair to break the one-to-one mapping relationship between the input and the output.&lt;/p&gt;
 &lt;h3&gt;Solution&lt;/h3&gt;
-&lt;p&gt;Use recursion to build the string while considering different cases of when to omit the parenthesis&lt;/p&gt;
+&lt;p&gt;Use recursion to build the string while considering different cases of when to omit the parenthesis.&lt;/p&gt;
 &lt;h3&gt;Code&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;span class="sd"&gt;Leetcode 0606. Construct String from Binary Tree&lt;/span&gt;
