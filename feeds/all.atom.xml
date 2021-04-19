@@ -1,5 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2021-04-17T00:00:00-07:00</updated><entry><title>Leetcode 0509. Fibonacci Number</title><link href="https://tofucode.com/posts/leetcode_0509_fibonacci-number.html" rel="alternate"></link><published>2021-04-17T00:00:00-07:00</published><updated>2021-04-17T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2021-04-17:/posts/leetcode_0509_fibonacci-number.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/fibonacci-number/"&gt;https://leetcode.com/problems/fibonacci-number/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2021-04-18T00:00:00-07:00</updated><entry><title>Leetcode 0019. Remove Nth Node From End of List</title><link href="https://tofucode.com/posts/leetcode_0019_remove-nth-node-from-end-of-list.html" rel="alternate"></link><published>2021-04-18T00:00:00-07:00</published><updated>2021-04-18T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2021-04-18:/posts/leetcode_0019_remove-nth-node-from-end-of-list.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/"&gt;https://leetcode.com/problems/remove-nth-node-from-end-of-list/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given the head of a linked list, remove the nth node from the end of the list and return its head.
+Follow up: Could you do this in one pass?
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: head = [1,2,3,4,5], n …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/"&gt;https://leetcode.com/problems/remove-nth-node-from-end-of-list/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given the head of a linked list, remove the nth node from the end of the list and return its head.
+Follow up: Could you do this in one pass?
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: head = [1,2,3,4,5], n = 2
+Output: [1,2,3,5]&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: head = [1], n = 1
+Output: []&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: head = [1,2], n = 1
+Output: [1]&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;The number of nodes in the list is sz.
+1 &amp;lt;= sz &amp;lt;= 30
+0 &amp;lt;= Node.val &amp;lt;= 100
+1 &amp;lt;= n &amp;lt;= sz&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Use two pointers to mark out the ideal end location and remove the next node.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0019. Remove Nth Node From End of List&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/remove-nth-node-from-end-of-list/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0019_remove-nth-node-from-end-of-list.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;# Definition for singly-linked list.&lt;/span&gt;
+&lt;span class="c1"&gt;# class ListNode:&lt;/span&gt;
+&lt;span class="c1"&gt;#     def __init__(self, val=0, next=None):&lt;/span&gt;
+&lt;span class="c1"&gt;#         self.val = val&lt;/span&gt;
+&lt;span class="c1"&gt;#         self.next = next&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;removeNthFromEnd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ListNode&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ListNode&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        First move x, then start moving both x and p&lt;/span&gt;
+&lt;span class="sd"&gt;              p     x&lt;/span&gt;
+&lt;span class="sd"&gt;        n1 n2 n3 n4 n5&lt;/span&gt;
+&lt;span class="sd"&gt;              x-&amp;gt;x&lt;/span&gt;
+&lt;span class="sd"&gt;        p-&amp;gt;p&lt;/span&gt;
+
+&lt;span class="sd"&gt;        x: goes through the whole list&lt;/span&gt;
+&lt;span class="sd"&gt;            * count: num of nodes up to x. 1, 2, ... total size of list&lt;/span&gt;
+&lt;span class="sd"&gt;        p: pointer to one node before the deletion&lt;/span&gt;
+&lt;span class="sd"&gt;            * Ideal Position: (position of x) - (position of p) == n&lt;/span&gt;
+&lt;span class="sd"&gt;            * So start moving p: count - 1 &amp;gt; n&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time: O(n) - one pass&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+
+        &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;head&lt;/span&gt;
+
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;
+            &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;
+        &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;head&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="linked-list"></category></entry><entry><title>Leetcode 0509. Fibonacci Number</title><link href="https://tofucode.com/posts/leetcode_0509_fibonacci-number.html" rel="alternate"></link><published>2021-04-17T00:00:00-07:00</published><updated>2021-04-17T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2021-04-17:/posts/leetcode_0509_fibonacci-number.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/fibonacci-number/"&gt;https://leetcode.com/problems/fibonacci-number/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,&lt;/p&gt;
