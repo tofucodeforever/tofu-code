@@ -1,5 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2021-04-18T00:00:00-07:00</updated><entry><title>Leetcode 0019. Remove Nth Node From End of List</title><link href="https://tofucode.com/posts/leetcode_0019_remove-nth-node-from-end-of-list.html" rel="alternate"></link><published>2021-04-18T00:00:00-07:00</published><updated>2021-04-18T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2021-04-18:/posts/leetcode_0019_remove-nth-node-from-end-of-list.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/"&gt;https://leetcode.com/problems/remove-nth-node-from-end-of-list/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2021-04-24T00:00:00-07:00</updated><entry><title>Leetcode 1151. Minimum Swaps to Group All 1's Together</title><link href="https://tofucode.com/posts/leetcode_1151_minimum-swaps-to-group-all-1s-together.html" rel="alternate"></link><published>2021-04-24T00:00:00-07:00</published><updated>2021-04-24T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2021-04-24:/posts/leetcode_1151_minimum-swaps-to-group-all-1s-together.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/"&gt;https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given a binary array data, return the minimum number of swaps required to group all 1’s present in the array together in any place in the array.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: data = [1,0,1,0,1]
+Output: 1
+Explanation …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/"&gt;https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given a binary array data, return the minimum number of swaps required to group all 1’s present in the array together in any place in the array.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: data = [1,0,1,0,1]
+Output: 1
+Explanation: 
+There are 3 ways to group all 1's together:
+[1,1,1,0,0] using 1 swap.
+[0,1,1,1,0] using 2 swaps.
+[0,0,1,1,1] using 1 swap.
+The minimum is 1.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: data = [0,0,0,1,0]
+Output: 0
+Explanation: 
+Since there is only one 1 in the array, no swaps needed.&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: data = [1,0,1,0,1,0,0,1,1,0,1]
+Output: 3
+Explanation: 
+One possible solution that uses 3 swaps is [0,0,0,0,0,1,1,1,1,1,1].&lt;/p&gt;
+&lt;p&gt;Example 4:&lt;/p&gt;
+&lt;p&gt;Input: data = [1,0,1,0,1,0,1,1,1,0,1,0,0,1,1,1,0,0,1,1,1,0,1,0,1,1,0,0,0,1,1,1,1,0,0,1]
+Output: 8&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= data.length &amp;lt;= 105
+data[i] is 0 or 1.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Use a fixed size sliding window to check all possible answers and find the min moves.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 1151. Minimum Swaps to Group All 1&amp;#39;s Together&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_1151_minimum-swaps-to-group-all-1s-together.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;minSwaps&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        Fix sized sliding window&lt;/span&gt;
+&lt;span class="sd"&gt;        [1,0,1,0,1]&lt;/span&gt;
+&lt;span class="sd"&gt;        1,0,1 (1s: 2 -&amp;gt; 1 swap)&lt;/span&gt;
+&lt;span class="sd"&gt;        0,1,0 (1s: 1 -&amp;gt; 2 swaps)&lt;/span&gt;
+&lt;span class="sd"&gt;        1,0,1 (1s: 2 -&amp;gt; 1 swap)&lt;/span&gt;
+
+&lt;span class="sd"&gt;        [1,1,1,0,0] using 1 swap.&lt;/span&gt;
+&lt;span class="sd"&gt;        [0,1,1,1,0] using 2 swaps.&lt;/span&gt;
+&lt;span class="sd"&gt;        [0,0,1,1,1] using 1 swap.&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space:O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# len of sliding window&lt;/span&gt;
+
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;inf&lt;/span&gt;
+        &lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="n"&gt;total&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="c1"&gt;# current count of 1s&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;min&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;total&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+            &lt;span class="c1"&gt;# add current&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+            &lt;span class="c1"&gt;# remove tail&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;total&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+            &lt;span class="c1"&gt;# check&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;min&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="sliding-window"></category></entry><entry><title>Leetcode 0019. Remove Nth Node From End of List</title><link href="https://tofucode.com/posts/leetcode_0019_remove-nth-node-from-end-of-list.html" rel="alternate"></link><published>2021-04-18T00:00:00-07:00</published><updated>2021-04-18T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2021-04-18:/posts/leetcode_0019_remove-nth-node-from-end-of-list.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/"&gt;https://leetcode.com/problems/remove-nth-node-from-end-of-list/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;Given the head of a linked list, remove the nth node from the end of the list and return its head.
