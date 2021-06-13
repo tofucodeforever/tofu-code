@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2021-04-24T00:00:00-07:00</updated><entry><title>Leetcode 1151. Minimum Swaps to Group All 1's Together</title><link href="https://tofucode.com/posts/leetcode_1151_minimum-swaps-to-group-all-1s-together.html" rel="alternate"></link><published>2021-04-24T00:00:00-07:00</published><updated>2021-04-24T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2021-04-24:/posts/leetcode_1151_minimum-swaps-to-group-all-1s-together.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/"&gt;https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2021-06-13T00:00:00-07:00</updated><entry><title>Leetcode 1228. Missing Number In Arithmetic Progression</title><link href="https://tofucode.com/posts/leetcode_1228_missing-number-in-arithmetic-progression.html" rel="alternate"></link><published>2021-06-13T00:00:00-07:00</published><updated>2021-06-13T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2021-06-13:/posts/leetcode_1228_missing-number-in-arithmetic-progression.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/missing-number-in-arithmetic-progression/"&gt;https://leetcode.com/problems/missing-number-in-arithmetic-progression/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;In some array arr, the values were in arithmetic progression: the values arr[i + 1] - arr[i] are all equal for every 0 &amp;lt;= i &amp;lt; arr.length - 1.
+A value from arr was removed that was not the first or last …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/missing-number-in-arithmetic-progression/"&gt;https://leetcode.com/problems/missing-number-in-arithmetic-progression/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;In some array arr, the values were in arithmetic progression: the values arr[i + 1] - arr[i] are all equal for every 0 &amp;lt;= i &amp;lt; arr.length - 1.
+A value from arr was removed that was not the first or last value in the array.
+Given arr, return the removed value.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: arr = [5,7,11,13]
+Output: 9
+Explanation: The previous array was [5,7,9,11,13].&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: arr = [15,13,12]
+Output: 14
+Explanation: The previous array was [15,14,13,12].
+ 
+Constraints:&lt;/p&gt;
+&lt;p&gt;3 &amp;lt;= arr.length &amp;lt;= 1000
+0 &amp;lt;= arr[i] &amp;lt;= 105
+The given array is guaranteed to be a valid array.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Trivial solution can be done in linear time by either scanning or with the sum equation. optimal solution is to use binary search.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 1228. Missing Number In Arithmetic Progression&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/missing-number-in-arithmetic-progression/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_1228_missing-number-in-arithmetic-progression.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;missingNumber&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;arr&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        diff = 2&lt;/span&gt;
+&lt;span class="sd"&gt;        0 1 2  3&lt;/span&gt;
+&lt;span class="sd"&gt;        5,7,11,13&lt;/span&gt;
+&lt;span class="sd"&gt;        l      r&lt;/span&gt;
+&lt;span class="sd"&gt;          m&lt;/span&gt;
+&lt;span class="sd"&gt;            l  r&lt;/span&gt;
+&lt;span class="sd"&gt;            m&lt;/span&gt;
+&lt;span class="sd"&gt;            l/r&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time: O(log n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;diff&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;arr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arr&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arr&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;mid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;arr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;mid&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;arr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;mid&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mid&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mid&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;arr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;diff&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="binary-search"></category></entry><entry><title>Leetcode 1151. Minimum Swaps to Group All 1's Together</title><link href="https://tofucode.com/posts/leetcode_1151_minimum-swaps-to-group-all-1s-together.html" rel="alternate"></link><published>2021-04-24T00:00:00-07:00</published><updated>2021-04-24T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2021-04-24:/posts/leetcode_1151_minimum-swaps-to-group-all-1s-together.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/"&gt;https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;Given a binary array data, return the minimum number of swaps required to group all 1’s present in the array together in any place in the array.
