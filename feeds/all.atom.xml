@@ -1,5 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2021-06-13T00:00:00-07:00</updated><entry><title>Leetcode 1228. Missing Number In Arithmetic Progression</title><link href="https://tofucode.com/posts/leetcode_1228_missing-number-in-arithmetic-progression.html" rel="alternate"></link><published>2021-06-13T00:00:00-07:00</published><updated>2021-06-13T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2021-06-13:/posts/leetcode_1228_missing-number-in-arithmetic-progression.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/missing-number-in-arithmetic-progression/"&gt;https://leetcode.com/problems/missing-number-in-arithmetic-progression/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-02-28T00:00:00-08:00</updated><entry><title>Leetcode 0001. Two Sum</title><link href="https://tofucode.com/posts/leetcode_0001_two-sum.html" rel="alternate"></link><published>2022-02-28T00:00:00-08:00</published><updated>2022-02-28T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-02-28:/posts/leetcode_0001_two-sum.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/two-sum/"&gt;https://leetcode.com/problems/two-sum/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+You may assume that each input would have exactly one solution, and you may not use the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/two-sum/"&gt;https://leetcode.com/problems/two-sum/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+You can return the answer in any order.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: nums = [3,2,4], target = 6
+Output: [1,2]&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: nums = [3,3], target = 6
+Output: [0,1]&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;2 &amp;lt;= nums.length &amp;lt;= 104
+-109 &amp;lt;= nums[i] &amp;lt;= 109
+-109 &amp;lt;= target &amp;lt;= 109
+Only one valid answer exists.&lt;/p&gt;
+&lt;p&gt;Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use a hashmap to store number =&amp;gt; index info for look up. &lt;/li&gt;
+&lt;li&gt;Go through the array and look for the other number needed for the sum by checking the hashmap&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0001. Two Sum&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/two-sum/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0001_two-sum.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;twoSum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        [3,2,4], target = 6&lt;/span&gt;
+
+&lt;span class="sd"&gt;        numbers: [2, 4]&lt;/span&gt;
+&lt;span class="sd"&gt;        indices: [1, 2]&lt;/span&gt;
+
+&lt;span class="sd"&gt;        other = target - current number&lt;/span&gt;
+&lt;span class="sd"&gt;        3 ?&lt;/span&gt;
+&lt;span class="sd"&gt;        4 ?&lt;/span&gt;
+&lt;span class="sd"&gt;        2 ?&lt;/span&gt;
+
+&lt;span class="sd"&gt;        seen = {} # number -&amp;gt; index&lt;/span&gt;
+&lt;span class="sd"&gt;        3 -&amp;gt; 0, 2 -&amp;gt; 1,&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;seen&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; &lt;span class="c1"&gt;# number -&amp;gt; index&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+            &lt;span class="n"&gt;other&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;other&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;other&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+            &lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="hash-map"></category></entry><entry><title>Leetcode 1228. Missing Number In Arithmetic Progression</title><link href="https://tofucode.com/posts/leetcode_1228_missing-number-in-arithmetic-progression.html" rel="alternate"></link><published>2021-06-13T00:00:00-07:00</published><updated>2021-06-13T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2021-06-13:/posts/leetcode_1228_missing-number-in-arithmetic-progression.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/missing-number-in-arithmetic-progression/"&gt;https://leetcode.com/problems/missing-number-in-arithmetic-progression/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;In some array arr, the values were in arithmetic progression: the values arr[i + 1] - arr[i] are all equal for every 0 &amp;lt;= i &amp;lt; arr.length - 1.
@@ -495,65 +560,4 @@ Explanation: Almost the same as the first example, except we can't omit the firs
 
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;wrap&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;(&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;)&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="recursion"></category><category term="binary-tree"></category></entry><entry><title>Leetcode 0001. Two Sum</title><link href="https://tofucode.com/posts/leetcode_0001_two-sum.html" rel="alternate"></link><published>2021-03-20T00:00:00-07:00</published><updated>2021-03-20T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2021-03-20:/posts/leetcode_0001_two-sum.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/two-sum/"&gt;https://leetcode.com/problems/two-sum/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Difficulty: Easy&lt;/p&gt;
-&lt;h3&gt;Question&lt;/h3&gt;
-&lt;p&gt;Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
-You may assume that each input would have exactly one solution, and you may not use the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/two-sum/"&gt;https://leetcode.com/problems/two-sum/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Difficulty: Easy&lt;/p&gt;
-&lt;h3&gt;Question&lt;/h3&gt;
-&lt;p&gt;Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-You can return the answer in any order.
- 
-Example 1:&lt;/p&gt;
-&lt;p&gt;Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Output: Because nums[0] + nums[1] == 9, we return [0, 1].&lt;/p&gt;
-&lt;p&gt;Example 2:&lt;/p&gt;
-&lt;p&gt;Input: nums = [3,2,4], target = 6
-Output: [1,2]&lt;/p&gt;
-&lt;p&gt;Example 3:&lt;/p&gt;
-&lt;p&gt;Input: nums = [3,3], target = 6
-Output: [0,1]&lt;/p&gt;
-&lt;p&gt;Constraints:&lt;/p&gt;
-&lt;p&gt;2 &amp;lt;= nums.length &amp;lt;= 103
--109 &amp;lt;= nums[i] &amp;lt;= 109
--109 &amp;lt;= target &amp;lt;= 109
-Only one valid answer exists.&lt;/p&gt;
-&lt;h3&gt;Solution&lt;/h3&gt;
-&lt;p&gt;Use a hashmap to store number to index info for look up&lt;/p&gt;
-&lt;h3&gt;Code&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-&lt;span class="sd"&gt;Leetcode 0001. Two Sum&lt;/span&gt;
-&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/two-sum/&lt;/span&gt;
-&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0001_two-sum.html&lt;/span&gt;
-&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;twoSum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
-        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-&lt;span class="sd"&gt;        [3,2,4], target = 6&lt;/span&gt;
-
-&lt;span class="sd"&gt;        numbers: [2, 4]&lt;/span&gt;
-&lt;span class="sd"&gt;        indices: [1, 2]&lt;/span&gt;
-
-&lt;span class="sd"&gt;        other = target - current number&lt;/span&gt;
-&lt;span class="sd"&gt;        3 ?&lt;/span&gt;
-&lt;span class="sd"&gt;        4 ?&lt;/span&gt;
-&lt;span class="sd"&gt;        2 ?&lt;/span&gt;
-
-&lt;span class="sd"&gt;        seen = {} # number -&amp;gt; index&lt;/span&gt;
-&lt;span class="sd"&gt;        3 -&amp;gt; 0, 2 -&amp;gt; 1,&lt;/span&gt;
-
-&lt;span class="sd"&gt;        Time: O(n)&lt;/span&gt;
-&lt;span class="sd"&gt;        Space: O(n)&lt;/span&gt;
-&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-        &lt;span class="n"&gt;seen&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; &lt;span class="c1"&gt;# number -&amp;gt; index&lt;/span&gt;
-
-        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
-            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-            &lt;span class="n"&gt;other&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;
-            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;other&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;other&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-            &lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="hash-map"></category></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="recursion"></category><category term="binary-tree"></category></entry></feed>
