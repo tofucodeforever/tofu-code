@@ -1,7 +1,7 @@
 Title: Leetcode 0509. Fibonacci Number
 Slug: leetcode_0509_fibonacci-number
 Status: published
-Date: 2021-04-17
+Date: 2022-02-28
 Category: Leetcode
 Tags: recursion
 Author: Zeph

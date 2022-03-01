@@ -1,7 +1,7 @@
 Title: Leetcode 0019. Remove Nth Node From End of List
 Slug: leetcode_0019_remove-nth-node-from-end-of-list
 Status: published
-Date: 2021-04-18
+Date: 2022-02-28
 Category: Leetcode
 Tags: linked-list
 Author: Zeph
@@ -12,7 +12,6 @@ Difficulty: Medium
 
 ### Question
 Given the head of a linked list, remove the nth node from the end of the list and return its head.
-Follow up: Could you do this in one pass?
  
 Example 1:
 
@@ -38,9 +37,13 @@ The number of nodes in the list is sz.
 0 <= Node.val <= 100
 1 <= n <= sz
 
+ 
+Follow up: Could you do this in one pass?
+
 ### Solution
 
 Use two pointers to mark out the ideal end location and remove the next node.
+
 
 ### Code
 ```python
