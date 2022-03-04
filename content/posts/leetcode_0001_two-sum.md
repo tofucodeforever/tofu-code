@@ -3,7 +3,7 @@ Slug: leetcode_0001_two-sum
 Status: published
 Date: 2022-02-28
 Category: Leetcode
-Tags: hash-map
+Tags: 
 Author: Zeph
 
 Question Link : [https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/two-sum/)
@@ -44,8 +44,7 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time com
 
 ### Solution
 
-* Use a hashmap to store number => index info for look up. 
-* Go through the array and look for the other number needed for the sum by checking the hashmap
+ww
 
 ### Code
 ```python
