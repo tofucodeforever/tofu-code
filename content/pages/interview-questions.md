@@ -9,5 +9,6 @@ Status: published
 | 0019 | [Remove Nth Node From End of List](https://tofucode.com/posts/leetcode_0019_remove-nth-node-from-end-of-list.html) | linked-list |
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion |
+| 0740 | [Delete and Earn](https://tofucode.com/posts/leetcode_0740_delete-and-earn.html) | dp |
 | 0799 | [Champagne Tower](https://tofucode.com/posts/leetcode_0799_champagne-tower.html) | simulation |
 | 0606 | [Construct String from Binary Tree](https://tofucode.com/posts/leetcode_0606_construct-string-from-binary-tree.html) | recursion, binary-tree |
