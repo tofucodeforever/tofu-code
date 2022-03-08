@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-03-06T00:00:00-08:00</updated><entry><title>Leetcode 0021. Merge Two Sorted Lists</title><link href="https://tofucode.com/posts/leetcode_0021_merge-two-sorted-lists.html" rel="alternate"></link><published>2022-03-06T00:00:00-08:00</published><updated>2022-03-06T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-03-06:/posts/leetcode_0021_merge-two-sorted-lists.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/merge-two-sorted-lists/"&gt;https://leetcode.com/problems/merge-two-sorted-lists/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-03-07T00:00:00-08:00</updated><entry><title>Leetcode 0141. Linked List Cycle</title><link href="https://tofucode.com/posts/leetcode_0141_linked-list-cycle.html" rel="alternate"></link><published>2022-03-07T00:00:00-08:00</published><updated>2022-03-07T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-03-07:/posts/leetcode_0141_linked-list-cycle.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/linked-list-cycle/"&gt;https://leetcode.com/problems/linked-list-cycle/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given head, the head of a linked list, determine if the linked list has a cycle in it.
+There is a cycle in a linked list if there is some node in the list that can be reached again by …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/linked-list-cycle/"&gt;https://leetcode.com/problems/linked-list-cycle/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given head, the head of a linked list, determine if the linked list has a cycle in it.
+There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
+Return true if there is a cycle in the linked list. Otherwise, return false.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: head = [3,2,0,-4], pos = 1
+Output: true
+Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: head = [1,2], pos = 0
+Output: true
+Explanation: There is a cycle in the linked list, where the tail connects to the 0th node.&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: head = [1], pos = -1
+Output: false
+Explanation: There is no cycle in the linked list.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;The number of the nodes in the list is in the range [0, 104].
+-105 &amp;lt;= Node.val &amp;lt;= 105
+pos is -1 or a valid index in the linked-list.&lt;/p&gt;
+&lt;p&gt;Follow up: Can you solve it using O(1) (i.e. constant) memory?&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use two pointer where the fast the twice the speed of the slow one&lt;/li&gt;
+&lt;li&gt;If there is a cycle the fast one would catch up with the slow one&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0141. Linked List Cycle&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/linked-list-cycle/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0141_linked-list-cycle.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Definition for singly-linked list.&lt;/span&gt;
+&lt;span class="c1"&gt;# class ListNode:&lt;/span&gt;
+&lt;span class="c1"&gt;#     def __init__(self, x):&lt;/span&gt;
+&lt;span class="c1"&gt;#         self.val = x&lt;/span&gt;
+&lt;span class="c1"&gt;#         self.next = None&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hasCycle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Optional&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ListNode&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;fast&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;head&lt;/span&gt;
+        &lt;span class="n"&gt;slow&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;head&lt;/span&gt;
+
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;fast&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;fast&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+
+            &lt;span class="n"&gt;fast&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fast&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;
+            &lt;span class="n"&gt;slow&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;slow&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;
+
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;fast&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;slow&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="linked-list"></category><category term="fast-slow-pointer"></category></entry><entry><title>Leetcode 0021. Merge Two Sorted Lists</title><link href="https://tofucode.com/posts/leetcode_0021_merge-two-sorted-lists.html" rel="alternate"></link><published>2022-03-06T00:00:00-08:00</published><updated>2022-03-06T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-03-06:/posts/leetcode_0021_merge-two-sorted-lists.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/merge-two-sorted-lists/"&gt;https://leetcode.com/problems/merge-two-sorted-lists/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;You are given the heads of two sorted linked lists list1 and list2.
