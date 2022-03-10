@@ -3,7 +3,7 @@ Slug: leetcode_0002_add-two-numbers
 Status: published
 Date: 2022-03-09
 Category: Leetcode
-Tags: linked-list, dummy-head
+Tags: linked-list, dummy-list-head
 Author: Zeph
 
 Question Link : [https://leetcode.com/problems/add-two-numbers/](https://leetcode.com/problems/add-two-numbers/)
