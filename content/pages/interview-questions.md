@@ -9,6 +9,7 @@ Status: published
 | 0002 | [Add Two Numbers](https://tofucode.com/posts/leetcode_0002_add-two-numbers.html) | linked-list, dummy-list-head |
 | 0019 | [Remove Nth Node From End of List](https://tofucode.com/posts/leetcode_0019_remove-nth-node-from-end-of-list.html) | linked-list |
 | 0021 | [Merge Two Sorted Lists](https://tofucode.com/posts/leetcode_0021_merge-two-sorted-lists.html) | linked-list |
+| 0061 | [Rotate List](https://tofucode.com/posts/leetcode_0061_rotate-list.html) | linked-list, list-to-ring |
 | 0141 | [Linked List Cycle](https://tofucode.com/posts/leetcode_0141_linked-list-cycle.html) | linked-list, fast-slow-pointer |
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion |
