@@ -8,6 +8,7 @@ Status: published
 | 0001 | [Two Sum](https://tofucode.com/posts/leetcode_0001_two-sum.html) | hash-map |
 | 0002 | [Add Two Numbers](https://tofucode.com/posts/leetcode_0002_add-two-numbers.html) | linked-list, dummy-list-head |
 | 0019 | [Remove Nth Node From End of List](https://tofucode.com/posts/leetcode_0019_remove-nth-node-from-end-of-list.html) | linked-list |
+| 0020 | [Valid Parentheses](https://tofucode.com/posts/leetcode_0020_valid-parentheses.html) | stack, parentheses |
 | 0021 | [Merge Two Sorted Lists](https://tofucode.com/posts/leetcode_0021_merge-two-sorted-lists.html) | linked-list |
 | 0061 | [Rotate List](https://tofucode.com/posts/leetcode_0061_rotate-list.html) | linked-list, list-to-ring |
 | 0138 | [Copy List with Random Pointer](https://tofucode.com/posts/leetcode_0138_copy-list-with-random-pointer.html) | linked-list, dummy-list-head, recursion |
