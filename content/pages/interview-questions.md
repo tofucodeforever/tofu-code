@@ -18,5 +18,6 @@ Status: published
 | 0740 | [Delete and Earn](https://tofucode.com/posts/leetcode_0740_delete-and-earn.html) | dp |
 | 0799 | [Champagne Tower](https://tofucode.com/posts/leetcode_0799_champagne-tower.html) | simulation |
 | 0946 | [Validate Stack Sequences](https://tofucode.com/posts/leetcode_0946_validate-stack-sequences.html) | stack, simulation, greedy |
+| 0991 | [Broken Calculator](https://tofucode.com/posts/leetcode_0991_broken-calculator.html) | reverse-thinking, puzzle |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://tofucode.com/posts/leetcode_1249_minimum-remove-to-make-valid-parentheses.html) | stack, parentheses |
 | 0606 | [Construct String from Binary Tree](https://tofucode.com/posts/leetcode_0606_construct-string-from-binary-tree.html) | recursion, binary-tree |
