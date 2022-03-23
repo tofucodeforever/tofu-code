@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://tofucode.com/theme/pygments/monokai.min.css">
+
+    <script src="https://tofucode.com/theme/tipuesearch/jquery.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="https://tofucode.com/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="https://tofucode.com/theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://tofucode.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="TofuCode Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'G-DCBDZPQQD1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Zeph" />
+<meta name="description" content="Question Link : https://leetcode.com/problems/broken-calculator/ Difficulty: Medium Question There is a broken calculator that has the integer startValue on its display initially. In one operation, you can: multiply the number on display by 2, or subtract 1 from the number on display. Given two integers startValue and target …" />
+<meta name="keywords" content="reverse-thinking, puzzle">
+
+
+<meta property="og:site_name" content="TofuCode"/>
+<meta property="og:title" content="Leetcode 0991. Broken Calculator"/>
+<meta property="og:description" content="Question Link : https://leetcode.com/problems/broken-calculator/ Difficulty: Medium Question There is a broken calculator that has the integer startValue on its display initially. In one operation, you can: multiply the number on display by 2, or subtract 1 from the number on display. Given two integers startValue and target …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://tofucode.com/posts/leetcode_0991_broken-calculator.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-03-22 00:00:00-07:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://tofucode.com/author/zeph.html">
+<meta property="article:section" content="Leetcode"/>
+<meta property="article:tag" content="reverse-thinking"/>
+<meta property="article:tag" content="puzzle"/>
+<meta property="og:image" content="">
+
+  <title>TofuCode &ndash; Leetcode 0991. Broken Calculator</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://tofucode.com">
+        <img src="https://tofucode.com/theme/img/profile.png" alt="TofuCode" title="TofuCode">
+      </a>
+
+      <h1>
+        <a href="https://tofucode.com">TofuCode</a>
+      </h1>
+
+      
+      <ul class="list social">
+      </ul>
+
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="/pages/interview-questions.html" >Interview Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/category/leetcode.html" >Recent Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/tags.html" >Tags</a>
+            </li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="leetcode_0991_broken-calculator">Leetcode 0991. Broken Calculator</h1>
+    <p>
+      Posted on Tue 22 March 2022 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Question Link : <a href="https://leetcode.com/problems/broken-calculator/">https://leetcode.com/problems/broken-calculator/</a></p>
+<p>Difficulty: Medium</p>
+<h3>Question</h3>
+<p>There is a broken calculator that has the integer startValue on its display initially. In one operation, you can:</p>
+<p>multiply the number on display by 2, or
+subtract 1 from the number on display.</p>
+<p>Given two integers startValue and target, return the minimum number of operations needed to display target on the calculator.
+ 
+Example 1:</p>
+<p>Input: startValue = 2, target = 3
+Output: 2
+Explanation: Use double operation and then decrement operation {2 -&gt; 4 -&gt; 3}.</p>
+<p>Example 2:</p>
+<p>Input: startValue = 5, target = 8
+Output: 2
+Explanation: Use decrement and then double {5 -&gt; 4 -&gt; 8}.</p>
+<p>Example 3:</p>
+<p>Input: startValue = 3, target = 10
+Output: 3
+Explanation: Use double, decrement and double {3 -&gt; 6 -&gt; 5 -&gt; 10}.</p>
+<p>Constraints:</p>
+<p>1 &lt;= x, y &lt;= 109</p>
+<h3>Solution</h3>
+<ul>
+<li>Because there are only 2 operations, and given the odd even of a number, only 1 operation can be take if we work backwards</li>
+<li>Think in reverse since it will reveal the single correct path</li>
+</ul>
+<h3>Code</h3>
+<div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Leetcode 0991. Broken Calculator</span>
+<span class="sd">Question Link : https://leetcode.com/problems/broken-calculator/</span>
+<span class="sd">Solution Link : https://tofucode.com/posts/leetcode_0991_broken-calculator.html</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">brokenCalc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">startValue</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">target</span> <span class="o">&gt;</span> <span class="n">startValue</span><span class="p">:</span>
+            <span class="c1"># // 2 when we can, otherwise +1</span>
+            <span class="k">if</span> <span class="n">target</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">target</span> <span class="o">//=</span> <span class="mi">2</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">target</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># the remaining diff is made up with the -1 operation</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="n">startValue</span> <span class="o">-</span> <span class="n">target</span>
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://tofucode.com/tag/reverse-thinking.html">reverse-thinking</a>
+      <a href="https://tofucode.com/tag/puzzle.html">puzzle</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p> Eat Tofu and be true </p>
+<p>&copy; 2022 TofuCode.com</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " TofuCode ",
+  "url" : "https://tofucode.com",
+  "image": "",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>

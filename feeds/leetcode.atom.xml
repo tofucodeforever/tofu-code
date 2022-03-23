@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-03-15T00:00:00-07:00</updated><entry><title>Leetcode 0946. Validate Stack Sequences</title><link href="https://tofucode.com/posts/leetcode_0946_validate-stack-sequences.html" rel="alternate"></link><published>2022-03-15T00:00:00-07:00</published><updated>2022-03-15T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-03-15:/posts/leetcode_0946_validate-stack-sequences.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/validate-stack-sequences/"&gt;https://leetcode.com/problems/validate-stack-sequences/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-03-22T00:00:00-07:00</updated><entry><title>Leetcode 0991. Broken Calculator</title><link href="https://tofucode.com/posts/leetcode_0991_broken-calculator.html" rel="alternate"></link><published>2022-03-22T00:00:00-07:00</published><updated>2022-03-22T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-03-22:/posts/leetcode_0991_broken-calculator.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/broken-calculator/"&gt;https://leetcode.com/problems/broken-calculator/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;There is a broken calculator that has the integer startValue on its display initially. In one operation, you can:&lt;/p&gt;
+&lt;p&gt;multiply the number on display by 2, or
+subtract 1 from the number on display.&lt;/p&gt;
+&lt;p&gt;Given two integers startValue and target …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/broken-calculator/"&gt;https://leetcode.com/problems/broken-calculator/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;There is a broken calculator that has the integer startValue on its display initially. In one operation, you can:&lt;/p&gt;
+&lt;p&gt;multiply the number on display by 2, or
+subtract 1 from the number on display.&lt;/p&gt;
+&lt;p&gt;Given two integers startValue and target, return the minimum number of operations needed to display target on the calculator.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: startValue = 2, target = 3
+Output: 2
+Explanation: Use double operation and then decrement operation {2 -&amp;gt; 4 -&amp;gt; 3}.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: startValue = 5, target = 8
+Output: 2
+Explanation: Use decrement and then double {5 -&amp;gt; 4 -&amp;gt; 8}.&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: startValue = 3, target = 10
+Output: 3
+Explanation: Use double, decrement and double {3 -&amp;gt; 6 -&amp;gt; 5 -&amp;gt; 10}.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= x, y &amp;lt;= 109&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Because there are only 2 operations, and given the odd even of a number, only 1 operation can be take if we work backwards&lt;/li&gt;
+&lt;li&gt;Think in reverse since it will reveal the single correct path&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0991. Broken Calculator&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/broken-calculator/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0991_broken-calculator.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;brokenCalc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;startValue&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;startValue&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="c1"&gt;# // 2 when we can, otherwise +1&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;//=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# the remaining diff is made up with the -1 operation&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;startValue&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="reverse-thinking"></category><category term="puzzle"></category></entry><entry><title>Leetcode 0946. Validate Stack Sequences</title><link href="https://tofucode.com/posts/leetcode_0946_validate-stack-sequences.html" rel="alternate"></link><published>2022-03-15T00:00:00-07:00</published><updated>2022-03-15T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-03-15:/posts/leetcode_0946_validate-stack-sequences.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/validate-stack-sequences/"&gt;https://leetcode.com/problems/validate-stack-sequences/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;Given two integer arrays pushed and popped each with distinct values, return true if this could have been the result of a sequence of push and pop operations on an initially empty stack, or false otherwise.
