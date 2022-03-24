@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://tofucode.com/theme/pygments/monokai.min.css">
+
+    <script src="https://tofucode.com/theme/tipuesearch/jquery.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="https://tofucode.com/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="https://tofucode.com/theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://tofucode.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="TofuCode Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'G-DCBDZPQQD1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Zeph" />
+<meta name="description" content="Question Link : https://leetcode.com/problems/boats-to-save-people/ Difficulty: Medium Question You are given an array people where people[i] is the weight of the ith person, and an infinite number of boats where each boat can carry a maximum weight of limit. Each boat carries at most two people at …" />
+<meta name="keywords" content="two-pointers, greedy">
+
+
+<meta property="og:site_name" content="TofuCode"/>
+<meta property="og:title" content="Leetcode 0881. Boats to Save People"/>
+<meta property="og:description" content="Question Link : https://leetcode.com/problems/boats-to-save-people/ Difficulty: Medium Question You are given an array people where people[i] is the weight of the ith person, and an infinite number of boats where each boat can carry a maximum weight of limit. Each boat carries at most two people at …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://tofucode.com/posts/leetcode_0881_boats-to-save-people.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-03-23 00:00:00-07:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://tofucode.com/author/zeph.html">
+<meta property="article:section" content="Leetcode"/>
+<meta property="article:tag" content="two-pointers"/>
+<meta property="article:tag" content="greedy"/>
+<meta property="og:image" content="">
+
+  <title>TofuCode &ndash; Leetcode 0881. Boats to Save People</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://tofucode.com">
+        <img src="https://tofucode.com/theme/img/profile.png" alt="TofuCode" title="TofuCode">
+      </a>
+
+      <h1>
+        <a href="https://tofucode.com">TofuCode</a>
+      </h1>
+
+      
+      <ul class="list social">
+      </ul>
+
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="/pages/interview-questions.html" >Interview Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/category/leetcode.html" >Recent Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/tags.html" >Tags</a>
+            </li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="leetcode_0881_boats-to-save-people">Leetcode 0881. Boats to Save People</h1>
+    <p>
+      Posted on Wed 23 March 2022 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Question Link : <a href="https://leetcode.com/problems/boats-to-save-people/">https://leetcode.com/problems/boats-to-save-people/</a></p>
+<p>Difficulty: Medium</p>
+<h3>Question</h3>
+<p>You are given an array people where people[i] is the weight of the ith person, and an infinite number of boats where each boat can carry a maximum weight of limit. Each boat carries at most two people at the same time, provided the sum of the weight of those people is at most limit.
+Return the minimum number of boats to carry every given person.
+ 
+Example 1:</p>
+<p>Input: people = [1,2], limit = 3
+Output: 1
+Explanation: 1 boat (1, 2)</p>
+<p>Example 2:</p>
+<p>Input: people = [3,2,2,1], limit = 3
+Output: 3
+Explanation: 3 boats (1, 2), (2) and (3)</p>
+<p>Example 3:</p>
+<p>Input: people = [3,5,3,4], limit = 5
+Output: 4
+Explanation: 4 boats (3), (3), (4), (5)</p>
+<p>Constraints:</p>
+<p>1 &lt;= people.length &lt;= 5 * 104
+1 &lt;= people[i] &lt;= limit &lt;= 3 * 104</p>
+<h3>Solution</h3>
+<ul>
+<li>First sort the people by weight</li>
+<li>Since each boat can at most carry 2 people, we can greedily try to pair people from the lightest and heaviest using two pointers </li>
+</ul>
+<h3>Code</h3>
+<div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Leetcode 0881. Boats to Save People</span>
+<span class="sd">Question Link : https://leetcode.com/problems/boats-to-save-people/</span>
+<span class="sd">Solution Link : https://tofucode.com/posts/leetcode_0881_boats-to-save-people.html</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">numRescueBoats</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">people</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">people</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">people</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">people</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">j</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">people</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">people</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">limit</span><span class="p">:</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://tofucode.com/tag/two-pointers.html">two-pointers</a>
+      <a href="https://tofucode.com/tag/greedy.html">greedy</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p> Eat Tofu and be true </p>
+<p>&copy; 2022 TofuCode.com</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " TofuCode ",
+  "url" : "https://tofucode.com",
+  "image": "",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>
