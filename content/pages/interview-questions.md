@@ -11,6 +11,7 @@ Status: published
 | 0020 | [Valid Parentheses](https://tofucode.com/posts/leetcode_0020_valid-parentheses.html) | stack, parentheses |
 | 0021 | [Merge Two Sorted Lists](https://tofucode.com/posts/leetcode_0021_merge-two-sorted-lists.html) | linked-list |
 | 0061 | [Rotate List](https://tofucode.com/posts/leetcode_0061_rotate-list.html) | linked-list, list-to-ring |
+| 0074 | [Search a 2D Matrix](https://tofucode.com/posts/leetcode_0074_search-a-2d-matrix.html) | binary-search |
 | 0138 | [Copy List with Random Pointer](https://tofucode.com/posts/leetcode_0138_copy-list-with-random-pointer.html) | linked-list, dummy-list-head, recursion |
 | 0141 | [Linked List Cycle](https://tofucode.com/posts/leetcode_0141_linked-list-cycle.html) | linked-list, fast-slow-pointer |
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp |
