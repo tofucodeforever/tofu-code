@@ -14,6 +14,7 @@ Status: published
 | 0074 | [Search a 2D Matrix](https://tofucode.com/posts/leetcode_0074_search-a-2d-matrix.html) | binary-search |
 | 0138 | [Copy List with Random Pointer](https://tofucode.com/posts/leetcode_0138_copy-list-with-random-pointer.html) | linked-list, dummy-list-head, recursion |
 | 0141 | [Linked List Cycle](https://tofucode.com/posts/leetcode_0141_linked-list-cycle.html) | linked-list, fast-slow-pointer |
+| 0344 | [Reverse String](https://tofucode.com/posts/leetcode_0344_reverse-string.html) | string |
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion |
 | 0740 | [Delete and Earn](https://tofucode.com/posts/leetcode_0740_delete-and-earn.html) | dp |
