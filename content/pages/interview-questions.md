@@ -16,6 +16,7 @@ Status: published
 | 0138 | [Copy List with Random Pointer](https://tofucode.com/posts/leetcode_0138_copy-list-with-random-pointer.html) | linked-list, dummy-list-head, recursion |
 | 0141 | [Linked List Cycle](https://tofucode.com/posts/leetcode_0141_linked-list-cycle.html) | linked-list, fast-slow-pointer |
 | 0344 | [Reverse String](https://tofucode.com/posts/leetcode_0344_reverse-string.html) | string |
+| 0347 | [Top K Frequent Elements](https://tofucode.com/posts/leetcode_0347_top-k-frequent-elements.html) | k-most-points, bucket-sort, hash-map |
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion |
 | 0740 | [Delete and Earn](https://tofucode.com/posts/leetcode_0740_delete-and-earn.html) | dp |
