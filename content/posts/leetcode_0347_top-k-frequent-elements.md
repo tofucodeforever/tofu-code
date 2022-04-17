@@ -69,7 +69,8 @@ class Solution:
 
         return result[:k]
 
-    def topKFrequentImproved1(self, nums: List[int], k: int) -> List[int]:
+class SolutionImproved1:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         '''
         freq: count -> number list
         Skip sort:

@@ -72,7 +72,8 @@ class Solution:
             return self.searchBST(root.right, val)
 
 
-    def searchBSTAlternative1(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
+class SolutionAlternative1:
+    def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
         '''
         Iterative
 

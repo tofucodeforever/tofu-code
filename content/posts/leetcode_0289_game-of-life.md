@@ -110,7 +110,8 @@ class Solution:
         return cell
 
 
-    def gameOfLifeFollowUp1(self, board: List[List[int]]) -> None:
+class SolutionFollowUp1:
+    def gameOfLife(self, board: List[List[int]]) -> None:
         '''
         Follow up: Could you solve it in-place?
         To do it in place:

@@ -100,7 +100,8 @@ class Solution:
 
         return dummy.next
 
-    def copyRandomListAlternative1(self, head: 'Optional[Node]') -> 'Optional[Node]':
+class SolutionAlternative1:
+    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
         '''
         list iteration with a hashmap old pointers -> new node
 
