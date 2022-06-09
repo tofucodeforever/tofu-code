@@ -33,5 +33,6 @@ Status: published
 | 0946 | [Validate Stack Sequences](https://tofucode.com/posts/leetcode_0946_validate-stack-sequences.html) | stack, simulation, greedy |
 | 0991 | [Broken Calculator](https://tofucode.com/posts/leetcode_0991_broken-calculator.html) | reverse-thinking, puzzle |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://tofucode.com/posts/leetcode_1249_minimum-remove-to-make-valid-parentheses.html) | stack, parentheses |
+| 2283 | [Check if Number Has Equal Digit Count and Digit Value](https://tofucode.com/posts/leetcode_2283_check-if-number-has-equal-digit-count-and-digit-value.html) | hash-map-count |
 | 2293 | [Min Max Game](https://tofucode.com/posts/leetcode_2293_min-max-game.html) | recursion, simulation |
 | 0606 | [Construct String from Binary Tree](https://tofucode.com/posts/leetcode_0606_construct-string-from-binary-tree.html) | recursion, binary-tree |
