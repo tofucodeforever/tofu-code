@@ -36,6 +36,8 @@ help:
 	@echo '   make rsync_upload                   upload the web site via rsync+ssh  '
 	@echo '   make github                         upload the web site via gh-pages   '
 	@echo '                                                                          '
+	@echo '   make newpage NAME="Page Name"       create new page                    '
+	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
@@ -81,3 +83,24 @@ github: publish
 
 
 .PHONY: html help clean regenerate serve serve-global devserver publish github
+# Added stuff (remember to use Tabs) : Create new Page
+POSTSDIR=$(INPUTDIR)/posts
+PAGESDIR=$(INPUTDIR)/pages
+DATE := $(shell date +'%Y-%m-%d %H:%M:%S')
+SLUG := $(shell echo '${NAME}' | sed -e 's/[^[:alnum:]]/-/g' | tr -s '-' | tr A-Z a-z)
+EXT := md
+EDITOR = vim #medit # add & as well if using other editor
+
+newpage:
+ifdef NAME
+	echo "Title: $(NAME)" >  $(PAGESDIR)/$(SLUG).$(EXT)
+	echo "Date: $(DATE)" >> $(PAGESDIR)/$(SLUG).$(EXT)
+	echo "Status: published" >> $(PAGESDIR)/$(SLUG).$(EXT)
+	echo "Author: Zeph" >> $(PAGESDIR)/$(SLUG).$(EXT)
+	echo ""              >> $(PAGESDIR)/$(SLUG).$(EXT)
+	echo ""              >> $(PAGESDIR)/$(SLUG).$(EXT)
+	${EDITOR} ${PAGESDIR}/${SLUG}.$(EXT)
+else
+	@echo 'Variable NAME is not defined.'
+	@echo 'Do make newpage NAME='"'"'Page Name'"'"
+endif
