@@ -9,4 +9,5 @@ save_as: index.html
 * For a list of all questions tags: [Tags](tags.html) 
 
 
-
+#### Pages
+* [Python Basics](pages/python-basics.html)
