@@ -38,4 +38,5 @@ Status: published
 | 2284 | [Sender With Largest Word Count](https://tofucode.com/posts/leetcode_2284_sender-with-largest-word-count.html) | hash-map-count |
 | 2287 | [Rearrange Characters to Make Target String](https://tofucode.com/posts/leetcode_2287_rearrange-characters-to-make-target-string.html) | hash-map-count |
 | 2293 | [Min Max Game](https://tofucode.com/posts/leetcode_2293_min-max-game.html) | recursion, simulation |
+| 2294 | [Partition Array Such That Maximum Difference Is K](https://tofucode.com/posts/leetcode_2294_partition-array-such-that-maximum-difference-is-k.html) | array |
 | 0606 | [Construct String from Binary Tree](https://tofucode.com/posts/leetcode_0606_construct-string-from-binary-tree.html) | recursion, binary-tree |
