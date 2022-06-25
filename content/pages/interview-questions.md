@@ -26,6 +26,7 @@ Status: published
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion |
 | 0647 | [Palindromic Substrings](https://tofucode.com/posts/leetcode_0647_palindromic-substrings.html) | palindrome, string |
+| 0665 | [Non-decreasing Array](https://tofucode.com/posts/leetcode_0665_non-decreasing-array.html) | monotonic-stack |
 | 0682 | [Baseball Game](https://tofucode.com/posts/leetcode_0682_baseball-game.html) | simulation |
 | 0700 | [Search in a Binary Search Tree](https://tofucode.com/posts/leetcode_0700_search-in-a-binary-search-tree.html) | bst |
 | 0740 | [Delete and Earn](https://tofucode.com/posts/leetcode_0740_delete-and-earn.html) | dp |
