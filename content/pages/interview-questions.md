@@ -36,6 +36,7 @@ Status: published
 | 0946 | [Validate Stack Sequences](https://tofucode.com/posts/leetcode_0946_validate-stack-sequences.html) | stack, simulation, greedy |
 | 0991 | [Broken Calculator](https://tofucode.com/posts/leetcode_0991_broken-calculator.html) | reverse-thinking, puzzle |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://tofucode.com/posts/leetcode_1249_minimum-remove-to-make-valid-parentheses.html) | stack, parentheses |
+| 1423 | [Maximum Points You Can Obtain from Cards](https://tofucode.com/posts/leetcode_1423_maximum-points-you-can-obtain-from-cards.html) | sliding-window, array |
 | 2283 | [Check if Number Has Equal Digit Count and Digit Value](https://tofucode.com/posts/leetcode_2283_check-if-number-has-equal-digit-count-and-digit-value.html) | hash-map-count |
 | 2284 | [Sender With Largest Word Count](https://tofucode.com/posts/leetcode_2284_sender-with-largest-word-count.html) | hash-map-count |
 | 2287 | [Rearrange Characters to Make Target String](https://tofucode.com/posts/leetcode_2287_rearrange-characters-to-make-target-string.html) | hash-map-count |
