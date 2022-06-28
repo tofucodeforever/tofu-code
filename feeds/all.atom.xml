@@ -1,5 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-06-26T00:00:00-07:00</updated><entry><title>Leetcode 1423. Maximum Points You Can Obtain from Cards</title><link href="https://tofucode.com/posts/leetcode_1423_maximum-points-you-can-obtain-from-cards.html" rel="alternate"></link><published>2022-06-26T00:00:00-07:00</published><updated>2022-06-26T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-06-26:/posts/leetcode_1423_maximum-points-you-can-obtain-from-cards.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/"&gt;https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-06-27T00:00:00-07:00</updated><entry><title>Leetcode 1647. Minimum Deletions to Make Character Frequencies Unique</title><link href="https://tofucode.com/posts/leetcode_1647_minimum-deletions-to-make-character-frequencies-unique.html" rel="alternate"></link><published>2022-06-27T00:00:00-07:00</published><updated>2022-06-27T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-06-27:/posts/leetcode_1647_minimum-deletions-to-make-character-frequencies-unique.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/"&gt;https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;A string s is called good if there are no two different characters in s that have the same frequency.
+Given a string s, return the minimum number of characters you need to delete to make s good.
+The frequency …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/"&gt;https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;A string s is called good if there are no two different characters in s that have the same frequency.
+Given a string s, return the minimum number of characters you need to delete to make s good.
+The frequency of a character in a string is the number of times it appears in the string. For example, in the string "aab", the frequency of 'a' is 2, while the frequency of 'b' is 1.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: s = "aab"
+Output: 0
+Explanation: s is already good.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: s = "aaabbbcc"
+Output: 2
+Explanation: You can delete two 'b's resulting in the good string "aaabcc".
+Another way it to delete one 'b' and one 'c' resulting in the good string "aaabbc".
+Example 3:&lt;/p&gt;
+&lt;p&gt;Input: s = "ceabaacb"
+Output: 2
+Explanation: You can delete both 'c's resulting in the good string "eabaab".
+Note that we only care about characters that are still in the string at the end (i.e. frequency of 0 is ignored).&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= s.length &amp;lt;= 105
+s contains only lowercase English letters.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Count the frequency and sort in reverse. Go through it and use a max_freq marker to calculate what the max possible freq is&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 1647. Minimum Deletions to Make Character Frequencies Unique&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_1647_minimum-deletions-to-make-character-frequencies-unique.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;minDeletions&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;aaabbbcc&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        a: 3&lt;/span&gt;
+&lt;span class="sd"&gt;        b: 3&lt;/span&gt;
+&lt;span class="sd"&gt;        c: 2&lt;/span&gt;
+
+&lt;span class="sd"&gt;        &amp;quot;ceabaacb&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        a: 3&lt;/span&gt;
+&lt;span class="sd"&gt;        b: 2&lt;/span&gt;
+&lt;span class="sd"&gt;        c: 2&lt;/span&gt;
+&lt;span class="sd"&gt;        e: 1&lt;/span&gt;
+
+&lt;span class="sd"&gt;        count first, sort by value,&lt;/span&gt;
+&lt;span class="sd"&gt;        from highest to lowest freq: keep trying max_freq&lt;/span&gt;
+
+&lt;span class="sd"&gt;        # s has n length, and k number of distinct chars (which is 26 max)&lt;/span&gt;
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+        &lt;span class="n"&gt;counts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; &lt;span class="c1"&gt;# letter -&amp;gt; count&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;counts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;counts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="n"&gt;max_freq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;counts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;reverse&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;max_freq&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;max_freq&lt;/span&gt;
+                &lt;span class="c1"&gt;# frequency of 0 is ignored&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;max_freq&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                    &lt;span class="n"&gt;max_freq&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;max_freq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="hash-map-count"></category></entry><entry><title>Leetcode 1423. Maximum Points You Can Obtain from Cards</title><link href="https://tofucode.com/posts/leetcode_1423_maximum-points-you-can-obtain-from-cards.html" rel="alternate"></link><published>2022-06-26T00:00:00-07:00</published><updated>2022-06-26T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-06-26:/posts/leetcode_1423_maximum-points-you-can-obtain-from-cards.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/"&gt;https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;There are several cards arranged in a row, and each card has an associated number of points. The points are given in the integer array cardPoints.
