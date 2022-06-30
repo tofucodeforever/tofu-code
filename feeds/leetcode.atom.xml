@@ -1,5 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-06-27T00:00:00-07:00</updated><entry><title>Leetcode 1647. Minimum Deletions to Make Character Frequencies Unique</title><link href="https://tofucode.com/posts/leetcode_1647_minimum-deletions-to-make-character-frequencies-unique.html" rel="alternate"></link><published>2022-06-27T00:00:00-07:00</published><updated>2022-06-27T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-06-27:/posts/leetcode_1647_minimum-deletions-to-make-character-frequencies-unique.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/"&gt;https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-06-29T00:00:00-07:00</updated><entry><title>Leetcode 0462. Minimum Moves to Equal Array Elements II</title><link href="https://tofucode.com/posts/leetcode_0462_minimum-moves-to-equal-array-elements-ii.html" rel="alternate"></link><published>2022-06-29T00:00:00-07:00</published><updated>2022-06-29T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-06-29:/posts/leetcode_0462_minimum-moves-to-equal-array-elements-ii.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/"&gt;https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.
+In one move, you can increment or decrement an element of the array by 1.
+Test cases are designed …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/"&gt;https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.
+In one move, you can increment or decrement an element of the array by 1.
+Test cases are designed so that the answer will fit in a 32-bit integer.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: nums = [1,2,3]
+Output: 2
+Explanation:
+Only two moves are needed (remember each move increments or decrements one element):
+[1,2,3]  =&amp;gt;  [2,2,3]  =&amp;gt;  [2,2,2]&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: nums = [1,10,2,9]
+Output: 16&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;n == nums.length
+1 &amp;lt;= nums.length &amp;lt;= 105
+-109 &amp;lt;= nums[i] &amp;lt;= 109&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;We are basically looking for a point that produces the min sum of distances to all other points, that's the median &lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0462. Minimum Moves to Equal Array Elements II&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0462_minimum-moves-to-equal-array-elements-ii.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;minMoves2&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        Use median not average&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n log n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;median&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;moves&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;abs&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;median&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;moves&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="math"></category></entry><entry><title>Leetcode 1647. Minimum Deletions to Make Character Frequencies Unique</title><link href="https://tofucode.com/posts/leetcode_1647_minimum-deletions-to-make-character-frequencies-unique.html" rel="alternate"></link><published>2022-06-27T00:00:00-07:00</published><updated>2022-06-27T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-06-27:/posts/leetcode_1647_minimum-deletions-to-make-character-frequencies-unique.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/"&gt;https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;A string s is called good if there are no two different characters in s that have the same frequency.
