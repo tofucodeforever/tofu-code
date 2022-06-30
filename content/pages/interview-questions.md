@@ -24,6 +24,7 @@ Status: published
 | 0344 | [Reverse String](https://tofucode.com/posts/leetcode_0344_reverse-string.html) | string |
 | 0347 | [Top K Frequent Elements](https://tofucode.com/posts/leetcode_0347_top-k-frequent-elements.html) | k-most-points, bucket-sort, hash-map |
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp |
+| 0462 | [Minimum Moves to Equal Array Elements II](https://tofucode.com/posts/leetcode_0462_minimum-moves-to-equal-array-elements-ii.html) | math |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion |
 | 0647 | [Palindromic Substrings](https://tofucode.com/posts/leetcode_0647_palindromic-substrings.html) | palindrome, string |
 | 0665 | [Non-decreasing Array](https://tofucode.com/posts/leetcode_0665_non-decreasing-array.html) | monotonic-stack |
