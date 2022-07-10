@@ -11,7 +11,7 @@ Python Basics: Essentials, Data Structure, Collections
 ```
 import math
 
-#  when need a max min value: note that this returns floats
+#  when you need a infinite max min value: note that this returns floats
 math.inf
 -math.inf
 
@@ -42,10 +42,13 @@ for i in range(6):
     i -= 1
 
 ```
-* lambda
+#### lambda
 ```
 x = lambda a, b, c : a + b + c
 print(x(5, 6, 2))
+
+# sort a 2d list by increasing of first number, and then increasing of second. eg. [7,0],[4,4],[7,1]
+sorted_list = sorted(original_list, key=lambda x: (x[0], x[1]))
 
 # filter
 final_list = list(filter(lambda x: (x%2 != 0) , li)) # filters out to get all odd nums in li
@@ -59,7 +62,7 @@ sum = reduce((lambda x, y: x + y), li) # sum of the list
 
 ```
 
-* Class
+#### Class
 
 ```
 class Dog:
@@ -73,8 +76,19 @@ class Dog:
     def add_trick(self, trick):
         self.tricks.append(trick)
 ```
-
-* Swapping
+#### Enum 
+```
+from enum import Enum
+class Color(Enum):
+    RED = 1
+    GREEN = 2
+    BLUE = 3
+    
+print(Color.RED) # Color.RED
+print(Color.RED.name) # RED 
+print(Color.RED.value) # 1
+```
+#### Swapping
 ```
 a, b, c = d, e, f
 # note that order matters curr has to be last:
@@ -85,9 +99,22 @@ a, b, c = d, e, f
 
 #### Data structures
 * Time: https://wiki.python.org/moin/TimeComplexity
+#### Char 
+```python
+# char to ascii value
+ord(c)
 
-* String
-   * Strings are immutable
+# ascii value to char 
+chr(x) 
+
+# ascii value offset from 'a'
+ord(c) - ord('a')
+
+
+```
+
+#### String
+* Strings are immutable
 
 ```python
 # initialize
@@ -120,7 +147,7 @@ t.ljust(20) # left align in 20 chars
 t.rjust(20) # right align in 20 chars
 
 # strip
-t.strip() # strip trailing whitespaces
+t.strirp() # strip trailing whitespaces
 t.lstrip()
 t.rstrip()
 
@@ -157,8 +184,8 @@ bin(3)[2:]
 
 ```
 
-* List
-    * same as arrays in java
+#### List
+* same as arrays in java
 
 ```python
 # initilizing
@@ -224,11 +251,11 @@ dp = [[0] * m for x in range(n)]
 
 ```
 
-* Tuple
-    * Better way of mixing types in a collection
-    * Tuples are faster and consume less memory than list
-    * It is immutable
-    * Can be used as keys on a dictionary
+#### Tuple
+* Better way of mixing types in a collection
+* Tuples are faster and consume less memory than list
+* It is immutable
+* Can be used as keys on a dictionary
 
 ```python
 # initilize
@@ -254,9 +281,9 @@ t = (1, [9, 8]) # you can change t[1][0]
 
 ```
 
-* Dictionary
-    * Are not sorted
-    * Can not have duplicate elements
+#### Dictionary
+* Are not sorted
+* Can not have duplicate elements
 
 ```python
 # initilize
@@ -289,12 +316,15 @@ for i in items:
 from collections import Counter
 counts = Counter(items)
 
+# sort by keys with highest first  
+sorted_list = sorted(freq.keys(), reverse=True)
+
 ```
 
-* Set
-    * unique elements
-    * ordering is arbitrary
-    * frozenset() is an immutable version of set
+#### Set
+* unique elements
+* ordering is arbitrary
+* frozenset() is an immutable version of set
 
 ```python
 # initilize
@@ -328,8 +358,8 @@ a.symmetric_difference(b)
 c = a.copy()
 
 ```
-* heap
-    * priority queue
+#### Heap
+* priority queue
 
 ```
 # creating it
@@ -354,10 +384,10 @@ heapq.nlargest(k, counts.keys(), key=counts.get)
 
 ```
 
-* PriorityQueue
-    * this is implemented as a wrapper around heap
-    * this is thread safe
-    * easier sytax
+#### PriorityQueue
+* this is implemented as a wrapper around heap
+* this is thread safe
+* easier sytax
 ```
 from queue import PriorityQueue
 q = PriorityQueue()
@@ -375,7 +405,7 @@ q.queue[0]
 
 ```
 
-#### Collections
+## Collections
 * Counter
 * defaultdict
 * OrderedDict
@@ -383,8 +413,8 @@ q.queue[0]
 * ChainMap
 * namedtuple()
 
-* Counter
-    * give it a list and it will count occurances of each element and give dictionary of key => occurances
+#### Counter
+* give it a list and it will count occurances of each element and give dictionary of key => occurances
 ```python
 from collections import Counter
 d = Counter([1,1,1,2]) # Counter({1: 3, 2: 1})
@@ -401,9 +431,9 @@ d.subtract(d2)
 
 ```
 
-* defaultdict
-    * sets a default return value instead of throwing a `KeyError` when the key does not exist
-    * easier to use d.get('two', 0) instead
+#### defaultdict
+* sets a default return value instead of throwing a `KeyError` when the key does not exist
+* easier to use d.get('two', 0) instead
 ```python
 from collections import defaultdict
 nums = defaultdict(int)
@@ -412,8 +442,8 @@ print(nums['three']) # 0
 
 ```
 
-* OrderedDict
-    * a dictionary where keys maintain the order in which they are inserted
+#### OrderedDict
+* a dictionary where keys maintain the order in which they are inserted
 
 ```python
 from collections import OrderedDict
@@ -425,9 +455,9 @@ print(d) # OrderedDict([('a', 1), ('b', 2), ('c', 3)])
 
 ```
 
-* deque
-    * list that append pop from either end in O(1)
-    * python list pop(0) would otherwise be O(n)
+#### deque
+* list that append pop from either end in O(1)
+* python list pop(0) would otherwise be O(n)
 
 ```python
 from collections import deque
@@ -449,8 +479,8 @@ dq.count('a') # counts the number of occurances: 1
 
 ```
 
-* ChainMap
-    * combine multiple dictionaries to be used as a single unit
+#### ChainMap
+* combine multiple dictionaries to be used as a single unit
 ```python
 from collections import ChainMap
 dict1 = { 'a' : 1, 'b' : 2 }
@@ -465,8 +495,8 @@ chain_map.new_child(dict3) # add another dictionary
 
 ```
 
-* namedtuple()
-    * gives name to each object in tuple
+#### namedtuple()
+* gives name to each object in tuple
 ```python
 from collections import namedtuple
 Student = namedtuple('Student', 'fname, lname, age')
