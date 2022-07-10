@@ -4,9 +4,10 @@ Status: published
 Author: Zeph
 
 
+Python Basics: Essentials, Data Structure, Collections 
 
-#### essentials
-* Math
+## Essentials
+#### Math
 ```
 import math
 
@@ -27,7 +28,7 @@ random.choice(l)
 random.shuffle(nums)
 
 ```
-* Exceptions
+#### Exceptions
 ```
 try:
     int(i)
@@ -81,7 +82,8 @@ a, b, c = d, e, f
 # curr.next, prev, curr = prev, curr, curr.next
 
 ```
-#### data structures
+
+#### Data structures
 * Time: https://wiki.python.org/moin/TimeComplexity
 
 * String
@@ -373,7 +375,7 @@ q.queue[0]
 
 ```
 
-#### collections
+#### Collections
 * Counter
 * defaultdict
 * OrderedDict
