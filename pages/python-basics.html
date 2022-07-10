@@ -112,7 +112,7 @@
 <h4>Math</h4>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
 
-<span class="c1">#  when need a max min value: note that this returns floats</span>
+<span class="c1">#  when you need a infinite max min value: note that this returns floats</span>
 <span class="n">math</span><span class="o">.</span><span class="n">inf</span>
 <span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">inf</span>
 
@@ -144,11 +144,12 @@
 <span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
 </code></pre></div>
 
-<ul>
-<li>lambda</li>
-</ul>
+<h4>lambda</h4>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="c1"># sort a 2d list by increasing of first number, and then increasing of second. eg. [7,0],[4,4],[7,1]</span>
+<span class="n">sorted_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">original_list</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 
 <span class="c1"># filter</span>
 <span class="n">final_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">,</span> <span class="n">li</span><span class="p">))</span> <span class="c1"># filters out to get all odd nums in li</span>
@@ -161,9 +162,7 @@
 <span class="nb">sum</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">),</span> <span class="n">li</span><span class="p">)</span> <span class="c1"># sum of the list</span>
 </code></pre></div>
 
-<ul>
-<li>Class</li>
-</ul>
+<h4>Class</h4>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="n">Dog:</span>
 
     <span class="n">all_tricks</span> = [] <span class="c1"># class instance shared by all dogs</span>
@@ -176,9 +175,19 @@
         <span class="nb">self</span>.<span class="n">tricks</span>.<span class="nb">append</span>(<span class="n">trick</span>)
 </code></pre></div>
 
-<ul>
-<li>Swapping</li>
-</ul>
+<h4>Enum</h4>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span><span class="p">)</span> <span class="c1"># Color.RED</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1"># RED </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="c1"># 1</span>
+</code></pre></div>
+
+<h4>Swapping</h4>
 <div class="highlight"><pre><span></span><code><span class="nv">a</span>, <span class="nv">b</span>, <span class="nv">c</span> <span class="o">=</span> <span class="nv">d</span>, <span class="nv">e</span>, <span class="nv">f</span>
 # <span class="nv">note</span> <span class="nv">that</span> <span class="nv">order</span> <span class="nv">matters</span> <span class="nv">curr</span> <span class="nv">has</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">last</span>:
 # <span class="nv">eg</span>. <span class="nv">when</span> <span class="nv">reversing</span> <span class="nv">a</span> <span class="nv">list</span> <span class="nv">in</span> <span class="nv">leetcode</span><span class="o">/</span><span class="nv">leet_0206_reverse</span><span class="o">-</span><span class="nv">linked</span><span class="o">-</span><span class="nv">list</span>.<span class="nv">py</span>
@@ -187,12 +196,21 @@
 
 <h4>Data structures</h4>
 <ul>
-<li>
-<p>Time: https://wiki.python.org/moin/TimeComplexity</p>
-</li>
-<li>
-<p>String</p>
-</li>
+<li>Time: https://wiki.python.org/moin/TimeComplexity</li>
+</ul>
+<h4>Char</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># char to ascii value</span>
+<span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+
+<span class="c1"># ascii value to char </span>
+<span class="nb">chr</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+
+<span class="c1"># ascii value offset from &#39;a&#39;</span>
+<span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<h4>String</h4>
+<ul>
 <li>Strings are immutable</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1"># initialize</span>
@@ -225,7 +243,7 @@
 <span class="n">t</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># right align in 20 chars</span>
 
 <span class="c1"># strip</span>
-<span class="n">t</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1"># strip trailing whitespaces</span>
+<span class="n">t</span><span class="o">.</span><span class="n">strirp</span><span class="p">()</span> <span class="c1"># strip trailing whitespaces</span>
 <span class="n">t</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
 <span class="n">t</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
 
@@ -260,11 +278,9 @@
 <span class="nb">bin</span><span class="p">(</span><span class="mi">3</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span>
 </code></pre></div>
 
+<h4>List</h4>
 <ul>
-<li>List<ul>
 <li>same as arrays in java</li>
-</ul>
-</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1"># initilizing</span>
 <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -328,14 +344,12 @@
 <span class="c1"># dp = [[0] * m] * n  # NOPE: This makes a list with five references to the same list</span>
 </code></pre></div>
 
+<h4>Tuple</h4>
 <ul>
-<li>Tuple<ul>
 <li>Better way of mixing types in a collection</li>
 <li>Tuples are faster and consume less memory than list</li>
 <li>It is immutable</li>
 <li>Can be used as keys on a dictionary</li>
-</ul>
-</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1"># initilize</span>
 <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
@@ -359,12 +373,10 @@
 <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span> <span class="c1"># you can change t[1][0]</span>
 </code></pre></div>
 
+<h4>Dictionary</h4>
 <ul>
-<li>Dictionary<ul>
 <li>Are not sorted</li>
 <li>Can not have duplicate elements</li>
-</ul>
-</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1"># initilize</span>
 <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
@@ -395,15 +407,16 @@
 
 <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 <span class="n">counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+
+<span class="c1"># sort by keys with highest first  </span>
+<span class="n">sorted_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">freq</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 
+<h4>Set</h4>
 <ul>
-<li>Set<ul>
 <li>unique elements</li>
 <li>ordering is arbitrary</li>
 <li>frozenset() is an immutable version of set</li>
-</ul>
-</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1"># initilize</span>
 <span class="n">a</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -436,11 +449,9 @@
 <span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </code></pre></div>
 
+<h4>Heap</h4>
 <ul>
-<li>heap<ul>
 <li>priority queue</li>
-</ul>
-</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1"># creating it</span>
 <span class="kn">import</span> <span class="nn">heapq</span>
@@ -463,13 +474,11 @@
 <span class="n">heapq</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">counts</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">counts</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
 </code></pre></div>
 
+<h4>PriorityQueue</h4>
 <ul>
-<li>PriorityQueue<ul>
 <li>this is implemented as a wrapper around heap</li>
 <li>this is thread safe</li>
 <li>easier sytax</li>
-</ul>
-</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">queue</span> <span class="kn">import</span> <span class="n">PriorityQueue</span>
 <span class="n">q</span> <span class="o">=</span> <span class="n">PriorityQueue</span><span class="p">()</span>
@@ -486,22 +495,18 @@
 <span class="n">q</span><span class="o">.</span><span class="n">queue</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div>
 
-<h4>Collections</h4>
+<h2>Collections</h2>
 <ul>
 <li>Counter</li>
 <li>defaultdict</li>
 <li>OrderedDict</li>
 <li>deque</li>
 <li>ChainMap</li>
-<li>
-<p>namedtuple()</p>
-</li>
-<li>
-<p>Counter</p>
+<li>namedtuple()</li>
+</ul>
+<h4>Counter</h4>
 <ul>
 <li>give it a list and it will count occurances of each element and give dictionary of key =&gt; occurances</li>
-</ul>
-</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># Counter({1: 3, 2: 1})</span>
@@ -517,12 +522,10 @@
 <span class="n">d</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">d2</span><span class="p">)</span>
 </code></pre></div>
 
+<h4>defaultdict</h4>
 <ul>
-<li>defaultdict<ul>
 <li>sets a default return value instead of throwing a <code>KeyError</code> when the key does not exist</li>
 <li>easier to use d.get('two', 0) instead</li>
-</ul>
-</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
 <span class="n">nums</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -530,11 +533,9 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="s1">&#39;three&#39;</span><span class="p">])</span> <span class="c1"># 0</span>
 </code></pre></div>
 
+<h4>OrderedDict</h4>
 <ul>
-<li>OrderedDict<ul>
 <li>a dictionary where keys maintain the order in which they are inserted</li>
-</ul>
-</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
@@ -544,12 +545,10 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="c1"># OrderedDict([(&#39;a&#39;, 1), (&#39;b&#39;, 2), (&#39;c&#39;, 3)])</span>
 </code></pre></div>
 
+<h4>deque</h4>
 <ul>
-<li>deque<ul>
 <li>list that append pop from either end in O(1)</li>
 <li>python list pop(0) would otherwise be O(n)</li>
-</ul>
-</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
 <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">]</span>
@@ -569,11 +568,9 @@
 <span class="n">dq</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="c1"># counts the number of occurances: 1</span>
 </code></pre></div>
 
+<h4>ChainMap</h4>
 <ul>
-<li>ChainMap<ul>
 <li>combine multiple dictionaries to be used as a single unit</li>
-</ul>
-</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">ChainMap</span>
 <span class="n">dict1</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;a&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span> <span class="p">:</span> <span class="mi">2</span> <span class="p">}</span>
@@ -587,11 +584,9 @@
 <span class="n">chain_map</span><span class="o">.</span><span class="n">new_child</span><span class="p">(</span><span class="n">dict3</span><span class="p">)</span> <span class="c1"># add another dictionary</span>
 </code></pre></div>
 
+<h4>namedtuple()</h4>
 <ul>
-<li>namedtuple()<ul>
 <li>gives name to each object in tuple</li>
-</ul>
-</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
 <span class="n">Student</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Student&#39;</span><span class="p">,</span> <span class="s1">&#39;fname, lname, age&#39;</span><span class="p">)</span>
