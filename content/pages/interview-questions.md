@@ -28,6 +28,7 @@ Status: published
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp |
 | 0462 | [Minimum Moves to Equal Array Elements II](https://tofucode.com/posts/leetcode_0462_minimum-moves-to-equal-array-elements-ii.html) | math |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion |
+| 0623 | [Add One Row to Tree](https://tofucode.com/posts/leetcode_0623_add-one-row-to-tree.html) | binary-tree-manipulation, dfs |
 | 0647 | [Palindromic Substrings](https://tofucode.com/posts/leetcode_0647_palindromic-substrings.html) | palindrome, string |
 | 0665 | [Non-decreasing Array](https://tofucode.com/posts/leetcode_0665_non-decreasing-array.html) | monotonic-stack |
 | 0682 | [Baseball Game](https://tofucode.com/posts/leetcode_0682_baseball-game.html) | simulation |
