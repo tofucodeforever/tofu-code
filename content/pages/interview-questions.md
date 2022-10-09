@@ -15,6 +15,7 @@ Status: published
 | 0035 | [Search Insert Position](https://tofucode.com/posts/leetcode_0035_search-insert-position.html) | binary-search |
 | 0061 | [Rotate List](https://tofucode.com/posts/leetcode_0061_rotate-list.html) | linked-list, list-to-ring |
 | 0074 | [Search a 2D Matrix](https://tofucode.com/posts/leetcode_0074_search-a-2d-matrix.html) | binary-search |
+| 0094 | [Binary Tree Inorder Traversal](https://tofucode.com/posts/leetcode_0094_binary-tree-inorder-traversal.html) | binary-tree-traversal-inorder |
 | 0112 | [Path Sum](https://tofucode.com/posts/leetcode_0112_path-sum.html) | binary-tree, recursion |
 | 0138 | [Copy List with Random Pointer](https://tofucode.com/posts/leetcode_0138_copy-list-with-random-pointer.html) | linked-list, dummy-list-head, recursion |
 | 0141 | [Linked List Cycle](https://tofucode.com/posts/leetcode_0141_linked-list-cycle.html) | linked-list, fast-slow-pointer |
