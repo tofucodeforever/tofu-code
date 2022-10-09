@@ -1,5 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-10-08T00:00:00-07:00</updated><entry><title>Leetcode 0035. Search Insert Position</title><link href="https://tofucode.com/posts/leetcode_0035_search-insert-position.html" rel="alternate"></link><published>2022-10-08T00:00:00-07:00</published><updated>2022-10-08T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-10-08:/posts/leetcode_0035_search-insert-position.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/search-insert-position/"&gt;https://leetcode.com/problems/search-insert-position/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-10-09T00:00:00-07:00</updated><entry><title>Leetcode 2432. The Employee That Worked on the Longest Task</title><link href="https://tofucode.com/posts/leetcode_2432_the-employee-that-worked-on-the-longest-task.html" rel="alternate"></link><published>2022-10-09T00:00:00-07:00</published><updated>2022-10-09T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-10-09:/posts/leetcode_2432_the-employee-that-worked-on-the-longest-task.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/the-employee-that-worked-on-the-longest-task/"&gt;https://leetcode.com/problems/the-employee-that-worked-on-the-longest-task/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;There are n employees, each with a unique id from 0 to n - 1.
+You are given a 2D integer array logs where logs[i] = [idi, leaveTimei] where:&lt;/p&gt;
+&lt;p&gt;idi is the id of the employee that worked on the ith …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/the-employee-that-worked-on-the-longest-task/"&gt;https://leetcode.com/problems/the-employee-that-worked-on-the-longest-task/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;There are n employees, each with a unique id from 0 to n - 1.
+You are given a 2D integer array logs where logs[i] = [idi, leaveTimei] where:&lt;/p&gt;
+&lt;p&gt;idi is the id of the employee that worked on the ith task, and
+leaveTimei is the time at which the employee finished the ith task. All the values leaveTimei are unique.&lt;/p&gt;
+&lt;p&gt;Note that the ith task starts the moment right after the (i - 1)th task ends, and the 0th task starts at time 0.
+Return the id of the employee that worked the task with the longest time. If there is a tie between two or more employees, return the smallest id among them.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: n = 10, logs = [[0,3],[2,5],[0,9],[1,15]]
+Output: 1
+Explanation: 
+Task 0 started at 0 and ended at 3 with 3 units of times.
+Task 1 started at 3 and ended at 5 with 2 units of times.
+Task 2 started at 5 and ended at 9 with 4 units of times.
+Task 3 started at 9 and ended at 15 with 6 units of times.
+The task with the longest time is task 3 and the employee with id 1 is the one that worked on it, so we return 1.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: n = 26, logs = [[1,1],[3,7],[2,12],[7,17]]
+Output: 3
+Explanation: 
+Task 0 started at 0 and ended at 1 with 1 unit of times.
+Task 1 started at 1 and ended at 7 with 6 units of times.
+Task 2 started at 7 and ended at 12 with 5 units of times.
+Task 3 started at 12 and ended at 17 with 5 units of times.
+The tasks with the longest time is task 1. The employees that worked on it is 3, so we return 3.&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: n = 2, logs = [[0,10],[1,20]]
+Output: 0
+Explanation: 
+Task 0 started at 0 and ended at 10 with 10 units of times.
+Task 1 started at 10 and ended at 20 with 10 units of times.
+The tasks with the longest time are tasks 0 and 1. The employees that worked on them are 0 and 1, so we return the smallest id 0.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;2 &amp;lt;= n &amp;lt;= 500
+1 &amp;lt;= logs.length &amp;lt;= 500
+logs[i].length == 2
+0 &amp;lt;= idi &amp;lt;= n - 1
+1 &amp;lt;= leaveTimei &amp;lt;= 500
+idi != idi+1
+leaveTimei are sorted in a strictly increasing order.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Go through the logs and keep track of the max&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 2432. The Employee That Worked on the Longest Task&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/the-employee-that-worked-on-the-longest-task/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_2432_the-employee-that-worked-on-the-longest-task.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hardestWorker&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;logs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        keep a max id and time, if there is a tie on time, we want the smallest id&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;longest_id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;logs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;longest_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;logs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;logs&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+            &lt;span class="n"&gt;current_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;leave_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;logs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+            &lt;span class="n"&gt;used_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;leave_time&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;logs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;used_time&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;longest_time&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;used_time&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;longest_time&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;current_id&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;longest_id&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                &lt;span class="n"&gt;longest_id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;current_id&lt;/span&gt;
+                &lt;span class="n"&gt;longest_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;used_time&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;longest_id&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="array"></category></entry><entry><title>Leetcode 0035. Search Insert Position</title><link href="https://tofucode.com/posts/leetcode_0035_search-insert-position.html" rel="alternate"></link><published>2022-10-08T00:00:00-07:00</published><updated>2022-10-08T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-10-08:/posts/leetcode_0035_search-insert-position.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/search-insert-position/"&gt;https://leetcode.com/problems/search-insert-position/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
