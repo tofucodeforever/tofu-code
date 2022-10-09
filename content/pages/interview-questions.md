@@ -54,4 +54,5 @@ Status: published
 | 2293 | [Min Max Game](https://tofucode.com/posts/leetcode_2293_min-max-game.html) | recursion, simulation |
 | 2294 | [Partition Array Such That Maximum Difference Is K](https://tofucode.com/posts/leetcode_2294_partition-array-such-that-maximum-difference-is-k.html) | array |
 | 2326 | [Spiral Matrix IV](https://tofucode.com/posts/leetcode_2326_spiral-matrix-iv.html) | spiral-matrix |
+| 2432 | [The Employee That Worked on the Longest Task](https://tofucode.com/posts/leetcode_2432_the-employee-that-worked-on-the-longest-task.html) | array |
 | 0606 | [Construct String from Binary Tree](https://tofucode.com/posts/leetcode_0606_construct-string-from-binary-tree.html) | recursion, binary-tree |
