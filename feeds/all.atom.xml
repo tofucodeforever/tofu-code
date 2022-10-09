@@ -76,7 +76,60 @@ leaveTimei are sorted in a strictly increasing order.&lt;/p&gt;
                 &lt;span class="n"&gt;longest_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;used_time&lt;/span&gt;
 
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;longest_id&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="array"></category></entry><entry><title>Leetcode 0035. Search Insert Position</title><link href="https://tofucode.com/posts/leetcode_0035_search-insert-position.html" rel="alternate"></link><published>2022-10-08T00:00:00-07:00</published><updated>2022-10-08T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-10-08:/posts/leetcode_0035_search-insert-position.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/search-insert-position/"&gt;https://leetcode.com/problems/search-insert-position/&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="array"></category></entry><entry><title>Leetcode 2433. Find The Original Array of Prefix Xor</title><link href="https://tofucode.com/posts/leetcode_2433_find-the-original-array-of-prefix-xor.html" rel="alternate"></link><published>2022-10-09T00:00:00-07:00</published><updated>2022-10-09T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-10-09:/posts/leetcode_2433_find-the-original-array-of-prefix-xor.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/find-the-original-array-of-prefix-xor/"&gt;https://leetcode.com/problems/find-the-original-array-of-prefix-xor/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given an integer array pref of size n. Find and return the array arr of size n that satisfies:&lt;/p&gt;
+&lt;p&gt;pref[i] = arr[0] ^ arr[1] ^ ... ^ arr[i].&lt;/p&gt;
+&lt;p&gt;Note that ^ denotes the bitwise-xor operation.
+It can be proven that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/find-the-original-array-of-prefix-xor/"&gt;https://leetcode.com/problems/find-the-original-array-of-prefix-xor/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given an integer array pref of size n. Find and return the array arr of size n that satisfies:&lt;/p&gt;
+&lt;p&gt;pref[i] = arr[0] ^ arr[1] ^ ... ^ arr[i].&lt;/p&gt;
+&lt;p&gt;Note that ^ denotes the bitwise-xor operation.
+It can be proven that the answer is unique.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: pref = [5,2,0,3,1]
+Output: [5,7,2,3,2]
+Explanation: From the array [5,7,2,3,2] we have the following:
+- pref[0] = 5.
+- pref[1] = 5 ^ 7 = 2.
+- pref[2] = 5 ^ 7 ^ 2 = 0.
+- pref[3] = 5 ^ 7 ^ 2 ^ 3 = 3.
+- pref[4] = 5 ^ 7 ^ 2 ^ 3 ^ 2 = 1.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: pref = [13]
+Output: [13]
+Explanation: We have pref[0] = arr[0] = 13.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= pref.length &amp;lt;= 105
+0 &amp;lt;= pref[i] &amp;lt;= 106&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;By looking at the XOR truth table, one can find that using the result to XOR one number gives the other number&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 2433. Find The Original Array of Prefix Xor&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/find-the-original-array-of-prefix-xor/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_2433_find-the-original-array-of-prefix-xor.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;findArray&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pref&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        if a ^ b = c then b ^ c = a&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(n)&lt;/span&gt;
+
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;pref&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pref&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pref&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;^&lt;/span&gt; &lt;span class="n"&gt;pref&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="math"></category></entry><entry><title>Leetcode 0035. Search Insert Position</title><link href="https://tofucode.com/posts/leetcode_0035_search-insert-position.html" rel="alternate"></link><published>2022-10-08T00:00:00-07:00</published><updated>2022-10-08T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-10-08:/posts/leetcode_0035_search-insert-position.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/search-insert-position/"&gt;https://leetcode.com/problems/search-insert-position/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
