@@ -12,6 +12,7 @@ Status: published
 | 0019 | [Remove Nth Node From End of List](https://tofucode.com/posts/leetcode_0019_remove-nth-node-from-end-of-list.html) | linked-list |
 | 0020 | [Valid Parentheses](https://tofucode.com/posts/leetcode_0020_valid-parentheses.html) | stack, parentheses |
 | 0021 | [Merge Two Sorted Lists](https://tofucode.com/posts/leetcode_0021_merge-two-sorted-lists.html) | linked-list |
+| 0035 | [Search Insert Position](https://tofucode.com/posts/leetcode_0035_search-insert-position.html) | binary-search |
 | 0061 | [Rotate List](https://tofucode.com/posts/leetcode_0061_rotate-list.html) | linked-list, list-to-ring |
 | 0074 | [Search a 2D Matrix](https://tofucode.com/posts/leetcode_0074_search-a-2d-matrix.html) | binary-search |
 | 0112 | [Path Sum](https://tofucode.com/posts/leetcode_0112_path-sum.html) | binary-tree, recursion |
