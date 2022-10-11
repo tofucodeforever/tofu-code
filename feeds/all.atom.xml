@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-10-09T00:00:00-07:00</updated><entry><title>Leetcode 0070. Climbing Stairs</title><link href="https://tofucode.com/posts/leetcode_0070_climbing-stairs.html" rel="alternate"></link><published>2022-10-09T00:00:00-07:00</published><updated>2022-10-09T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-10-09:/posts/leetcode_0070_climbing-stairs.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/climbing-stairs/"&gt;https://leetcode.com/problems/climbing-stairs/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-10-10T00:00:00-07:00</updated><entry><title>Leetcode 0334. Increasing Triplet Subsequence</title><link href="https://tofucode.com/posts/leetcode_0334_increasing-triplet-subsequence.html" rel="alternate"></link><published>2022-10-10T00:00:00-07:00</published><updated>2022-10-10T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-10-10:/posts/leetcode_0334_increasing-triplet-subsequence.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/increasing-triplet-subsequence/"&gt;https://leetcode.com/problems/increasing-triplet-subsequence/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given an integer array nums, return true if there exists a triple of indices (i, j, k) such that i &amp;lt; j &amp;lt; k and nums[i] &amp;lt; nums[j] &amp;lt; nums[k]. If no such indices exists, return false.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: nums …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/increasing-triplet-subsequence/"&gt;https://leetcode.com/problems/increasing-triplet-subsequence/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given an integer array nums, return true if there exists a triple of indices (i, j, k) such that i &amp;lt; j &amp;lt; k and nums[i] &amp;lt; nums[j] &amp;lt; nums[k]. If no such indices exists, return false.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: nums = [1,2,3,4,5]
+Output: true
+Explanation: Any triplet where i &amp;lt; j &amp;lt; k is valid.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: nums = [5,4,3,2,1]
+Output: false
+Explanation: No triplet exists.&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: nums = [2,1,5,0,4,6]
+Output: true
+Explanation: The triplet (3, 4, 5) is valid because nums[3] == 0 &amp;lt; nums[4] == 4 &amp;lt; nums[5] == 6.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= nums.length &amp;lt;= 5 * 105
+-231 &amp;lt;= nums[i] &amp;lt;= 231 - 1&lt;/p&gt;
+&lt;p&gt;Follow up: Could you implement a solution that runs in O(n) time complexity and O(1) space complexity?&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Keep track of 2 pointers, and find 2 places where the second &amp;gt; the first, after we find this, if we come upon a thrid where third &amp;gt; second, we return True&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0334. Increasing Triplet Subsequence&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/increasing-triplet-subsequence/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0334_increasing-triplet-subsequence.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;increasingTriplet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        first, second, thrid&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;second&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;inf&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;
+            &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;second&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;second&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="array"></category></entry><entry><title>Leetcode 0070. Climbing Stairs</title><link href="https://tofucode.com/posts/leetcode_0070_climbing-stairs.html" rel="alternate"></link><published>2022-10-09T00:00:00-07:00</published><updated>2022-10-09T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-10-09:/posts/leetcode_0070_climbing-stairs.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/climbing-stairs/"&gt;https://leetcode.com/problems/climbing-stairs/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;You are climbing a staircase. It takes n steps to reach the top.
