@@ -45,16 +45,25 @@
 <!-- End Google Analytics -->  
 
 
-    <meta name="author" content="Zeph" />
-    <meta name="description" content="" />
-<meta property="og:site_name" content="TofuCode"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="TofuCode"/>
-<meta property="og:description" content=""/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://tofucode.com"/>
+<meta name="author" content="Zeph" />
+<meta name="description" content="Question Link : https://leetcode.com/problems/single-number/ Difficulty: Easy Question Given a non-empty array of integers nums, every element appears twice except for one. Find that single one. You must implement a solution with a linear runtime complexity and use only constant extra space. Example 1: Input: nums = [2,2 …" />
+<meta name="keywords" content="math">
 
-  <title>TofuCode &ndash; Tag math</title>
+
+<meta property="og:site_name" content="TofuCode"/>
+<meta property="og:title" content="Leetcode 0136. Single Number"/>
+<meta property="og:description" content="Question Link : https://leetcode.com/problems/single-number/ Difficulty: Easy Question Given a non-empty array of integers nums, every element appears twice except for one. Find that single one. You must implement a solution with a linear runtime complexity and use only constant extra space. Example 1: Input: nums = [2,2 …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://tofucode.com/posts/leetcode_0136_single-number.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-10-15 00:00:00-07:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://tofucode.com/author/zeph.html">
+<meta property="article:section" content="Leetcode"/>
+<meta property="article:tag" content="math"/>
+<meta property="og:image" content="">
+
+  <title>TofuCode &ndash; Leetcode 0136. Single Number</title>
 
 </head>
 <body class="light-theme">
@@ -99,90 +108,71 @@
   <main>
 
 
-
-
-<article>
+<article class="single">
   <header>
-    <h2><a href="https://tofucode.com/posts/leetcode_0136_single-number.html">Leetcode 0136. Single Number</a></h2>
+      
+    <h1 id="leetcode_0136_single-number">Leetcode 0136. Single Number</h1>
     <p>
       Posted on Sat 15 October 2022 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
 
-          &#8226; Tagged with
-              <a href="https://tofucode.com/tag/math.html">math</a>
     </p>
   </header>
+
+
   <div>
-      <p>Question Link : <a href="https://leetcode.com/problems/single-number/">https://leetcode.com/problems/single-number/</a></p>
+    <p>Question Link : <a href="https://leetcode.com/problems/single-number/">https://leetcode.com/problems/single-number/</a></p>
 <p>Difficulty: Easy</p>
 <h3>Question</h3>
 <p>Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
 You must implement a solution with a linear runtime complexity and use only constant extra space.
  
 Example 1:
-Input: nums = [2,2 …</p>
-        <br>
-        <a class="btn"
-           href="https://tofucode.com/posts/leetcode_0136_single-number.html">
-          Continue reading
-        </a>
+Input: nums = [2,2,1]
+Output: 1
+Example 2:
+Input: nums = [4,1,2,1,2]
+Output: 4
+Example 3:
+Input: nums = [1]
+Output: 1</p>
+<p>Constraints:</p>
+<p>1 &lt;= nums.length &lt;= 3 * 104
+-3 * 104 &lt;= nums[i] &lt;= 3 * 104
+Each element in the array appears twice except for one element which appears only once.</p>
+<h3>Solution</h3>
+<p>Any number that XOR it self would cancel itself out. So we can go through nums and xor everything</p>
+<h3>Code</h3>
+<div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Leetcode 0136. Single Number</span>
+<span class="sd">Question Link : https://leetcode.com/problems/single-number/</span>
+<span class="sd">Solution Link : https://tofucode.com/posts/leetcode_0136_single-number.html</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">singleNumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        xor</span>
+
+<span class="sd">        Time : O(n)</span>
+<span class="sd">        Space: O(1)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="n">result</span> <span class="o">^=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
   </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://tofucode.com/posts/leetcode_2433_find-the-original-array-of-prefix-xor.html">Leetcode 2433. Find The Original Array of Prefix Xor</a></h2>
+  <div class="tag-cloud">
     <p>
-      Posted on Sun 09 October 2022 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
-
-          &#8226; Tagged with
-              <a href="https://tofucode.com/tag/math.html">math</a>
+      <a href="https://tofucode.com/tag/math.html">math</a>
     </p>
-  </header>
-  <div>
-      <p>Question Link : <a href="https://leetcode.com/problems/find-the-original-array-of-prefix-xor/">https://leetcode.com/problems/find-the-original-array-of-prefix-xor/</a></p>
-<p>Difficulty: Medium</p>
-<h3>Question</h3>
-<p>You are given an integer array pref of size n. Find and return the array arr of size n that satisfies:</p>
-<p>pref[i] = arr[0] ^ arr[1] ^ ... ^ arr[i].</p>
-<p>Note that ^ denotes the bitwise-xor operation.
-It can be proven that …</p>
-        <br>
-        <a class="btn"
-           href="https://tofucode.com/posts/leetcode_2433_find-the-original-array-of-prefix-xor.html">
-          Continue reading
-        </a>
   </div>
-  <hr />
+
+
+
+
+
 </article>
-<article>
-  <header>
-    <h2><a href="https://tofucode.com/posts/leetcode_0462_minimum-moves-to-equal-array-elements-ii.html">Leetcode 0462. Minimum Moves to Equal Array Elements II</a></h2>
-    <p>
-      Posted on Wed 29 June 2022 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
-
-          &#8226; Tagged with
-              <a href="https://tofucode.com/tag/math.html">math</a>
-    </p>
-  </header>
-  <div>
-      <p>Question Link : <a href="https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/">https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/</a></p>
-<p>Difficulty: Medium</p>
-<h3>Question</h3>
-<p>Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.
-In one move, you can increment or decrement an element of the array by 1.
-Test cases are designed …</p>
-        <br>
-        <a class="btn"
-           href="https://tofucode.com/posts/leetcode_0462_minimum-moves-to-equal-array-elements-ii.html">
-          Continue reading
-        </a>
-  </div>
-</article>
-
-  <div class="pagination">
-  </div>
-
-
 
     <footer>
 <p> Eat Tofu and be true </p>
