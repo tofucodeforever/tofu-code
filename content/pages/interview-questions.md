@@ -53,6 +53,7 @@ Status: published
 | 1423 | [Maximum Points You Can Obtain from Cards](https://tofucode.com/posts/leetcode_1423_maximum-points-you-can-obtain-from-cards.html) | sliding-window, array |
 | 1578 | [Minimum Time to Make Rope Colorful](https://tofucode.com/posts/leetcode_1578_minimum-time-to-make-rope-colorful.html) | pointers, array |
 | 1647 | [Minimum Deletions to Make Character Frequencies Unique](https://tofucode.com/posts/leetcode_1647_minimum-deletions-to-make-character-frequencies-unique.html) | hash-map-count |
+| 1662 | [Check If Two String Arrays are Equivalent](https://tofucode.com/posts/leetcode_1662_check-if-two-string-arrays-are-equivalent.html) | string |
 | 1710 | [Maximum Units on a Truck](https://tofucode.com/posts/leetcode_1710_maximum-units-on-a-truck.html) | greedy |
 | 2095 | [Delete the Middle Node of a Linked List](https://tofucode.com/posts/leetcode_2095_delete-the-middle-node-of-a-linked-list.html) | fast-slow-pointer |
 | 2283 | [Check if Number Has Equal Digit Count and Digit Value](https://tofucode.com/posts/leetcode_2283_check-if-number-has-equal-digit-count-and-digit-value.html) | hash-map-count |
