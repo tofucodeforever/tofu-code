@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-10-16T00:00:00-07:00</updated><entry><title>Leetcode 0160. Intersection of Two Linked Lists</title><link href="https://tofucode.com/posts/leetcode_0160_intersection-of-two-linked-lists.html" rel="alternate"></link><published>2022-10-16T00:00:00-07:00</published><updated>2022-10-16T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-10-16:/posts/leetcode_0160_intersection-of-two-linked-lists.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/intersection-of-two-linked-lists/"&gt;https://leetcode.com/problems/intersection-of-two-linked-lists/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-10-24T00:00:00-07:00</updated><entry><title>Leetcode 1662. Check If Two String Arrays are Equivalent</title><link href="https://tofucode.com/posts/leetcode_1662_check-if-two-string-arrays-are-equivalent.html" rel="alternate"></link><published>2022-10-24T00:00:00-07:00</published><updated>2022-10-24T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-10-24:/posts/leetcode_1662_check-if-two-string-arrays-are-equivalent.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/"&gt;https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.
+A string is represented by an array if the array elements concatenated in order forms the string.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/"&gt;https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.
+A string is represented by an array if the array elements concatenated in order forms the string.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: word1 = ["ab", "c"], word2 = ["a", "bc"]
+Output: true
+Explanation:
+word1 represents string "ab" + "c" -&amp;gt; "abc"
+word2 represents string "a" + "bc" -&amp;gt; "abc"
+The strings are the same, so return true.
+Example 2:&lt;/p&gt;
+&lt;p&gt;Input: word1 = ["a", "cb"], word2 = ["ab", "c"]
+Output: false&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: word1  = ["abc", "d", "defg"], word2 = ["abcddefg"]
+Output: true&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= word1.length, word2.length &amp;lt;= 103
+1 &amp;lt;= word1[i].length, word2[i].length &amp;lt;= 103
+1 &amp;lt;= sum(word1[i].length), sum(word2[i].length) &amp;lt;= 103
+word1[i] and word2[i] consist of lowercase letters.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Caculate the 2 words and compare&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 1662. Check If Two String Arrays are Equivalent&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_1662_check-if-two-string-arrays-are-equivalent.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;arrayStringsAreEqual&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;word1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;word2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        calculate w1, w2, compare the 2&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;w1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;w2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;part&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;word1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;w1&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;part&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;part&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;word2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;w2&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;part&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;w1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;w2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="string"></category></entry><entry><title>Leetcode 0160. Intersection of Two Linked Lists</title><link href="https://tofucode.com/posts/leetcode_0160_intersection-of-two-linked-lists.html" rel="alternate"></link><published>2022-10-16T00:00:00-07:00</published><updated>2022-10-16T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-10-16:/posts/leetcode_0160_intersection-of-two-linked-lists.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/intersection-of-two-linked-lists/"&gt;https://leetcode.com/problems/intersection-of-two-linked-lists/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
