@@ -26,6 +26,7 @@ Status: published
 | 0141 | [Linked List Cycle](https://tofucode.com/posts/leetcode_0141_linked-list-cycle.html) | linked-list, fast-slow-pointer |
 | 0160 | [Intersection of Two Linked Lists](https://tofucode.com/posts/leetcode_0160_intersection-of-two-linked-lists.html) | linked-list |
 | 0167 | [Two Sum II - Input Array Is Sorted](https://tofucode.com/posts/leetcode_0167_two-sum-ii-input-array-is-sorted.html) | k-sum |
+| 0169 | [Majority Element](https://tofucode.com/posts/leetcode_0169_majority-element.html) | counting, boyer-moore-voting-algorithm |
 | 0173 | [Binary Search Tree Iterator](https://tofucode.com/posts/leetcode_0173_binary-search-tree-iterator.html) | bst |
 | 0198 | [House Robber](https://tofucode.com/posts/leetcode_0198_house-robber.html) | dp |
 | 0215 | [Kth Largest Element in an Array](https://tofucode.com/posts/leetcode_0215_kth-largest-element-in-an-array.html) | k-most-points, bubble-sort, quick-sort |
