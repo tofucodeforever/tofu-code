@@ -29,6 +29,7 @@ Status: published
 | 0169 | [Majority Element](https://tofucode.com/posts/leetcode_0169_majority-element.html) | counting, boyer-moore-voting-algorithm |
 | 0173 | [Binary Search Tree Iterator](https://tofucode.com/posts/leetcode_0173_binary-search-tree-iterator.html) | bst |
 | 0198 | [House Robber](https://tofucode.com/posts/leetcode_0198_house-robber.html) | dp |
+| 0206 | [Reverse Linked List](https://tofucode.com/posts/leetcode_0206_reverse-linked-list.html) | linked-list |
 | 0215 | [Kth Largest Element in an Array](https://tofucode.com/posts/leetcode_0215_kth-largest-element-in-an-array.html) | k-most-points, bubble-sort, quick-sort |
 | 0226 | [Invert Binary Tree](https://tofucode.com/posts/leetcode_0226_invert-binary-tree.html) | binary-tree-manipulation |
 | 0234 | [Palindrome Linked List](https://tofucode.com/posts/leetcode_0234_palindrome-linked-list.html) | palindrome-center-expansion, fast-slow-pointer |
