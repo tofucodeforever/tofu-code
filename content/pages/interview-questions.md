@@ -62,6 +62,7 @@ Status: published
 | 1662 | [Check If Two String Arrays are Equivalent](https://tofucode.com/posts/leetcode_1662_check-if-two-string-arrays-are-equivalent.html) | string |
 | 1710 | [Maximum Units on a Truck](https://tofucode.com/posts/leetcode_1710_maximum-units-on-a-truck.html) | greedy |
 | 2095 | [Delete the Middle Node of a Linked List](https://tofucode.com/posts/leetcode_2095_delete-the-middle-node-of-a-linked-list.html) | fast-slow-pointer |
+| 2131 | [Longest Palindrome by Concatenating Two Letter Words](https://tofucode.com/posts/leetcode_2131_longest-palindrome-by-concatenating-two-letter-words.html) | palindrome, string |
 | 2283 | [Check if Number Has Equal Digit Count and Digit Value](https://tofucode.com/posts/leetcode_2283_check-if-number-has-equal-digit-count-and-digit-value.html) | hash-map-count |
 | 2284 | [Sender With Largest Word Count](https://tofucode.com/posts/leetcode_2284_sender-with-largest-word-count.html) | hash-map-count |
 | 2287 | [Rearrange Characters to Make Target String](https://tofucode.com/posts/leetcode_2287_rearrange-characters-to-make-target-string.html) | hash-map-count |
