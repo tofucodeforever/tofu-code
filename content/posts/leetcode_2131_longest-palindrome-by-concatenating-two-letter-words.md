@@ -107,7 +107,8 @@ class Solution:
 
         return result
 
-    def longestPalindromeImproved1(self, words: List[str]) -> int:
+class SolutionImproved1:
+    def longestPalindrome(self, words: List[str]) -> int:
         '''
         Do this in one loop: check as we go
         When there is a reverse, just need to -1 for the reverse
