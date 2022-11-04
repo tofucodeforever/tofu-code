@@ -87,8 +87,8 @@ class Solution:
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-class Solution:
-    def isPalindromeNaive1(self, head: Optional[ListNode]) -> bool:
+class SolutionNaive1:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
         '''
         Use a list to store the path of values and check if that list is a palindrome
 
