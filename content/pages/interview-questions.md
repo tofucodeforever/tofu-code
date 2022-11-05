@@ -73,4 +73,5 @@ Status: published
 | 2326 | [Spiral Matrix IV](https://tofucode.com/posts/leetcode_2326_spiral-matrix-iv.html) | spiral-matrix |
 | 2432 | [The Employee That Worked on the Longest Task](https://tofucode.com/posts/leetcode_2432_the-employee-that-worked-on-the-longest-task.html) | array |
 | 2433 | [Find The Original Array of Prefix Xor](https://tofucode.com/posts/leetcode_2433_find-the-original-array-of-prefix-xor.html) | math |
+| 2455 | [Average Value of Even Numbers That Are Divisible by Three](https://tofucode.com/posts/leetcode_2455_average-value-of-even-numbers-that-are-divisible-by-three.html) | math |
 | 0606 | [Construct String from Binary Tree](https://tofucode.com/posts/leetcode_0606_construct-string-from-binary-tree.html) | recursion, binary-tree |
