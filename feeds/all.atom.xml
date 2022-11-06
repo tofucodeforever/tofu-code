@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-11-05T00:00:00-07:00</updated><entry><title>Leetcode 2451. Odd String Difference</title><link href="https://tofucode.com/posts/leetcode_2451_odd-string-difference.html" rel="alternate"></link><published>2022-11-05T00:00:00-07:00</published><updated>2022-11-05T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-05:/posts/leetcode_2451_odd-string-difference.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/odd-string-difference/"&gt;https://leetcode.com/problems/odd-string-difference/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-11-05T00:00:00-07:00</updated><entry><title>Leetcode 2446. Determine if Two Events Have Conflict</title><link href="https://tofucode.com/posts/leetcode_2446_determine-if-two-events-have-conflict.html" rel="alternate"></link><published>2022-11-05T00:00:00-07:00</published><updated>2022-11-05T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-05:/posts/leetcode_2446_determine-if-two-events-have-conflict.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/determine-if-two-events-have-conflict/"&gt;https://leetcode.com/problems/determine-if-two-events-have-conflict/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given two arrays of strings that represent two inclusive events that happened on the same day, event1 and event2, where:&lt;/p&gt;
+&lt;p&gt;event1 = [startTime1, endTime1] and
+event2 = [startTime2, endTime2].&lt;/p&gt;
+&lt;p&gt;Event times are valid 24 hours format in the form of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/determine-if-two-events-have-conflict/"&gt;https://leetcode.com/problems/determine-if-two-events-have-conflict/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given two arrays of strings that represent two inclusive events that happened on the same day, event1 and event2, where:&lt;/p&gt;
+&lt;p&gt;event1 = [startTime1, endTime1] and
+event2 = [startTime2, endTime2].&lt;/p&gt;
+&lt;p&gt;Event times are valid 24 hours format in the form of HH:MM.
+A conflict happens when two events have some non-empty intersection (i.e., some moment is common to both events).
+Return true if there is a conflict between two events. Otherwise, return false.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: event1 = ["01:15","02:00"], event2 = ["02:00","03:00"]
+Output: true
+Explanation: The two events intersect at time 2:00.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: event1 = ["01:00","02:00"], event2 = ["01:20","03:00"]
+Output: true
+Explanation: The two events intersect starting from 01:20 to 02:00.&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: event1 = ["10:00","11:00"], event2 = ["14:00","15:00"]
+Output: false
+Explanation: The two events do not intersect.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;evnet1.length == event2.length == 2.
+event1[i].length == event2[i].length == 5
+startTime1 &amp;lt;= endTime1
+startTime2 &amp;lt;= endTime2
+All the event times follow the HH:MM format.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;The easiest kind of merge interval problem since there are only two intervals. Since the tiems are in 24 hours, string compares work. &lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 2446. Determine if Two Events Have Conflict&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/determine-if-two-events-have-conflict/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_2446_determine-if-two-events-have-conflict.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;haveConflict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;event1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;event2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        Sort first so the first event happens first&lt;/span&gt;
+&lt;span class="sd"&gt;        Only need to check: event1 end time and event2 start time&lt;/span&gt;
+
+&lt;span class="sd"&gt;        There are only 2 events&lt;/span&gt;
+&lt;span class="sd"&gt;        Time : O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;events&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;event1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;event2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+        &lt;span class="n"&gt;end_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;events&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;start_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;events&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;end_time&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;start_time&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="interval"></category></entry><entry><title>Leetcode 2451. Odd String Difference</title><link href="https://tofucode.com/posts/leetcode_2451_odd-string-difference.html" rel="alternate"></link><published>2022-11-05T00:00:00-07:00</published><updated>2022-11-05T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-05:/posts/leetcode_2451_odd-string-difference.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/odd-string-difference/"&gt;https://leetcode.com/problems/odd-string-difference/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;You are given an array of equal-length strings words. Assume that the length of each string is n.
