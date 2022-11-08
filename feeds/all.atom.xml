@@ -1,5 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-11-05T00:00:00-07:00</updated><entry><title>Leetcode 2441. Largest Positive Integer That Exists With Its Negative</title><link href="https://tofucode.com/posts/leetcode_2441_largest-positive-integer-that-exists-with-its-negative.html" rel="alternate"></link><published>2022-11-05T00:00:00-07:00</published><updated>2022-11-05T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-05:/posts/leetcode_2441_largest-positive-integer-that-exists-with-its-negative.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/"&gt;https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-11-07T00:00:00-08:00</updated><entry><title>Leetcode 1544. Make The String Great</title><link href="https://tofucode.com/posts/leetcode_1544_make-the-string-great.html" rel="alternate"></link><published>2022-11-07T00:00:00-08:00</published><updated>2022-11-07T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-07:/posts/leetcode_1544_make-the-string-great.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/make-the-string-great/"&gt;https://leetcode.com/problems/make-the-string-great/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given a string s of lower and upper case English letters.
+A good string is a string which doesn't have two adjacent characters s[i] and s[i + 1] where:&lt;/p&gt;
+&lt;p&gt;0 &amp;lt;= i &amp;lt;= s.length - 2
+s[i] is a lower-case …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/make-the-string-great/"&gt;https://leetcode.com/problems/make-the-string-great/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given a string s of lower and upper case English letters.
+A good string is a string which doesn't have two adjacent characters s[i] and s[i + 1] where:&lt;/p&gt;
+&lt;p&gt;0 &amp;lt;= i &amp;lt;= s.length - 2
+s[i] is a lower-case letter and s[i + 1] is the same letter but in upper-case or vice-versa.&lt;/p&gt;
+&lt;p&gt;To make the string good, you can choose two adjacent characters that make the string bad and remove them. You can keep doing this until the string becomes good.
+Return the string after making it good. The answer is guaranteed to be unique under the given constraints.
+Notice that an empty string is also good.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: s = "leEeetcode"
+Output: "leetcode"
+Explanation: In the first step, either you choose i = 1 or i = 2, both will result "leEeetcode" to be reduced to "leetcode".&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: s = "abBAcC"
+Output: ""
+Explanation: We have many possible scenarios, and all lead to the same answer. For example:
+"abBAcC" --&amp;gt; "aAcC" --&amp;gt; "cC" --&amp;gt; ""
+"abBAcC" --&amp;gt; "abBA" --&amp;gt; "aA" --&amp;gt; ""&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: s = "s"
+Output: "s"&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= s.length &amp;lt;= 100
+s contains only lower and upper case English letters.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Use a stack so we can check back and deviced if a pair needs to be removed.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 1544. Make The String Great&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/make-the-string-great/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_1544_make-the-string-great.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;makeGood&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        abBA&lt;/span&gt;
+&lt;span class="sd"&gt;        if we remove bB,  it will leave aA&lt;/span&gt;
+
+&lt;span class="sd"&gt;        stack like closing prethesis&lt;/span&gt;
+&lt;span class="sd"&gt;        remove when bB, aA, return what&amp;#39;s left&lt;/span&gt;
+&lt;span class="sd"&gt;        for abBAcC:&lt;/span&gt;
+&lt;span class="sd"&gt;        a&lt;/span&gt;
+&lt;span class="sd"&gt;        ab&lt;/span&gt;
+&lt;span class="sd"&gt;        a&lt;/span&gt;
+&lt;span class="sd"&gt;        _&lt;/span&gt;
+&lt;span class="sd"&gt;        c&lt;/span&gt;
+&lt;span class="sd"&gt;        _&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Sapce: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;stack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;stack&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sameCharDiffCase&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                &lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;sameCharDiffCase&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isupper&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isupper&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="stack"></category></entry><entry><title>Leetcode 2441. Largest Positive Integer That Exists With Its Negative</title><link href="https://tofucode.com/posts/leetcode_2441_largest-positive-integer-that-exists-with-its-negative.html" rel="alternate"></link><published>2022-11-05T00:00:00-07:00</published><updated>2022-11-05T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-05:/posts/leetcode_2441_largest-positive-integer-that-exists-with-its-negative.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/"&gt;https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;Given an integer array nums that does not contain any zeros, find the largest positive integer k such that -k also exists in the array.
