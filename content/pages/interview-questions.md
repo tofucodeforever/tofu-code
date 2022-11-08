@@ -79,4 +79,5 @@ Status: published
 | 2451 | [Odd String Difference](https://tofucode.com/posts/leetcode_2451_odd-string-difference.html) | array, counting |
 | 2455 | [Average Value of Even Numbers That Are Divisible by Three](https://tofucode.com/posts/leetcode_2455_average-value-of-even-numbers-that-are-divisible-by-three.html) | math |
 | 2456 | [Most Popular Video Creator](https://tofucode.com/posts/leetcode_2456_most-popular-video-creator.html) | hash-map-count |
+| 2460 | [Apply Operations to an Array](https://tofucode.com/posts/leetcode_2460_apply-operations-to-an-array.html) | two-pointers |
 | 0606 | [Construct String from Binary Tree](https://tofucode.com/posts/leetcode_0606_construct-string-from-binary-tree.html) | recursion, binary-tree |
