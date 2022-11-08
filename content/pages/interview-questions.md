@@ -73,6 +73,7 @@ Status: published
 | 2326 | [Spiral Matrix IV](https://tofucode.com/posts/leetcode_2326_spiral-matrix-iv.html) | spiral-matrix |
 | 2432 | [The Employee That Worked on the Longest Task](https://tofucode.com/posts/leetcode_2432_the-employee-that-worked-on-the-longest-task.html) | array |
 | 2433 | [Find The Original Array of Prefix Xor](https://tofucode.com/posts/leetcode_2433_find-the-original-array-of-prefix-xor.html) | math |
+| 2441 | [Largest Positive Integer That Exists With Its Negative](https://tofucode.com/posts/leetcode_2441_largest-positive-integer-that-exists-with-its-negative.html) | two-pointers |
 | 2446 | [Determine if Two Events Have Conflict](https://tofucode.com/posts/leetcode_2446_determine-if-two-events-have-conflict.html) | interval |
 | 2451 | [Odd String Difference](https://tofucode.com/posts/leetcode_2451_odd-string-difference.html) | array, counting |
 | 2455 | [Average Value of Even Numbers That Are Divisible by Three](https://tofucode.com/posts/leetcode_2455_average-value-of-even-numbers-that-are-divisible-by-three.html) | math |
