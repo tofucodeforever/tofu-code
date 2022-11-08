@@ -59,6 +59,7 @@ Status: published
 | 0991 | [Broken Calculator](https://tofucode.com/posts/leetcode_0991_broken-calculator.html) | reverse-thinking, puzzle |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://tofucode.com/posts/leetcode_1249_minimum-remove-to-make-valid-parentheses.html) | stack, parentheses |
 | 1423 | [Maximum Points You Can Obtain from Cards](https://tofucode.com/posts/leetcode_1423_maximum-points-you-can-obtain-from-cards.html) | sliding-window, array |
+| 1544 | [Make The String Great](https://tofucode.com/posts/leetcode_1544_make-the-string-great.html) | stack |
 | 1578 | [Minimum Time to Make Rope Colorful](https://tofucode.com/posts/leetcode_1578_minimum-time-to-make-rope-colorful.html) | pointers, array |
 | 1647 | [Minimum Deletions to Make Character Frequencies Unique](https://tofucode.com/posts/leetcode_1647_minimum-deletions-to-make-character-frequencies-unique.html) | hash-map-count |
 | 1662 | [Check If Two String Arrays are Equivalent](https://tofucode.com/posts/leetcode_1662_check-if-two-string-arrays-are-equivalent.html) | string |
