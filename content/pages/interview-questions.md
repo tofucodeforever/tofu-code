@@ -55,6 +55,7 @@ Status: published
 | 0799 | [Champagne Tower](https://tofucode.com/posts/leetcode_0799_champagne-tower.html) | simulation |
 | 0881 | [Boats to Save People](https://tofucode.com/posts/leetcode_0881_boats-to-save-people.html) | two-pointers, greedy |
 | 0897 | [Increasing Order Search Tree](https://tofucode.com/posts/leetcode_0897_increasing-order-search-tree.html) | bst |
+| 0901 | [Online Stock Span](https://tofucode.com/posts/leetcode_0901_online-stock-span.html) | monotonic-stack |
 | 0946 | [Validate Stack Sequences](https://tofucode.com/posts/leetcode_0946_validate-stack-sequences.html) | stack, simulation, greedy |
 | 0991 | [Broken Calculator](https://tofucode.com/posts/leetcode_0991_broken-calculator.html) | reverse-thinking, puzzle |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://tofucode.com/posts/leetcode_1249_minimum-remove-to-make-valid-parentheses.html) | stack, parentheses |
