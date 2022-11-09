@@ -80,7 +80,54 @@ At most 104 calls will be made to next.&lt;/p&gt;
 &lt;span class="c1"&gt;# Your StockSpanner object will be instantiated and called as such:&lt;/span&gt;
 &lt;span class="c1"&gt;# obj = StockSpanner()&lt;/span&gt;
 &lt;span class="c1"&gt;# param_1 = obj.next(price)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="monotonic-stack"></category></entry><entry><title>Leetcode 2437. Number of Valid Clock Times</title><link href="https://tofucode.com/posts/leetcode_2437_number-of-valid-clock-times.html" rel="alternate"></link><published>2022-11-08T00:00:00-08:00</published><updated>2022-11-08T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-08:/posts/leetcode_2437_number-of-valid-clock-times.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/number-of-valid-clock-times/"&gt;https://leetcode.com/problems/number-of-valid-clock-times/&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="monotonic-stack"></category></entry><entry><title>Leetcode 2427. Number of Common Factors</title><link href="https://tofucode.com/posts/leetcode_2427_number-of-common-factors.html" rel="alternate"></link><published>2022-11-08T00:00:00-08:00</published><updated>2022-11-08T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-08:/posts/leetcode_2427_number-of-common-factors.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/number-of-common-factors/"&gt;https://leetcode.com/problems/number-of-common-factors/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given two positive integers a and b, return the number of common factors of a and b.
+An integer x is a common factor of a and b if x divides both a and b.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: a = 12 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/number-of-common-factors/"&gt;https://leetcode.com/problems/number-of-common-factors/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given two positive integers a and b, return the number of common factors of a and b.
+An integer x is a common factor of a and b if x divides both a and b.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: a = 12, b = 6
+Output: 4
+Explanation: The common factors of 12 and 6 are 1, 2, 3, 6.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: a = 25, b = 30
+Output: 2
+Explanation: The common factors of 25 and 30 are 1, 5.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= a, b &amp;lt;= 1000&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Check from 1 to the smallest number.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 2427. Number of Common Factors&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/number-of-common-factors/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_2427_number-of-common-factors.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;commonFactors&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        for loop 1 to min(a,b) and count&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;min&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="math"></category></entry><entry><title>Leetcode 2437. Number of Valid Clock Times</title><link href="https://tofucode.com/posts/leetcode_2437_number-of-valid-clock-times.html" rel="alternate"></link><published>2022-11-08T00:00:00-08:00</published><updated>2022-11-08T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-08:/posts/leetcode_2437_number-of-valid-clock-times.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/number-of-valid-clock-times/"&gt;https://leetcode.com/problems/number-of-valid-clock-times/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;You are given a string of length 5 called time, representing the current time on a digital clock in the format "hh:mm". The earliest possible time is "00:00" and the latest possible time is "23:59".
