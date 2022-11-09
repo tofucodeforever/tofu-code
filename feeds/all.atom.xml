@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-11-08T00:00:00-08:00</updated><entry><title>Leetcode 0901. Online Stock Span</title><link href="https://tofucode.com/posts/leetcode_0901_online-stock-span.html" rel="alternate"></link><published>2022-11-08T00:00:00-08:00</published><updated>2022-11-08T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-08:/posts/leetcode_0901_online-stock-span.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/online-stock-span/"&gt;https://leetcode.com/problems/online-stock-span/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-11-09T00:00:00-08:00</updated><entry><title>Leetcode 2404. Most Frequent Even Element</title><link href="https://tofucode.com/posts/leetcode_2404_most-frequent-even-element.html" rel="alternate"></link><published>2022-11-09T00:00:00-08:00</published><updated>2022-11-09T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-09:/posts/leetcode_2404_most-frequent-even-element.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/most-frequent-even-element/"&gt;https://leetcode.com/problems/most-frequent-even-element/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given an integer array nums, return the most frequent even element.
+If there is a tie, return the smallest one. If there is no such element, return -1.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: nums = [0,1,2,2,4,4,1]
+Output …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/most-frequent-even-element/"&gt;https://leetcode.com/problems/most-frequent-even-element/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given an integer array nums, return the most frequent even element.
+If there is a tie, return the smallest one. If there is no such element, return -1.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: nums = [0,1,2,2,4,4,1]
+Output: 2
+Explanation:
+The even elements are 0, 2, and 4. Of these, 2 and 4 appear the most.
+We return the smallest one, which is 2.
+Example 2:&lt;/p&gt;
+&lt;p&gt;Input: nums = [4,4,4,9,2,4]
+Output: 4
+Explanation: 4 is the even element appears the most.&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: nums = [29,47,21,41,13,37,25,7]
+Output: -1
+Explanation: There is no even element.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= nums.length &amp;lt;= 2000
+0 &amp;lt;= nums[i] &amp;lt;= 105&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Count and a sort.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 2404. Most Frequent Even Element&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/most-frequent-even-element/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_2404_most-frequent-even-element.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;mostFrequentEven&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        dict of even num -&amp;gt; count&lt;/span&gt;
+&lt;span class="sd"&gt;        sort by count, return smallest num&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;counts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; &lt;span class="c1"&gt;# even num -&amp;gt; count&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;counts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;counts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;counts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# most count, smallest num: sort by reversed count, than the number itself&lt;/span&gt;
+        &lt;span class="n"&gt;sorted_nums&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;counts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;sorted_nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="hash-map-count"></category></entry><entry><title>Leetcode 0901. Online Stock Span</title><link href="https://tofucode.com/posts/leetcode_0901_online-stock-span.html" rel="alternate"></link><published>2022-11-08T00:00:00-08:00</published><updated>2022-11-08T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-08:/posts/leetcode_0901_online-stock-span.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/online-stock-span/"&gt;https://leetcode.com/problems/online-stock-span/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;Design an algorithm that collects daily price quotes for some stock and returns the span of that stock's price for the current day.
