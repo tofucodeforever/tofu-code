@@ -1,5 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-11-08T00:00:00-08:00</updated><entry><title>Leetcode 2460. Apply Operations to an Array</title><link href="https://tofucode.com/posts/leetcode_2460_apply-operations-to-an-array.html" rel="alternate"></link><published>2022-11-08T00:00:00-08:00</published><updated>2022-11-08T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-08:/posts/leetcode_2460_apply-operations-to-an-array.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/apply-operations-to-an-array/"&gt;https://leetcode.com/problems/apply-operations-to-an-array/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-11-08T00:00:00-08:00</updated><entry><title>Leetcode 0901. Online Stock Span</title><link href="https://tofucode.com/posts/leetcode_0901_online-stock-span.html" rel="alternate"></link><published>2022-11-08T00:00:00-08:00</published><updated>2022-11-08T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-08:/posts/leetcode_0901_online-stock-span.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/online-stock-span/"&gt;https://leetcode.com/problems/online-stock-span/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Design an algorithm that collects daily price quotes for some stock and returns the span of that stock's price for the current day.
+The span of the stock's price today is defined as the maximum number of consecutive days (starting …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/online-stock-span/"&gt;https://leetcode.com/problems/online-stock-span/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Design an algorithm that collects daily price quotes for some stock and returns the span of that stock's price for the current day.
+The span of the stock's price today is defined as the maximum number of consecutive days (starting from today and going backward) for which the stock price was less than or equal to today's price.&lt;/p&gt;
+&lt;p&gt;For example, if the price of a stock over the next 7 days were [100,80,60,70,60,75,85], then the stock spans would be [1,1,1,2,1,4,6].&lt;/p&gt;
+&lt;p&gt;Implement the StockSpanner class:&lt;/p&gt;
+&lt;p&gt;StockSpanner() Initializes the object of the class.
+int next(int price) Returns the span of the stock's price given that today's price is price.&lt;/p&gt;
+&lt;p&gt;Example 1:&lt;/p&gt;
+&lt;p&gt;Input
+["StockSpanner", "next", "next", "next", "next", "next", "next", "next"]
+[[], [100], [80], [60], [70], [60], [75], [85]]
+Output
+[null, 1, 1, 1, 2, 1, 4, 6]&lt;/p&gt;
+&lt;p&gt;Explanation
+StockSpanner stockSpanner = new StockSpanner();
+stockSpanner.next(100); // return 1
+stockSpanner.next(80);  // return 1
+stockSpanner.next(60);  // return 1
+stockSpanner.next(70);  // return 2
+stockSpanner.next(60);  // return 1
+stockSpanner.next(75);  // return 4, because the last 4 prices (including today's price of 75) were less than or equal to today's price.
+stockSpanner.next(85);  // return 6&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= price &amp;lt;= 105
+At most 104 calls will be made to next.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Since we need to keep checking back, we can use a stack, we also need to store how many smaller prices before are seen at each price, so we can use a tuple. Here we have a monotonic stack that is decreasing in price, and with each price, we store the span.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0901. Online Stock Span&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/online-stock-span/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0901_online-stock-span.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;StockSpanner&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;    1: 100&lt;/span&gt;
+&lt;span class="sd"&gt;    1: 100 80&lt;/span&gt;
+&lt;span class="sd"&gt;    1: 100 80 60&lt;/span&gt;
+&lt;span class="sd"&gt;    2: 100 80 60 70 (60 and 70)&lt;/span&gt;
+&lt;span class="sd"&gt;    1: 100 80 60 70 60&lt;/span&gt;
+&lt;span class="sd"&gt;    4: 100 80 60 70 60 75 (60 70 60 75)&lt;/span&gt;
+
+&lt;span class="sd"&gt;    stack keep checking back [(price, span count)]&lt;/span&gt;
+&lt;span class="sd"&gt;    remove all that are smaller than the current price and add +1&lt;/span&gt;
+&lt;span class="sd"&gt;    monotonic decreasing stack&lt;/span&gt;
+
+&lt;span class="sd"&gt;    1: (100, 1)&lt;/span&gt;
+&lt;span class="sd"&gt;    1: (100, 1), (80, 1)&lt;/span&gt;
+&lt;span class="sd"&gt;    1: (100, 1), (80, 1), (60, 1)&lt;/span&gt;
+&lt;span class="sd"&gt;    2: (100, 1), (80, 1), (70, 2)&lt;/span&gt;
+&lt;span class="sd"&gt;    1: (100, 1), (80, 1), (70, 2), (60, 1)&lt;/span&gt;
+&lt;span class="sd"&gt;    4: (100, 1), (80, 1), (75, 4)  4 is: (2 + 1 + 1)&lt;/span&gt;
+
+
+&lt;span class="sd"&gt;    Time : O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;    Space: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;next&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;price&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;price&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;()[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;price&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# Your StockSpanner object will be instantiated and called as such:&lt;/span&gt;
+&lt;span class="c1"&gt;# obj = StockSpanner()&lt;/span&gt;
+&lt;span class="c1"&gt;# param_1 = obj.next(price)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="monotonic-stack"></category></entry><entry><title>Leetcode 2460. Apply Operations to an Array</title><link href="https://tofucode.com/posts/leetcode_2460_apply-operations-to-an-array.html" rel="alternate"></link><published>2022-11-08T00:00:00-08:00</published><updated>2022-11-08T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-08:/posts/leetcode_2460_apply-operations-to-an-array.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/apply-operations-to-an-array/"&gt;https://leetcode.com/problems/apply-operations-to-an-array/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;You are given a 0-indexed array nums of size n consisting of non-negative integers.
