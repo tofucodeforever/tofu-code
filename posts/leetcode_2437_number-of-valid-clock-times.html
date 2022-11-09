@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://tofucode.com/theme/pygments/monokai.min.css">
+
+    <script src="https://tofucode.com/theme/tipuesearch/jquery.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="https://tofucode.com/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="https://tofucode.com/theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://tofucode.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="TofuCode Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'G-DCBDZPQQD1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Zeph" />
+<meta name="description" content="Question Link : https://leetcode.com/problems/number-of-valid-clock-times/ Difficulty: Easy Question You are given a string of length 5 called time, representing the current time on a digital clock in the format &#34;hh:mm&#34;. The earliest possible time is &#34;00:00&#34; and the latest possible time is &#34;23:59&#34;. In the …" />
+<meta name="keywords" content="simulation">
+
+
+<meta property="og:site_name" content="TofuCode"/>
+<meta property="og:title" content="Leetcode 2437. Number of Valid Clock Times"/>
+<meta property="og:description" content="Question Link : https://leetcode.com/problems/number-of-valid-clock-times/ Difficulty: Easy Question You are given a string of length 5 called time, representing the current time on a digital clock in the format &#34;hh:mm&#34;. The earliest possible time is &#34;00:00&#34; and the latest possible time is &#34;23:59&#34;. In the …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://tofucode.com/posts/leetcode_2437_number-of-valid-clock-times.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-11-08 00:00:00-08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://tofucode.com/author/zeph.html">
+<meta property="article:section" content="Leetcode"/>
+<meta property="article:tag" content="simulation"/>
+<meta property="og:image" content="">
+
+  <title>TofuCode &ndash; Leetcode 2437. Number of Valid Clock Times</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://tofucode.com">
+        <img src="https://tofucode.com/theme/img/profile.png" alt="TofuCode" title="TofuCode">
+      </a>
+
+      <h1>
+        <a href="https://tofucode.com">TofuCode</a>
+      </h1>
+
+      
+      <ul class="list social">
+      </ul>
+
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="/pages/interview-questions.html" >Interview Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/category/leetcode.html" >Recent Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/tags.html" >Tags</a>
+            </li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="leetcode_2437_number-of-valid-clock-times">Leetcode 2437. Number of Valid Clock Times</h1>
+    <p>
+      Posted on Tue 08 November 2022 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Question Link : <a href="https://leetcode.com/problems/number-of-valid-clock-times/">https://leetcode.com/problems/number-of-valid-clock-times/</a></p>
+<p>Difficulty: Easy</p>
+<h3>Question</h3>
+<p>You are given a string of length 5 called time, representing the current time on a digital clock in the format "hh:mm". The earliest possible time is "00:00" and the latest possible time is "23:59".
+In the string time, the digits represented by the ? symbol are unknown, and must be replaced with a digit from 0 to 9.
+Return an integer answer, the number of valid clock times that can be created by replacing every ? with a digit from 0 to 9.
+ 
+Example 1:</p>
+<p>Input: time = "?5:00"
+Output: 2
+Explanation: We can replace the ? with either a 0 or 1, producing "05:00" or "15:00". Note that we cannot replace it with a 2, since the time "25:00" is invalid. In total, we have two choices.</p>
+<p>Example 2:</p>
+<p>Input: time = "0?:0?"
+Output: 100
+Explanation: Each ? can be replaced by any digit from 0 to 9, so we have 100 total choices.</p>
+<p>Example 3:</p>
+<p>Input: time = "??:??"
+Output: 1440
+Explanation: There are 24 possible choices for the hours, and 60 possible choices for the minutes. In total, we have 24 * 60 = 1440 choices.</p>
+<p>Constraints:</p>
+<p>time is a valid string of length 5 in the format "hh:mm".
+"00" &lt;= hh &lt;= "23"
+"00" &lt;= mm &lt;= "59"
+Some of the digits might be replaced with '?' and need to be replaced with digits from 0 to 9.</p>
+<h3>Solution</h3>
+<p>Each digit can be a question mark, but each digit has different restriction, we can analyze the different cases, and the result would be the mutiplicqtion of all ?s.</p>
+<h3>Code</h3>
+<div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Leetcode 2437. Number of Valid Clock Times</span>
+<span class="sd">Question Link : https://leetcode.com/problems/number-of-valid-clock-times/</span>
+<span class="sd">Solution Link : https://tofucode.com/posts/leetcode_2437_number-of-valid-clock-times.html</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">countTime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        ab:cd</span>
+
+<span class="sd">        Restriction on a b, how many valid number each place can have</span>
+<span class="sd">        1. a is 0 or 1, b can be all 10 numbers</span>
+<span class="sd">        a: 2 (0 1)</span>
+<span class="sd">        b: 10 (0-9)</span>
+<span class="sd">        c: 6 (0-5)</span>
+<span class="sd">        d: 10 (0-9)</span>
+
+
+<span class="sd">        2. a is 2, b has to be &lt; 4</span>
+<span class="sd">        a: is 2</span>
+<span class="sd">        b: 4 (0 1 2 3)</span>
+<span class="sd">        cd same</span>
+
+<span class="sd">        Time : O(1)</span>
+<span class="sd">        Space: O(1)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">time</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">time</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">time</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="s1">&#39;?&#39;</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="s1">&#39;?&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">*=</span> <span class="mi">24</span>
+        <span class="k">elif</span> <span class="n">a</span> <span class="o">==</span> <span class="s1">&#39;?&#39;</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">!=</span> <span class="s1">&#39;?&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">*=</span> <span class="mi">2</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">*=</span> <span class="mi">3</span>
+        <span class="k">elif</span> <span class="n">a</span> <span class="o">!=</span> <span class="s1">&#39;?&#39;</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="s1">&#39;?&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">*=</span> <span class="mi">4</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">*=</span> <span class="mi">10</span>
+
+        <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39;?&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">*=</span> <span class="mi">6</span>
+        <span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="s1">&#39;?&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">*=</span> <span class="mi">10</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://tofucode.com/tag/simulation.html">simulation</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p> Eat Tofu and be true </p>
+<p>&copy; 2022 TofuCode.com</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " TofuCode ",
+  "url" : "https://tofucode.com",
+  "image": "",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>
