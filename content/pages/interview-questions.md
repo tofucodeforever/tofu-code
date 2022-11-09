@@ -73,6 +73,7 @@ Status: published
 | 2293 | [Min Max Game](https://tofucode.com/posts/leetcode_2293_min-max-game.html) | recursion, simulation |
 | 2294 | [Partition Array Such That Maximum Difference Is K](https://tofucode.com/posts/leetcode_2294_partition-array-such-that-maximum-difference-is-k.html) | array |
 | 2326 | [Spiral Matrix IV](https://tofucode.com/posts/leetcode_2326_spiral-matrix-iv.html) | spiral-matrix |
+| 2427 | [Number of Common Factors](https://tofucode.com/posts/leetcode_2427_number-of-common-factors.html) | math |
 | 2432 | [The Employee That Worked on the Longest Task](https://tofucode.com/posts/leetcode_2432_the-employee-that-worked-on-the-longest-task.html) | array |
 | 2433 | [Find The Original Array of Prefix Xor](https://tofucode.com/posts/leetcode_2433_find-the-original-array-of-prefix-xor.html) | math |
 | 2437 | [Number of Valid Clock Times](https://tofucode.com/posts/leetcode_2437_number-of-valid-clock-times.html) | simulation |
