@@ -60,7 +60,58 @@ Explanation: There is no even element.&lt;/p&gt;
         &lt;span class="n"&gt;sorted_nums&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;counts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
 
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;sorted_nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="hash-map-count"></category></entry><entry><title>Leetcode 0901. Online Stock Span</title><link href="https://tofucode.com/posts/leetcode_0901_online-stock-span.html" rel="alternate"></link><published>2022-11-08T00:00:00-08:00</published><updated>2022-11-08T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-08:/posts/leetcode_0901_online-stock-span.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/online-stock-span/"&gt;https://leetcode.com/problems/online-stock-span/&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="hash-map-count"></category></entry><entry><title>Leetcode 2413. Smallest Even Multiple</title><link href="https://tofucode.com/posts/leetcode_2413_smallest-even-multiple.html" rel="alternate"></link><published>2022-11-09T00:00:00-08:00</published><updated>2022-11-09T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-09:/posts/leetcode_2413_smallest-even-multiple.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/smallest-even-multiple/"&gt;https://leetcode.com/problems/smallest-even-multiple/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given a positive integer n, return the smallest positive integer that is a multiple of both 2 and n.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: n = 5
+Output: 10
+Explanation: The smallest multiple of both 5 and 2 is 10.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/smallest-even-multiple/"&gt;https://leetcode.com/problems/smallest-even-multiple/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given a positive integer n, return the smallest positive integer that is a multiple of both 2 and n.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: n = 5
+Output: 10
+Explanation: The smallest multiple of both 5 and 2 is 10.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: n = 6
+Output: 6
+Explanation: The smallest multiple of both 6 and 2 is 6. Note that a number is a multiple of itself.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= n &amp;lt;= 150&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Think about the differnt cases, and find the common pattern for n.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 2413. Smallest Even Multiple&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/smallest-even-multiple/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_2413_smallest-even-multiple.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;smallestEvenMultiple&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        1,2 : return 2&lt;/span&gt;
+&lt;span class="sd"&gt;        n % 2 == 0 return n&lt;/span&gt;
+&lt;span class="sd"&gt;        else return n * 2 - always even&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="math"></category></entry><entry><title>Leetcode 0901. Online Stock Span</title><link href="https://tofucode.com/posts/leetcode_0901_online-stock-span.html" rel="alternate"></link><published>2022-11-08T00:00:00-08:00</published><updated>2022-11-08T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-08:/posts/leetcode_0901_online-stock-span.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/online-stock-span/"&gt;https://leetcode.com/problems/online-stock-span/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;Design an algorithm that collects daily price quotes for some stock and returns the span of that stock's price for the current day.
