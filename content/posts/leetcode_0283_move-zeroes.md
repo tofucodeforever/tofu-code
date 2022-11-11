@@ -3,7 +3,7 @@ Slug: leetcode_0283_move-zeroes
 Status: published
 Date: 2022-11-03
 Category: Leetcode
-Tags: two-pointers
+Tags: array-shift, two-pointers
 Author: Zeph
 
 Question Link : [https://leetcode.com/problems/move-zeroes/](https://leetcode.com/problems/move-zeroes/)
