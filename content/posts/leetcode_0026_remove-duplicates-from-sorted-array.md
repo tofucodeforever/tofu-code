@@ -3,7 +3,7 @@ Slug: leetcode_0026_remove-duplicates-from-sorted-array
 Status: published
 Date: 2022-11-11
 Category: Leetcode
-Tags: array-shift
+Tags: array-shift, two-pointers
 Author: Zeph
 
 Question Link : [https://leetcode.com/problems/remove-duplicates-from-sorted-array/](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
