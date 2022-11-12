@@ -1,5 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-11-11T00:00:00-08:00</updated><entry><title>Leetcode 0026. Remove Duplicates from Sorted Array</title><link href="https://tofucode.com/posts/leetcode_0026_remove-duplicates-from-sorted-array.html" rel="alternate"></link><published>2022-11-11T00:00:00-08:00</published><updated>2022-11-11T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-11:/posts/leetcode_0026_remove-duplicates-from-sorted-array.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/"&gt;https://leetcode.com/problems/remove-duplicates-from-sorted-array/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-11-12T00:00:00-08:00</updated><entry><title>Leetcode 1094. Car Pooling</title><link href="https://tofucode.com/posts/leetcode_1094_car-pooling.html" rel="alternate"></link><published>2022-11-12T00:00:00-08:00</published><updated>2022-11-12T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-12:/posts/leetcode_1094_car-pooling.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/car-pooling/"&gt;https://leetcode.com/problems/car-pooling/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;There is a car with capacity empty seats. The vehicle only drives east (i.e., it cannot turn around and drive west).
+You are given the integer capacity and an array trips where trips[i] = [numPassengersi, fromi, toi] indicates that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/car-pooling/"&gt;https://leetcode.com/problems/car-pooling/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;There is a car with capacity empty seats. The vehicle only drives east (i.e., it cannot turn around and drive west).
+You are given the integer capacity and an array trips where trips[i] = [numPassengersi, fromi, toi] indicates that the ith trip has numPassengersi passengers and the locations to pick them up and drop them off are fromi and toi respectively. The locations are given as the number of kilometers due east from the car's initial location.
+Return true if it is possible to pick up and drop off all passengers for all the given trips, or false otherwise.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: trips = [[2,1,5],[3,3,7]], capacity = 4
+Output: false&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: trips = [[2,1,5],[3,3,7]], capacity = 5
+Output: true&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= trips.length &amp;lt;= 1000
+trips[i].length == 3
+1 &amp;lt;= numPassengersi &amp;lt;= 100
+0 &amp;lt;= fromi &amp;lt; toi &amp;lt;= 1000
+1 &amp;lt;= capacity &amp;lt;= 105&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Use a dict or an array to track what the passenger count is at every point, and then whenever that exceeds the capacity, we return False.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 1094. Car Pooling&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/car-pooling/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_1094_car-pooling.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;carPooling&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;trips&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;]],&lt;/span&gt; &lt;span class="n"&gt;capacity&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        location -&amp;gt; count&lt;/span&gt;
+&lt;span class="sd"&gt;        check through every locaiton needs to be &amp;lt; capacity&lt;/span&gt;
+
+&lt;span class="sd"&gt;        [2,1,5], passengers, from, to&lt;/span&gt;
+&lt;span class="sd"&gt;        1 -&amp;gt; 2&lt;/span&gt;
+&lt;span class="sd"&gt;        2 -&amp;gt; 2&lt;/span&gt;
+&lt;span class="sd"&gt;        3 -&amp;gt; 2 + 3&lt;/span&gt;
+&lt;span class="sd"&gt;        4 -&amp;gt; 2 + 3&lt;/span&gt;
+&lt;span class="sd"&gt;        5 -&amp;gt; 2 + 3&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(1000 * 1000) every trip goes full length&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1000)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; &lt;span class="c1"&gt;# location -&amp;gt; passenger count&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;trip&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;trips&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;end&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;trip&lt;/span&gt;
+            &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;end&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                &lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;capacity&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="interval-overlap"></category></entry><entry><title>Leetcode 0026. Remove Duplicates from Sorted Array</title><link href="https://tofucode.com/posts/leetcode_0026_remove-duplicates-from-sorted-array.html" rel="alternate"></link><published>2022-11-11T00:00:00-08:00</published><updated>2022-11-11T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-11:/posts/leetcode_0026_remove-duplicates-from-sorted-array.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/"&gt;https://leetcode.com/problems/remove-duplicates-from-sorted-array/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
