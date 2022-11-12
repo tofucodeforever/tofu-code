@@ -73,7 +73,61 @@ nums is sorted in non-decreasing order.&lt;/p&gt;
                 &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
                 &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="array-shift"></category><category term="two-pointers"></category></entry><entry><title>Leetcode 2414. Length of the Longest Alphabetical Continuous Substring</title><link href="https://tofucode.com/posts/leetcode_2414_length-of-the-longest-alphabetical-continuous-substring.html" rel="alternate"></link><published>2022-11-10T00:00:00-08:00</published><updated>2022-11-10T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-10:/posts/leetcode_2414_length-of-the-longest-alphabetical-continuous-substring.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/length-of-the-longest-alphabetical-continuous-substring/"&gt;https://leetcode.com/problems/length-of-the-longest-alphabetical-continuous-substring/&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="array-shift"></category><category term="two-pointers"></category></entry><entry><title>Leetcode 2418. Sort the People</title><link href="https://tofucode.com/posts/leetcode_2418_sort-the-people.html" rel="alternate"></link><published>2022-11-11T00:00:00-08:00</published><updated>2022-11-11T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-11:/posts/leetcode_2418_sort-the-people.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/sort-the-people/"&gt;https://leetcode.com/problems/sort-the-people/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given an array of strings names, and an array heights that consists of distinct positive integers. Both arrays are of length n.
+For each index i, names[i] and heights[i] denote the name and height of the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/sort-the-people/"&gt;https://leetcode.com/problems/sort-the-people/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given an array of strings names, and an array heights that consists of distinct positive integers. Both arrays are of length n.
+For each index i, names[i] and heights[i] denote the name and height of the ith person.
+Return names sorted in descending order by the people's heights.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: names = ["Mary","John","Emma"], heights = [180,165,170]
+Output: ["Mary","Emma","John"]
+Explanation: Mary is the tallest, followed by Emma and John.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: names = ["Alice","Bob","Bob"], heights = [155,185,150]
+Output: ["Bob","Alice","Bob"]
+Explanation: The first Bob is the tallest, followed by Alice and the second Bob.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;n == names.length == heights.length
+1 &amp;lt;= n &amp;lt;= 103
+1 &amp;lt;= names[i].length &amp;lt;= 20
+1 &amp;lt;= heights[i] &amp;lt;= 105
+names[i] consists of lower and upper case English letters.
+All the values of heights are distinct.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Use a hashmap to map height to name, and sort by height.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 2418. Sort the People&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/sort-the-people/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_2418_sort-the-people.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;sortPeople&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;heights&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        height is distinct&lt;/span&gt;
+&lt;span class="sd"&gt;        people = {} # height -&amp;gt; name&lt;/span&gt;
+&lt;span class="sd"&gt;        sort based on key, return name&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;people&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; &lt;span class="c1"&gt;# height -&amp;gt; name&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+            &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+            &lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;heights&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+            &lt;span class="n"&gt;people&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;
+
+        &lt;span class="n"&gt;sorted_people&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;people&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;reverse&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sorted_people&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="hash-map"></category></entry><entry><title>Leetcode 2414. Length of the Longest Alphabetical Continuous Substring</title><link href="https://tofucode.com/posts/leetcode_2414_length-of-the-longest-alphabetical-continuous-substring.html" rel="alternate"></link><published>2022-11-10T00:00:00-08:00</published><updated>2022-11-10T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-10:/posts/leetcode_2414_length-of-the-longest-alphabetical-continuous-substring.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/length-of-the-longest-alphabetical-continuous-substring/"&gt;https://leetcode.com/problems/length-of-the-longest-alphabetical-continuous-substring/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;An alphabetical continuous string is a string consisting of consecutive letters in the alphabet. In other words, it is any substring of the string "abcdefghijklmnopqrstuvwxyz".&lt;/p&gt;
