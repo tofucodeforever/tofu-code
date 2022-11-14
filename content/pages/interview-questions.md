@@ -46,7 +46,7 @@ Status: published
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp |
 | 0452 | [Minimum Number of Arrows to Burst Balloons](https://tofucode.com/posts/leetcode_0452_minimum-number-of-arrows-to-burst-balloons.html) | interval-merge |
 | 0462 | [Minimum Moves to Equal Array Elements II](https://tofucode.com/posts/leetcode_0462_minimum-moves-to-equal-array-elements-ii.html) | math |
-| 0495 | [Teemo Attacking](https://tofucode.com/posts/leetcode_0495_teemo-attacking.html) | interval-merge, simulation |
+| 0495 | [Teemo Attacking](https://tofucode.com/posts/leetcode_0495_teemo-attacking.html) | greedy, interval-merge, simulation |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion |
 | 0543 | [Diameter of Binary Tree](https://tofucode.com/posts/leetcode_0543_diameter-of-binary-tree.html) | binary-tree-traversal |
 | 0623 | [Add One Row to Tree](https://tofucode.com/posts/leetcode_0623_add-one-row-to-tree.html) | binary-tree-manipulation, dfs |

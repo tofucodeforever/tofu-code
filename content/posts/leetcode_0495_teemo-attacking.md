@@ -3,7 +3,7 @@ Slug: leetcode_0495_teemo-attacking
 Status: published
 Date: 2022-11-13
 Category: Leetcode
-Tags: interval-merge, simulation
+Tags: greedy, interval-merge, simulation
 Author: Zeph
 
 Question Link : [https://leetcode.com/problems/teemo-attacking/](https://leetcode.com/problems/teemo-attacking/)
@@ -68,5 +68,31 @@ class Solution:
         for i in range(len(timeSeries)-1):
             result += min(timeSeries[i+1] - timeSeries[i], duration)
         return result + duration
+
+class SolutionAlternative1:
+    def findPoisonedDuration(self, timeSeries: List[int], duration: int) -> int:
+        '''
+        merge intervals, result is sum of all interval length
+
+        Time : O(n)
+        Space: O(n)
+        '''
+        if not timeSeries or not duration:
+            return 0
+        intervals = [[t, t+duration] for t in timeSeries]
+        result = []
+
+        for interval in intervals:
+            if not result:
+                result.append(interval)
+            last = result[-1]
+            if interval[0] < last[1]:
+                result.pop()
+                result.append([last[0], max(last[1], interval[1])])
+            else:
+                result.append(interval)
+
+        d = [x[1]-x[0] for x in result]
+        return sum(d)
 ```
 
