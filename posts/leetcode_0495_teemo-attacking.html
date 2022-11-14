@@ -47,7 +47,7 @@
 
 <meta name="author" content="Zeph" />
 <meta name="description" content="Question Link : https://leetcode.com/problems/teemo-attacking/ Difficulty: Easy Question Our hero Teemo is attacking an enemy Ashe with poison attacks! When Teemo attacks Ashe, Ashe gets poisoned for a exactly duration seconds. More formally, an attack at second t will mean Ashe is poisoned during the inclusive time interval …" />
-<meta name="keywords" content="interval-merge, simulation">
+<meta name="keywords" content="greedy, interval-merge, simulation">
 
 
 <meta property="og:site_name" content="TofuCode"/>
@@ -60,6 +60,7 @@
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://tofucode.com/author/zeph.html">
 <meta property="article:section" content="Leetcode"/>
+<meta property="article:tag" content="greedy"/>
 <meta property="article:tag" content="interval-merge"/>
 <meta property="article:tag" content="simulation"/>
 <meta property="og:image" content="">
@@ -172,10 +173,37 @@ timeSeries is sorted in non-decreasing order.</p>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">timeSeries</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
             <span class="n">result</span> <span class="o">+=</span> <span class="nb">min</span><span class="p">(</span><span class="n">timeSeries</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">timeSeries</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">duration</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">result</span> <span class="o">+</span> <span class="n">duration</span>
+
+<span class="k">class</span> <span class="nc">SolutionAlternative1</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">findPoisonedDuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeSeries</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">duration</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        merge intervals, result is sum of all interval length</span>
+
+<span class="sd">        Time : O(n)</span>
+<span class="sd">        Space: O(n)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">timeSeries</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">duration</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="n">intervals</span> <span class="o">=</span> <span class="p">[[</span><span class="n">t</span><span class="p">,</span> <span class="n">t</span><span class="o">+</span><span class="n">duration</span><span class="p">]</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">timeSeries</span><span class="p">]</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">interval</span> <span class="ow">in</span> <span class="n">intervals</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">:</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">interval</span><span class="p">)</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">interval</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">last</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">last</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">max</span><span class="p">(</span><span class="n">last</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">interval</span><span class="p">[</span><span class="mi">1</span><span class="p">])])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">interval</span><span class="p">)</span>
+
+        <span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">result</span><span class="p">]</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </code></pre></div>
   </div>
   <div class="tag-cloud">
     <p>
+      <a href="https://tofucode.com/tag/greedy.html">greedy</a>
       <a href="https://tofucode.com/tag/interval-merge.html">interval-merge</a>
       <a href="https://tofucode.com/tag/simulation.html">simulation</a>
     </p>
