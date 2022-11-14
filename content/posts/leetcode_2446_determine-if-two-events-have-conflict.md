@@ -1,7 +1,7 @@
 Title: Leetcode 2446. Determine if Two Events Have Conflict
 Slug: leetcode_2446_determine-if-two-events-have-conflict
 Status: published
-Date: 2022-11-05
+Date: 2022-11-13
 Category: Leetcode
 Tags: interval
 Author: Zeph
@@ -49,7 +49,7 @@ All the event times follow the HH:MM format.
 
 ### Solution
 
-The easiest kind of merge interval problem since there are only two intervals. Since the tiems are in 24 hours, string compares work. 
+Check event 1 end time and event 2 start time 
 
 
 ### Code
