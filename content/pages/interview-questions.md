@@ -44,6 +44,7 @@ Status: published
 | 0347 | [Top K Frequent Elements](https://tofucode.com/posts/leetcode_0347_top-k-frequent-elements.html) | k-most-points, bucket-sort, hash-map |
 | 0406 | [Queue Reconstruction by Height](https://tofucode.com/posts/leetcode_0406_queue-reconstruction-by-height.html) | sort |
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp |
+| 0452 | [Minimum Number of Arrows to Burst Balloons](https://tofucode.com/posts/leetcode_0452_minimum-number-of-arrows-to-burst-balloons.html) | interval-merge |
 | 0462 | [Minimum Moves to Equal Array Elements II](https://tofucode.com/posts/leetcode_0462_minimum-moves-to-equal-array-elements-ii.html) | math |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion |
 | 0543 | [Diameter of Binary Tree](https://tofucode.com/posts/leetcode_0543_diameter-of-binary-tree.html) | binary-tree-traversal |
