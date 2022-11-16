@@ -1,5 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-11-14T00:00:00-08:00</updated><entry><title>Leetcode 0222. Count Complete Tree Nodes</title><link href="https://tofucode.com/posts/leetcode_0222_count-complete-tree-nodes.html" rel="alternate"></link><published>2022-11-14T00:00:00-08:00</published><updated>2022-11-14T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-14:/posts/leetcode_0222_count-complete-tree-nodes.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/count-complete-tree-nodes/"&gt;https://leetcode.com/problems/count-complete-tree-nodes/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-11-15T00:00:00-08:00</updated><entry><title>Leetcode 0374. Guess Number Higher or Lower</title><link href="https://tofucode.com/posts/leetcode_0374_guess-number-higher-or-lower.html" rel="alternate"></link><published>2022-11-15T00:00:00-08:00</published><updated>2022-11-15T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-15:/posts/leetcode_0374_guess-number-higher-or-lower.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/guess-number-higher-or-lower/"&gt;https://leetcode.com/problems/guess-number-higher-or-lower/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;We are playing the Guess Game. The game is as follows:
+I pick a number from 1 to n. You have to guess which number I picked.
+Every time you guess wrong, I will tell you whether the number I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/guess-number-higher-or-lower/"&gt;https://leetcode.com/problems/guess-number-higher-or-lower/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;We are playing the Guess Game. The game is as follows:
+I pick a number from 1 to n. You have to guess which number I picked.
+Every time you guess wrong, I will tell you whether the number I picked is higher or lower than your guess.
+You call a pre-defined API int guess(int num), which returns three possible results:&lt;/p&gt;
+&lt;p&gt;-1: Your guess is higher than the number I picked (i.e. num &amp;gt; pick).
+1: Your guess is lower than the number I picked (i.e. num &amp;lt; pick).
+0: your guess is equal to the number I picked (i.e. num == pick).&lt;/p&gt;
+&lt;p&gt;Return the number that I picked.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: n = 10, pick = 6
+Output: 6&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: n = 1, pick = 1
+Output: 1&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: n = 2, pick = 1
+Output: 1&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= n &amp;lt;= 231 - 1
+1 &amp;lt;= pick &amp;lt;= n&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Use binary search with the only change being using guess() to check where the anwser is.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0374. Guess Number Higher or Lower&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/guess-number-higher-or-lower/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0374_guess-number-higher-or-lower.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# The guess API is already defined for you.&lt;/span&gt;
+&lt;span class="c1"&gt;# @param num, your guess&lt;/span&gt;
+&lt;span class="c1"&gt;# @return -1 if num is higher than the picked number&lt;/span&gt;
+&lt;span class="c1"&gt;#          1 if num is lower than the picked number&lt;/span&gt;
+&lt;span class="c1"&gt;#          otherwise return 0&lt;/span&gt;
+&lt;span class="c1"&gt;# def guess(num: int) -&amp;gt; int:&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;guessNumber&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        binary search&lt;/span&gt;
+
+&lt;span class="sd"&gt;        edge case:&lt;/span&gt;
+&lt;span class="sd"&gt;        n = 1: return 1&lt;/span&gt;
+&lt;span class="sd"&gt;        n = 2, l = 1, r = 2, mid is 1, l += 1, return l&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(log n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+        &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;
+
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;mid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+            &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="n"&gt;guess&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mid&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;mid&lt;/span&gt;
+            &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mid&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mid&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="binary-search"></category></entry><entry><title>Leetcode 0222. Count Complete Tree Nodes</title><link href="https://tofucode.com/posts/leetcode_0222_count-complete-tree-nodes.html" rel="alternate"></link><published>2022-11-14T00:00:00-08:00</published><updated>2022-11-14T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-14:/posts/leetcode_0222_count-complete-tree-nodes.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/count-complete-tree-nodes/"&gt;https://leetcode.com/problems/count-complete-tree-nodes/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;Given the root of a complete binary tree, return the number of the nodes in the tree.
