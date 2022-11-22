@@ -28,7 +28,7 @@ DEFAULT_PAGINATION = 10
 # search: https://github.com/getpelican/pelican-plugins/tree/master/tipue_search
 
 #### Paths
-ARTICLE_PATHS = ['posts']
+ARTICLE_PATHS = ['posts_leetcode', 'posts_leetcode_premium']
 PAGE_PATHS = ['pages']
 
 STATIC_PATHS = ['extras/robots.txt', 'extras/favicon.ico', 'extras/CNAME']
