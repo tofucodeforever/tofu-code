@@ -3,12 +3,14 @@ Slug: leetcode_0001_two-sum
 Status: published
 Date: 2022-02-28
 Category: Leetcode
-Tags: 
+Tags: hash-map
 Author: Zeph
 
 Question Link : [https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/two-sum/)
 
 Difficulty: Easy
+
+Premium: False
 
 ### Question
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
