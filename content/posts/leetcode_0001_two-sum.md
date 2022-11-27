@@ -1,7 +1,7 @@
 Title: Leetcode 0001. Two Sum
 Slug: leetcode_0001_two-sum
 Status: published
-Date: 2022-02-28
+Date: 2022-11-23
 Category: Leetcode
 Tags: hash-map
 Author: Zeph

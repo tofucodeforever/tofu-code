@@ -5,7 +5,7 @@ Status: published
 
 | # | Question | Tags | Companies |
 |----|----|----|----|
-| 0001 | [Two Sum](https://tofucode.com/posts/leetcode_0001_two-sum.html) | hash-map | |
+| 0001 | [Two Sum](https://tofucode.com/posts/leetcode_0001_two-sum.html) | hash-map | [74](# [('amazon', 133), ('adobe', 63), ('apple', 51), ('google', 46), ('microsoft', 28), ('bloomberg', 26), ('facebook', 19), ('uber', 9), ('spotify', 8), ('oracle', 7), ('accenture', 6), ('dell', 5), ('expedia', 5), ('yahoo', 5), ('accolite', 4), ('cisco', 4), ('ibm', 4), ('intel', 4), ('jpmorgan', 4), ('tcs', 4), ('capital-one', 3), ('citadel', 3), ('makemytrip', 3), ('morgan-stanley', 3), ('paypal', 3), ('qualcomm', 3), ('salesforce', 3), ('snapchat', 3), ('splunk', 3), ('square', 3), ('walmart-labs', 3), ('zoho', 3), ('zomato', 3), ('zoom', 3), ('american-express', 2), ('arcesium', 2), ('blackrock', 2), ('capgemini', 2), ('citrix', 2), ('cognizant', 2), ('deutsche-bank', 2), ('ebay', 2), ('epam-systems', 2), ('factset', 2), ('godaddy', 2), ('goldman-sachs', 2), ('grab', 2), ('hbo', 2), ('info-edge', 2), ('infosys', 2), ('intuit', 2), ('nagarro', 2), ('nvidia', 2), ('optum', 2), ('paytm', 2), ('samsung', 2), ('sap', 2), ('servicenow', 2), ('shopee', 2), ('siemens', 2), ('tesla', 2), ('twitch', 2), ('twitter', 2), ('united-health-group', 2), ('visa', 2), ('vmware', 2), ('wayfair', 2), ('yandex', 2), ('zillow', 2), ('zscaler', 2), ('airbnb', 0), ('dropbox', 0), ('linkedin', 0), ('yelp', 0)]) |
 | 0002 | [Add Two Numbers](https://tofucode.com/posts/leetcode_0002_add-two-numbers.html) | linked-list, dummy-list-head | |
 | 0005 | [Longest Palindromic Substring](https://tofucode.com/posts/leetcode_0005_longest-palindromic-substring.html) | palindrome | |
 | 0011 | [Container With Most Water](https://tofucode.com/posts/leetcode_0011_container-with-most-water.html) | two-pointers | |
@@ -56,6 +56,7 @@ Status: published
 | 0495 | [Teemo Attacking](https://tofucode.com/posts/leetcode_0495_teemo-attacking.html) | greedy, interval-merge, simulation | |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion | |
 | 0543 | [Diameter of Binary Tree](https://tofucode.com/posts/leetcode_0543_diameter-of-binary-tree.html) | binary-tree-traversal | |
+| 0606 | [Construct String from Binary Tree](https://tofucode.com/posts/leetcode_0606_construct-string-from-binary-tree.html) | recursion, binary-tree | |
 | 0623 | [Add One Row to Tree](https://tofucode.com/posts/leetcode_0623_add-one-row-to-tree.html) | binary-tree-manipulation, dfs | |
 | 0647 | [Palindromic Substrings](https://tofucode.com/posts/leetcode_0647_palindromic-substrings.html) | palindrome, string | |
 | 0653 | [Two Sum IV - Input is a BST](https://tofucode.com/posts/leetcode_0653_two-sum-iv-input-is-a-bst.html) | k-sum, dfs | |
@@ -101,4 +102,3 @@ Status: published
 | 2455 | [Average Value of Even Numbers That Are Divisible by Three](https://tofucode.com/posts/leetcode_2455_average-value-of-even-numbers-that-are-divisible-by-three.html) | math | |
 | 2456 | [Most Popular Video Creator](https://tofucode.com/posts/leetcode_2456_most-popular-video-creator.html) | hash-map-count | |
 | 2460 | [Apply Operations to an Array](https://tofucode.com/posts/leetcode_2460_apply-operations-to-an-array.html) | two-pointers | |
-| 0606 | [Construct String from Binary Tree](https://tofucode.com/posts/leetcode_0606_construct-string-from-binary-tree.html) | recursion, binary-tree | |
