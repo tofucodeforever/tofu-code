@@ -1,7 +1,7 @@
 Title: Leetcode 0002. Add Two Numbers
 Slug: leetcode_0002_add-two-numbers
 Status: published
-Date: 2022-03-09
+Date: 2022-11-27
 Category: Leetcode
 Tags: linked-list, dummy-list-head
 Author: Zeph
@@ -9,6 +9,8 @@ Author: Zeph
 Question Link : [https://leetcode.com/problems/add-two-numbers/](https://leetcode.com/problems/add-two-numbers/)
 
 Difficulty: Medium
+
+Premium: False
 
 ### Question
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
