@@ -49,6 +49,7 @@ Status: published
 | 0345 | [Reverse Vowels of a String](https://tofucode.com/posts/leetcode_0345_reverse-vowels-of-a-string.html) | two-pointers, string | |
 | 0347 | [Top K Frequent Elements](https://tofucode.com/posts/leetcode_0347_top-k-frequent-elements.html) | k-most-points, bucket-sort, hash-map | |
 | 0374 | [Guess Number Higher or Lower](https://tofucode.com/posts/leetcode_0374_guess-number-higher-or-lower.html) | binary-search | |
+| 0380 | [Insert Delete GetRandom O(1)](https://tofucode.com/posts/leetcode_0380_insert-delete-getrandom-o1.html) | hash-map, array |  |
 | 0406 | [Queue Reconstruction by Height](https://tofucode.com/posts/leetcode_0406_queue-reconstruction-by-height.html) | sort | |
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp | |
 | 0435 | [Non-overlapping Intervals](https://tofucode.com/posts/leetcode_0435_non-overlapping-intervals.html) | interval-merge, greedy | |
