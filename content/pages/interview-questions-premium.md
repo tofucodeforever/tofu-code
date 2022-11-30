@@ -74,6 +74,7 @@ Status: published
 | 0946 | [Validate Stack Sequences](https://tofucode.com/posts/leetcode_0946_validate-stack-sequences.html) | stack, simulation, greedy | |
 | 0991 | [Broken Calculator](https://tofucode.com/posts/leetcode_0991_broken-calculator.html) | reverse-thinking, puzzle | |
 | 1094 | [Car Pooling](https://tofucode.com/posts/leetcode_1094_car-pooling.html) | interval-overlap | |
+| 1207 | [Unique Number of Occurrences](https://tofucode.com/posts/leetcode_1207_unique-number-of-occurrences.html) | counting | [7](#"[('amazon', 9), ('adobe', 7), ('apple', 5), ('facebook', 5), ('bloomberg', 3), ('google', 3), ('yahoo', 2)]") |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://tofucode.com/posts/leetcode_1249_minimum-remove-to-make-valid-parentheses.html) | stack, parentheses | |
 | 1423 | [Maximum Points You Can Obtain from Cards](https://tofucode.com/posts/leetcode_1423_maximum-points-you-can-obtain-from-cards.html) | sliding-window, array | |
 | 1544 | [Make The String Great](https://tofucode.com/posts/leetcode_1544_make-the-string-great.html) | stack | |
