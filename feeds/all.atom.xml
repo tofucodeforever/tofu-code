@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-11-28T00:00:00-08:00</updated><entry><title>Leetcode 0380. Insert Delete GetRandom O(1)</title><link href="https://tofucode.com/posts/leetcode_0380_insert-delete-getrandom-o1.html" rel="alternate"></link><published>2022-11-28T00:00:00-08:00</published><updated>2022-11-28T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-28:/posts/leetcode_0380_insert-delete-getrandom-o1.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/insert-delete-getrandom-o1/"&gt;https://leetcode.com/problems/insert-delete-getrandom-o1/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-11-29T00:00:00-08:00</updated><entry><title>Leetcode 1207. Unique Number of Occurrences</title><link href="https://tofucode.com/posts/leetcode_1207_unique-number-of-occurrences.html" rel="alternate"></link><published>2022-11-29T00:00:00-08:00</published><updated>2022-11-29T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-29:/posts/leetcode_1207_unique-number-of-occurrences.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/unique-number-of-occurrences/"&gt;https://leetcode.com/problems/unique-number-of-occurrences/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given an array of integers arr, return true if the number of occurrences of each value in the array is unique, or false otherwise.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: arr = [1,2,2,1,1,3]
+Output: true
+Explanation: The …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/unique-number-of-occurrences/"&gt;https://leetcode.com/problems/unique-number-of-occurrences/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given an array of integers arr, return true if the number of occurrences of each value in the array is unique, or false otherwise.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: arr = [1,2,2,1,1,3]
+Output: true
+Explanation: The value 1 has 3 occurrences, 2 has 2 and 3 has 1. No two values have the same number of occurrences.
+Example 2:&lt;/p&gt;
+&lt;p&gt;Input: arr = [1,2]
+Output: false&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: arr = [-3,0,1,-3,1,1,1,-3,10,0]
+Output: true&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= arr.length &amp;lt;= 1000
+-1000 &amp;lt;= arr[i] &amp;lt;= 1000&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Use a hash map to count the occurance and then check is all that is unique.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 1207. Unique Number of Occurrences&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/unique-number-of-occurrences/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_1207_unique-number-of-occurrences.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;uniqueOccurrences&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;arr&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        Go through arr&lt;/span&gt;
+&lt;span class="sd"&gt;        counter: num -&amp;gt; count&lt;/span&gt;
+&lt;span class="sd"&gt;        len of set of all count == len(counter)&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Sapce: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; &lt;span class="c1"&gt;# num -&amp;gt; count&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;arr&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;()))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="counting"></category></entry><entry><title>Leetcode 0380. Insert Delete GetRandom O(1)</title><link href="https://tofucode.com/posts/leetcode_0380_insert-delete-getrandom-o1.html" rel="alternate"></link><published>2022-11-28T00:00:00-08:00</published><updated>2022-11-28T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-28:/posts/leetcode_0380_insert-delete-getrandom-o1.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/insert-delete-getrandom-o1/"&gt;https://leetcode.com/problems/insert-delete-getrandom-o1/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
