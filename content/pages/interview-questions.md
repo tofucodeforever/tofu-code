@@ -80,6 +80,7 @@ Status: published
 | 1544 | [Make The String Great](https://tofucode.com/posts/leetcode_1544_make-the-string-great.html) | stack | |
 | 1578 | [Minimum Time to Make Rope Colorful](https://tofucode.com/posts/leetcode_1578_minimum-time-to-make-rope-colorful.html) | pointers, array | |
 | 1647 | [Minimum Deletions to Make Character Frequencies Unique](https://tofucode.com/posts/leetcode_1647_minimum-deletions-to-make-character-frequencies-unique.html) | hash-map-count | |
+| 1657 | [Determine if Two Strings Are Close](https://tofucode.com/posts/leetcode_1657_determine-if-two-strings-are-close.html) | counting |  |
 | 1662 | [Check If Two String Arrays are Equivalent](https://tofucode.com/posts/leetcode_1662_check-if-two-string-arrays-are-equivalent.html) | string | |
 | 1704 | [Determine if String Halves Are Alike](https://tofucode.com/posts/leetcode_1704_determine-if-string-halves-are-alike.html) | string |  |
 | 1710 | [Maximum Units on a Truck](https://tofucode.com/posts/leetcode_1710_maximum-units-on-a-truck.html) | greedy | |
