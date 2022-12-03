@@ -53,6 +53,7 @@ Status: published
 | 0406 | [Queue Reconstruction by Height](https://tofucode.com/posts/leetcode_0406_queue-reconstruction-by-height.html) | sort | |
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp | |
 | 0435 | [Non-overlapping Intervals](https://tofucode.com/posts/leetcode_0435_non-overlapping-intervals.html) | interval-merge, greedy | |
+| 0451 | [Sort Characters By Frequency](https://tofucode.com/posts/leetcode_0451_sort-characters-by-frequency.html) | counting |  |
 | 0452 | [Minimum Number of Arrows to Burst Balloons](https://tofucode.com/posts/leetcode_0452_minimum-number-of-arrows-to-burst-balloons.html) | interval-merge | |
 | 0462 | [Minimum Moves to Equal Array Elements II](https://tofucode.com/posts/leetcode_0462_minimum-moves-to-equal-array-elements-ii.html) | math | |
 | 0495 | [Teemo Attacking](https://tofucode.com/posts/leetcode_0495_teemo-attacking.html) | greedy, interval-merge, simulation | |
