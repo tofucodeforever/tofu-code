@@ -74,6 +74,7 @@ Status: published
 | 0881 | [Boats to Save People](https://tofucode.com/posts/leetcode_0881_boats-to-save-people.html) | two-pointers, greedy | |
 | 0897 | [Increasing Order Search Tree](https://tofucode.com/posts/leetcode_0897_increasing-order-search-tree.html) | bst | |
 | 0901 | [Online Stock Span](https://tofucode.com/posts/leetcode_0901_online-stock-span.html) | monotonic-stack | |
+| 0938 | [Range Sum of BST](https://tofucode.com/posts/leetcode_0938_range-sum-of-bst.html) | bst, recursion | [7](#"[('facebook', 13), ('google', 6), ('amazon', 4), ('oracle', 4), ('apple', 3), ('adobe', 2), ('yandex', 2)]") |
 | 0946 | [Validate Stack Sequences](https://tofucode.com/posts/leetcode_0946_validate-stack-sequences.html) | stack, simulation, greedy | |
 | 0991 | [Broken Calculator](https://tofucode.com/posts/leetcode_0991_broken-calculator.html) | reverse-thinking, puzzle | |
 | 1094 | [Car Pooling](https://tofucode.com/posts/leetcode_1094_car-pooling.html) | interval-overlap | |
