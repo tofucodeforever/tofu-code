@@ -1,5 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-12-06T00:00:00-08:00</updated><entry><title>Leetcode 0938. Range Sum of BST</title><link href="https://tofucode.com/posts/leetcode_0938_range-sum-of-bst.html" rel="alternate"></link><published>2022-12-06T00:00:00-08:00</published><updated>2022-12-06T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-12-06:/posts/leetcode_0938_range-sum-of-bst.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/range-sum-of-bst/"&gt;https://leetcode.com/problems/range-sum-of-bst/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-12-07T00:00:00-08:00</updated><entry><title>Leetcode 0872. Leaf-Similar Trees</title><link href="https://tofucode.com/posts/leetcode_0872_leaf-similar-trees.html" rel="alternate"></link><published>2022-12-07T00:00:00-08:00</published><updated>2022-12-07T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-12-07:/posts/leetcode_0872_leaf-similar-trees.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/leaf-similar-trees/"&gt;https://leetcode.com/problems/leaf-similar-trees/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Consider all the leaves of a binary tree, from left to right order, the values of those leaves form a leaf value sequence.&lt;/p&gt;
+&lt;p&gt;For example, in the given tree above, the leaf value sequence is (6, 7, 4 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/leaf-similar-trees/"&gt;https://leetcode.com/problems/leaf-similar-trees/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Consider all the leaves of a binary tree, from left to right order, the values of those leaves form a leaf value sequence.&lt;/p&gt;
+&lt;p&gt;For example, in the given tree above, the leaf value sequence is (6, 7, 4, 9, 8).
+Two binary trees are considered leaf-similar if their leaf value sequence is the same.
+Return true if and only if the two given trees with head nodes root1 and root2 are leaf-similar.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: root1 = [3,5,1,6,2,9,8,null,null,7,4], root2 = [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]
+Output: true&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: root1 = [1,2,3], root2 = [1,3,2]
+Output: false&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;The number of nodes in each tree will be in the range [1, 200].
+Both of the given trees will have values in the range [0, 200].&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Traverse both trees and note the leaf node values, compare.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0872. Leaf-Similar Trees&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/leaf-similar-trees/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0872_leaf-similar-trees.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Definition for a binary tree node.&lt;/span&gt;
+&lt;span class="c1"&gt;# class TreeNode:&lt;/span&gt;
+&lt;span class="c1"&gt;#     def __init__(self, val=0, left=None, right=None):&lt;/span&gt;
+&lt;span class="c1"&gt;#         self.val = val&lt;/span&gt;
+&lt;span class="c1"&gt;#         self.left = left&lt;/span&gt;
+&lt;span class="c1"&gt;#         self.right = right&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;leafSimilar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;root1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Optional&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;TreeNode&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;root2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Optional&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;TreeNode&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        go through both and compare&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;traverse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[])&lt;/span&gt;
+        &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;traverse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[])&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;traverse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;left&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;right&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;val&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+        &lt;span class="n"&gt;current&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;left&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;current&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;traverse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;left&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;current&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;right&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;current&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;current&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;traverse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;right&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;current&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="binary-tree-traversal"></category></entry><entry><title>Leetcode 0938. Range Sum of BST</title><link href="https://tofucode.com/posts/leetcode_0938_range-sum-of-bst.html" rel="alternate"></link><published>2022-12-06T00:00:00-08:00</published><updated>2022-12-06T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-12-06:/posts/leetcode_0938_range-sum-of-bst.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/range-sum-of-bst/"&gt;https://leetcode.com/problems/range-sum-of-bst/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
