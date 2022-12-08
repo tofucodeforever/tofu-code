@@ -70,6 +70,7 @@ Status: published
 | 0740 | [Delete and Earn](https://tofucode.com/posts/leetcode_0740_delete-and-earn.html) | dp | |
 | 0746 | [Min Cost Climbing Stairs](https://tofucode.com/posts/leetcode_0746_min-cost-climbing-stairs.html) | dp | |
 | 0799 | [Champagne Tower](https://tofucode.com/posts/leetcode_0799_champagne-tower.html) | simulation | |
+| 0872 | [Leaf-Similar Trees](https://tofucode.com/posts/leetcode_0872_leaf-similar-trees.html) | binary-tree-traversal |  |
 | 0876 | [Middle of the Linked List](https://tofucode.com/posts/leetcode_0876_middle-of-the-linked-list.html) | fast-slow-pointer |  |
 | 0881 | [Boats to Save People](https://tofucode.com/posts/leetcode_0881_boats-to-save-people.html) | two-pointers, greedy | |
 | 0897 | [Increasing Order Search Tree](https://tofucode.com/posts/leetcode_0897_increasing-order-search-tree.html) | bst | |
