@@ -24,6 +24,7 @@ Status: published
 | 0101 | [Symmetric Tree](https://tofucode.com/posts/leetcode_0101_symmetric-tree.html) | binary-tree-traversal | |
 | 0104 | [Maximum Depth of Binary Tree](https://tofucode.com/posts/leetcode_0104_maximum-depth-of-binary-tree.html) | binary-tree-traversal | |
 | 0112 | [Path Sum](https://tofucode.com/posts/leetcode_0112_path-sum.html) | binary-tree, recursion | |
+| 0124 | [Binary Tree Maximum Path Sum](https://tofucode.com/posts/leetcode_0124_binary-tree-maximum-path-sum.html) | recursion, binary-tree | [30](#"[('doordash', 23), ('google', 8), ('bytedance', 6), ('microsoft', 5), ('amazon', 4), ('facebook', 3), ('myntra', 3), ('snapchat', 3), ('sprinklr', 3), ('uber', 3), ('adobe', 2), ('akuna-capital', 2), ('apple', 2), ('bloomberg', 2), ('didi', 2), ('flipkart', 2), ('linkedin', 2), ('morgan-stanley', 2), ('oracle', 2), ('samsung', 2), ('shopee', 2), ('tiktok', 2), ('tusimple', 2), ('twilio', 2), ('twitter', 2), ('walmart-labs', 2), ('wish', 2), ('yandex', 2), ('baidu', 0), ('wix', 0)]") |
 | 0136 | [Single Number](https://tofucode.com/posts/leetcode_0136_single-number.html) | math | |
 | 0138 | [Copy List with Random Pointer](https://tofucode.com/posts/leetcode_0138_copy-list-with-random-pointer.html) | linked-list, dummy-list-head, recursion | |
 | 0141 | [Linked List Cycle](https://tofucode.com/posts/leetcode_0141_linked-list-cycle.html) | linked-list, fast-slow-pointer | |

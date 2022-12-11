@@ -24,6 +24,7 @@ Status: published
 | 0101 | [Symmetric Tree](https://tofucode.com/posts/leetcode_0101_symmetric-tree.html) | binary-tree-traversal | |
 | 0104 | [Maximum Depth of Binary Tree](https://tofucode.com/posts/leetcode_0104_maximum-depth-of-binary-tree.html) | binary-tree-traversal | |
 | 0112 | [Path Sum](https://tofucode.com/posts/leetcode_0112_path-sum.html) | binary-tree, recursion | |
+| 0124 | [Binary Tree Maximum Path Sum](https://tofucode.com/posts/leetcode_0124_binary-tree-maximum-path-sum.html) | recursion, binary-tree |  |
 | 0136 | [Single Number](https://tofucode.com/posts/leetcode_0136_single-number.html) | math | |
 | 0138 | [Copy List with Random Pointer](https://tofucode.com/posts/leetcode_0138_copy-list-with-random-pointer.html) | linked-list, dummy-list-head, recursion | |
 | 0141 | [Linked List Cycle](https://tofucode.com/posts/leetcode_0141_linked-list-cycle.html) | linked-list, fast-slow-pointer | |
