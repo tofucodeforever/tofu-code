@@ -1,7 +1,7 @@
 Title: Leetcode 0198. House Robber
 Slug: leetcode_0198_house-robber
 Status: published
-Date: 2022-03-04
+Date: 2022-12-13
 Category: Leetcode
 Tags: dp
 Author: Zeph
@@ -9,6 +9,8 @@ Author: Zeph
 Question Link : [https://leetcode.com/problems/house-robber/](https://leetcode.com/problems/house-robber/)
 
 Difficulty: Medium
+
+Premium: False
 
 ### Question
 You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.

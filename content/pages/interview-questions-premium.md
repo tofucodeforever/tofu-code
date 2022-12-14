@@ -33,7 +33,7 @@ Status: published
 | 0167 | [Two Sum II - Input Array Is Sorted](https://tofucode.com/posts/leetcode_0167_two-sum-ii-input-array-is-sorted.html) | k-sum | |
 | 0169 | [Majority Element](https://tofucode.com/posts/leetcode_0169_majority-element.html) | counting, boyer-moore-voting-algorithm | |
 | 0173 | [Binary Search Tree Iterator](https://tofucode.com/posts/leetcode_0173_binary-search-tree-iterator.html) | bst | |
-| 0198 | [House Robber](https://tofucode.com/posts/leetcode_0198_house-robber.html) | dp | |
+| 0198 | [House Robber](https://tofucode.com/posts/leetcode_0198_house-robber.html) | dp | [26](#"[('amazon', 21), ('cisco', 13), ('bloomberg', 10), ('apple', 7), ('arcesium', 6), ('google', 6), ('qualtrics', 6), ('adobe', 4), ('goldman-sachs', 4), ('oracle', 4), ('ebay', 3), ('facebook', 3), ('flipkart', 3), ('infosys', 3), ('paytm', 3), ('yahoo', 3), ('bytedance', 2), ('intel', 2), ('microsoft', 2), ('paypal', 2), ('splunk', 2), ('tiktok', 2), ('vmware', 2), ('walmart-labs', 2), ('airbnb', 0), ('linkedin', 0)]") |
 | 0206 | [Reverse Linked List](https://tofucode.com/posts/leetcode_0206_reverse-linked-list.html) | linked-list | |
 | 0215 | [Kth Largest Element in an Array](https://tofucode.com/posts/leetcode_0215_kth-largest-element-in-an-array.html) | k-most-points, bubble-sort, quick-sort | |
 | 0222 | [Count Complete Tree Nodes](https://tofucode.com/posts/leetcode_0222_count-complete-tree-nodes.html) | binary-tree | |
