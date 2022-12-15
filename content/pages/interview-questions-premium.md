@@ -81,6 +81,7 @@ Status: published
 | 0946 | [Validate Stack Sequences](https://tofucode.com/posts/leetcode_0946_validate-stack-sequences.html) | stack, simulation, greedy | |
 | 0991 | [Broken Calculator](https://tofucode.com/posts/leetcode_0991_broken-calculator.html) | reverse-thinking, puzzle | |
 | 1094 | [Car Pooling](https://tofucode.com/posts/leetcode_1094_car-pooling.html) | interval-overlap | |
+| 1143 | [Longest Common Subsequence](https://tofucode.com/posts/leetcode_1143_longest-common-subsequence.html) | dp-2d | [13](#"[('amazon', 7), ('apple', 5), ('doordash', 3), ('indeed', 3), ('karat', 3), ('microsoft', 3), ('vmware', 3), ('adobe', 2), ('bloomberg', 2), ('google', 2), ('intuit', 2), ('uber', 2), ('wayfair', 2)]") |
 | 1207 | [Unique Number of Occurrences](https://tofucode.com/posts/leetcode_1207_unique-number-of-occurrences.html) | counting | [7](#"[('amazon', 9), ('adobe', 7), ('apple', 5), ('facebook', 5), ('bloomberg', 3), ('google', 3), ('yahoo', 2)]") |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://tofucode.com/posts/leetcode_1249_minimum-remove-to-make-valid-parentheses.html) | stack, parentheses | |
 | 1339 | [Maximum Product of Splitted Binary Tree](https://tofucode.com/posts/leetcode_1339_maximum-product-of-splitted-binary-tree.html) | binary-tree | [4](#"[('two-sigma', 3), ('amazon', 2), ('bloomberg', 2), ('microsoft', 0)]") |
