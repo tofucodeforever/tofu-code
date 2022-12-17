@@ -28,6 +28,7 @@ Status: published
 | 0136 | [Single Number](https://tofucode.com/posts/leetcode_0136_single-number.html) | math | |
 | 0138 | [Copy List with Random Pointer](https://tofucode.com/posts/leetcode_0138_copy-list-with-random-pointer.html) | linked-list, dummy-list-head, recursion | |
 | 0141 | [Linked List Cycle](https://tofucode.com/posts/leetcode_0141_linked-list-cycle.html) | linked-list, fast-slow-pointer | |
+| 0150 | [Evaluate Reverse Polish Notation](https://tofucode.com/posts/leetcode_0150_evaluate-reverse-polish-notation.html) | stack | [12](#"[('amazon', 13), ('google', 10), ('doordash', 4), ('facebook', 4), ('oracle', 4), ('linkedin', 3), ('yandex', 3), ('apple', 2), ('bloomberg', 2), ('citadel', 2), ('microsoft', 2), ('visa', 2)]") |
 | 0160 | [Intersection of Two Linked Lists](https://tofucode.com/posts/leetcode_0160_intersection-of-two-linked-lists.html) | linked-list | |
 | 0163 | [Missing Ranges](https://tofucode.com/posts/leetcode_0163_missing-ranges.html) | array | [7](#"[('amazon', 9), ('facebook', 5), ('bytedance', 3), ('google', 3), ('tiktok', 3), ('coupang', 2), ('microsoft', 2)]") |
 | 0167 | [Two Sum II - Input Array Is Sorted](https://tofucode.com/posts/leetcode_0167_two-sum-ii-input-array-is-sorted.html) | k-sum | |
