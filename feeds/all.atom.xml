@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-12-14T00:00:00-08:00</updated><entry><title>Leetcode 1143. Longest Common Subsequence</title><link href="https://tofucode.com/posts/leetcode_1143_longest-common-subsequence.html" rel="alternate"></link><published>2022-12-14T00:00:00-08:00</published><updated>2022-12-14T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-12-14:/posts/leetcode_1143_longest-common-subsequence.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/longest-common-subsequence/"&gt;https://leetcode.com/problems/longest-common-subsequence/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2022-12-16T00:00:00-08:00</updated><entry><title>Leetcode 0150. Evaluate Reverse Polish Notation</title><link href="https://tofucode.com/posts/leetcode_0150_evaluate-reverse-polish-notation.html" rel="alternate"></link><published>2022-12-16T00:00:00-08:00</published><updated>2022-12-16T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-12-16:/posts/leetcode_0150_evaluate-reverse-polish-notation.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/"&gt;https://leetcode.com/problems/evaluate-reverse-polish-notation/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Evaluate the value of an arithmetic expression in Reverse Polish Notation.
+Valid operators are +, -, *, and /. Each operand may be an integer or another expression.
+Note that division between two integers should truncate toward zero.
+It is guaranteed that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/"&gt;https://leetcode.com/problems/evaluate-reverse-polish-notation/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Evaluate the value of an arithmetic expression in Reverse Polish Notation.
+Valid operators are +, -, *, and /. Each operand may be an integer or another expression.
+Note that division between two integers should truncate toward zero.
+It is guaranteed that the given RPN expression is always valid. That means the expression would always evaluate to a result, and there will not be any division by zero operation.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: tokens = ["2","1","+","3","*"]
+Output: 9
+Explanation: ((2 + 1) * 3) = 9&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: tokens = ["4","13","5","/","+"]
+Output: 6
+Explanation: (4 + (13 / 5)) = 6&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: tokens = ["10","6","9","3","+","-11","&lt;em&gt;","/","&lt;/em&gt;","17","+","5","+"]
+Output: 22
+Explanation: ((10 * (6 / ((9 + 3) * -11))) + 17) + 5
+= ((10 * (6 / (12 * -11))) + 17) + 5
+= ((10 * (6 / -132)) + 17) + 5
+= ((10 * 0) + 17) + 5
+= (0 + 17) + 5
+= 17 + 5
+= 22&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= tokens.length &amp;lt;= 104
+tokens[i] is either an operator: "+", "-", "*", or "/", or an integer in the range [-200, 200].&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Notice  the pattern that the operation is always for the 2 previous numbers, in this case a stack makes case so we can access the last 2. Two other things to note: 
+1. Check not an operation as a number, isdigit() doesn't work with negative numbers
+2. to truncate toward zero: int(a / b)&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0150. Evaluate Reverse Polish Notation&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/evaluate-reverse-polish-notation/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0150_evaluate-reverse-polish-notation.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="stack"></category></entry><entry><title>Leetcode 1143. Longest Common Subsequence</title><link href="https://tofucode.com/posts/leetcode_1143_longest-common-subsequence.html" rel="alternate"></link><published>2022-12-14T00:00:00-08:00</published><updated>2022-12-14T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-12-14:/posts/leetcode_1143_longest-common-subsequence.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/longest-common-subsequence/"&gt;https://leetcode.com/problems/longest-common-subsequence/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
