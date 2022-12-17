@@ -63,5 +63,37 @@ Question Link : https://leetcode.com/problems/evaluate-reverse-polish-notation/
 Solution Link : https://tofucode.com/posts/leetcode_0150_evaluate-reverse-polish-notation.html
 '''
 
+class Solution:
+    def evalRPN(self, tokens: List[str]) -> int:
+        '''
+        stack
+
+        keep pushing numbers,
+        if operation, pop the last 2 and evaluate, push back
+
+        Time : O(n)
+        Space: O(n)
+        '''
+        stack = []
+        ops = set(["+", "-", "*", "/"])
+
+        for token in tokens:
+            if not token in ops:
+                stack.append(int(token))
+            else:
+                b = stack.pop()
+                a = stack.pop()
+                result = 0
+                if token == '+':
+                    result = a + b
+                elif token == '-':
+                    result = a - b
+                elif token == '*':
+                    result = a * b
+                elif token == '/':
+                    result = int(a / b)
+                stack.append(result)
+        return stack[-1]
+
 ```
 
