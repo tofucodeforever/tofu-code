@@ -46,24 +46,25 @@
 
 
 <meta name="author" content="Zeph" />
-<meta name="description" content="Question Link : https://leetcode.com/problems/diameter-of-binary-tree/ Difficulty: Easy Question Given the root of a binary tree, return the length of the diameter of the tree. The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or …" />
-<meta name="keywords" content="binary-tree-traversal">
+<meta name="description" content="Question Link : https://leetcode.com/problems/same-tree/ Difficulty: Easy Premium: False Question Given the roots of two binary trees p and q, write a function to check if they are the same or not. Two binary trees are considered the same if they are structurally identical, and the nodes have …" />
+<meta name="keywords" content="binary-tree-traversal, recursion">
 
 
 <meta property="og:site_name" content="TofuCode"/>
-<meta property="og:title" content="Leetcode 0543. Diameter of Binary Tree"/>
-<meta property="og:description" content="Question Link : https://leetcode.com/problems/diameter-of-binary-tree/ Difficulty: Easy Question Given the root of a binary tree, return the length of the diameter of the tree. The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or …"/>
+<meta property="og:title" content="Leetcode 0100. Same Tree"/>
+<meta property="og:description" content="Question Link : https://leetcode.com/problems/same-tree/ Difficulty: Easy Premium: False Question Given the roots of two binary trees p and q, write a function to check if they are the same or not. Two binary trees are considered the same if they are structurally identical, and the nodes have …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://tofucode.com/posts/leetcode_0543_diameter-of-binary-tree.html"/>
+<meta property="og:url" content="https://tofucode.com/posts/leetcode_0100_same-tree.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2022-10-28 00:00:00-07:00"/>
+<meta property="article:published_time" content="2023-01-09 00:00:00-08:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://tofucode.com/author/zeph.html">
 <meta property="article:section" content="Leetcode"/>
 <meta property="article:tag" content="binary-tree-traversal"/>
+<meta property="article:tag" content="recursion"/>
 <meta property="og:image" content="">
 
-  <title>TofuCode &ndash; Leetcode 0543. Diameter of Binary Tree</title>
+  <title>TofuCode &ndash; Leetcode 0100. Same Tree</title>
 
 </head>
 <body class="light-theme">
@@ -111,39 +112,41 @@
 <article class="single">
   <header>
       
-    <h1 id="leetcode_0543_diameter-of-binary-tree">Leetcode 0543. Diameter of Binary Tree</h1>
+    <h1 id="leetcode_0100_same-tree">Leetcode 0100. Same Tree</h1>
     <p>
-      Posted on Fri 28 October 2022 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
+      Posted on Mon 09 January 2023 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
 
     </p>
   </header>
 
 
   <div>
-    <p>Question Link : <a href="https://leetcode.com/problems/diameter-of-binary-tree/">https://leetcode.com/problems/diameter-of-binary-tree/</a></p>
+    <p>Question Link : <a href="https://leetcode.com/problems/same-tree/">https://leetcode.com/problems/same-tree/</a></p>
 <p>Difficulty: Easy</p>
+<p>Premium: False</p>
 <h3>Question</h3>
-<p>Given the root of a binary tree, return the length of the diameter of the tree.
-The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
-The length of a path between two nodes is represented by the number of edges between them.
+<p>Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
  
 Example 1:</p>
-<p>Input: root = [1,2,3,4,5]
-Output: 3
-Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].</p>
+<p>Input: p = [1,2,3], q = [1,2,3]
+Output: true</p>
 <p>Example 2:</p>
-<p>Input: root = [1,2]
-Output: 1</p>
+<p>Input: p = [1,2], q = [1,null,2]
+Output: false</p>
+<p>Example 3:</p>
+<p>Input: p = [1,2,1], q = [1,1,2]
+Output: false</p>
 <p>Constraints:</p>
-<p>The number of nodes in the tree is in the range [1, 104].
--100 &lt;= Node.val &lt;= 100</p>
+<p>The number of nodes in both trees is in the range [0, 100].
+-104 &lt;= Node.val &lt;= 104</p>
 <h3>Solution</h3>
-<p>Go through the whole tree and keep track of the max (left depth + right depth). Note the anwser does not need to pass the original root node so we can't only calculate depth sum of root.left and root.right.</p>
+<p>Recursively compare all node. Note the 4 different cases of the 2 nodes.</p>
 <h3>Code</h3>
 <div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">Leetcode 0543. Diameter of Binary Tree</span>
-<span class="sd">Question Link : https://leetcode.com/problems/diameter-of-binary-tree/</span>
-<span class="sd">Solution Link : https://tofucode.com/posts/leetcode_0543_diameter-of-binary-tree.html</span>
+<span class="sd">Leetcode 0100. Same Tree</span>
+<span class="sd">Question Link : https://leetcode.com/problems/same-tree/</span>
+<span class="sd">Solution Link : https://tofucode.com/posts/leetcode_0100_same-tree.html</span>
 <span class="sd">&#39;&#39;&#39;</span>
 
 <span class="c1"># Definition for a binary tree node.</span>
@@ -153,33 +156,27 @@ Output: 1</p>
 <span class="c1">#         self.left = left</span>
 <span class="c1">#         self.right = right</span>
 <span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">diameterOfBinaryTree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">isSameTree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">],</span> <span class="n">q</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">        diameter doesn&#39;t have to path root node</span>
-<span class="sd">        traverse the whole tree and keep returning the max depth,</span>
-<span class="sd">        the result would be the max of left max depth + right max depth</span>
+<span class="sd">        Recursion: check and compare all nodes</span>
 
 <span class="sd">        Time : O(n)</span>
 <span class="sd">        Space: O(n)</span>
 <span class="sd">        &#39;&#39;&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span>
+        <span class="k">if</span> <span class="n">p</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">q</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">^</span> <span class="nb">bool</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">val</span> <span class="o">!=</span> <span class="n">q</span><span class="o">.</span><span class="n">val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
 
-    <span class="k">def</span> <span class="nf">traverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39; max depth &#39;&#39;&#39;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">node</span><span class="p">:</span>
-            <span class="k">return</span> <span class="mi">0</span>
-
-        <span class="n">left</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
-        <span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">left</span> <span class="o">+</span> <span class="n">right</span><span class="p">)</span>
-        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">isSameTree</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">q</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">isSameTree</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">q</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
 </code></pre></div>
   </div>
   <div class="tag-cloud">
     <p>
       <a href="https://tofucode.com/tag/binary-tree-traversal.html">binary-tree-traversal</a>
+      <a href="https://tofucode.com/tag/recursion.html">recursion</a>
     </p>
   </div>
 
