@@ -43,6 +43,7 @@ Status: published
 | 0224 | [Basic Calculator](https://tofucode.com/posts/leetcode_0224_basic-calculator.html) | calculator, parentheses | |
 | 0226 | [Invert Binary Tree](https://tofucode.com/posts/leetcode_0226_invert-binary-tree.html) | binary-tree-manipulation | |
 | 0227 | [Basic Calculator II](https://tofucode.com/posts/leetcode_0227_basic-calculator-ii.html) | calculator | |
+| 0232 | [Implement Queue using Stacks](https://tofucode.com/posts/leetcode_0232_implement-queue-using-stacks.html) | stack, queue | [14](#"[('apple', 6), ('amazon', 3), ('bytedance', 3), ('ebay', 3), ('goldman-sachs', 3), ('vmware', 3), ('bloomberg', 2), ('de-shaw', 2), ('docusign', 2), ('google', 2), ('microsoft', 2), ('oracle', 2), ('qualcomm', 2), ('splunk', 2)]") |
 | 0234 | [Palindrome Linked List](https://tofucode.com/posts/leetcode_0234_palindrome-linked-list.html) | palindrome-center-expansion, fast-slow-pointer | |
 | 0263 | [Ugly Number](https://tofucode.com/posts/leetcode_0263_ugly-number.html) | math | |
 | 0283 | [Move Zeroes](https://tofucode.com/posts/leetcode_0283_move-zeroes.html) | array-shift, two-pointers | |
