@@ -63,10 +63,10 @@ class Solution:
         Space: O(1)
         '''
         result = []
-        self.backtrack(result, s, [], 0)
+        self.backtrack(result, [], s, 0)
         return result
 
-    def backtrack(self, result, s, path, idx):
+    def backtrack(self, result, path, s, idx):
         if idx == len(s):
             if len(path) == 4:
                 result.append('.'.join(path))
@@ -85,6 +85,6 @@ class Solution:
             if int(num) > 255:
                 break
 
-            self.backtrack(result, s, path +[num], i)
+            self.backtrack(result, path +[num], s, i)
 ```
 
