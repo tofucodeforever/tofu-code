@@ -20,6 +20,7 @@ Status: published
 | 0061 | [Rotate List](https://tofucode.com/posts/leetcode_0061_rotate-list.html) | linked-list, list-to-ring | |
 | 0070 | [Climbing Stairs](https://tofucode.com/posts/leetcode_0070_climbing-stairs.html) | dp | |
 | 0074 | [Search a 2D Matrix](https://tofucode.com/posts/leetcode_0074_search-a-2d-matrix.html) | binary-search | |
+| 0093 | [Restore IP Addresses](https://tofucode.com/posts/leetcode_0093_restore-ip-addresses.html) | backtracking | [10](#"[('google', 6), ('amazon', 4), ('microsoft', 3), ('tiktok', 3), ('apple', 2), ('arista-networks', 2), ('bytedance', 2), ('cisco', 2), ('facebook', 2), ('yahoo', 2)]") |
 | 0094 | [Binary Tree Inorder Traversal](https://tofucode.com/posts/leetcode_0094_binary-tree-inorder-traversal.html) | binary-tree-traversal-inorder | |
 | 0100 | [Same Tree](https://tofucode.com/posts/leetcode_0100_same-tree.html) | binary-tree-traversal, recursion | [12](#"[('linkedin', 9), ('amazon', 7), ('american-express', 6), ('apple', 4), ('facebook', 4), ('adobe', 3), ('google', 3), ('bloomberg', 2), ('microsoft', 2), ('oracle', 2), ('uber', 2), ('yandex', 2)]") |
 | 0101 | [Symmetric Tree](https://tofucode.com/posts/leetcode_0101_symmetric-tree.html) | binary-tree-traversal | |
