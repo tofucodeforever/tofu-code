@@ -30,6 +30,7 @@ Status: published
 | 0136 | [Single Number](https://tofucode.com/posts/leetcode_0136_single-number.html) | math | |
 | 0138 | [Copy List with Random Pointer](https://tofucode.com/posts/leetcode_0138_copy-list-with-random-pointer.html) | linked-list, dummy-list-head, recursion | |
 | 0141 | [Linked List Cycle](https://tofucode.com/posts/leetcode_0141_linked-list-cycle.html) | linked-list, fast-slow-pointer | |
+| 0146 | [LRU Cache](https://tofucode.com/posts/leetcode_0146_lru-cache.html) | lru-cache |  |
 | 0150 | [Evaluate Reverse Polish Notation](https://tofucode.com/posts/leetcode_0150_evaluate-reverse-polish-notation.html) | stack |  |
 | 0160 | [Intersection of Two Linked Lists](https://tofucode.com/posts/leetcode_0160_intersection-of-two-linked-lists.html) | linked-list | |
 | 0163 | [Missing Ranges](https://tofucode.com/posts/leetcode_0163_missing-ranges.html) | array |  |
