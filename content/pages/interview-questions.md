@@ -25,6 +25,7 @@ Status: published
 | 0100 | [Same Tree](https://tofucode.com/posts/leetcode_0100_same-tree.html) | binary-tree-traversal, recursion |  |
 | 0101 | [Symmetric Tree](https://tofucode.com/posts/leetcode_0101_symmetric-tree.html) | binary-tree-traversal | |
 | 0104 | [Maximum Depth of Binary Tree](https://tofucode.com/posts/leetcode_0104_maximum-depth-of-binary-tree.html) | binary-tree-traversal | |
+| 0106 | [Construct Binary Tree from Inorder and Postorder Traversal](https://tofucode.com/posts/leetcode_0106_construct-binary-tree-from-inorder-and-postorder-traversal.html) | binary-tree-manipulation |  |
 | 0112 | [Path Sum](https://tofucode.com/posts/leetcode_0112_path-sum.html) | binary-tree, recursion | |
 | 0124 | [Binary Tree Maximum Path Sum](https://tofucode.com/posts/leetcode_0124_binary-tree-maximum-path-sum.html) | recursion, binary-tree |  |
 | 0129 | [Sum Root to Leaf Numbers](https://tofucode.com/posts/leetcode_0129_sum-root-to-leaf-numbers.html) | recursion, binary-tree |  |
