@@ -41,6 +41,7 @@ Status: published
 | 0173 | [Binary Search Tree Iterator](https://tofucode.com/posts/leetcode_0173_binary-search-tree-iterator.html) | bst | |
 | 0198 | [House Robber](https://tofucode.com/posts/leetcode_0198_house-robber.html) | dp |  |
 | 0206 | [Reverse Linked List](https://tofucode.com/posts/leetcode_0206_reverse-linked-list.html) | linked-list | |
+| 0208 | [Implement Trie (Prefix Tree)](https://tofucode.com/posts/leetcode_0208_implement-trie-prefix-tree.html) | trie-prefix-tree |  |
 | 0215 | [Kth Largest Element in an Array](https://tofucode.com/posts/leetcode_0215_kth-largest-element-in-an-array.html) | k-most-points, bubble-sort, quick-sort | |
 | 0222 | [Count Complete Tree Nodes](https://tofucode.com/posts/leetcode_0222_count-complete-tree-nodes.html) | binary-tree | |
 | 0223 | [Rectangle Area](https://tofucode.com/posts/leetcode_0223_rectangle-area.html) | math | |
