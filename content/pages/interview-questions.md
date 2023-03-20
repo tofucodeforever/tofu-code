@@ -71,6 +71,7 @@ Status: published
 | 0495 | [Teemo Attacking](https://tofucode.com/posts/leetcode_0495_teemo-attacking.html) | greedy, interval-merge, simulation | |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion | |
 | 0543 | [Diameter of Binary Tree](https://tofucode.com/posts/leetcode_0543_diameter-of-binary-tree.html) | binary-tree-traversal | |
+| 0605 | [Can Place Flowers](https://tofucode.com/posts/leetcode_0605_can-place-flowers.html) | array |  |
 | 0606 | [Construct String from Binary Tree](https://tofucode.com/posts/leetcode_0606_construct-string-from-binary-tree.html) | recursion, binary-tree | |
 | 0623 | [Add One Row to Tree](https://tofucode.com/posts/leetcode_0623_add-one-row-to-tree.html) | binary-tree-manipulation, dfs | |
 | 0647 | [Palindromic Substrings](https://tofucode.com/posts/leetcode_0647_palindromic-substrings.html) | palindrome, string | |
