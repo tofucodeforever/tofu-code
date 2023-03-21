@@ -115,6 +115,7 @@ Status: published
 | 2293 | [Min Max Game](https://tofucode.com/posts/leetcode_2293_min-max-game.html) | recursion, simulation | |
 | 2294 | [Partition Array Such That Maximum Difference Is K](https://tofucode.com/posts/leetcode_2294_partition-array-such-that-maximum-difference-is-k.html) | array | |
 | 2326 | [Spiral Matrix IV](https://tofucode.com/posts/leetcode_2326_spiral-matrix-iv.html) | spiral-matrix | |
+| 2348 | [Number of Zero-Filled Subarrays](https://tofucode.com/posts/leetcode_2348_number-of-zero-filled-subarrays.html) | array, math |  |
 | 2389 | [Longest Subsequence With Limited Sum](https://tofucode.com/posts/leetcode_2389_longest-subsequence-with-limited-sum.html) | subset-sum, binary-search |  |
 | 2404 | [Most Frequent Even Element](https://tofucode.com/posts/leetcode_2404_most-frequent-even-element.html) | hash-map-count | |
 | 2413 | [Smallest Even Multiple](https://tofucode.com/posts/leetcode_2413_smallest-even-multiple.html) | math | |
