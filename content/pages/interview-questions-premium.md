@@ -98,6 +98,7 @@ Status: published
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://tofucode.com/posts/leetcode_1249_minimum-remove-to-make-valid-parentheses.html) | stack, parentheses | |
 | 1339 | [Maximum Product of Splitted Binary Tree](https://tofucode.com/posts/leetcode_1339_maximum-product-of-splitted-binary-tree.html) | binary-tree | [4](#"[('two-sigma', 3), ('amazon', 2), ('bloomberg', 2), ('microsoft', 0)]") |
 | 1423 | [Maximum Points You Can Obtain from Cards](https://tofucode.com/posts/leetcode_1423_maximum-points-you-can-obtain-from-cards.html) | sliding-window, array | |
+| 1466 | [Reorder Routes to Make All Paths Lead to the City Zero](https://tofucode.com/posts/leetcode_1466_reorder-routes-to-make-all-paths-lead-to-the-city-zero.html) | dfs, bfs | [5](#"[('drw', 4), ('amazon', 3), ('american-express', 3), ('bloomberg', 2), ('grab', 2)]") |
 | 1470 | [Shuffle the Array](https://tofucode.com/posts/leetcode_1470_shuffle-the-array.html) | array | [7](#"[('amazon', 4), ('uber', 3), ('adobe', 2), ('apple', 2), ('bloomberg', 2), ('google', 2), ('microsoft', 2)]") |
 | 1472 | [Design Browser History](https://tofucode.com/posts/leetcode_1472_design-browser-history.html) | stack | [8](#"[('roblox', 8), ('bloomberg', 7), ('amazon', 5), ('doordash', 3), ('google', 2), ('microsoft', 2), ('oracle', 2), ('wish', 2)]") |
 | 1544 | [Make The String Great](https://tofucode.com/posts/leetcode_1544_make-the-string-great.html) | stack | |
