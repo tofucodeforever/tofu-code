@@ -1,7 +1,7 @@
 Title: Leetcode 0005. Longest Palindromic Substring
 Slug: leetcode_0005_longest-palindromic-substring
 Status: published
-Date: 2022-06-15
+Date: 2023-03-27
 Category: Leetcode
 Tags: palindrome
 Author: Zeph
@@ -9,6 +9,8 @@ Author: Zeph
 Question Link : [https://leetcode.com/problems/longest-palindromic-substring/](https://leetcode.com/problems/longest-palindromic-substring/)
 
 Difficulty: Medium
+
+Premium: False
 
 ### Question
 Given a string s, return the longest palindromic substring in s.
