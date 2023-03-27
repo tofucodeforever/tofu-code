@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2023-03-26T00:00:00-07:00</updated><entry><title>Leetcode 0064. Minimum Path Sum</title><link href="https://tofucode.com/posts/leetcode_0064_minimum-path-sum.html" rel="alternate"></link><published>2023-03-26T00:00:00-07:00</published><updated>2023-03-26T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-03-26:/posts/leetcode_0064_minimum-path-sum.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/minimum-path-sum/"&gt;https://leetcode.com/problems/minimum-path-sum/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2023-03-27T00:00:00-07:00</updated><entry><title>Leetcode 0011. Container With Most Water</title><link href="https://tofucode.com/posts/leetcode_0011_container-with-most-water.html" rel="alternate"></link><published>2023-03-27T00:00:00-07:00</published><updated>2023-03-27T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-03-27:/posts/leetcode_0011_container-with-most-water.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/container-with-most-water/"&gt;https://leetcode.com/problems/container-with-most-water/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+Find two lines that together with …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/container-with-most-water/"&gt;https://leetcode.com/problems/container-with-most-water/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+Find two lines that together with the x-axis form a container, such that the container contains the most water.
+Return the maximum amount of water a container can store.
+Notice that you may not slant the container.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: height = [1,8,6,2,5,4,8,3,7]
+Output: 49
+Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: height = [1,1]
+Output: 1&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;n == height.length
+2 &amp;lt;= n &amp;lt;= 105
+0 &amp;lt;= height[i] &amp;lt;= 104&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Use two pointers from start and end and go towards the middle. Always move the shorter one of the two since that is the bottleneck&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0011. Container With Most Water&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/container-with-most-water/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0011_container-with-most-water.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;maxArea&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;current&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;min&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;max&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+                &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="two-pointers"></category></entry><entry><title>Leetcode 0064. Minimum Path Sum</title><link href="https://tofucode.com/posts/leetcode_0064_minimum-path-sum.html" rel="alternate"></link><published>2023-03-26T00:00:00-07:00</published><updated>2023-03-26T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-03-26:/posts/leetcode_0064_minimum-path-sum.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/minimum-path-sum/"&gt;https://leetcode.com/problems/minimum-path-sum/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
@@ -9217,58 +9270,7 @@ For operations "C" and "D", there will always be at least one previous score on 
                 &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="simulation"></category></entry><entry><title>Leetcode 0011. Container With Most Water</title><link href="https://tofucode.com/posts/leetcode_0011_container-with-most-water.html" rel="alternate"></link><published>2022-04-04T00:00:00-07:00</published><updated>2022-04-04T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-04-04:/posts/leetcode_0011_container-with-most-water.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/container-with-most-water/"&gt;https://leetcode.com/problems/container-with-most-water/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Difficulty: Medium&lt;/p&gt;
-&lt;h3&gt;Question&lt;/h3&gt;
-&lt;p&gt;You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
-Find two lines that together with the x-axis …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/container-with-most-water/"&gt;https://leetcode.com/problems/container-with-most-water/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Difficulty: Medium&lt;/p&gt;
-&lt;h3&gt;Question&lt;/h3&gt;
-&lt;p&gt;You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
-Find two lines that together with the x-axis form a container, such that the container contains the most water.
-Return the maximum amount of water a container can store.
-Notice that you may not slant the container.
- 
-Example 1:&lt;/p&gt;
-&lt;p&gt;Input: height = [1,8,6,2,5,4,8,3,7]
-Output: 49
-Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.&lt;/p&gt;
-&lt;p&gt;Example 2:&lt;/p&gt;
-&lt;p&gt;Input: height = [1,1]
-Output: 1&lt;/p&gt;
-&lt;p&gt;Constraints:&lt;/p&gt;
-&lt;p&gt;n == height.length
-2 &amp;lt;= n &amp;lt;= 105
-0 &amp;lt;= height[i] &amp;lt;= 104&lt;/p&gt;
-&lt;h3&gt;Solution&lt;/h3&gt;
-&lt;p&gt;Use two pointers from start and end and go towards the middle. Always move the shorter one of the two since that is the bottleneck&lt;/p&gt;
-&lt;h3&gt;Code&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-&lt;span class="sd"&gt;Leetcode 0011. Container With Most Water&lt;/span&gt;
-&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/container-with-most-water/&lt;/span&gt;
-&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0011_container-with-most-water.html&lt;/span&gt;
-&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;maxArea&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
-&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
-&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-        &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-        &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-
-        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;current&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;min&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-            &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;max&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
-                &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-                &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="two-pointers"></category></entry><entry><title>Leetcode 0344. Reverse String</title><link href="https://tofucode.com/posts/leetcode_0344_reverse-string.html" rel="alternate"></link><published>2022-03-31T00:00:00-07:00</published><updated>2022-03-31T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-03-31:/posts/leetcode_0344_reverse-string.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/reverse-string/"&gt;https://leetcode.com/problems/reverse-string/&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="simulation"></category></entry><entry><title>Leetcode 0344. Reverse String</title><link href="https://tofucode.com/posts/leetcode_0344_reverse-string.html" rel="alternate"></link><published>2022-03-31T00:00:00-07:00</published><updated>2022-03-31T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-03-31:/posts/leetcode_0344_reverse-string.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/reverse-string/"&gt;https://leetcode.com/problems/reverse-string/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;Write a function that reverses a string. The input string is given as an array of characters s.
