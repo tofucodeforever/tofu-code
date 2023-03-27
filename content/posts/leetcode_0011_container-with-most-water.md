@@ -1,7 +1,7 @@
 Title: Leetcode 0011. Container With Most Water
 Slug: leetcode_0011_container-with-most-water
 Status: published
-Date: 2022-04-04
+Date: 2023-03-27
 Category: Leetcode
 Tags: two-pointers
 Author: Zeph
@@ -9,6 +9,8 @@ Author: Zeph
 Question Link : [https://leetcode.com/problems/container-with-most-water/](https://leetcode.com/problems/container-with-most-water/)
 
 Difficulty: Medium
+
+Premium: False
 
 ### Question
 You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
