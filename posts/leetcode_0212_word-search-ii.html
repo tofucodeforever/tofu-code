@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://tofucode.com/theme/pygments/monokai.min.css">
+
+    <script src="https://tofucode.com/theme/tipuesearch/jquery.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="https://tofucode.com/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="https://tofucode.com/theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://tofucode.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="TofuCode Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'G-DCBDZPQQD1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Zeph" />
+<meta name="description" content="Question Link : https://leetcode.com/problems/word-search-ii/ Difficulty: Hard Premium: False Question Given an m x n board of characters and a list of strings words, return all words on the board. Each word must be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically …" />
+<meta name="keywords" content="backtracking-with-matrix">
+
+
+<meta property="og:site_name" content="TofuCode"/>
+<meta property="og:title" content="Leetcode 0212. Word Search II"/>
+<meta property="og:description" content="Question Link : https://leetcode.com/problems/word-search-ii/ Difficulty: Hard Premium: False Question Given an m x n board of characters and a list of strings words, return all words on the board. Each word must be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://tofucode.com/posts/leetcode_0212_word-search-ii.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2023-03-26 00:00:00-07:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://tofucode.com/author/zeph.html">
+<meta property="article:section" content="Leetcode"/>
+<meta property="article:tag" content="backtracking-with-matrix"/>
+<meta property="og:image" content="">
+
+  <title>TofuCode &ndash; Leetcode 0212. Word Search II</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://tofucode.com">
+        <img src="https://tofucode.com/theme/img/profile.png" alt="TofuCode" title="TofuCode">
+      </a>
+
+      <h1>
+        <a href="https://tofucode.com">TofuCode</a>
+      </h1>
+
+      
+      <ul class="list social">
+      </ul>
+
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="/pages/interview-questions.html" >Interview Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/category/leetcode.html" >Recent Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/tags.html" >Tags</a>
+            </li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="leetcode_0212_word-search-ii">Leetcode 0212. Word Search II</h1>
+    <p>
+      Posted on Sun 26 March 2023 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Question Link : <a href="https://leetcode.com/problems/word-search-ii/">https://leetcode.com/problems/word-search-ii/</a></p>
+<p>Difficulty: Hard</p>
+<p>Premium: False</p>
+<h3>Question</h3>
+<p>Given an m x n board of characters and a list of strings words, return all words on the board.
+Each word must be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.
+ 
+Example 1:</p>
+<p>Input: board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], words = ["oath","pea","eat","rain"]
+Output: ["eat","oath"]</p>
+<p>Example 2:</p>
+<p>Input: board = [["a","b"],["c","d"]], words = ["abcb"]
+Output: []</p>
+<p>Constraints:</p>
+<p>m == board.length
+n == board[i].length
+1 &lt;= m, n &lt;= 12
+board[i][j] is a lowercase English letter.
+1 &lt;= words.length &lt;= 3 * 104
+1 &lt;= words[i].length &lt;= 10
+words[i] consists of lowercase English letters.
+All the strings of words are unique.</p>
+<h3>Solution</h3>
+<p>Intuition is to do the same as the Word Search problem, but time would be multiplied by number of words to search for. Here the best way is to first use all the words to build a trie, and run backtracking with that trie.</p>
+<h3>Code</h3>
+<div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Leetcode 0212. Word Search II</span>
+<span class="sd">Question Link : https://leetcode.com/problems/word-search-ii/</span>
+<span class="sd">Solution Link : https://tofucode.com/posts/leetcode_0212_word-search-ii.html</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">findWords</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">board</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]],</span> <span class="n">words</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        We build a Trie, and while doing backtracking, try to match against the trie.</span>
+
+<span class="sd">        Trie + Word Search</span>
+<span class="sd">        Trie: https://leetcode.com/problems/implement-trie-prefix-tree/</span>
+<span class="sd">        Word Search: https://leetcode.com/problems/word-search/</span>
+
+<span class="sd">        Time : : O(mn * 3^k) mn is board size, k is length of word, 3 is due to 3 way spilt</span>
+<span class="sd">        Space: O(k) total k letters in the dictionary</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">trie</span> <span class="o">=</span> <span class="n">Trie</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+            <span class="n">trie</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+
+        <span class="n">rows</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+        <span class="n">cols</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">if</span> <span class="n">rows</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="n">seen</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span> <span class="c1"># or can be subed with: board[i][j] = &quot;#&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
+                <span class="n">letter</span> <span class="o">=</span> <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">trie</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">backtracking</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">seen</span><span class="p">,</span> <span class="n">trie</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">letter</span><span class="p">])</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span>
+
+
+    <span class="k">def</span> <span class="nf">backtracking</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">board</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">seen</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+        <span class="n">node_letter</span> <span class="o">=</span> <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+        <span class="c1"># check current char</span>
+        <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="n">node</span><span class="o">.</span><span class="n">c</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="c1"># check if leaf and matched the whole word, null out node.original to avoid dups</span>
+        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">is_leaf</span> <span class="ow">and</span> <span class="n">node</span><span class="o">.</span><span class="n">original</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">original</span><span class="p">)</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">original</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
+        <span class="c1"># board[i][j] = &quot;#&quot;</span>
+
+        <span class="k">for</span> <span class="n">offset</span> <span class="ow">in</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)]:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">offset</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="n">offset</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">rows</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">cols</span><span class="p">:</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
+                    <span class="n">letter</span> <span class="o">=</span> <span class="n">board</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">backtracking</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">seen</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">letter</span><span class="p">])</span>
+
+        <span class="n">seen</span><span class="o">.</span><span class="n">remove</span><span class="p">((</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
+        <span class="c1"># board[i][j] = node_letter</span>
+
+
+<span class="k">class</span> <span class="nc">TrieNode</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="n">c</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># char -&gt; TrieNode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_leaf</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">original</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">class</span> <span class="nc">Trie</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="n">TrieNode</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span>
+
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">current</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+                <span class="n">current</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">TrieNode</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+        <span class="n">current</span><span class="o">.</span><span class="n">is_leaf</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">current</span><span class="o">.</span><span class="n">original</span> <span class="o">=</span> <span class="n">word</span>
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://tofucode.com/tag/backtracking-with-matrix.html">backtracking-with-matrix</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p> Eat Tofu and be true </p>
+<p>&copy; 2023 TofuCode.com</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " TofuCode ",
+  "url" : "https://tofucode.com",
+  "image": "",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>
