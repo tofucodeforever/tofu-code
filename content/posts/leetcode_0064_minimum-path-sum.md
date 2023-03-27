@@ -80,7 +80,7 @@ class Solution:
         return dp[rows-1][cols-1]
 
 
-class Solution:
+class SolutionImproved1:
     def minPathSum(self, grid: List[List[int]]) -> int:
         """
         Compress the dp array to just 1d: we only care about the last row
