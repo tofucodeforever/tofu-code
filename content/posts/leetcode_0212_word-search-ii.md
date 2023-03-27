@@ -3,7 +3,7 @@ Slug: leetcode_0212_word-search-ii
 Status: published
 Date: 2023-03-26
 Category: Leetcode
-Tags: backtracking-with-matrix
+Tags: backtracking-with-matrix, trie-prefix-tree
 Author: Zeph
 
 Question Link : [https://leetcode.com/problems/word-search-ii/](https://leetcode.com/problems/word-search-ii/)
