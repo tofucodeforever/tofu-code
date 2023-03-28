@@ -95,6 +95,7 @@ Status: published
 | 0938 | [Range Sum of BST](https://tofucode.com/posts/leetcode_0938_range-sum-of-bst.html) | bst, recursion | [7](#"[('facebook', 13), ('google', 6), ('amazon', 4), ('oracle', 4), ('apple', 3), ('adobe', 2), ('yandex', 2)]") |
 | 0946 | [Validate Stack Sequences](https://tofucode.com/posts/leetcode_0946_validate-stack-sequences.html) | stack, simulation, greedy | |
 | 0958 | [Check Completeness of a Binary Tree](https://tofucode.com/posts/leetcode_0958_check-completeness-of-a-binary-tree.html) | binary-tree, bfs | [4](#"[('facebook', 7), ('amazon', 2), ('apple', 2), ('microsoft', 2)]") |
+| 0983 | [Minimum Cost For Tickets](https://tofucode.com/posts/leetcode_0983_minimum-cost-for-tickets.html) | dp, knapsack-unbounded | [10](#"[('shopee', 9), ('bloomberg', 5), ('google', 4), ('goldman-sachs', 3), ('adobe', 2), ('amazon', 2), ('apple', 2), ('facebook', 2), ('flipkart', 2), ('grab', 0)]") |
 | 0991 | [Broken Calculator](https://tofucode.com/posts/leetcode_0991_broken-calculator.html) | reverse-thinking, puzzle | |
 | 1094 | [Car Pooling](https://tofucode.com/posts/leetcode_1094_car-pooling.html) | interval-overlap | |
 | 1143 | [Longest Common Subsequence](https://tofucode.com/posts/leetcode_1143_longest-common-subsequence.html) | dp-2d | [13](#"[('amazon', 7), ('apple', 5), ('doordash', 3), ('indeed', 3), ('karat', 3), ('microsoft', 3), ('vmware', 3), ('adobe', 2), ('bloomberg', 2), ('google', 2), ('intuit', 2), ('uber', 2), ('wayfair', 2)]") |
