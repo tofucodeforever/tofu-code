@@ -88,7 +88,7 @@ Status: published
 | 0799 | [Champagne Tower](https://tofucode.com/posts/leetcode_0799_champagne-tower.html) | simulation | |
 | 0872 | [Leaf-Similar Trees](https://tofucode.com/posts/leetcode_0872_leaf-similar-trees.html) | binary-tree-traversal | [3](#"[('amazon', 4), ('google', 3), ('microsoft', 2)]") |
 | 0876 | [Middle of the Linked List](https://tofucode.com/posts/leetcode_0876_middle-of-the-linked-list.html) | fast-slow-pointer | [14](#"[('adobe', 4), ('amazon', 4), ('apple', 4), ('bloomberg', 2), ('facebook', 2), ('goldman-sachs', 2), ('google', 2), ('jpmorgan', 2), ('microsoft', 2), ('nvidia', 2), ('oracle', 2), ('qualcomm', 2), ('samsung', 2), ('walmart-labs', 0)]") |
-| 0881 | [Boats to Save People](https://tofucode.com/posts/leetcode_0881_boats-to-save-people.html) | two-pointers, greedy | |
+| 0881 | [Boats to Save People](https://tofucode.com/posts/leetcode_0881_boats-to-save-people.html) | two-pointers, greedy | [9](#"[('amazon', 5), ('salesforce', 5), ('apple', 3), ('cisco', 3), ('google', 3), ('intuit', 3), ('uber', 3), ('bloomberg', 2), ('microsoft', 2)]") |
 | 0897 | [Increasing Order Search Tree](https://tofucode.com/posts/leetcode_0897_increasing-order-search-tree.html) | bst | |
 | 0901 | [Online Stock Span](https://tofucode.com/posts/leetcode_0901_online-stock-span.html) | monotonic-stack | |
 | 0931 | [Minimum Falling Path Sum](https://tofucode.com/posts/leetcode_0931_minimum-falling-path-sum.html) | dp-2d | [5](#"[('amazon', 3), ('google', 3), ('apple', 2), ('visa', 2), ('goldman-sachs', 0)]") |

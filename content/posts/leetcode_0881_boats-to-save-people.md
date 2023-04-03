@@ -1,7 +1,7 @@
 Title: Leetcode 0881. Boats to Save People
 Slug: leetcode_0881_boats-to-save-people
 Status: published
-Date: 2022-03-23
+Date: 2023-04-02
 Category: Leetcode
 Tags: two-pointers, greedy
 Author: Zeph
@@ -9,6 +9,8 @@ Author: Zeph
 Question Link : [https://leetcode.com/problems/boats-to-save-people/](https://leetcode.com/problems/boats-to-save-people/)
 
 Difficulty: Medium
+
+Premium: False
 
 ### Question
 You are given an array people where people[i] is the weight of the ith person, and an infinite number of boats where each boat can carry a maximum weight of limit. Each boat carries at most two people at the same time, provided the sum of the weight of those people is at most limit.
@@ -54,6 +56,14 @@ Solution Link : https://tofucode.com/posts/leetcode_0881_boats-to-save-people.ht
 
 class Solution:
     def numRescueBoats(self, people: List[int], limit: int) -> int:
+        """
+        sort people
+        greedy: pair smallest to largest if possible
+        also run when l == r: the last remaining one in the middle
+
+        Time : O(n log n)
+        Space: O(n)
+        """
         people = sorted(people)
         result = 0
         i = 0

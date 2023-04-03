@@ -88,7 +88,7 @@ Status: published
 | 0799 | [Champagne Tower](https://tofucode.com/posts/leetcode_0799_champagne-tower.html) | simulation | |
 | 0872 | [Leaf-Similar Trees](https://tofucode.com/posts/leetcode_0872_leaf-similar-trees.html) | binary-tree-traversal |  |
 | 0876 | [Middle of the Linked List](https://tofucode.com/posts/leetcode_0876_middle-of-the-linked-list.html) | fast-slow-pointer |  |
-| 0881 | [Boats to Save People](https://tofucode.com/posts/leetcode_0881_boats-to-save-people.html) | two-pointers, greedy | |
+| 0881 | [Boats to Save People](https://tofucode.com/posts/leetcode_0881_boats-to-save-people.html) | two-pointers, greedy |  |
 | 0897 | [Increasing Order Search Tree](https://tofucode.com/posts/leetcode_0897_increasing-order-search-tree.html) | bst | |
 | 0901 | [Online Stock Span](https://tofucode.com/posts/leetcode_0901_online-stock-span.html) | monotonic-stack | |
 | 0931 | [Minimum Falling Path Sum](https://tofucode.com/posts/leetcode_0931_minimum-falling-path-sum.html) | dp-2d |  |
