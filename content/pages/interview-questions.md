@@ -124,6 +124,7 @@ Status: published
 | 2348 | [Number of Zero-Filled Subarrays](https://tofucode.com/posts/leetcode_2348_number-of-zero-filled-subarrays.html) | array, math |  |
 | 2389 | [Longest Subsequence With Limited Sum](https://tofucode.com/posts/leetcode_2389_longest-subsequence-with-limited-sum.html) | subset-sum, binary-search |  |
 | 2404 | [Most Frequent Even Element](https://tofucode.com/posts/leetcode_2404_most-frequent-even-element.html) | hash-map-count | |
+| 2405 | [Optimal Partition of String](https://tofucode.com/posts/leetcode_2405_optimal-partition-of-string.html) | string, greedy |  |
 | 2413 | [Smallest Even Multiple](https://tofucode.com/posts/leetcode_2413_smallest-even-multiple.html) | math | |
 | 2414 | [Length of the Longest Alphabetical Continuous Substring](https://tofucode.com/posts/leetcode_2414_length-of-the-longest-alphabetical-continuous-substring.html) | pointers, stack | |
 | 2418 | [Sort the People](https://tofucode.com/posts/leetcode_2418_sort-the-people.html) | hash-map | |
