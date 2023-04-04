@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2023-04-02T00:00:00-07:00</updated><entry><title>Leetcode 0881. Boats to Save People</title><link href="https://tofucode.com/posts/leetcode_0881_boats-to-save-people.html" rel="alternate"></link><published>2023-04-02T00:00:00-07:00</published><updated>2023-04-02T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-04-02:/posts/leetcode_0881_boats-to-save-people.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/boats-to-save-people/"&gt;https://leetcode.com/problems/boats-to-save-people/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2023-04-03T00:00:00-07:00</updated><entry><title>Leetcode 2405. Optimal Partition of String</title><link href="https://tofucode.com/posts/leetcode_2405_optimal-partition-of-string.html" rel="alternate"></link><published>2023-04-03T00:00:00-07:00</published><updated>2023-04-03T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-04-03:/posts/leetcode_2405_optimal-partition-of-string.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/optimal-partition-of-string/"&gt;https://leetcode.com/problems/optimal-partition-of-string/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given a string s, partition the string into one or more substrings such that the characters in each substring are unique. That is, no letter appears in a single substring more than once.
+Return the minimum number of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/optimal-partition-of-string/"&gt;https://leetcode.com/problems/optimal-partition-of-string/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given a string s, partition the string into one or more substrings such that the characters in each substring are unique. That is, no letter appears in a single substring more than once.
+Return the minimum number of substrings in such a partition.
+Note that each character should belong to exactly one substring in a partition.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: s = "abacaba"
+Output: 4
+Explanation:
+Two possible partitions are ("a","ba","cab","a") and ("ab","a","ca","ba").
+It can be shown that 4 is the minimum number of substrings needed.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: s = "ssssss"
+Output: 6
+Explanation:
+The only valid partition is ("s","s","s","s","s","s").&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= s.length &amp;lt;= 105
+s consists of only English lowercase letters.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Since each substring can only have one copy of a letter, we can use a set to check that it only appears once for each substring. &lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 2405. Optimal Partition of String&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/optimal-partition-of-string/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_2405_optimal-partition-of-string.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;partitionString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;abacaba&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        ab&lt;/span&gt;
+&lt;span class="sd"&gt;        ac&lt;/span&gt;
+&lt;span class="sd"&gt;        ab&lt;/span&gt;
+&lt;span class="sd"&gt;        a&lt;/span&gt;
+
+&lt;span class="sd"&gt;        keep a seen set for every substring, can also be an array since max size is 26&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;seen&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# current substring&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;seen&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+                &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="string"></category><category term="greedy"></category></entry><entry><title>Leetcode 0881. Boats to Save People</title><link href="https://tofucode.com/posts/leetcode_0881_boats-to-save-people.html" rel="alternate"></link><published>2023-04-02T00:00:00-07:00</published><updated>2023-04-02T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-04-02:/posts/leetcode_0881_boats-to-save-people.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/boats-to-save-people/"&gt;https://leetcode.com/problems/boats-to-save-people/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
