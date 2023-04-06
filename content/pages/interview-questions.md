@@ -43,6 +43,7 @@ Status: published
 | 0169 | [Majority Element](https://tofucode.com/posts/leetcode_0169_majority-element.html) | counting, boyer-moore-voting-algorithm | |
 | 0173 | [Binary Search Tree Iterator](https://tofucode.com/posts/leetcode_0173_binary-search-tree-iterator.html) | bst | |
 | 0198 | [House Robber](https://tofucode.com/posts/leetcode_0198_house-robber.html) | dp |  |
+| 0200 | [Number of Islands](https://tofucode.com/posts/leetcode_0200_number-of-islands.html) | dfs-bfs-grid |  |
 | 0206 | [Reverse Linked List](https://tofucode.com/posts/leetcode_0206_reverse-linked-list.html) | linked-list | |
 | 0208 | [Implement Trie (Prefix Tree)](https://tofucode.com/posts/leetcode_0208_implement-trie-prefix-tree.html) | trie-prefix-tree |  |
 | 0211 | [Design Add and Search Words Data Structure](https://tofucode.com/posts/leetcode_0211_design-add-and-search-words-data-structure.html) | trie-prefix-tree, dfs, recursion |  |
