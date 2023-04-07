@@ -98,6 +98,7 @@ Status: published
 | 0958 | [Check Completeness of a Binary Tree](https://tofucode.com/posts/leetcode_0958_check-completeness-of-a-binary-tree.html) | binary-tree, bfs |  |
 | 0983 | [Minimum Cost For Tickets](https://tofucode.com/posts/leetcode_0983_minimum-cost-for-tickets.html) | dp, knapsack-unbounded |  |
 | 0991 | [Broken Calculator](https://tofucode.com/posts/leetcode_0991_broken-calculator.html) | reverse-thinking, puzzle | |
+| 1020 | [Number of Enclaves](https://tofucode.com/posts/leetcode_1020_number-of-enclaves.html) | dfs-bfs-grid |  |
 | 1094 | [Car Pooling](https://tofucode.com/posts/leetcode_1094_car-pooling.html) | interval-overlap | |
 | 1143 | [Longest Common Subsequence](https://tofucode.com/posts/leetcode_1143_longest-common-subsequence.html) | dp-2d |  |
 | 1207 | [Unique Number of Occurrences](https://tofucode.com/posts/leetcode_1207_unique-number-of-occurrences.html) | counting |  |
