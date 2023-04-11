@@ -126,6 +126,7 @@ Status: published
 | 2326 | [Spiral Matrix IV](https://tofucode.com/posts/leetcode_2326_spiral-matrix-iv.html) | spiral-matrix | |
 | 2348 | [Number of Zero-Filled Subarrays](https://tofucode.com/posts/leetcode_2348_number-of-zero-filled-subarrays.html) | array, math | [1](#"[('google', 0)]") |
 | 2389 | [Longest Subsequence With Limited Sum](https://tofucode.com/posts/leetcode_2389_longest-subsequence-with-limited-sum.html) | subset-sum, binary-search | [0](#"[]") |
+| 2390 | [Removing Stars From a String](https://tofucode.com/posts/leetcode_2390_removing-stars-from-a-string.html) | stack | [1](#"[('amazon', 0)]") |
 | 2404 | [Most Frequent Even Element](https://tofucode.com/posts/leetcode_2404_most-frequent-even-element.html) | hash-map-count | |
 | 2405 | [Optimal Partition of String](https://tofucode.com/posts/leetcode_2405_optimal-partition-of-string.html) | string, greedy | [2](#"[('amazon', 2), ('microsoft', 2)]") |
 | 2413 | [Smallest Even Multiple](https://tofucode.com/posts/leetcode_2413_smallest-even-multiple.html) | math | |
