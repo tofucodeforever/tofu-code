@@ -1,5 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2023-04-06T00:00:00-07:00</updated><entry><title>Leetcode 1020. Number of Enclaves</title><link href="https://tofucode.com/posts/leetcode_1020_number-of-enclaves.html" rel="alternate"></link><published>2023-04-06T00:00:00-07:00</published><updated>2023-04-06T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-04-06:/posts/leetcode_1020_number-of-enclaves.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/number-of-enclaves/"&gt;https://leetcode.com/problems/number-of-enclaves/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2023-04-10T00:00:00-07:00</updated><entry><title>Leetcode 2390. Removing Stars From a String</title><link href="https://tofucode.com/posts/leetcode_2390_removing-stars-from-a-string.html" rel="alternate"></link><published>2023-04-10T00:00:00-07:00</published><updated>2023-04-10T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-04-10:/posts/leetcode_2390_removing-stars-from-a-string.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/removing-stars-from-a-string/"&gt;https://leetcode.com/problems/removing-stars-from-a-string/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given a string s, which contains stars *.
+In one operation, you can:&lt;/p&gt;
+&lt;p&gt;Choose a star in s.
+Remove the closest non-star character to its left, as well as remove the star itself.&lt;/p&gt;
+&lt;p&gt;Return the string after …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/removing-stars-from-a-string/"&gt;https://leetcode.com/problems/removing-stars-from-a-string/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given a string s, which contains stars *.
+In one operation, you can:&lt;/p&gt;
+&lt;p&gt;Choose a star in s.
+Remove the closest non-star character to its left, as well as remove the star itself.&lt;/p&gt;
+&lt;p&gt;Return the string after all stars have been removed.
+Note:&lt;/p&gt;
+&lt;p&gt;The input will be generated such that the operation is always possible.
+It can be shown that the resulting string will always be unique.&lt;/p&gt;
+&lt;p&gt;Example 1:&lt;/p&gt;
+&lt;p&gt;Input: s = "leet&lt;strong&gt;cod*e"
+Output: "lecoe"
+Explanation: Performing the removals from left to right:
+- The closest character to the 1st star is 't' in "leet&lt;/strong&gt;cod&lt;em&gt;e". s becomes "lee&lt;/em&gt;cod&lt;em&gt;e".
+- The closest character to the 2nd star is 'e' in "lee&lt;/em&gt;cod&lt;em&gt;e". s becomes "lecod&lt;/em&gt;e".
+- The closest character to the 3rd star is 'd' in "lecod*e". s becomes "lecoe".
+There are no more stars, so we return "lecoe".
+Example 2:&lt;/p&gt;
+&lt;p&gt;Input: s = "erase&lt;strong&gt;*&lt;/strong&gt;"
+Output: ""
+Explanation: The entire string is removed, so we return an empty string.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= s.length &amp;lt;= 105
+s consists of lowercase English letters and stars *.
+The operation above can be performed on s.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Use a stack since it mentions removing to the left.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 2390. Removing Stars From a String&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/removing-stars-from-a-string/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_2390_removing-stars-from-a-string.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;removeStars&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        stack, pop when there is a star&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;stack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;*&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="stack"></category></entry><entry><title>Leetcode 1020. Number of Enclaves</title><link href="https://tofucode.com/posts/leetcode_1020_number-of-enclaves.html" rel="alternate"></link><published>2023-04-06T00:00:00-07:00</published><updated>2023-04-06T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-04-06:/posts/leetcode_1020_number-of-enclaves.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/number-of-enclaves/"&gt;https://leetcode.com/problems/number-of-enclaves/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
