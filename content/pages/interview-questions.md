@@ -21,6 +21,7 @@ Status: published
 | 0061 | [Rotate List](https://tofucode.com/posts/leetcode_0061_rotate-list.html) | linked-list, list-to-ring | |
 | 0064 | [Minimum Path Sum](https://tofucode.com/posts/leetcode_0064_minimum-path-sum.html) | dp-2d, dp |  |
 | 0070 | [Climbing Stairs](https://tofucode.com/posts/leetcode_0070_climbing-stairs.html) | dp | |
+| 0071 | [Simplify Path](https://tofucode.com/posts/leetcode_0071_simplify-path.html) | stack |  |
 | 0074 | [Search a 2D Matrix](https://tofucode.com/posts/leetcode_0074_search-a-2d-matrix.html) | binary-search | |
 | 0079 | [Word Search](https://tofucode.com/posts/leetcode_0079_word-search.html) | backtracking-with-matrix |  |
 | 0093 | [Restore IP Addresses](https://tofucode.com/posts/leetcode_0093_restore-ip-addresses.html) | backtracking |  |
