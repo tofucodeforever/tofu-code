@@ -108,6 +108,7 @@ Status: published
 | 1254 | [Number of Closed Islands](https://tofucode.com/posts/leetcode_1254_number-of-closed-islands.html) | dfs-bfs-grid |  |
 | 1339 | [Maximum Product of Splitted Binary Tree](https://tofucode.com/posts/leetcode_1339_maximum-product-of-splitted-binary-tree.html) | binary-tree |  |
 | 1423 | [Maximum Points You Can Obtain from Cards](https://tofucode.com/posts/leetcode_1423_maximum-points-you-can-obtain-from-cards.html) | sliding-window, array | |
+| 1431 | [Kids With the Greatest Number of Candies](https://tofucode.com/posts/leetcode_1431_kids-with-the-greatest-number-of-candies.html) | simulation |  |
 | 1466 | [Reorder Routes to Make All Paths Lead to the City Zero](https://tofucode.com/posts/leetcode_1466_reorder-routes-to-make-all-paths-lead-to-the-city-zero.html) | dfs, bfs |  |
 | 1470 | [Shuffle the Array](https://tofucode.com/posts/leetcode_1470_shuffle-the-array.html) | array |  |
 | 1472 | [Design Browser History](https://tofucode.com/posts/leetcode_1472_design-browser-history.html) | stack |  |
