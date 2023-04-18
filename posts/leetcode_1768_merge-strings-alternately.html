@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://tofucode.com/theme/pygments/monokai.min.css">
+
+    <script src="https://tofucode.com/theme/tipuesearch/jquery.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="https://tofucode.com/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="https://tofucode.com/theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://tofucode.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="TofuCode Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'G-DCBDZPQQD1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Zeph" />
+<meta name="description" content="Question Link : https://leetcode.com/problems/merge-strings-alternately/ Difficulty: Easy Premium: False Question You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged …" />
+<meta name="keywords" content="pointers">
+
+
+<meta property="og:site_name" content="TofuCode"/>
+<meta property="og:title" content="Leetcode 1768. Merge Strings Alternately"/>
+<meta property="og:description" content="Question Link : https://leetcode.com/problems/merge-strings-alternately/ Difficulty: Easy Premium: False Question You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://tofucode.com/posts/leetcode_1768_merge-strings-alternately.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2023-04-17 00:00:00-07:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://tofucode.com/author/zeph.html">
+<meta property="article:section" content="Leetcode"/>
+<meta property="article:tag" content="pointers"/>
+<meta property="og:image" content="">
+
+  <title>TofuCode &ndash; Leetcode 1768. Merge Strings Alternately</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://tofucode.com">
+        <img src="https://tofucode.com/theme/img/profile.png" alt="TofuCode" title="TofuCode">
+      </a>
+
+      <h1>
+        <a href="https://tofucode.com">TofuCode</a>
+      </h1>
+
+      
+      <ul class="list social">
+      </ul>
+
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="/pages/interview-questions.html" >Interview Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/category/leetcode.html" >Recent Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/tags.html" >Tags</a>
+            </li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="leetcode_1768_merge-strings-alternately">Leetcode 1768. Merge Strings Alternately</h1>
+    <p>
+      Posted on Mon 17 April 2023 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Question Link : <a href="https://leetcode.com/problems/merge-strings-alternately/">https://leetcode.com/problems/merge-strings-alternately/</a></p>
+<p>Difficulty: Easy</p>
+<p>Premium: False</p>
+<h3>Question</h3>
+<p>You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.
+Return the merged string.
+ 
+Example 1:</p>
+<p>Input: word1 = "abc", word2 = "pqr"
+Output: "apbqcr"
+Explanation: The merged string will be merged as so:
+word1:  a   b   c
+word2:    p   q   r
+merged: a p b q c r</p>
+<p>Example 2:</p>
+<p>Input: word1 = "ab", word2 = "pqrs"
+Output: "apbqrs"
+Explanation: Notice that as word2 is longer, "rs" is appended to the end.
+word1:  a   b 
+word2:    p   q   r   s
+merged: a p b q   r   s</p>
+<p>Example 3:</p>
+<p>Input: word1 = "abcd", word2 = "pq"
+Output: "apbqcd"
+Explanation: Notice that as word1 is longer, "cd" is appended to the end.
+word1:  a   b   c   d
+word2:    p   q 
+merged: a p b q c   d</p>
+<p>Constraints:</p>
+<p>1 &lt;= word1.length, word2.length &lt;= 100
+word1 and word2 consist of lowercase English letters.</p>
+<h3>Solution</h3>
+<p>Use 2 ponters one for each word, and check at the end if there are any left. If try solving this question with setting one word as the shorter one, note that the requirement is that we always need to start with word1.</p>
+<h3>Code</h3>
+<div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Leetcode 1768. Merge Strings Alternately</span>
+<span class="sd">Question Link : https://leetcode.com/problems/merge-strings-alternately/</span>
+<span class="sd">Solution Link : https://tofucode.com/posts/leetcode_1768_merge-strings-alternately.html</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">mergeAlternately</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">word2</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        word1 = &quot;ab&quot;, word2 = &quot;pqrs&quot;</span>
+<span class="sd">        2 pointers</span>
+<span class="sd">        a p b qrs</span>
+
+<span class="sd">        n total chars</span>
+<span class="sd">        Time : O(n)</span>
+<span class="sd">        Space: O(n)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">word1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">word2</span><span class="p">):</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word2</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">word1</span><span class="p">):</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word1</span><span class="p">[</span><span class="n">i</span><span class="p">:])</span>
+        <span class="k">elif</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">word2</span><span class="p">):</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word2</span><span class="p">[</span><span class="n">i</span><span class="p">:])</span>
+
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://tofucode.com/tag/pointers.html">pointers</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p> Eat Tofu and be true </p>
+<p>&copy; 2023 TofuCode.com</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " TofuCode ",
+  "url" : "https://tofucode.com",
+  "image": "",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>
