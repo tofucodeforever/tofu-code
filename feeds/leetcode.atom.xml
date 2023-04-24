@@ -1,5 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2023-04-17T00:00:00-07:00</updated><entry><title>Leetcode 1768. Merge Strings Alternately</title><link href="https://tofucode.com/posts/leetcode_1768_merge-strings-alternately.html" rel="alternate"></link><published>2023-04-17T00:00:00-07:00</published><updated>2023-04-17T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-04-17:/posts/leetcode_1768_merge-strings-alternately.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/merge-strings-alternately/"&gt;https://leetcode.com/problems/merge-strings-alternately/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2023-04-24T00:00:00-07:00</updated><entry><title>Leetcode 1046. Last Stone Weight</title><link href="https://tofucode.com/posts/leetcode_1046_last-stone-weight.html" rel="alternate"></link><published>2023-04-24T00:00:00-07:00</published><updated>2023-04-24T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-04-24:/posts/leetcode_1046_last-stone-weight.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/last-stone-weight/"&gt;https://leetcode.com/problems/last-stone-weight/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given an array of integers stones where stones[i] is the weight of the ith stone.
+We are playing a game with the stones. On each turn, we choose the heaviest two stones and smash them …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/last-stone-weight/"&gt;https://leetcode.com/problems/last-stone-weight/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given an array of integers stones where stones[i] is the weight of the ith stone.
+We are playing a game with the stones. On each turn, we choose the heaviest two stones and smash them together. Suppose the heaviest two stones have weights x and y with x &amp;lt;= y. The result of this smash is:&lt;/p&gt;
+&lt;p&gt;If x == y, both stones are destroyed, and
+If x != y, the stone of weight x is destroyed, and the stone of weight y has new weight y - x.&lt;/p&gt;
+&lt;p&gt;At the end of the game, there is at most one stone left.
+Return the weight of the last remaining stone. If there are no stones left, return 0.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: stones = [2,7,4,1,8,1]
+Output: 1
+Explanation: 
+We combine 7 and 8 to get 1 so the array converts to [2,4,1,1,1] then,
+we combine 2 and 4 to get 2 so the array converts to [2,1,1,1] then,
+we combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
+we combine 1 and 1 to get 0 so the array converts to [1] then that's the value of the last stone.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: stones = [1]
+Output: 1&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= stones.length &amp;lt;= 30
+1 &amp;lt;= stones[i] &amp;lt;= 1000&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Use a priority queue and put all weights in with x -1 to have the max up front. In the end don't forget to check for the empty case&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 1046. Last Stone Weight&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/last-stone-weight/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_1046_last-stone-weight.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;queue&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;PriorityQueue&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;lastStoneWeight&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stones&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        maintain order : priority queue&lt;/span&gt;
+&lt;span class="sd"&gt;        x -1 to have max in front&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n log n) # get/put is log n&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;pq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;PriorityQueue&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;stone&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;stones&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;stone&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qsize&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+            &lt;span class="n"&gt;second&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;second&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;remain&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;abs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;second&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;remain&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# If there are no stones left, return 0&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qsize&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;abs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="priority-queue"></category></entry><entry><title>Leetcode 1768. Merge Strings Alternately</title><link href="https://tofucode.com/posts/leetcode_1768_merge-strings-alternately.html" rel="alternate"></link><published>2023-04-17T00:00:00-07:00</published><updated>2023-04-17T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-04-17:/posts/leetcode_1768_merge-strings-alternately.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/merge-strings-alternately/"&gt;https://leetcode.com/problems/merge-strings-alternately/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
