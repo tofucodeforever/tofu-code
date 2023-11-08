@@ -59,6 +59,7 @@ Status: published
 | 0232 | [Implement Queue using Stacks](https://tofucode.com/posts/leetcode_0232_implement-queue-using-stacks.html) | stack, queue |  |
 | 0234 | [Palindrome Linked List](https://tofucode.com/posts/leetcode_0234_palindrome-linked-list.html) | palindrome-center-expansion, fast-slow-pointer | |
 | 0263 | [Ugly Number](https://tofucode.com/posts/leetcode_0263_ugly-number.html) | math | |
+| 0278 | [First Bad Version](https://tofucode.com/posts/leetcode_0278_first-bad-version.html) | binary-search |  |
 | 0283 | [Move Zeroes](https://tofucode.com/posts/leetcode_0283_move-zeroes.html) | array-shift, two-pointers | |
 | 0289 | [Game of Life](https://tofucode.com/posts/leetcode_0289_game-of-life.html) | simulation, state-changes | |
 | 0328 | [Odd Even Linked List](https://tofucode.com/posts/leetcode_0328_odd-even-linked-list.html) | two-pointers |  |

@@ -59,6 +59,7 @@ Status: published
 | 0232 | [Implement Queue using Stacks](https://tofucode.com/posts/leetcode_0232_implement-queue-using-stacks.html) | stack, queue | [14](#"[('apple', 6), ('amazon', 3), ('bytedance', 3), ('ebay', 3), ('goldman-sachs', 3), ('vmware', 3), ('bloomberg', 2), ('de-shaw', 2), ('docusign', 2), ('google', 2), ('microsoft', 2), ('oracle', 2), ('qualcomm', 2), ('splunk', 2)]") |
 | 0234 | [Palindrome Linked List](https://tofucode.com/posts/leetcode_0234_palindrome-linked-list.html) | palindrome-center-expansion, fast-slow-pointer | |
 | 0263 | [Ugly Number](https://tofucode.com/posts/leetcode_0263_ugly-number.html) | math | |
+| 0278 | [First Bad Version](https://tofucode.com/posts/leetcode_0278_first-bad-version.html) | binary-search | [13](#"[('adobe', 4), ('amazon', 2), ('apple', 2), ('bloomberg', 2), ('cisco', 2), ('expedia', 2), ('facebook', 2), ('google', 2), ('microsoft', 2), ('tiktok', 2), ('uber', 2), ('vmware', 2), ('yahoo', 2)]") |
 | 0283 | [Move Zeroes](https://tofucode.com/posts/leetcode_0283_move-zeroes.html) | array-shift, two-pointers | |
 | 0289 | [Game of Life](https://tofucode.com/posts/leetcode_0289_game-of-life.html) | simulation, state-changes | |
 | 0328 | [Odd Even Linked List](https://tofucode.com/posts/leetcode_0328_odd-even-linked-list.html) | two-pointers | [13](#"[('microsoft', 7), ('amazon', 6), ('adobe', 3), ('apple', 3), ('google', 3), ('bloomberg', 2), ('bytedance', 2), ('ebay', 2), ('facebook', 2), ('oracle', 2), ('tiktok', 2), ('vmware', 2), ('yahoo', 2)]") |
