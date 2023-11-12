@@ -87,6 +87,7 @@ Status: published
 | 0665 | [Non-decreasing Array](https://tofucode.com/posts/leetcode_0665_non-decreasing-array.html) | monotonic-stack | |
 | 0682 | [Baseball Game](https://tofucode.com/posts/leetcode_0682_baseball-game.html) | simulation | |
 | 0700 | [Search in a Binary Search Tree](https://tofucode.com/posts/leetcode_0700_search-in-a-binary-search-tree.html) | bst | |
+| 0704 | [Binary Search](https://tofucode.com/posts/leetcode_0704_binary-search.html) | binary-search |  |
 | 0740 | [Delete and Earn](https://tofucode.com/posts/leetcode_0740_delete-and-earn.html) | dp | |
 | 0746 | [Min Cost Climbing Stairs](https://tofucode.com/posts/leetcode_0746_min-cost-climbing-stairs.html) | dp | |
 | 0799 | [Champagne Tower](https://tofucode.com/posts/leetcode_0799_champagne-tower.html) | simulation | |
