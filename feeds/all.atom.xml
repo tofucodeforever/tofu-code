@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2023-11-11T00:00:00-08:00</updated><entry><title>Leetcode 0704. Binary Search</title><link href="https://tofucode.com/posts/leetcode_0704_binary-search.html" rel="alternate"></link><published>2023-11-11T00:00:00-08:00</published><updated>2023-11-11T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-11-11:/posts/leetcode_0704_binary-search.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/binary-search/"&gt;https://leetcode.com/problems/binary-search/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2024-08-11T00:00:00-07:00</updated><entry><title>Leetcode 3110. Score of a String</title><link href="https://tofucode.com/posts/leetcode_3110_score-of-a-string.html" rel="alternate"></link><published>2024-08-11T00:00:00-07:00</published><updated>2024-08-11T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-08-11:/posts/leetcode_3110_score-of-a-string.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/score-of-a-string/"&gt;https://leetcode.com/problems/score-of-a-string/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given a string s. The score of a string is defined as the sum of the absolute difference between the ASCII values of adjacent characters.
+Return the score of s.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: s = "hello"
+Output …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/score-of-a-string/"&gt;https://leetcode.com/problems/score-of-a-string/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given a string s. The score of a string is defined as the sum of the absolute difference between the ASCII values of adjacent characters.
+Return the score of s.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: s = "hello"
+Output: 13
+Explanation:
+The ASCII values of the characters in s are: 'h' = 104, 'e' = 101, 'l' = 108, 'o' = 111. So, the score of s would be |104 - 101| + |101 - 108| + |108 - 108| + |108 - 111| = 3 + 7 + 0 + 3 = 13.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: s = "zaz"
+Output: 50
+Explanation:
+The ASCII values of the characters in s are: 'z' = 122, 'a' = 97. So, the score of s would be |122 - 97| + |97 - 122| = 25 + 25 = 50.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;2 &amp;lt;= s.length &amp;lt;= 100
+s consists only of lowercase English letters.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Go through the string and calculate each abs() pair&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 3110. Score of a String&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/score-of-a-string/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_3110_score-of-a-string.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;scoreOfString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;hello&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        h: 104&lt;/span&gt;
+&lt;span class="sd"&gt;            | h - e |&lt;/span&gt;
+&lt;span class="sd"&gt;        e: 101&lt;/span&gt;
+&lt;span class="sd"&gt;            | e - l |&lt;/span&gt;
+&lt;span class="sd"&gt;        l: 108&lt;/span&gt;
+&lt;span class="sd"&gt;            | l - l |&lt;/span&gt;
+&lt;span class="sd"&gt;        l: 108&lt;/span&gt;
+&lt;span class="sd"&gt;            | l - o |&lt;/span&gt;
+&lt;span class="sd"&gt;        o: 111&lt;/span&gt;
+
+&lt;span class="sd"&gt;        | current - next |&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="nb"&gt;abs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;ord&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="nb"&gt;ord&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="string"></category></entry><entry><title>Leetcode 0704. Binary Search</title><link href="https://tofucode.com/posts/leetcode_0704_binary-search.html" rel="alternate"></link><published>2023-11-11T00:00:00-08:00</published><updated>2023-11-11T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-11-11:/posts/leetcode_0704_binary-search.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/binary-search/"&gt;https://leetcode.com/problems/binary-search/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;

@@ -46,24 +46,24 @@
 
 
 <meta name="author" content="Zeph" />
-<meta name="description" content="Question Link : https://leetcode.com/problems/reverse-string/ Difficulty: Easy Question Write a function that reverses a string. The input string is given as an array of characters s. You must do this by modifying the input array in-place with O(1) extra memory. Example 1: Input: s = [&#34;h&#34;,&#34;e&#34;,&#34;l …" />
+<meta name="description" content="Question Link : https://leetcode.com/problems/score-of-a-string/ Difficulty: Easy Premium: False Question You are given a string s. The score of a string is defined as the sum of the absolute difference between the ASCII values of adjacent characters. Return the score of s. Example 1: Input: s = &#34;hello&#34; Output …" />
 <meta name="keywords" content="string">
 
 
 <meta property="og:site_name" content="TofuCode"/>
-<meta property="og:title" content="Leetcode 0344. Reverse String"/>
-<meta property="og:description" content="Question Link : https://leetcode.com/problems/reverse-string/ Difficulty: Easy Question Write a function that reverses a string. The input string is given as an array of characters s. You must do this by modifying the input array in-place with O(1) extra memory. Example 1: Input: s = [&#34;h&#34;,&#34;e&#34;,&#34;l …"/>
+<meta property="og:title" content="Leetcode 3110. Score of a String"/>
+<meta property="og:description" content="Question Link : https://leetcode.com/problems/score-of-a-string/ Difficulty: Easy Premium: False Question You are given a string s. The score of a string is defined as the sum of the absolute difference between the ASCII values of adjacent characters. Return the score of s. Example 1: Input: s = &#34;hello&#34; Output …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://tofucode.com/posts/leetcode_0344_reverse-string.html"/>
+<meta property="og:url" content="https://tofucode.com/posts/leetcode_3110_score-of-a-string.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2022-03-31 00:00:00-07:00"/>
+<meta property="article:published_time" content="2024-08-11 00:00:00-07:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://tofucode.com/author/zeph.html">
 <meta property="article:section" content="Leetcode"/>
 <meta property="article:tag" content="string"/>
 <meta property="og:image" content="">
 
-  <title>TofuCode &ndash; Leetcode 0344. Reverse String</title>
+  <title>TofuCode &ndash; Leetcode 3110. Score of a String</title>
 
 </head>
 <body class="light-theme">
@@ -111,53 +111,69 @@
 <article class="single">
   <header>
       
-    <h1 id="leetcode_0344_reverse-string">Leetcode 0344. Reverse String</h1>
+    <h1 id="leetcode_3110_score-of-a-string">Leetcode 3110. Score of a String</h1>
     <p>
-      Posted on Thu 31 March 2022 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
+      Posted on Sun 11 August 2024 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
 
     </p>
   </header>
 
 
   <div>
-    <p>Question Link : <a href="https://leetcode.com/problems/reverse-string/">https://leetcode.com/problems/reverse-string/</a></p>
+    <p>Question Link : <a href="https://leetcode.com/problems/score-of-a-string/">https://leetcode.com/problems/score-of-a-string/</a></p>
 <p>Difficulty: Easy</p>
+<p>Premium: False</p>
 <h3>Question</h3>
-<p>Write a function that reverses a string. The input string is given as an array of characters s.
-You must do this by modifying the input array in-place with O(1) extra memory.
+<p>You are given a string s. The score of a string is defined as the sum of the absolute difference between the ASCII values of adjacent characters.
+Return the score of s.
  
-Example 1:
-Input: s = ["h","e","l","l","o"]
-Output: ["o","l","l","e","h"]
-Example 2:
-Input: s = ["H","a","n","n","a","h"]
-Output: ["h","a","n","n","a","H"]</p>
+Example 1:</p>
+<p>Input: s = "hello"
+Output: 13
+Explanation:
+The ASCII values of the characters in s are: 'h' = 104, 'e' = 101, 'l' = 108, 'o' = 111. So, the score of s would be |104 - 101| + |101 - 108| + |108 - 108| + |108 - 111| = 3 + 7 + 0 + 3 = 13.</p>
+<p>Example 2:</p>
+<p>Input: s = "zaz"
+Output: 50
+Explanation:
+The ASCII values of the characters in s are: 'z' = 122, 'a' = 97. So, the score of s would be |122 - 97| + |97 - 122| = 25 + 25 = 50.</p>
 <p>Constraints:</p>
-<p>1 &lt;= s.length &lt;= 105
-s[i] is a printable ascii character.</p>
+<p>2 &lt;= s.length &lt;= 100
+s consists only of lowercase English letters.</p>
 <h3>Solution</h3>
-<p>Use 2 pointers from start and end and swap</p>
+<p>Go through the string and calculate each abs() pair</p>
 <h3>Code</h3>
 <div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">Leetcode 0344. Reverse String</span>
-<span class="sd">Question Link : https://leetcode.com/problems/reverse-string/</span>
-<span class="sd">Solution Link : https://tofucode.com/posts/leetcode_0344_reverse-string.html</span>
+<span class="sd">Leetcode 3110. Score of a String</span>
+<span class="sd">Question Link : https://leetcode.com/problems/score-of-a-string/</span>
+<span class="sd">Solution Link : https://tofucode.com/posts/leetcode_3110_score-of-a-string.html</span>
 <span class="sd">&#39;&#39;&#39;</span>
 
 <span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">reverseString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Do not return anything, modify s in-place instead.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
-            <span class="k">return</span>
-        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">j</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">scoreOfString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        &quot;hello&quot;</span>
+<span class="sd">        h: 104</span>
+<span class="sd">            | h - e |</span>
+<span class="sd">        e: 101</span>
+<span class="sd">            | e - l |</span>
+<span class="sd">        l: 108</span>
+<span class="sd">            | l - l |</span>
+<span class="sd">        l: 108</span>
+<span class="sd">            | l - o |</span>
+<span class="sd">        o: 111</span>
 
-        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">:</span>
-            <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="n">j</span>  <span class="o">-=</span> <span class="mi">1</span>
+<span class="sd">        | current - next |</span>
+
+<span class="sd">        Time : O(n)</span>
+<span class="sd">        Space: O(1)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]))</span>
+
+        <span class="k">return</span> <span class="n">result</span>
 </code></pre></div>
   </div>
   <div class="tag-cloud">
