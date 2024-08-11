@@ -150,4 +150,5 @@ Status: published
 | 2455 | [Average Value of Even Numbers That Are Divisible by Three](https://tofucode.com/posts/leetcode_2455_average-value-of-even-numbers-that-are-divisible-by-three.html) | math | |
 | 2456 | [Most Popular Video Creator](https://tofucode.com/posts/leetcode_2456_most-popular-video-creator.html) | hash-map-count | |
 | 2492 | [Minimum Score of a Path Between Two Cities](https://tofucode.com/posts/leetcode_2492_minimum-score-of-a-path-between-two-cities.html) | dfs, bfs, union-find |  |
+| 3110 | [Score of a String](https://tofucode.com/posts/leetcode_3110_score-of-a-string.html) | string |  |
 | 2460 | [Apply Operations to an Array](https://tofucode.com/posts/leetcode_2460_apply-operations-to-an-array.html) | two-pointers | |
