@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2024-08-11T00:00:00-07:00</updated><entry><title>Leetcode 3110. Score of a String</title><link href="https://tofucode.com/posts/leetcode_3110_score-of-a-string.html" rel="alternate"></link><published>2024-08-11T00:00:00-07:00</published><updated>2024-08-11T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-08-11:/posts/leetcode_3110_score-of-a-string.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/score-of-a-string/"&gt;https://leetcode.com/problems/score-of-a-string/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2024-08-26T00:00:00-07:00</updated><entry><title>Leetcode 3263. Convert Doubly Linked List to Array I</title><link href="https://tofucode.com/posts/leetcode_3263_convert-doubly-linked-list-to-array-i.html" rel="alternate"></link><published>2024-08-26T00:00:00-07:00</published><updated>2024-08-26T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-08-26:/posts/leetcode_3263_convert-doubly-linked-list-to-array-i.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/convert-doubly-linked-list-to-array-i/"&gt;https://leetcode.com/problems/convert-doubly-linked-list-to-array-i/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given the head of a doubly linked list, which contains nodes that have a next pointer and a previous pointer.
+Return an integer array which contains the elements of the linked list in order.
+ 
+Example 1 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/convert-doubly-linked-list-to-array-i/"&gt;https://leetcode.com/problems/convert-doubly-linked-list-to-array-i/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given the head of a doubly linked list, which contains nodes that have a next pointer and a previous pointer.
+Return an integer array which contains the elements of the linked list in order.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: head = [1,2,3,4,3,2,1]
+Output: [1,2,3,4,3,2,1]&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: head = [2,2,2,2,2]
+Output: [2,2,2,2,2]&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: head = [3,2,3,2,3,2]
+Output: [3,2,3,2,3,2]&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;The number of nodes in the given list is in the range [1, 50].
+1 &amp;lt;= Node.val &amp;lt;= 50&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Iterate through and store in an array&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 3263. Convert Doubly Linked List to Array I&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/convert-doubly-linked-list-to-array-i/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_3263_convert-doubly-linked-list-to-array-i.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;# Definition for a Node.&lt;/span&gt;
+&lt;span class="sd"&gt;class Node:&lt;/span&gt;
+&lt;span class="sd"&gt;    def __init__(self, val, prev=None, next=None):&lt;/span&gt;
+&lt;span class="sd"&gt;        self.val = val&lt;/span&gt;
+&lt;span class="sd"&gt;        self.prev = prev&lt;/span&gt;
+&lt;span class="sd"&gt;        self.next = next&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;toArray&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Optional[Node]&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        iterate through&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+
+        &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;val&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="linked-list"></category></entry><entry><title>Leetcode 3110. Score of a String</title><link href="https://tofucode.com/posts/leetcode_3110_score-of-a-string.html" rel="alternate"></link><published>2024-08-11T00:00:00-07:00</published><updated>2024-08-11T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-08-11:/posts/leetcode_3110_score-of-a-string.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/score-of-a-string/"&gt;https://leetcode.com/problems/score-of-a-string/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
