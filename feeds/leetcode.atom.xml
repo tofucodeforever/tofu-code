@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2024-08-26T00:00:00-07:00</updated><entry><title>Leetcode 3263. Convert Doubly Linked List to Array I</title><link href="https://tofucode.com/posts/leetcode_3263_convert-doubly-linked-list-to-array-i.html" rel="alternate"></link><published>2024-08-26T00:00:00-07:00</published><updated>2024-08-26T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-08-26:/posts/leetcode_3263_convert-doubly-linked-list-to-array-i.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/convert-doubly-linked-list-to-array-i/"&gt;https://leetcode.com/problems/convert-doubly-linked-list-to-array-i/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2024-09-02T00:00:00-07:00</updated><entry><title>Leetcode 0771. Jewels and Stones</title><link href="https://tofucode.com/posts/leetcode_0771_jewels-and-stones.html" rel="alternate"></link><published>2024-09-02T00:00:00-07:00</published><updated>2024-09-02T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-09-02:/posts/leetcode_0771_jewels-and-stones.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/jewels-and-stones/"&gt;https://leetcode.com/problems/jewels-and-stones/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You're given strings jewels representing the types of stones that are jewels, and stones representing the stones you have. Each character in stones is a type of stone you have. You want to know how many of the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/jewels-and-stones/"&gt;https://leetcode.com/problems/jewels-and-stones/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You're given strings jewels representing the types of stones that are jewels, and stones representing the stones you have. Each character in stones is a type of stone you have. You want to know how many of the stones you have are also jewels.
+Letters are case sensitive, so "a" is considered a different type of stone from "A".
+ 
+Example 1:
+Input: jewels = "aA", stones = "aAAbbbb"
+Output: 3
+Example 2:
+Input: jewels = "z", stones = "ZZ"
+Output: 0&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= jewels.length, stones.length &amp;lt;= 50
+jewels and stones consist of only English letters.
+All the characters of jewels are unique.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Use a set to denote the known jewels so we can check every stone against that &lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0771. Jewels and Stones&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/jewels-and-stones/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0771_jewels-and-stones.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;numJewelsInStones&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;jewels&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stones&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        jewels:&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;aA&amp;quot; -&amp;gt; set(&amp;quot;aA&amp;quot;)&lt;/span&gt;
+
+&lt;span class="sd"&gt;        for every stone in stones: check if in set&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n + m)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(n) &amp;lt;- n is length of jewels - consist of only English letters so really O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;known_jewels&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;jewels&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;stones&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;known_jewels&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="set"></category></entry><entry><title>Leetcode 3263. Convert Doubly Linked List to Array I</title><link href="https://tofucode.com/posts/leetcode_3263_convert-doubly-linked-list-to-array-i.html" rel="alternate"></link><published>2024-08-26T00:00:00-07:00</published><updated>2024-08-26T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-08-26:/posts/leetcode_3263_convert-doubly-linked-list-to-array-i.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/convert-doubly-linked-list-to-array-i/"&gt;https://leetcode.com/problems/convert-doubly-linked-list-to-array-i/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
