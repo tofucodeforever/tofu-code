@@ -90,6 +90,7 @@ Status: published
 | 0704 | [Binary Search](https://tofucode.com/posts/leetcode_0704_binary-search.html) | binary-search |  |
 | 0740 | [Delete and Earn](https://tofucode.com/posts/leetcode_0740_delete-and-earn.html) | dp | |
 | 0746 | [Min Cost Climbing Stairs](https://tofucode.com/posts/leetcode_0746_min-cost-climbing-stairs.html) | dp | |
+| 0771 | [Jewels and Stones](https://tofucode.com/posts/leetcode_0771_jewels-and-stones.html) | set |  |
 | 0799 | [Champagne Tower](https://tofucode.com/posts/leetcode_0799_champagne-tower.html) | simulation | |
 | 0872 | [Leaf-Similar Trees](https://tofucode.com/posts/leetcode_0872_leaf-similar-trees.html) | binary-tree-traversal |  |
 | 0876 | [Middle of the Linked List](https://tofucode.com/posts/leetcode_0876_middle-of-the-linked-list.html) | fast-slow-pointer |  |
