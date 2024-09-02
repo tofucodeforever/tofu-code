@@ -24,6 +24,7 @@ Status: published
 | 0071 | [Simplify Path](https://tofucode.com/posts/leetcode_0071_simplify-path.html) | stack |  |
 | 0074 | [Search a 2D Matrix](https://tofucode.com/posts/leetcode_0074_search-a-2d-matrix.html) | binary-search | |
 | 0079 | [Word Search](https://tofucode.com/posts/leetcode_0079_word-search.html) | backtracking-with-matrix |  |
+| 0088 | [Merge Sorted Array](https://tofucode.com/posts/leetcode_0088_merge-sorted-array.html) | pointers |  |
 | 0093 | [Restore IP Addresses](https://tofucode.com/posts/leetcode_0093_restore-ip-addresses.html) | backtracking |  |
 | 0094 | [Binary Tree Inorder Traversal](https://tofucode.com/posts/leetcode_0094_binary-tree-inorder-traversal.html) | binary-tree-traversal-inorder | |
 | 0100 | [Same Tree](https://tofucode.com/posts/leetcode_0100_same-tree.html) | binary-tree-traversal, recursion |  |
