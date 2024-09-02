@@ -123,6 +123,7 @@ Status: published
 | 1662 | [Check If Two String Arrays are Equivalent](https://tofucode.com/posts/leetcode_1662_check-if-two-string-arrays-are-equivalent.html) | string | |
 | 1704 | [Determine if String Halves Are Alike](https://tofucode.com/posts/leetcode_1704_determine-if-string-halves-are-alike.html) | string | [0](#"[]") |
 | 1710 | [Maximum Units on a Truck](https://tofucode.com/posts/leetcode_1710_maximum-units-on-a-truck.html) | greedy | |
+| 1757 | [Recyclable and Low Fat Products](https://tofucode.com/posts/leetcode_1757_recyclable-and-low-fat-products.html) | sql | [9](#"[('google', 33), ('amazon', 21), ('microsoft', 17), ('adobe', 5), ('apple', 3), ('bloomberg', 3), ('facebook', 2), ('uber', 2), ('yahoo', 2)]") |
 | 1768 | [Merge Strings Alternately](https://tofucode.com/posts/leetcode_1768_merge-strings-alternately.html) | pointers | [1](#"[('uber', 3)]") |
 | 2095 | [Delete the Middle Node of a Linked List](https://tofucode.com/posts/leetcode_2095_delete-the-middle-node-of-a-linked-list.html) | fast-slow-pointer | |
 | 2131 | [Longest Palindrome by Concatenating Two Letter Words](https://tofucode.com/posts/leetcode_2131_longest-palindrome-by-concatenating-two-letter-words.html) | palindrome, string | |
