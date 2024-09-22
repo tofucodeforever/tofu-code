@@ -81,6 +81,7 @@ Status: published
 | 0460 | [LFU Cache](https://tofucode.com/posts/leetcode_0460_lfu-cache.html) | lfu-cache |  |
 | 0462 | [Minimum Moves to Equal Array Elements II](https://tofucode.com/posts/leetcode_0462_minimum-moves-to-equal-array-elements-ii.html) | math | |
 | 0495 | [Teemo Attacking](https://tofucode.com/posts/leetcode_0495_teemo-attacking.html) | greedy, interval-merge, simulation | |
+| 0501 | [Find Mode in Binary Search Tree](https://tofucode.com/posts/leetcode_0501_find-mode-in-binary-search-tree.html) | bst, binary-tree-traversal-inorder, dfs |  |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion | |
 | 0543 | [Diameter of Binary Tree](https://tofucode.com/posts/leetcode_0543_diameter-of-binary-tree.html) | binary-tree-traversal | |
 | 0605 | [Can Place Flowers](https://tofucode.com/posts/leetcode_0605_can-place-flowers.html) | array |  |
