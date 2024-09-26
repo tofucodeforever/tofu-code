@@ -27,6 +27,7 @@ Status: published
 | 0088 | [Merge Sorted Array](https://tofucode.com/posts/leetcode_0088_merge-sorted-array.html) | pointers |  |
 | 0093 | [Restore IP Addresses](https://tofucode.com/posts/leetcode_0093_restore-ip-addresses.html) | backtracking |  |
 | 0094 | [Binary Tree Inorder Traversal](https://tofucode.com/posts/leetcode_0094_binary-tree-inorder-traversal.html) | binary-tree-traversal-inorder | |
+| 0098 | [Validate Binary Search Tree](https://tofucode.com/posts/leetcode_0098_validate-binary-search-tree.html) | bst, recursion |  |
 | 0100 | [Same Tree](https://tofucode.com/posts/leetcode_0100_same-tree.html) | binary-tree-traversal, recursion |  |
 | 0101 | [Symmetric Tree](https://tofucode.com/posts/leetcode_0101_symmetric-tree.html) | binary-tree-traversal | |
 | 0104 | [Maximum Depth of Binary Tree](https://tofucode.com/posts/leetcode_0104_maximum-depth-of-binary-tree.html) | binary-tree-traversal | |
