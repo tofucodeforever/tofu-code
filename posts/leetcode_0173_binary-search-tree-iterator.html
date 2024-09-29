@@ -46,17 +46,17 @@
 
 
 <meta name="author" content="Zeph" />
-<meta name="description" content="Question Link : https://leetcode.com/problems/binary-search-tree-iterator/ Difficulty: Medium Question Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST): BSTIterator(TreeNode root) Initializes an object of the BSTIterator class. The root of the BST is given as part of the constructor …" />
+<meta name="description" content="Question Link : https://leetcode.com/problems/binary-search-tree-iterator/ Difficulty: Medium Premium: False Question Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST): BSTIterator(TreeNode root) Initializes an object of the BSTIterator class. The root of the BST is given as part of …" />
 <meta name="keywords" content="bst">
 
 
 <meta property="og:site_name" content="TofuCode"/>
 <meta property="og:title" content="Leetcode 0173. Binary Search Tree Iterator"/>
-<meta property="og:description" content="Question Link : https://leetcode.com/problems/binary-search-tree-iterator/ Difficulty: Medium Question Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST): BSTIterator(TreeNode root) Initializes an object of the BSTIterator class. The root of the BST is given as part of the constructor …"/>
+<meta property="og:description" content="Question Link : https://leetcode.com/problems/binary-search-tree-iterator/ Difficulty: Medium Premium: False Question Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST): BSTIterator(TreeNode root) Initializes an object of the BSTIterator class. The root of the BST is given as part of …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://tofucode.com/posts/leetcode_0173_binary-search-tree-iterator.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2022-04-23 00:00:00-07:00"/>
+<meta property="article:published_time" content="2024-09-29 00:00:00-07:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://tofucode.com/author/zeph.html">
 <meta property="article:section" content="Leetcode"/>
@@ -113,7 +113,7 @@
       
     <h1 id="leetcode_0173_binary-search-tree-iterator">Leetcode 0173. Binary Search Tree Iterator</h1>
     <p>
-      Posted on Sat 23 April 2022 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
+      Posted on Sun 29 September 2024 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
 
     </p>
   </header>
@@ -122,6 +122,7 @@
   <div>
     <p>Question Link : <a href="https://leetcode.com/problems/binary-search-tree-iterator/">https://leetcode.com/problems/binary-search-tree-iterator/</a></p>
 <p>Difficulty: Medium</p>
+<p>Premium: False</p>
 <h3>Question</h3>
 <p>Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST):</p>
 <p>BSTIterator(TreeNode root) Initializes an object of the BSTIterator class. The root of the BST is given as part of the constructor. The pointer should be initialized to a non-existent number smaller than any element in the BST.
@@ -199,42 +200,44 @@ At most 105 calls will be made to hasNext, and next.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
 
-<span class="k">class</span> <span class="nc">BSTIteratorImproved1</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    stack only stores the current left tree</span>
-<span class="sd">    [7 3]</span>
-<span class="sd">    [7] # next</span>
-<span class="sd">    [15, 9] # next</span>
-<span class="sd">    [15] # next</span>
-<span class="sd">    [20] # next</span>
 
-<span class="sd">    Time : O(1)</span>
+<span class="k">class</span> <span class="nc">BSTIteratorImproved1</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    inorder traversal: left, node, right</span>
+<span class="sd">    naive: inorder traverse into a stack and move the pointer</span>
+
+<span class="sd">    want to uniify the logic of next and hasNext:</span>
+<span class="sd">    From current node:</span>
+<span class="sd">    * go left as much as possible</span>
+<span class="sd">    * go back to parent or left node ( use a stack )</span>
+<span class="sd">    * go right, and then go left as possible</span>
+
+<span class="sd">    stack:</span>
+<span class="sd">    keep track of left node stack - keep going left</span>
+<span class="sd">    top of the stack - next smallest element</span>
+
+<span class="sd">    Time : O(h) goAllTheWayLeft()</span>
 <span class="sd">    Space: O(h)</span>
-<span class="sd">    &#39;&#39;&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">]):</span>
-        <span class="c1"># store in reverse so we can pop()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">traverseLeft</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">goAllTheWayLeft</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">traverseLeft</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="n">val</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="c1"># next smallest element</span>
+
+        <span class="k">if</span> <span class="n">current</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">goAllTheWayLeft</span><span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">current</span><span class="o">.</span><span class="n">val</span>
 
     <span class="k">def</span> <span class="nf">hasNext</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
 
-    <span class="k">def</span> <span class="nf">traverseLeft</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">node</span><span class="p">:</span>
-            <span class="k">return</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">traverseLeft</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
-
-<span class="c1"># Your BSTIterator object will be instantiated and called as such:</span>
-<span class="c1"># obj = BSTIterator(root)</span>
-<span class="c1"># param_1 = obj.next()</span>
-<span class="c1"># param_2 = obj.hasNext()</span>
+    <span class="k">def</span> <span class="nf">goAllTheWayLeft</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+        <span class="k">while</span> <span class="n">node</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">left</span>
 </code></pre></div>
   </div>
   <div class="tag-cloud">
