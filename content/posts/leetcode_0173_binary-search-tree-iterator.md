@@ -1,7 +1,7 @@
 Title: Leetcode 0173. Binary Search Tree Iterator
 Slug: leetcode_0173_binary-search-tree-iterator
 Status: published
-Date: 2022-04-23
+Date: 2024-09-29
 Category: Leetcode
 Tags: bst
 Author: Zeph
@@ -9,6 +9,8 @@ Author: Zeph
 Question Link : [https://leetcode.com/problems/binary-search-tree-iterator/](https://leetcode.com/problems/binary-search-tree-iterator/)
 
 Difficulty: Medium
+
+Premium: False
 
 ### Question
 Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST):
@@ -101,42 +103,44 @@ class BSTIterator:
         self.stack.append(node.val)
         self.traverse(node.right)
 
-class BSTIteratorImproved1:
-    '''
-    stack only stores the current left tree
-    [7 3]
-    [7] # next
-    [15, 9] # next
-    [15] # next
-    [20] # next
 
-    Time : O(1)
+class BSTIteratorImproved1:
+    """
+    inorder traversal: left, node, right
+    naive: inorder traverse into a stack and move the pointer
+
+    want to uniify the logic of next and hasNext:
+    From current node:
+    * go left as much as possible
+    * go back to parent or left node ( use a stack )
+    * go right, and then go left as possible
+
+    stack:
+    keep track of left node stack - keep going left
+    top of the stack - next smallest element
+
+    Time : O(h) goAllTheWayLeft()
     Space: O(h)
-    '''
+    """
+
     def __init__(self, root: Optional[TreeNode]):
-        # store in reverse so we can pop()
         self.stack = []
-        self.traverseLeft(root)
+        self.goAllTheWayLeft(root)
 
     def next(self) -> int:
-        node = self.stack.pop()
-        if node.right:
-            self.traverseLeft(node.right)
-        return node.val
+        current = self.stack.pop() # next smallest element
+
+        if current.right:
+            self.goAllTheWayLeft(current.right)
+        return current.val
 
     def hasNext(self) -> bool:
         return len(self.stack) > 0
 
-    def traverseLeft(self, node):
-        if not node:
-            return
-        self.stack.append(node)
-        self.traverseLeft(node.left)
-
-# Your BSTIterator object will be instantiated and called as such:
-# obj = BSTIterator(root)
-# param_1 = obj.next()
-# param_2 = obj.hasNext()
+    def goAllTheWayLeft(self, node):
+        while node:
+            self.stack.append(node)
+            node = node.left
 
 
 ```
