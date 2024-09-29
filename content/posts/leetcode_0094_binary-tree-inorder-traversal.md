@@ -1,7 +1,7 @@
 Title: Leetcode 0094. Binary Tree Inorder Traversal
 Slug: leetcode_0094_binary-tree-inorder-traversal
 Status: published
-Date: 2022-10-08
+Date: 2024-09-29
 Category: Leetcode
 Tags: binary-tree-traversal-inorder
 Author: Zeph
@@ -10,21 +10,31 @@ Question Link : [https://leetcode.com/problems/binary-tree-inorder-traversal/](h
 
 Difficulty: Easy
 
+Premium: False
+
 ### Question
 Given the root of a binary tree, return the inorder traversal of its nodes' values.
  
 Example 1:
 
-
 Input: root = [1,null,2,3]
 Output: [1,3,2]
+Explanation:
+
 
 Example 2:
+
+Input: root = [1,2,3,4,5,null,8,null,null,6,7,9]
+Output: [4,2,6,5,7,1,3,9,8]
+Explanation:
+
+
+Example 3:
 
 Input: root = []
 Output: []
 
-Example 3:
+Example 4:
 
 Input: root = [1]
 Output: [1]
@@ -40,7 +50,7 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 
 ### Solution
 
-Recursive traversal of the whole tree 
+Inorder traversal
 
 
 ### Code
