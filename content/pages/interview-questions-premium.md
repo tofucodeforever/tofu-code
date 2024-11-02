@@ -14,6 +14,7 @@ Status: published
 | 0020 | [Valid Parentheses](https://tofucode.com/posts/leetcode_0020_valid-parentheses.html) | stack, parentheses | |
 | 0021 | [Merge Two Sorted Lists](https://tofucode.com/posts/leetcode_0021_merge-two-sorted-lists.html) | linked-list | |
 | 0026 | [Remove Duplicates from Sorted Array](https://tofucode.com/posts/leetcode_0026_remove-duplicates-from-sorted-array.html) | array-shift, two-pointers | |
+| 0027 | [Remove Element](https://tofucode.com/posts/leetcode_0027_remove-element.html) | two-pointers | [10](#"[('google', 17), ('amazon', 9), ('bloomberg', 8), ('yahoo', 7), ('adobe', 6), ('microsoft', 4), ('uber', 3), ('yandex', 3), ('apple', 2), ('facebook', 2)]") |
 | 0035 | [Search Insert Position](https://tofucode.com/posts/leetcode_0035_search-insert-position.html) | binary-search | |
 | 0049 | [Group Anagrams](https://tofucode.com/posts/leetcode_0049_group-anagrams.html) | hash-map, anagram | |
 | 0056 | [Merge Intervals](https://tofucode.com/posts/leetcode_0056_merge-intervals.html) | interval-merge | |
