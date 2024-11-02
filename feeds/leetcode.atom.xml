@@ -1,5 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2024-11-01T00:00:00-07:00</updated><entry><title>Leetcode 0027. Remove Element</title><link href="https://tofucode.com/posts/leetcode_0027_remove-element.html" rel="alternate"></link><published>2024-11-01T00:00:00-07:00</published><updated>2024-11-01T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-01:/posts/leetcode_0027_remove-element.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/remove-element/"&gt;https://leetcode.com/problems/remove-element/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2024-11-01T00:00:00-07:00</updated><entry><title>Leetcode 0026. Remove Duplicates from Sorted Array</title><link href="https://tofucode.com/posts/leetcode_0026_remove-duplicates-from-sorted-array.html" rel="alternate"></link><published>2024-11-01T00:00:00-07:00</published><updated>2024-11-01T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-01:/posts/leetcode_0026_remove-duplicates-from-sorted-array.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/"&gt;https://leetcode.com/problems/remove-duplicates-from-sorted-array/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/"&gt;https://leetcode.com/problems/remove-duplicates-from-sorted-array/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
+Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things:&lt;/p&gt;
+&lt;p&gt;Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums.
+Return k.&lt;/p&gt;
+&lt;p&gt;Custom Judge:
+The judge will test your solution with the following code:&lt;/p&gt;
+&lt;p&gt;int[] nums = [...]; // Input array
+int[] expectedNums = [...]; // The expected answer with correct length&lt;/p&gt;
+&lt;p&gt;int k = removeDuplicates(nums); // Calls your implementation&lt;/p&gt;
+&lt;p&gt;assert k == expectedNums.length;
+for (int i = 0; i &amp;lt; k; i++) {
+    assert nums[i] == expectedNums[i];
+}&lt;/p&gt;
+&lt;p&gt;If all assertions pass, then your solution will be accepted.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: nums = [1,1,2]
+Output: 2, nums = [1,2,_]
+Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+It does not matter what you leave beyond the returned k (hence they are underscores).&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: nums = [0,0,1,1,1,2,2,3,3,4]
+Output: 5, nums = [0,1,2,3,4,&lt;em&gt;,&lt;/em&gt;,&lt;em&gt;,&lt;/em&gt;,_]
+Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
+It does not matter what you leave beyond the returned k (hence they are underscores).&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= nums.length &amp;lt;= 3 * 104
+-100 &amp;lt;= nums[i] &amp;lt;= 100
+nums is sorted in non-decreasing order.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Keep a pointer as an anchor and use a for loop to move the next none dup number forward.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0026. Remove Duplicates from Sorted Array&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/remove-duplicates-from-sorted-array/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0026_remove-duplicates-from-sorted-array.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;removeDuplicates&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        Ask:&lt;/span&gt;
+&lt;span class="sd"&gt;        [0,0,1,1,1,2,2,3,3,4]&lt;/span&gt;
+&lt;span class="sd"&gt;        [0,1,2,3,4,_,_,_,_,_]&lt;/span&gt;
+&lt;span class="sd"&gt;        sorted in non-decreasing order&lt;/span&gt;
+&lt;span class="sd"&gt;        only want one from duplicates: for loop&lt;/span&gt;
+
+&lt;span class="sd"&gt;        two pointers:&lt;/span&gt;
+&lt;span class="sd"&gt;        x: go through array to find next non dup&lt;/span&gt;
+&lt;span class="sd"&gt;        y: last good position&lt;/span&gt;
+&lt;span class="sd"&gt;        y+1: trailing marker to mark duplicate spot to wrie to&lt;/span&gt;
+&lt;span class="sd"&gt;        move non dup to marker: nums[y+1] = nums[x]&lt;/span&gt;
+
+&lt;span class="sd"&gt;        [0,0,1,1,1,2,2,3,3,4]&lt;/span&gt;
+&lt;span class="sd"&gt;           x&lt;/span&gt;
+&lt;span class="sd"&gt;         y&lt;/span&gt;
+&lt;span class="sd"&gt;        [0,0,1,1,1,2,2,3,3,4]&lt;/span&gt;
+&lt;span class="sd"&gt;             x&lt;/span&gt;
+&lt;span class="sd"&gt;           y                  (y+1)&lt;/span&gt;
+&lt;span class="sd"&gt;        [0,1,1,1,1,2,2,3,3,4]&lt;/span&gt;
+&lt;span class="sd"&gt;             y     x&lt;/span&gt;
+
+&lt;span class="sd"&gt;        edge cases: len is 0 or 1&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+        &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+                &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+                &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="array-shift"></category><category term="two-pointers"></category></entry><entry><title>Leetcode 0027. Remove Element</title><link href="https://tofucode.com/posts/leetcode_0027_remove-element.html" rel="alternate"></link><published>2024-11-01T00:00:00-07:00</published><updated>2024-11-01T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-01:/posts/leetcode_0027_remove-element.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/remove-element/"&gt;https://leetcode.com/problems/remove-element/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
@@ -6895,81 +6980,7 @@ trips[i].length == 3
                     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
 
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="interval-overlap"></category></entry><entry><title>Leetcode 0026. Remove Duplicates from Sorted Array</title><link href="https://tofucode.com/posts/leetcode_0026_remove-duplicates-from-sorted-array.html" rel="alternate"></link><published>2022-11-11T00:00:00-08:00</published><updated>2022-11-11T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-11:/posts/leetcode_0026_remove-duplicates-from-sorted-array.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/"&gt;https://leetcode.com/problems/remove-duplicates-from-sorted-array/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Difficulty: Easy&lt;/p&gt;
-&lt;h3&gt;Question&lt;/h3&gt;
-&lt;p&gt;Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
-Since it is impossible to change the length …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/"&gt;https://leetcode.com/problems/remove-duplicates-from-sorted-array/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Difficulty: Easy&lt;/p&gt;
-&lt;h3&gt;Question&lt;/h3&gt;
-&lt;p&gt;Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
-Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
-Return k after placing the final result in the first k slots of nums.
-Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
-Custom Judge:
-The judge will test your solution with the following code:&lt;/p&gt;
-&lt;p&gt;int[] nums = [...]; // Input array
-int[] expectedNums = [...]; // The expected answer with correct length&lt;/p&gt;
-&lt;p&gt;int k = removeDuplicates(nums); // Calls your implementation&lt;/p&gt;
-&lt;p&gt;assert k == expectedNums.length;
-for (int i = 0; i &amp;lt; k; i++) {
-    assert nums[i] == expectedNums[i];
-}&lt;/p&gt;
-&lt;p&gt;If all assertions pass, then your solution will be accepted.
- 
-Example 1:&lt;/p&gt;
-&lt;p&gt;Input: nums = [1,1,2]
-Output: 2, nums = [1,2,_]
-Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).&lt;/p&gt;
-&lt;p&gt;Example 2:&lt;/p&gt;
-&lt;p&gt;Input: nums = [0,0,1,1,1,2,2,3,3,4]
-Output: 5, nums = [0,1,2,3,4,&lt;em&gt;,&lt;/em&gt;,&lt;em&gt;,&lt;/em&gt;,_]
-Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).&lt;/p&gt;
-&lt;p&gt;Constraints:&lt;/p&gt;
-&lt;p&gt;1 &amp;lt;= nums.length &amp;lt;= 3 * 104
--100 &amp;lt;= nums[i] &amp;lt;= 100
-nums is sorted in non-decreasing order.&lt;/p&gt;
-&lt;h3&gt;Solution&lt;/h3&gt;
-&lt;p&gt;Keep a pointer as an anchor and use a for loop to move the next none dup number forward.&lt;/p&gt;
-&lt;h3&gt;Code&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-&lt;span class="sd"&gt;Leetcode 0026. Remove Duplicates from Sorted Array&lt;/span&gt;
-&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/remove-duplicates-from-sorted-array/&lt;/span&gt;
-&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0026_remove-duplicates-from-sorted-array.html&lt;/span&gt;
-&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;removeDuplicates&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-&lt;span class="sd"&gt;        (move i to p+1)&lt;/span&gt;
-&lt;span class="sd"&gt;        0,0,1,1,1,2,2,3,3,4&lt;/span&gt;
-&lt;span class="sd"&gt;        p   i&lt;/span&gt;
-&lt;span class="sd"&gt;        0,1,1,1,1,2,2,3,3,4&lt;/span&gt;
-&lt;span class="sd"&gt;          p       i&lt;/span&gt;
-&lt;span class="sd"&gt;        0,1,2,1,1,2,2,3,3,4&lt;/span&gt;
-&lt;span class="sd"&gt;            p         i&lt;/span&gt;
-&lt;span class="sd"&gt;        0,1,2,3,1,2,2,3,3,4&lt;/span&gt;
-&lt;span class="sd"&gt;              p           i&lt;/span&gt;
-&lt;span class="sd"&gt;        0,1,2,3,4,2,2,3,3,4&lt;/span&gt;
-&lt;span class="sd"&gt;                p&lt;/span&gt;
-&lt;span class="sd"&gt;        length is p + 1&lt;/span&gt;
-&lt;span class="sd"&gt;        p: index of last good position&lt;/span&gt;
-&lt;span class="sd"&gt;        p+1: the index of the dup position&lt;/span&gt;
-
-&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
-&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
-&lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-
-        &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
-            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
-                &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-                &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="array-shift"></category><category term="two-pointers"></category></entry><entry><title>Leetcode 2418. Sort the People</title><link href="https://tofucode.com/posts/leetcode_2418_sort-the-people.html" rel="alternate"></link><published>2022-11-11T00:00:00-08:00</published><updated>2022-11-11T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-11:/posts/leetcode_2418_sort-the-people.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/sort-the-people/"&gt;https://leetcode.com/problems/sort-the-people/&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="interval-overlap"></category></entry><entry><title>Leetcode 2418. Sort the People</title><link href="https://tofucode.com/posts/leetcode_2418_sort-the-people.html" rel="alternate"></link><published>2022-11-11T00:00:00-08:00</published><updated>2022-11-11T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2022-11-11:/posts/leetcode_2418_sort-the-people.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/sort-the-people/"&gt;https://leetcode.com/problems/sort-the-people/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;You are given an array of strings names, and an array heights that consists of distinct positive integers. Both arrays are of length n.
