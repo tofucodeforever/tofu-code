@@ -13,7 +13,7 @@ Status: published
 | 0019 | [Remove Nth Node From End of List](https://tofucode.com/posts/leetcode_0019_remove-nth-node-from-end-of-list.html) | linked-list | |
 | 0020 | [Valid Parentheses](https://tofucode.com/posts/leetcode_0020_valid-parentheses.html) | stack, parentheses | |
 | 0021 | [Merge Two Sorted Lists](https://tofucode.com/posts/leetcode_0021_merge-two-sorted-lists.html) | linked-list | |
-| 0026 | [Remove Duplicates from Sorted Array](https://tofucode.com/posts/leetcode_0026_remove-duplicates-from-sorted-array.html) | array-shift, two-pointers | |
+| 0026 | [Remove Duplicates from Sorted Array](https://tofucode.com/posts/leetcode_0026_remove-duplicates-from-sorted-array.html) | array-shift, two-pointers | [17](#"[('google', 20), ('amazon', 10), ('facebook', 9), ('bloomberg', 7), ('microsoft', 7), ('adobe', 3), ('apple', 3), ('yahoo', 3), ('accenture', 2), ('akamai', 2), ('capgemini', 2), ('epam-systems', 2), ('infosys', 2), ('ozon', 2), ('tcs', 2), ('wipro', 2), ('zoho', 2)]") |
 | 0027 | [Remove Element](https://tofucode.com/posts/leetcode_0027_remove-element.html) | two-pointers | [10](#"[('google', 17), ('amazon', 9), ('bloomberg', 8), ('yahoo', 7), ('adobe', 6), ('microsoft', 4), ('uber', 3), ('yandex', 3), ('apple', 2), ('facebook', 2)]") |
 | 0035 | [Search Insert Position](https://tofucode.com/posts/leetcode_0035_search-insert-position.html) | binary-search | |
 | 0049 | [Group Anagrams](https://tofucode.com/posts/leetcode_0049_group-anagrams.html) | hash-map, anagram | |

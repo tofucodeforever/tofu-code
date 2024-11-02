@@ -1,7 +1,7 @@
 Title: Leetcode 0026. Remove Duplicates from Sorted Array
 Slug: leetcode_0026_remove-duplicates-from-sorted-array
 Status: published
-Date: 2022-11-11
+Date: 2024-11-01
 Category: Leetcode
 Tags: array-shift, two-pointers
 Author: Zeph
@@ -10,11 +10,15 @@ Question Link : [https://leetcode.com/problems/remove-duplicates-from-sorted-arr
 
 Difficulty: Easy
 
+Premium: False
+
 ### Question
-Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
-Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
-Return k after placing the final result in the first k slots of nums.
-Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
+Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
+Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things:
+
+Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums.
+Return k.
+
 Custom Judge:
 The judge will test your solution with the following code:
 
@@ -62,35 +66,46 @@ Leetcode 0026. Remove Duplicates from Sorted Array
 Question Link : https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 Solution Link : https://tofucode.com/posts/leetcode_0026_remove-duplicates-from-sorted-array.html
 '''
+
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        '''
-        (move i to p+1)
-        0,0,1,1,1,2,2,3,3,4
-        p   i
-        0,1,1,1,1,2,2,3,3,4
-          p       i
-        0,1,2,1,1,2,2,3,3,4
-            p         i
-        0,1,2,3,1,2,2,3,3,4
-              p           i
-        0,1,2,3,4,2,2,3,3,4
-                p
-        length is p + 1
-        p: index of last good position
-        p+1: the index of the dup position
+        """
+        Ask:
+        [0,0,1,1,1,2,2,3,3,4]
+        [0,1,2,3,4,_,_,_,_,_]
+        sorted in non-decreasing order
+        only want one from duplicates: for loop
+
+        two pointers:
+        x: go through array to find next non dup
+        y: last good position
+        y+1: trailing marker to mark duplicate spot to wrie to
+        move non dup to marker: nums[y+1] = nums[x]
+
+        [0,0,1,1,1,2,2,3,3,4]
+           x
+         y
+        [0,0,1,1,1,2,2,3,3,4]
+             x
+           y                  (y+1)
+        [0,1,1,1,1,2,2,3,3,4]
+             y     x
+
+        edge cases: len is 0 or 1
 
         Time : O(n)
         Space: O(1)
-        '''
-        if not nums or len(nums) == 0:
+        """
+        if not nums:
             return 0
 
-        p = 0
-        for i in range(len(nums)):
-            if nums[i] != nums[p]:
-                p += 1
-                nums[p] = nums[i]
-        return p+1
+        y = 0
+        for x in range(len(nums)):
+            if nums[x] != nums[y]:
+                y += 1
+                nums[y] = nums[x]
+
+        return y + 1
+
 ```
 
