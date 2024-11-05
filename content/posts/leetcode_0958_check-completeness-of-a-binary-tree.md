@@ -1,7 +1,7 @@
 Title: Leetcode 0958. Check Completeness of a Binary Tree
 Slug: leetcode_0958_check-completeness-of-a-binary-tree
 Status: published
-Date: 2023-03-14
+Date: 2024-11-05
 Category: Leetcode
 Tags: binary-tree, bfs
 Author: Zeph
@@ -72,21 +72,21 @@ class Solution:
         if not root:
             return True
 
-        stack = [root]
+        queue = [root]
         hit_null = False
-        while stack:
-            node = stack.pop(0)
+        while queue:
+            node = queue.pop(0) # bfs
             if node.left:
                 if hit_null:
                     return False
-                stack.append(node.left)
+                queue.append(node.left)
             else:
                 hit_null = True
 
             if node.right:
                 if hit_null:
                     return False
-                stack.append(node.right)
+                queue.append(node.right)
             else:
                 hit_null = True
 
