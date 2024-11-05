@@ -1,7 +1,7 @@
 Title: Leetcode 0211. Design Add and Search Words Data Structure
 Slug: leetcode_0211_design-add-and-search-words-data-structure
 Status: published
-Date: 2023-03-19
+Date: 2024-11-05
 Category: Leetcode
 Tags: trie-prefix-tree, dfs, recursion
 Author: Zeph
@@ -45,7 +45,7 @@ Constraints:
 1 <= word.length <= 25
 word in addWord consists of lowercase English letters.
 word in search consist of '.' or lowercase English letters.
-There will be at most 3 dots in word for search queries.
+There will be at most 2 dots in word for search queries.
 At most 104 calls will be made to addWord and search.
 
 ### Solution
@@ -138,7 +138,7 @@ class WordDictionaryAlternative1:
         stack = [(self.root, word)]
 
         while stack:
-            current, w = stack.pop(0)
+            current, w = stack.pop()
             if w == '':
                 if current.is_leaf:
                     return True
