@@ -1,7 +1,7 @@
 Title: Leetcode 0623. Add One Row to Tree
 Slug: leetcode_0623_add-one-row-to-tree
 Status: published
-Date: 2022-10-05
+Date: 2024-11-05
 Category: Leetcode
 Tags: binary-tree-manipulation, dfs
 Author: Zeph
@@ -9,6 +9,8 @@ Author: Zeph
 Question Link : [https://leetcode.com/problems/add-one-row-to-tree/](https://leetcode.com/problems/add-one-row-to-tree/)
 
 Difficulty: Medium
+
+Premium: False
 
 ### Question
 Given the root of a binary tree and two integers val and depth, add a row of nodes with value val at the given depth depth.
@@ -78,7 +80,7 @@ class Solution:
         stack = [(1, root)]
 
         while stack:
-            d, node = stack.pop(0)
+            d, node = stack.pop()
             if d == depth - 1:
                 # create 2 nodes
                 l = TreeNode(val)

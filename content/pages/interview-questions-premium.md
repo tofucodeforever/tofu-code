@@ -90,7 +90,7 @@ Status: published
 | 0543 | [Diameter of Binary Tree](https://tofucode.com/posts/leetcode_0543_diameter-of-binary-tree.html) | binary-tree-traversal | |
 | 0605 | [Can Place Flowers](https://tofucode.com/posts/leetcode_0605_can-place-flowers.html) | array | [7](#"[('linkedin', 15), ('amazon', 5), ('bloomberg', 4), ('facebook', 3), ('microsoft', 3), ('google', 2), ('yahoo', 2)]") |
 | 0606 | [Construct String from Binary Tree](https://tofucode.com/posts/leetcode_0606_construct-string-from-binary-tree.html) | recursion, binary-tree | |
-| 0623 | [Add One Row to Tree](https://tofucode.com/posts/leetcode_0623_add-one-row-to-tree.html) | binary-tree-manipulation, dfs | |
+| 0623 | [Add One Row to Tree](https://tofucode.com/posts/leetcode_0623_add-one-row-to-tree.html) | binary-tree-manipulation, dfs | [3](#"[('facebook', 2), ('google', 2), ('gilt-groupe', 0)]") |
 | 0647 | [Palindromic Substrings](https://tofucode.com/posts/leetcode_0647_palindromic-substrings.html) | palindrome, string | |
 | 0653 | [Two Sum IV - Input is a BST](https://tofucode.com/posts/leetcode_0653_two-sum-iv-input-is-a-bst.html) | k-sum, dfs | |
 | 0665 | [Non-decreasing Array](https://tofucode.com/posts/leetcode_0665_non-decreasing-array.html) | monotonic-stack | |
