@@ -34,6 +34,7 @@ Status: published
 | 0104 | [Maximum Depth of Binary Tree](https://tofucode.com/posts/leetcode_0104_maximum-depth-of-binary-tree.html) | binary-tree-traversal | |
 | 0106 | [Construct Binary Tree from Inorder and Postorder Traversal](https://tofucode.com/posts/leetcode_0106_construct-binary-tree-from-inorder-and-postorder-traversal.html) | binary-tree-manipulation |  |
 | 0108 | [Convert Sorted Array to Binary Search Tree](https://tofucode.com/posts/leetcode_0108_convert-sorted-array-to-binary-search-tree.html) | bst |  |
+| 0111 | [Minimum Depth of Binary Tree](https://tofucode.com/posts/leetcode_0111_minimum-depth-of-binary-tree.html) | bfs, binary-tree |  |
 | 0112 | [Path Sum](https://tofucode.com/posts/leetcode_0112_path-sum.html) | binary-tree, recursion | |
 | 0124 | [Binary Tree Maximum Path Sum](https://tofucode.com/posts/leetcode_0124_binary-tree-maximum-path-sum.html) | recursion, binary-tree |  |
 | 0129 | [Sum Root to Leaf Numbers](https://tofucode.com/posts/leetcode_0129_sum-root-to-leaf-numbers.html) | recursion, binary-tree |  |
