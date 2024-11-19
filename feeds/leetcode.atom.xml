@@ -1,5 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2024-11-05T00:00:00-08:00</updated><entry><title>Leetcode 0111. Minimum Depth of Binary Tree</title><link href="https://tofucode.com/posts/leetcode_0111_minimum-depth-of-binary-tree.html" rel="alternate"></link><published>2024-11-05T00:00:00-08:00</published><updated>2024-11-05T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-05:/posts/leetcode_0111_minimum-depth-of-binary-tree.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/minimum-depth-of-binary-tree/"&gt;https://leetcode.com/problems/minimum-depth-of-binary-tree/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2024-11-18T00:00:00-08:00</updated><entry><title>Leetcode 0202. Happy Number</title><link href="https://tofucode.com/posts/leetcode_0202_happy-number.html" rel="alternate"></link><published>2024-11-18T00:00:00-08:00</published><updated>2024-11-18T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-18:/posts/leetcode_0202_happy-number.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/happy-number/"&gt;https://leetcode.com/problems/happy-number/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Write an algorithm to determine if a number n is happy.
+A happy number is a number defined by the following process:&lt;/p&gt;
+&lt;p&gt;Starting with any positive integer, replace the number by the sum of the squares of its …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/happy-number/"&gt;https://leetcode.com/problems/happy-number/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Write an algorithm to determine if a number n is happy.
+A happy number is a number defined by the following process:&lt;/p&gt;
+&lt;p&gt;Starting with any positive integer, replace the number by the sum of the squares of its digits.
+Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
+Those numbers for which this process ends in 1 are happy.&lt;/p&gt;
+&lt;p&gt;Return true if n is a happy number, and false if not.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: n = 19
+Output: true
+Explanation:
+12 + 92 = 82
+82 + 22 = 68
+62 + 82 = 100
+12 + 02 + 02 = 1&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: n = 2
+Output: false&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= n &amp;lt;= 231 - 1&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Since we need to exit if the loops continues endlessly, it is pretty straightforward to use a set to track all seen numbers for this. An improvement to cut down the space is to change to track fast and slow pointers and solve it as a graph cycle problem.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0202. Happy Number&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/happy-number/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0202_happy-number.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;isHappy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        19&lt;/span&gt;
+&lt;span class="sd"&gt;        1 ^ 2 + 9 ^ 2 = 82&lt;/span&gt;
+&lt;span class="sd"&gt;        = 1: happy&lt;/span&gt;
+&lt;span class="sd"&gt;        endless loop: not happy&lt;/span&gt;
+
+&lt;span class="sd"&gt;        use a set to check if seen:&lt;/span&gt;
+&lt;span class="sd"&gt;        if seen and can return false&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(log n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(log n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;seen&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+            &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;process&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;process&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        Time : O(log n) to go through all digits of a number&lt;/span&gt;
+&lt;span class="sd"&gt;        n = 999, 3 digits: 10^2 &amp;lt;= 999 &amp;lt; 10^3&lt;/span&gt;
+&lt;span class="sd"&gt;        given n with d digits: 10^(d-1) &amp;lt;= n &amp;lt; 10^(d)&lt;/span&gt;
+&lt;span class="sd"&gt;        take base 10 log: log(10^(d-1)) &amp;lt;= log(n) &amp;lt; log(10^(d))&lt;/span&gt;
+&lt;span class="sd"&gt;        d-1 &amp;lt;= log(n) &amp;lt; d&lt;/span&gt;
+&lt;span class="sd"&gt;        So:&lt;/span&gt;
+&lt;span class="sd"&gt;        d &amp;lt;= log(n) + 1&lt;/span&gt;
+&lt;span class="sd"&gt;        log(n) &amp;lt; d&lt;/span&gt;
+&lt;span class="sd"&gt;        worst case log(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;SolutionImproved1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;isHappy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        19&lt;/span&gt;
+&lt;span class="sd"&gt;        1 ^ 2 + 9 ^ 2 = 82&lt;/span&gt;
+&lt;span class="sd"&gt;        = 1: happy&lt;/span&gt;
+&lt;span class="sd"&gt;        endless loop: not happy&lt;/span&gt;
+
+&lt;span class="sd"&gt;        as a graph problem, where each number is a state / node&lt;/span&gt;
+&lt;span class="sd"&gt;        use two pointers: fast / slow&lt;/span&gt;
+&lt;span class="sd"&gt;        start:&lt;/span&gt;
+&lt;span class="sd"&gt;            slow: n&lt;/span&gt;
+&lt;span class="sd"&gt;            fast: process(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        every step:&lt;/span&gt;
+&lt;span class="sd"&gt;            slow 1 step&lt;/span&gt;
+&lt;span class="sd"&gt;            fast: 2 steps&lt;/span&gt;
+
+
+&lt;span class="sd"&gt;        Time : O(log n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+        &lt;span class="n"&gt;slow&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;
+        &lt;span class="n"&gt;fast&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;process&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;slow&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;fast&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;fast&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;
+
+            &lt;span class="n"&gt;slow&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;process&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;slow&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;fast&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;process&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;process&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fast&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;fast&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="c1"&gt;# takes care if n == 1&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;process&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        Time : O(log n) to go through all digits of a number&lt;/span&gt;
+&lt;span class="sd"&gt;        n = 999, 3 digits: 10^2 &amp;lt;= 999 &amp;lt; 10^3&lt;/span&gt;
+&lt;span class="sd"&gt;        given n with d digits: 10^(d-1) &amp;lt;= n &amp;lt; 10^(d)&lt;/span&gt;
+&lt;span class="sd"&gt;        take base 10 log: log(10^(d-1)) &amp;lt;= log(n) &amp;lt; log(10^(d))&lt;/span&gt;
+&lt;span class="sd"&gt;        d-1 &amp;lt;= log(n) &amp;lt; d&lt;/span&gt;
+&lt;span class="sd"&gt;        So:&lt;/span&gt;
+&lt;span class="sd"&gt;        d &amp;lt;= log(n) + 1&lt;/span&gt;
+&lt;span class="sd"&gt;        log(n) &amp;lt; d&lt;/span&gt;
+&lt;span class="sd"&gt;        worst case log(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="set"></category><category term="fast-slow-pointer"></category></entry><entry><title>Leetcode 0111. Minimum Depth of Binary Tree</title><link href="https://tofucode.com/posts/leetcode_0111_minimum-depth-of-binary-tree.html" rel="alternate"></link><published>2024-11-05T00:00:00-08:00</published><updated>2024-11-05T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-05:/posts/leetcode_0111_minimum-depth-of-binary-tree.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/minimum-depth-of-binary-tree/"&gt;https://leetcode.com/problems/minimum-depth-of-binary-tree/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
