@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2024-11-18T00:00:00-08:00</updated><entry><title>Leetcode 0202. Happy Number</title><link href="https://tofucode.com/posts/leetcode_0202_happy-number.html" rel="alternate"></link><published>2024-11-18T00:00:00-08:00</published><updated>2024-11-18T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-18:/posts/leetcode_0202_happy-number.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/happy-number/"&gt;https://leetcode.com/problems/happy-number/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2024-11-19T00:00:00-08:00</updated><entry><title>Leetcode 0190. Reverse Bits</title><link href="https://tofucode.com/posts/leetcode_0190_reverse-bits.html" rel="alternate"></link><published>2024-11-19T00:00:00-08:00</published><updated>2024-11-19T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-19:/posts/leetcode_0190_reverse-bits.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/reverse-bits/"&gt;https://leetcode.com/problems/reverse-bits/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Reverse bits of a given 32 bits unsigned integer.
+Note:&lt;/p&gt;
+&lt;p&gt;Note that in some languages, such as Java, there is no unsigned integer type. In this case, both input and output will be given as a signed integer …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/reverse-bits/"&gt;https://leetcode.com/problems/reverse-bits/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Reverse bits of a given 32 bits unsigned integer.
+Note:&lt;/p&gt;
+&lt;p&gt;Note that in some languages, such as Java, there is no unsigned integer type. In this case, both input and output will be given as a signed integer type. They should not affect your implementation, as the integer's internal binary representation is the same, whether it is signed or unsigned.
+In Java, the compiler represents the signed integers using 2's complement notation. Therefore, in Example 2 above, the input represents the signed integer -3 and the output represents the signed integer -1073741825.&lt;/p&gt;
+&lt;p&gt;Example 1:&lt;/p&gt;
+&lt;p&gt;Input: n = 00000010100101000001111010011100
+Output:    964176192 (00111001011110000010100101000000)
+Explanation: The input binary string 00000010100101000001111010011100 represents the unsigned integer 43261596, so return 964176192 which its binary representation is 00111001011110000010100101000000.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: n = 11111111111111111111111111111101
+Output:   3221225471 (10111111111111111111111111111111)
+Explanation: The input binary string 11111111111111111111111111111101 represents the unsigned integer 4294967293, so return 3221225471 which its binary representation is 10111111111111111111111111111111.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;The input must be a binary string of length 32&lt;/p&gt;
+&lt;p&gt;Follow up: If this function is called many times, how would you optimize it?&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Use bit operations to go through each bit and add the least significant bit each time to result &lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0190. Reverse Bits&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/reverse-bits/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0190_reverse-bits.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;reverseBits&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        32 bit int: [0 ... 31]&lt;/span&gt;
+&lt;span class="sd"&gt;        index i -&amp;gt; 31 - i&lt;/span&gt;
+
+&lt;span class="sd"&gt;        for each bit:&lt;/span&gt;
+&lt;span class="sd"&gt;            shift result left, so can add to least sig&lt;/span&gt;
+&lt;span class="sd"&gt;            get the least sig bit (OR): n &amp;amp; mask&lt;/span&gt;
+&lt;span class="sd"&gt;            add it to result (AND)&lt;/span&gt;
+&lt;span class="sd"&gt;            shift n right for the next least sig bit&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="n"&gt;mask&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;32&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;|=&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;mask&lt;/span&gt;
+            &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="bits"></category></entry><entry><title>Leetcode 0202. Happy Number</title><link href="https://tofucode.com/posts/leetcode_0202_happy-number.html" rel="alternate"></link><published>2024-11-18T00:00:00-08:00</published><updated>2024-11-18T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-18:/posts/leetcode_0202_happy-number.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/happy-number/"&gt;https://leetcode.com/problems/happy-number/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
