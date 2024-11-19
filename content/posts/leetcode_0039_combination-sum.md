@@ -79,8 +79,10 @@ class Solution:
         2, 1, [6]
         3, 0, [7] (append to result)
 
-        Time : O()
-        Space: O()
+        n candidates, t target value, m smallest minimal number
+        worst case that the target is composed of all of the smallest number: t / m
+        Time : O(n ^ (t / m))
+        Space: O(t / m)
         '''
         nums = sorted(candidates)
         result = []
