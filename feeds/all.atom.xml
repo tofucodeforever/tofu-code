@@ -62,8 +62,10 @@ All elements of candidates are distinct.
 &lt;span class="sd"&gt;        2, 1, [6]&lt;/span&gt;
 &lt;span class="sd"&gt;        3, 0, [7] (append to result)&lt;/span&gt;
 
-&lt;span class="sd"&gt;        Time : O()&lt;/span&gt;
-&lt;span class="sd"&gt;        Space: O()&lt;/span&gt;
+&lt;span class="sd"&gt;        n candidates, t target value, m smallest minimal number&lt;/span&gt;
+&lt;span class="sd"&gt;        worst case that the target is composed of all of the smallest number: t / m&lt;/span&gt;
+&lt;span class="sd"&gt;        Time : O(n ^ (t / m))&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(t / m)&lt;/span&gt;
 &lt;span class="sd"&gt;        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
         &lt;span class="n"&gt;nums&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candidates&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;

@@ -178,8 +178,10 @@ All elements of candidates are distinct.
 <span class="sd">        2, 1, [6]</span>
 <span class="sd">        3, 0, [7] (append to result)</span>
 
-<span class="sd">        Time : O()</span>
-<span class="sd">        Space: O()</span>
+<span class="sd">        n candidates, t target value, m smallest minimal number</span>
+<span class="sd">        worst case that the target is composed of all of the smallest number: t / m</span>
+<span class="sd">        Time : O(n ^ (t / m))</span>
+<span class="sd">        Space: O(t / m)</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">nums</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
