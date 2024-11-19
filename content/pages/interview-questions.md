@@ -81,6 +81,7 @@ Status: published
 | 0380 | [Insert Delete GetRandom O(1)](https://tofucode.com/posts/leetcode_0380_insert-delete-getrandom-o1.html) | hash-map, array |  |
 | 0406 | [Queue Reconstruction by Height](https://tofucode.com/posts/leetcode_0406_queue-reconstruction-by-height.html) | sort | |
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp | |
+| 0415 | [Add Strings](https://tofucode.com/posts/leetcode_0415_add-strings.html) | string |  |
 | 0435 | [Non-overlapping Intervals](https://tofucode.com/posts/leetcode_0435_non-overlapping-intervals.html) | interval-merge, greedy | |
 | 0451 | [Sort Characters By Frequency](https://tofucode.com/posts/leetcode_0451_sort-characters-by-frequency.html) | counting |  |
 | 0452 | [Minimum Number of Arrows to Burst Balloons](https://tofucode.com/posts/leetcode_0452_minimum-number-of-arrows-to-burst-balloons.html) | interval-merge | |
