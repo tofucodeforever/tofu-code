@@ -59,6 +59,7 @@ Status: published
 | 0211 | [Design Add and Search Words Data Structure](https://tofucode.com/posts/leetcode_0211_design-add-and-search-words-data-structure.html) | trie-prefix-tree, dfs, recursion |  |
 | 0212 | [Word Search II](https://tofucode.com/posts/leetcode_0212_word-search-ii.html) | backtracking-with-matrix, trie-prefix-tree |  |
 | 0215 | [Kth Largest Element in an Array](https://tofucode.com/posts/leetcode_0215_kth-largest-element-in-an-array.html) | k-most-points, bubble-sort, quick-sort | |
+| 0217 | [Contains Duplicate](https://tofucode.com/posts/leetcode_0217_contains-duplicate.html) | set |  |
 | 0222 | [Count Complete Tree Nodes](https://tofucode.com/posts/leetcode_0222_count-complete-tree-nodes.html) | binary-tree | |
 | 0223 | [Rectangle Area](https://tofucode.com/posts/leetcode_0223_rectangle-area.html) | math | |
 | 0224 | [Basic Calculator](https://tofucode.com/posts/leetcode_0224_basic-calculator.html) | calculator, parentheses | |
