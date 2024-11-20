@@ -69,6 +69,7 @@ Status: published
 | 0227 | [Basic Calculator II](https://tofucode.com/posts/leetcode_0227_basic-calculator-ii.html) | calculator | |
 | 0232 | [Implement Queue using Stacks](https://tofucode.com/posts/leetcode_0232_implement-queue-using-stacks.html) | stack, queue | [14](#"[('apple', 6), ('amazon', 3), ('bytedance', 3), ('ebay', 3), ('goldman-sachs', 3), ('vmware', 3), ('bloomberg', 2), ('de-shaw', 2), ('docusign', 2), ('google', 2), ('microsoft', 2), ('oracle', 2), ('qualcomm', 2), ('splunk', 2)]") |
 | 0234 | [Palindrome Linked List](https://tofucode.com/posts/leetcode_0234_palindrome-linked-list.html) | palindrome-center-expansion, fast-slow-pointer | |
+| 0251 | [Flatten 2D Vector](https://tofucode.com/posts/leetcode_0251_flatten-2d-vector.html) | iterator | [4](#"[('airbnb', 4), ('google', 0), ('twitter', 0), ('zenefits', 0)]") |
 | 0263 | [Ugly Number](https://tofucode.com/posts/leetcode_0263_ugly-number.html) | math | |
 | 0270 | [Closest Binary Search Tree Value](https://tofucode.com/posts/leetcode_0270_closest-binary-search-tree-value.html) | bst, binary-search | [6](#"[('facebook', 12), ('oracle', 3), ('amazon', 2), ('google', 0), ('microsoft', 0), ('snapchat', 0)]") |
 | 0278 | [First Bad Version](https://tofucode.com/posts/leetcode_0278_first-bad-version.html) | binary-search | [13](#"[('adobe', 4), ('amazon', 2), ('apple', 2), ('bloomberg', 2), ('cisco', 2), ('expedia', 2), ('facebook', 2), ('google', 2), ('microsoft', 2), ('tiktok', 2), ('uber', 2), ('vmware', 2), ('yahoo', 2)]") |
