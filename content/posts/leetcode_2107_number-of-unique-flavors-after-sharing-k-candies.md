@@ -3,7 +3,7 @@ Slug: leetcode_2107_number-of-unique-flavors-after-sharing-k-candies
 Status: published
 Date: 2024-11-20
 Category: Leetcode
-Tags: sliding-window
+Tags: sliding-window-fixed
 Author: Zeph
 
 Question Link : [https://leetcode.com/problems/number-of-unique-flavors-after-sharing-k-candies/](https://leetcode.com/problems/number-of-unique-flavors-after-sharing-k-candies/)
