@@ -127,6 +127,7 @@ Status: published
 | 1207 | [Unique Number of Occurrences](https://tofucode.com/posts/leetcode_1207_unique-number-of-occurrences.html) | counting |  |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://tofucode.com/posts/leetcode_1249_minimum-remove-to-make-valid-parentheses.html) | stack, parentheses | |
 | 1254 | [Number of Closed Islands](https://tofucode.com/posts/leetcode_1254_number-of-closed-islands.html) | dfs-bfs-grid |  |
+| 1257 | [Smallest Common Region](https://tofucode.com/posts/leetcode_1257_smallest-common-region.html) | least-common-ancestor |  |
 | 1339 | [Maximum Product of Splitted Binary Tree](https://tofucode.com/posts/leetcode_1339_maximum-product-of-splitted-binary-tree.html) | binary-tree |  |
 | 1423 | [Maximum Points You Can Obtain from Cards](https://tofucode.com/posts/leetcode_1423_maximum-points-you-can-obtain-from-cards.html) | sliding-window, array | |
 | 1431 | [Kids With the Greatest Number of Candies](https://tofucode.com/posts/leetcode_1431_kids-with-the-greatest-number-of-candies.html) | simulation |  |
