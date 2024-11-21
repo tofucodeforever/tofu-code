@@ -69,6 +69,7 @@ Status: published
 | 0227 | [Basic Calculator II](https://tofucode.com/posts/leetcode_0227_basic-calculator-ii.html) | calculator | |
 | 0232 | [Implement Queue using Stacks](https://tofucode.com/posts/leetcode_0232_implement-queue-using-stacks.html) | stack, queue |  |
 | 0234 | [Palindrome Linked List](https://tofucode.com/posts/leetcode_0234_palindrome-linked-list.html) | palindrome-center-expansion, fast-slow-pointer | |
+| 0236 | [Lowest Common Ancestor of a Binary Tree](https://tofucode.com/posts/leetcode_0236_lowest-common-ancestor-of-a-binary-tree.html) | least-common-ancestor |  |
 | 0251 | [Flatten 2D Vector](https://tofucode.com/posts/leetcode_0251_flatten-2d-vector.html) | iterator |  |
 | 0263 | [Ugly Number](https://tofucode.com/posts/leetcode_0263_ugly-number.html) | math | |
 | 0270 | [Closest Binary Search Tree Value](https://tofucode.com/posts/leetcode_0270_closest-binary-search-tree-value.html) | bst, binary-search |  |
