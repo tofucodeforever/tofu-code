@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://tofucode.com/theme/pygments/monokai.min.css">
+
+    <script src="https://tofucode.com/theme/tipuesearch/jquery.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="https://tofucode.com/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="https://tofucode.com/theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://tofucode.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="TofuCode Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'G-DCBDZPQQD1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Zeph" />
+<meta name="description" content="Question Link : https://leetcode.com/problems/number-of-unique-flavors-after-sharing-k-candies/ Difficulty: Medium Premium: False Question You are given a 0-indexed integer array candies, where candies[i] represents the flavor of the ith candy. Your mom wants you to share these candies with your little sister by giving her k consecutive candies, but you …" />
+<meta name="keywords" content="sliding-window">
+
+
+<meta property="og:site_name" content="TofuCode"/>
+<meta property="og:title" content="Leetcode 2107. Number of Unique Flavors After Sharing K Candies"/>
+<meta property="og:description" content="Question Link : https://leetcode.com/problems/number-of-unique-flavors-after-sharing-k-candies/ Difficulty: Medium Premium: False Question You are given a 0-indexed integer array candies, where candies[i] represents the flavor of the ith candy. Your mom wants you to share these candies with your little sister by giving her k consecutive candies, but you …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://tofucode.com/posts/leetcode_2107_number-of-unique-flavors-after-sharing-k-candies.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2024-11-20 00:00:00-08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://tofucode.com/author/zeph.html">
+<meta property="article:section" content="Leetcode"/>
+<meta property="article:tag" content="sliding-window"/>
+<meta property="og:image" content="">
+
+  <title>TofuCode &ndash; Leetcode 2107. Number of Unique Flavors After Sharing K Candies</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://tofucode.com">
+        <img src="https://tofucode.com/theme/img/profile.png" alt="TofuCode" title="TofuCode">
+      </a>
+
+      <h1>
+        <a href="https://tofucode.com">TofuCode</a>
+      </h1>
+
+      
+      <ul class="list social">
+      </ul>
+
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="/pages/interview-questions.html" >Interview Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/category/leetcode.html" >Recent Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/tags.html" >Tags</a>
+            </li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="leetcode_2107_number-of-unique-flavors-after-sharing-k-candies">Leetcode 2107. Number of Unique Flavors After Sharing K Candies</h1>
+    <p>
+      Posted on Wed 20 November 2024 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Question Link : <a href="https://leetcode.com/problems/number-of-unique-flavors-after-sharing-k-candies/">https://leetcode.com/problems/number-of-unique-flavors-after-sharing-k-candies/</a></p>
+<p>Difficulty: Medium</p>
+<p>Premium: False</p>
+<h3>Question</h3>
+<p>You are given a 0-indexed integer array candies, where candies[i] represents the flavor of the ith candy. Your mom wants you to share these candies with your little sister by giving her k consecutive candies, but you want to keep as many flavors of candies as possible.
+Return the maximum number of unique flavors of candy you can keep after sharing  with your sister.
+ 
+Example 1:</p>
+<p>Input: candies = [1,2,2,3,4,3], k = 3
+Output: 3
+Explanation: 
+Give the candies in the range [1, 3] (inclusive) with flavors [2,2,3].
+You can eat candies with flavors [1,4,3].
+There are 3 unique flavors, so return 3.</p>
+<p>Example 2:</p>
+<p>Input: candies = [2,2,2,2,3,3], k = 2
+Output: 2
+Explanation: 
+Give the candies in the range [3, 4] (inclusive) with flavors [2,3].
+You can eat candies with flavors [2,2,2,3].
+There are 2 unique flavors, so return 2.
+Note that you can also share the candies with flavors [2,2] and eat the candies with flavors [2,2,3,3].</p>
+<p>Example 3:</p>
+<p>Input: candies = [2,4,5], k = 0
+Output: 3
+Explanation: 
+You do not have to give any candies.
+You can eat the candies with flavors [2,4,5].
+There are 3 unique flavors, so return 3.</p>
+<p>Constraints:</p>
+<p>1 &lt;= candies.length &lt;= 105
+1 &lt;= candies[i] &lt;= 105
+0 &lt;= k &lt;= candies.length</p>
+<h3>Solution</h3>
+<p>Since the ask is to take out a consecutive piece of length k - this first thought is that this could be a sliding window provlem with a constant length. The resulting unique candies can be maintained with a dict outside of the fixed sliding window.</p>
+<h3>Code</h3>
+<div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Leetcode 2107. Number of Unique Flavors After Sharing K Candies</span>
+<span class="sd">Question Link : https://leetcode.com/problems/number-of-unique-flavors-after-sharing-k-candies/</span>
+<span class="sd">Solution Link : https://tofucode.com/posts/leetcode_2107_number-of-unique-flavors-after-sharing-k-candies.html</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">shareCandies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">candies</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        candies = [1,2,2,3,4,3], k = 3</span>
+<span class="sd">        give out [2,2,3], eat [1,4,3]</span>
+
+<span class="sd">        give out k consecutive candies</span>
+<span class="sd">        return set(rest) as unique flavors</span>
+
+<span class="sd">        sliding window, want to find the largest set outside of the sliding window</span>
+<span class="sd">        l = 0</span>
+<span class="sd">        r = l+k</span>
+<span class="sd">        constant length window of k</span>
+<span class="sd">        maintain a dict {} of flavor -&gt; count of everything outside the sliding window</span>
+
+<span class="sd">        on window move:</span>
+<span class="sd">        adjust this dict:</span>
+<span class="sd">        take out left end of window, add in right end of window</span>
+<span class="sd">        [1,2,2,3,4,3]</span>
+<span class="sd">        count: {3: 2, 4: 1} - init [1,2,2]: max 2 flavors</span>
+<span class="sd">        count: {1: 1, 3: 1, 4 : 1} moved to [2,2,3]: max 3 flavors</span>
+
+<span class="sd">        Time : O(n)</span>
+<span class="sd">        Space: O(n)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># flavor -&gt; count</span>
+
+        <span class="c1"># set up count on initial window</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">candies</span><span class="p">)):</span>
+            <span class="n">candy</span> <span class="o">=</span> <span class="n">candies</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">count</span><span class="p">[</span><span class="n">candy</span><span class="p">]</span> <span class="o">=</span> <span class="n">count</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">candy</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+
+        <span class="c1"># slide window and recalculate:</span>
+        <span class="c1"># window: take left out, add right - next one in</span>
+        <span class="c1"># count dict: add left in, take right out</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">candies</span><span class="p">)):</span>
+            <span class="n">l</span> <span class="o">=</span> <span class="n">i</span><span class="o">-</span><span class="n">k</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="n">l_candy</span> <span class="o">=</span> <span class="n">candies</span><span class="p">[</span><span class="n">l</span><span class="p">]</span>
+            <span class="n">r_candy</span> <span class="o">=</span> <span class="n">candies</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+
+            <span class="c1"># count: add left in, take right out</span>
+            <span class="n">count</span><span class="p">[</span><span class="n">l_candy</span><span class="p">]</span> <span class="o">=</span> <span class="n">count</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">l_candy</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">count</span><span class="p">[</span><span class="n">r_candy</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">count</span><span class="p">[</span><span class="n">r_candy</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">del</span> <span class="n">count</span><span class="p">[</span><span class="n">r_candy</span><span class="p">]</span>
+
+            <span class="n">result</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">count</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://tofucode.com/tag/sliding-window.html">sliding-window</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p> Eat Tofu and be true </p>
+<p>&copy; 2024 TofuCode.com</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " TofuCode ",
+  "url" : "https://tofucode.com",
+  "image": "",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>
