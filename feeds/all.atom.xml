@@ -97,11 +97,11 @@ m == queries.length
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="subset-sum"></category><category term="binary-search"></category></entry><entry><title>Leetcode 2955. Number of Same-End Substrings</title><link href="https://tofucode.com/posts/leetcode_2955_number-of-same-end-substrings.html" rel="alternate"></link><published>2024-11-22T00:00:00-08:00</published><updated>2024-11-22T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-22:/posts/leetcode_2955_number-of-same-end-substrings.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/number-of-same-end-substrings/"&gt;https://leetcode.com/problems/number-of-same-end-substrings/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
-&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;p&gt;Premium: True&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;You are given a 0-indexed string s, and a 2D array of integers queries, where queries[i] = [li, ri] indicates a substring of s starting from the index li and ending at the index ri (both inclusive), i …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/number-of-same-end-substrings/"&gt;https://leetcode.com/problems/number-of-same-end-substrings/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
-&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;p&gt;Premium: True&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
 &lt;p&gt;You are given a 0-indexed string s, and a 2D array of integers queries, where queries[i] = [li, ri] indicates a substring of s starting from the index li and ending at the index ri (both inclusive), i.e. s[li..ri].
 Return an array ans where ans[i] is the number of same-end substrings of queries[i].
@@ -291,7 +291,7 @@ queries[i] = [li, ri]
             &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;total&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="math"></category><category term="binary-search"></category><category term="prefix-sum"></category></entry><entry><title>Leetcode 1213. Intersection of Three Sorted Arrays</title><link href="https://tofucode.com/posts/leetcode_1213_intersection-of-three-sorted-arrays.html" rel="alternate"></link><published>2024-11-21T00:00:00-08:00</published><updated>2024-11-21T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-21:/posts/leetcode_1213_intersection-of-three-sorted-arrays.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/intersection-of-three-sorted-arrays/"&gt;https://leetcode.com/problems/intersection-of-three-sorted-arrays/&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode Premium"></category><category term="math"></category><category term="binary-search"></category><category term="prefix-sum"></category></entry><entry><title>Leetcode 1213. Intersection of Three Sorted Arrays</title><link href="https://tofucode.com/posts/leetcode_1213_intersection-of-three-sorted-arrays.html" rel="alternate"></link><published>2024-11-21T00:00:00-08:00</published><updated>2024-11-21T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-21:/posts/leetcode_1213_intersection-of-three-sorted-arrays.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/intersection-of-three-sorted-arrays/"&gt;https://leetcode.com/problems/intersection-of-three-sorted-arrays/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
