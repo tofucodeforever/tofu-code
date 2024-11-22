@@ -1,7 +1,7 @@
 Title: Leetcode 2389. Longest Subsequence With Limited Sum
 Slug: leetcode_2389_longest-subsequence-with-limited-sum
 Status: published
-Date: 2023-01-14
+Date: 2024-11-22
 Category: Leetcode
 Tags: subset-sum, binary-search
 Author: Zeph
