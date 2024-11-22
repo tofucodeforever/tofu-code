@@ -2,7 +2,7 @@ Title: Leetcode 2955. Number of Same-End Substrings
 Slug: leetcode_2955_number-of-same-end-substrings
 Status: published
 Date: 2024-11-22
-Category: Leetcode
+Category: Leetcode Premium
 Tags: math, binary-search, prefix-sum
 Author: Zeph
 
@@ -10,7 +10,7 @@ Question Link : [https://leetcode.com/problems/number-of-same-end-substrings/](h
 
 Difficulty: Medium
 
-Premium: False
+Premium: True
 
 ### Question
 You are given a 0-indexed string s, and a 2D array of integers queries, where queries[i] = [li, ri] indicates a substring of s starting from the index li and ending at the index ri (both inclusive), i.e. s[li..ri].
