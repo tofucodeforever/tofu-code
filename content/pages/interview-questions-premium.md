@@ -125,6 +125,7 @@ Status: published
 | 1094 | [Car Pooling](https://tofucode.com/posts/leetcode_1094_car-pooling.html) | interval-overlap | |
 | 1143 | [Longest Common Subsequence](https://tofucode.com/posts/leetcode_1143_longest-common-subsequence.html) | dp-2d | [13](#"[('amazon', 7), ('apple', 5), ('doordash', 3), ('indeed', 3), ('karat', 3), ('microsoft', 3), ('vmware', 3), ('adobe', 2), ('bloomberg', 2), ('google', 2), ('intuit', 2), ('uber', 2), ('wayfair', 2)]") |
 | 1207 | [Unique Number of Occurrences](https://tofucode.com/posts/leetcode_1207_unique-number-of-occurrences.html) | counting | [7](#"[('amazon', 9), ('adobe', 7), ('apple', 5), ('facebook', 5), ('bloomberg', 3), ('google', 3), ('yahoo', 2)]") |
+| 1213 | [Intersection of Three Sorted Arrays](https://tofucode.com/posts/leetcode_1213_intersection-of-three-sorted-arrays.html) | pointers | [1](#"[('facebook', 2)]") |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://tofucode.com/posts/leetcode_1249_minimum-remove-to-make-valid-parentheses.html) | stack, parentheses | |
 | 1254 | [Number of Closed Islands](https://tofucode.com/posts/leetcode_1254_number-of-closed-islands.html) | dfs-bfs-grid | [6](#"[('google', 5), ('microsoft', 5), ('amazon', 2), ('apple', 2), ('bloomberg', 2), ('coupang', 2)]") |
 | 1257 | [Smallest Common Region](https://tofucode.com/posts/leetcode_1257_smallest-common-region.html) | least-common-ancestor | [2](#"[('airbnb', 4), ('tiktok', 2)]") |
