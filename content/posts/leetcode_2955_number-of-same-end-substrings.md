@@ -1,7 +1,7 @@
 Title: Leetcode 2955. Number of Same-End Substrings
 Slug: leetcode_2955_number-of-same-end-substrings
 Status: published
-Date: 2024-11-21
+Date: 2024-11-22
 Category: Leetcode
 Tags: math, binary-search, prefix-sum
 Author: Zeph
