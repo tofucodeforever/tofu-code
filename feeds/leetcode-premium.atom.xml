@@ -77,7 +77,101 @@ Output: []&lt;/p&gt;
                     &lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
 
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode Premium"></category><category term="pointers"></category></entry><entry><title>Leetcode 2955. Number of Same-End Substrings</title><link href="https://tofucode.com/posts/leetcode_2955_number-of-same-end-substrings.html" rel="alternate"></link><published>2024-11-22T00:00:00-08:00</published><updated>2024-11-22T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-22:/posts/leetcode_2955_number-of-same-end-substrings.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/number-of-same-end-substrings/"&gt;https://leetcode.com/problems/number-of-same-end-substrings/&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode Premium"></category><category term="pointers"></category></entry><entry><title>Leetcode 1257. Smallest Common Region</title><link href="https://tofucode.com/posts/leetcode_1257_smallest-common-region.html" rel="alternate"></link><published>2024-11-22T00:00:00-08:00</published><updated>2024-11-22T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-22:/posts/leetcode_1257_smallest-common-region.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/smallest-common-region/"&gt;https://leetcode.com/problems/smallest-common-region/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: True&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given some lists of regions where the first region of each list includes all other regions in that list.
+Naturally, if a region x contains another region y then x is bigger than y. Also, by …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/smallest-common-region/"&gt;https://leetcode.com/problems/smallest-common-region/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: True&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given some lists of regions where the first region of each list includes all other regions in that list.
+Naturally, if a region x contains another region y then x is bigger than y. Also, by definition, a region x contains itself.
+Given two regions: region1 and region2, return the smallest region that contains both of them.
+If you are given regions r1, r2, and r3 such that r1 includes r3, it is guaranteed there is no r2 such that r2 includes r3.
+It is guaranteed the smallest region exists.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input:
+regions = [["Earth","North America","South America"],
+["North America","United States","Canada"],
+["United States","New York","Boston"],
+["Canada","Ontario","Quebec"],
+["South America","Brazil"]],
+region1 = "Quebec",
+region2 = "New York"
+Output: "North America"&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: regions = [["Earth", "North America", "South America"],["North America", "United States", "Canada"],["United States", "New York", "Boston"],["Canada", "Ontario", "Quebec"],["South America", "Brazil"]], region1 = "Canada", region2 = "South America"
+Output: "Earth"&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;2 &amp;lt;= regions.length &amp;lt;= 104
+2 &amp;lt;= regions[i].length &amp;lt;= 20
+1 &amp;lt;= regions[i][j].length, region1.length, region2.length &amp;lt;= 20
+region1 != region2
+regions[i][j], region1, and region2 consist of English letters.
+The input is generated such that there exists a region which contains all the other regions, either directly or indirectly.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;LCA problem, since the only info we care about here are the names, we can just use a dict instead of building out a Node class&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 1257. Smallest Common Region&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/smallest-common-region/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_1257_smallest-common-region.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;findSmallestRegion&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;regions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;]],&lt;/span&gt; &lt;span class="n"&gt;region1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;region2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        regions = [&lt;/span&gt;
+&lt;span class="sd"&gt;            [&amp;quot;Earth&amp;quot;,&amp;quot;North America&amp;quot;,&amp;quot;South America&amp;quot;],&lt;/span&gt;
+&lt;span class="sd"&gt;            [&amp;quot;North America&amp;quot;,&amp;quot;United States&amp;quot;,&amp;quot;Canada&amp;quot;],&lt;/span&gt;
+&lt;span class="sd"&gt;            [&amp;quot;United States&amp;quot;,&amp;quot;New York&amp;quot;,&amp;quot;Boston&amp;quot;],&lt;/span&gt;
+&lt;span class="sd"&gt;            [&amp;quot;Canada&amp;quot;,&amp;quot;Ontario&amp;quot;,&amp;quot;Quebec&amp;quot;],&lt;/span&gt;
+&lt;span class="sd"&gt;            [&amp;quot;South America&amp;quot;,&amp;quot;Brazil&amp;quot;]&lt;/span&gt;
+&lt;span class="sd"&gt;        ],&lt;/span&gt;
+&lt;span class="sd"&gt;        for a sublist: first is the parent&lt;/span&gt;
+&lt;span class="sd"&gt;        eg:&lt;/span&gt;
+&lt;span class="sd"&gt;            Quebec (Quebec - Canada - North America)&lt;/span&gt;
+&lt;span class="sd"&gt;            New York (New York - United States - North America)&lt;/span&gt;
+
+&lt;span class="sd"&gt;        ask:&lt;/span&gt;
+&lt;span class="sd"&gt;        region1, region2 find the first common ancester&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Tree: and find first common ancester&lt;/span&gt;
+&lt;span class="sd"&gt;        1. set up Tree:&lt;/span&gt;
+&lt;span class="sd"&gt;            do we need Node class:&lt;/span&gt;
+&lt;span class="sd"&gt;                no: all we care about is the child -&amp;gt; parent, use a dict&lt;/span&gt;
+&lt;span class="sd"&gt;            Go through regions list and build a tree&lt;/span&gt;
+&lt;span class="sd"&gt;        3. find first common ancester&lt;/span&gt;
+&lt;span class="sd"&gt;            traverse one region up to root and store in set()&lt;/span&gt;
+&lt;span class="sd"&gt;            traverse second region up and return first common&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;nodes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; &lt;span class="c1"&gt;# child -&amp;gt; parent&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# set up tree&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;region_info&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;regions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;parent_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;region_info&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+            &lt;span class="n"&gt;children_names&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;region_info&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
+            &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;child_name&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;children_names&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;nodes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;child_name&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parent_name&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# find common ancestor&lt;/span&gt;
+        &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;region1&lt;/span&gt;
+        &lt;span class="n"&gt;seen&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nodes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;region2&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;
+            &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nodes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode Premium"></category><category term="least-common-ancestor"></category></entry><entry><title>Leetcode 2955. Number of Same-End Substrings</title><link href="https://tofucode.com/posts/leetcode_2955_number-of-same-end-substrings.html" rel="alternate"></link><published>2024-11-22T00:00:00-08:00</published><updated>2024-11-22T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-22:/posts/leetcode_2955_number-of-same-end-substrings.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/number-of-same-end-substrings/"&gt;https://leetcode.com/problems/number-of-same-end-substrings/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;p&gt;Premium: True&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
