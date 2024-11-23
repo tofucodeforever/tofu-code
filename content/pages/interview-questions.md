@@ -48,7 +48,6 @@ Status: published
 | 0146 | [LRU Cache](https://tofucode.com/posts/leetcode_0146_lru-cache.html) | lru-cache |  |
 | 0150 | [Evaluate Reverse Polish Notation](https://tofucode.com/posts/leetcode_0150_evaluate-reverse-polish-notation.html) | stack |  |
 | 0160 | [Intersection of Two Linked Lists](https://tofucode.com/posts/leetcode_0160_intersection-of-two-linked-lists.html) | linked-list | |
-| 0163 | [Missing Ranges](https://tofucode.com/posts/leetcode_0163_missing-ranges.html) | array |  |
 | 0167 | [Two Sum II - Input Array Is Sorted](https://tofucode.com/posts/leetcode_0167_two-sum-ii-input-array-is-sorted.html) | k-sum | |
 | 0169 | [Majority Element](https://tofucode.com/posts/leetcode_0169_majority-element.html) | counting, boyer-moore-voting-algorithm | |
 | 0173 | [Binary Search Tree Iterator](https://tofucode.com/posts/leetcode_0173_binary-search-tree-iterator.html) | bst |  |
@@ -70,9 +69,7 @@ Status: published
 | 0232 | [Implement Queue using Stacks](https://tofucode.com/posts/leetcode_0232_implement-queue-using-stacks.html) | stack, queue |  |
 | 0234 | [Palindrome Linked List](https://tofucode.com/posts/leetcode_0234_palindrome-linked-list.html) | palindrome-center-expansion, fast-slow-pointer | |
 | 0236 | [Lowest Common Ancestor of a Binary Tree](https://tofucode.com/posts/leetcode_0236_lowest-common-ancestor-of-a-binary-tree.html) | least-common-ancestor |  |
-| 0251 | [Flatten 2D Vector](https://tofucode.com/posts/leetcode_0251_flatten-2d-vector.html) | iterator |  |
 | 0263 | [Ugly Number](https://tofucode.com/posts/leetcode_0263_ugly-number.html) | math | |
-| 0270 | [Closest Binary Search Tree Value](https://tofucode.com/posts/leetcode_0270_closest-binary-search-tree-value.html) | bst, binary-search |  |
 | 0278 | [First Bad Version](https://tofucode.com/posts/leetcode_0278_first-bad-version.html) | binary-search |  |
 | 0283 | [Move Zeroes](https://tofucode.com/posts/leetcode_0283_move-zeroes.html) | array-shift, two-pointers | |
 | 0289 | [Game of Life](https://tofucode.com/posts/leetcode_0289_game-of-life.html) | simulation, state-changes | |
@@ -125,10 +122,8 @@ Status: published
 | 1094 | [Car Pooling](https://tofucode.com/posts/leetcode_1094_car-pooling.html) | interval-overlap | |
 | 1143 | [Longest Common Subsequence](https://tofucode.com/posts/leetcode_1143_longest-common-subsequence.html) | dp-2d |  |
 | 1207 | [Unique Number of Occurrences](https://tofucode.com/posts/leetcode_1207_unique-number-of-occurrences.html) | counting |  |
-| 1213 | [Intersection of Three Sorted Arrays](https://tofucode.com/posts/leetcode_1213_intersection-of-three-sorted-arrays.html) | pointers |  |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://tofucode.com/posts/leetcode_1249_minimum-remove-to-make-valid-parentheses.html) | stack, parentheses | |
 | 1254 | [Number of Closed Islands](https://tofucode.com/posts/leetcode_1254_number-of-closed-islands.html) | dfs-bfs-grid |  |
-| 1257 | [Smallest Common Region](https://tofucode.com/posts/leetcode_1257_smallest-common-region.html) | least-common-ancestor |  |
 | 1339 | [Maximum Product of Splitted Binary Tree](https://tofucode.com/posts/leetcode_1339_maximum-product-of-splitted-binary-tree.html) | binary-tree |  |
 | 1423 | [Maximum Points You Can Obtain from Cards](https://tofucode.com/posts/leetcode_1423_maximum-points-you-can-obtain-from-cards.html) | sliding-window, array | |
 | 1431 | [Kids With the Greatest Number of Candies](https://tofucode.com/posts/leetcode_1431_kids-with-the-greatest-number-of-candies.html) | simulation |  |
@@ -137,9 +132,7 @@ Status: published
 | 1472 | [Design Browser History](https://tofucode.com/posts/leetcode_1472_design-browser-history.html) | stack |  |
 | 1544 | [Make The String Great](https://tofucode.com/posts/leetcode_1544_make-the-string-great.html) | stack | |
 | 1578 | [Minimum Time to Make Rope Colorful](https://tofucode.com/posts/leetcode_1578_minimum-time-to-make-rope-colorful.html) | pointers, array | |
-| 1644 | [Lowest Common Ancestor of a Binary Tree II](https://tofucode.com/posts/leetcode_1644_lowest-common-ancestor-of-a-binary-tree-ii.html) | least-common-ancestor |  |
 | 1647 | [Minimum Deletions to Make Character Frequencies Unique](https://tofucode.com/posts/leetcode_1647_minimum-deletions-to-make-character-frequencies-unique.html) | hash-map-count | |
-| 1650 | [Lowest Common Ancestor of a Binary Tree III](https://tofucode.com/posts/leetcode_1650_lowest-common-ancestor-of-a-binary-tree-iii.html) | least-common-ancestor |  |
 | 1657 | [Determine if Two Strings Are Close](https://tofucode.com/posts/leetcode_1657_determine-if-two-strings-are-close.html) | counting |  |
 | 1662 | [Check If Two String Arrays are Equivalent](https://tofucode.com/posts/leetcode_1662_check-if-two-string-arrays-are-equivalent.html) | string | |
 | 1704 | [Determine if String Halves Are Alike](https://tofucode.com/posts/leetcode_1704_determine-if-string-halves-are-alike.html) | string |  |
@@ -147,7 +140,6 @@ Status: published
 | 1757 | [Recyclable and Low Fat Products](https://tofucode.com/posts/leetcode_1757_recyclable-and-low-fat-products.html) | sql |  |
 | 1768 | [Merge Strings Alternately](https://tofucode.com/posts/leetcode_1768_merge-strings-alternately.html) | pointers |  |
 | 2095 | [Delete the Middle Node of a Linked List](https://tofucode.com/posts/leetcode_2095_delete-the-middle-node-of-a-linked-list.html) | fast-slow-pointer | |
-| 2107 | [Number of Unique Flavors After Sharing K Candies](https://tofucode.com/posts/leetcode_2107_number-of-unique-flavors-after-sharing-k-candies.html) | sliding-window-fixed |  |
 | 2131 | [Longest Palindrome by Concatenating Two Letter Words](https://tofucode.com/posts/leetcode_2131_longest-palindrome-by-concatenating-two-letter-words.html) | palindrome, string | |
 | 2283 | [Check if Number Has Equal Digit Count and Digit Value](https://tofucode.com/posts/leetcode_2283_check-if-number-has-equal-digit-count-and-digit-value.html) | hash-map-count | |
 | 2284 | [Sender With Largest Word Count](https://tofucode.com/posts/leetcode_2284_sender-with-largest-word-count.html) | hash-map-count | |
@@ -174,7 +166,5 @@ Status: published
 | 2455 | [Average Value of Even Numbers That Are Divisible by Three](https://tofucode.com/posts/leetcode_2455_average-value-of-even-numbers-that-are-divisible-by-three.html) | math | |
 | 2456 | [Most Popular Video Creator](https://tofucode.com/posts/leetcode_2456_most-popular-video-creator.html) | hash-map-count | |
 | 2492 | [Minimum Score of a Path Between Two Cities](https://tofucode.com/posts/leetcode_2492_minimum-score-of-a-path-between-two-cities.html) | dfs, bfs, union-find |  |
-| 2955 | [Number of Same-End Substrings](https://tofucode.com/posts/leetcode_2955_number-of-same-end-substrings.html) | math, binary-search, prefix-sum |  |
 | 3110 | [Score of a String](https://tofucode.com/posts/leetcode_3110_score-of-a-string.html) | string |  |
-| 3263 | [Convert Doubly Linked List to Array I](https://tofucode.com/posts/leetcode_3263_convert-doubly-linked-list-to-array-i.html) | linked-list |  |
 | 2460 | [Apply Operations to an Array](https://tofucode.com/posts/leetcode_2460_apply-operations-to-an-array.html) | two-pointers | |
