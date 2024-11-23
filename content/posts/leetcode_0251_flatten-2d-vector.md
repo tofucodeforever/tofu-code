@@ -1,8 +1,8 @@
 Title: Leetcode 0251. Flatten 2D Vector
 Slug: leetcode_0251_flatten-2d-vector
 Status: published
-Date: 2024-11-19
-Category: Leetcode
+Date: 2024-11-22
+Category: Leetcode Premium
 Tags: iterator
 Author: Zeph
 
@@ -10,7 +10,7 @@ Question Link : [https://leetcode.com/problems/flatten-2d-vector/](https://leetc
 
 Difficulty: Medium
 
-Premium: False
+Premium: True
 
 ### Question
 Design an iterator to flatten a 2D vector. It should support the next and hasNext operations.
