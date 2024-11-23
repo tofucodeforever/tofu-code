@@ -1,8 +1,8 @@
 Title: Leetcode 1213. Intersection of Three Sorted Arrays
 Slug: leetcode_1213_intersection-of-three-sorted-arrays
 Status: published
-Date: 2024-11-21
-Category: Leetcode
+Date: 2024-11-22
+Category: Leetcode Premium
 Tags: pointers
 Author: Zeph
 
@@ -10,7 +10,7 @@ Question Link : [https://leetcode.com/problems/intersection-of-three-sorted-arra
 
 Difficulty: Easy
 
-Premium: False
+Premium: True
 
 ### Question
 Given three integer arrays arr1, arr2 and arr3 sorted in strictly increasing order, return a sorted array of only the integers that appeared in all three arrays.
