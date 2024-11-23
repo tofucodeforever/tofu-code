@@ -1,7 +1,7 @@
 Title: Leetcode 0019. Remove Nth Node From End of List
 Slug: leetcode_0019_remove-nth-node-from-end-of-list
 Status: published
-Date: 2022-02-28
+Date: 2024-11-22
 Category: Leetcode
 Tags: linked-list
 Author: Zeph
@@ -9,6 +9,8 @@ Author: Zeph
 Question Link : [https://leetcode.com/problems/remove-nth-node-from-end-of-list/](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 
 Difficulty: Medium
+
+Premium: False
 
 ### Question
 Given the head of a linked list, remove the nth node from the end of the list and return its head.
