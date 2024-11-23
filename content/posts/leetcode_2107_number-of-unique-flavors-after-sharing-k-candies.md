@@ -1,8 +1,8 @@
 Title: Leetcode 2107. Number of Unique Flavors After Sharing K Candies
 Slug: leetcode_2107_number-of-unique-flavors-after-sharing-k-candies
 Status: published
-Date: 2024-11-20
-Category: Leetcode
+Date: 2024-11-22
+Category: Leetcode Premium
 Tags: sliding-window-fixed
 Author: Zeph
 
@@ -10,7 +10,7 @@ Question Link : [https://leetcode.com/problems/number-of-unique-flavors-after-sh
 
 Difficulty: Medium
 
-Premium: False
+Premium: True
 
 ### Question
 You are given a 0-indexed integer array candies, where candies[i] represents the flavor of the ith candy. Your mom wants you to share these candies with your little sister by giving her k consecutive candies, but you want to keep as many flavors of candies as possible.
