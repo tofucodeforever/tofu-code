@@ -46,20 +46,20 @@
 
 
 <meta name="author" content="Zeph" />
-<meta name="description" content="Question Link : https://leetcode.com/problems/missing-ranges/ Difficulty: Easy Premium: False Question You are given an inclusive range [lower, upper] and a sorted unique integer array nums, where all elements are in the inclusive range. A number x is considered missing if x is in the range [lower, upper] and …" />
+<meta name="description" content="Question Link : https://leetcode.com/problems/missing-ranges/ Difficulty: Easy Premium: True Question You are given an inclusive range [lower, upper] and a sorted unique integer array nums, where all elements are within the inclusive range. A number x is considered missing if x is in the range [lower, upper] and …" />
 <meta name="keywords" content="array">
 
 
 <meta property="og:site_name" content="TofuCode"/>
 <meta property="og:title" content="Leetcode 0163. Missing Ranges"/>
-<meta property="og:description" content="Question Link : https://leetcode.com/problems/missing-ranges/ Difficulty: Easy Premium: False Question You are given an inclusive range [lower, upper] and a sorted unique integer array nums, where all elements are in the inclusive range. A number x is considered missing if x is in the range [lower, upper] and …"/>
+<meta property="og:description" content="Question Link : https://leetcode.com/problems/missing-ranges/ Difficulty: Easy Premium: True Question You are given an inclusive range [lower, upper] and a sorted unique integer array nums, where all elements are within the inclusive range. A number x is considered missing if x is in the range [lower, upper] and …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://tofucode.com/posts/leetcode_0163_missing-ranges.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2022-11-27 00:00:00-08:00"/>
+<meta property="article:published_time" content="2024-11-22 00:00:00-08:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://tofucode.com/author/zeph.html">
-<meta property="article:section" content="Leetcode"/>
+<meta property="article:section" content="Leetcode Premium"/>
 <meta property="article:tag" content="array"/>
 <meta property="og:image" content="">
 
@@ -113,7 +113,7 @@
       
     <h1 id="leetcode_0163_missing-ranges">Leetcode 0163. Missing Ranges</h1>
     <p>
-      Posted on Sun 27 November 2022 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
+      Posted on Fri 22 November 2024 in <a href="https://tofucode.com/category/leetcode-premium.html">Leetcode Premium</a>
 
     </p>
   </header>
@@ -122,22 +122,21 @@
   <div>
     <p>Question Link : <a href="https://leetcode.com/problems/missing-ranges/">https://leetcode.com/problems/missing-ranges/</a></p>
 <p>Difficulty: Easy</p>
-<p>Premium: False</p>
+<p>Premium: True</p>
 <h3>Question</h3>
-<p>You are given an inclusive range [lower, upper] and a sorted unique integer array nums, where all elements are in the inclusive range.
+<p>You are given an inclusive range [lower, upper] and a sorted unique integer array nums, where all elements are within the inclusive range.
 A number x is considered missing if x is in the range [lower, upper] and x is not in nums.
-Return the smallest sorted list of ranges that cover every missing number exactly. That is, no element of nums is in any of the ranges, and each missing number is in one of the ranges.
-Each range [a,b] in the list should be output as:</p>
-<p>"a-&gt;b" if a != b
-"a" if a == b</p>
-<p>Example 1:</p>
+Return the shortest sorted list of ranges that exactly covers all the missing numbers. That is, no element of nums is included in any of the ranges, and each missing number is covered by one of the ranges.
+ 
+ 
+Example 1:</p>
 <p>Input: nums = [0,1,3,50,75], lower = 0, upper = 99
-Output: ["2","4-&gt;49","51-&gt;74","76-&gt;99"]
+Output: [[2,2],[4,49],[51,74],[76,99]]
 Explanation: The ranges are:
-[2,2] --&gt; "2"
-[4,49] --&gt; "4-&gt;49"
-[51,74] --&gt; "51-&gt;74"
-[76,99] --&gt; "76-&gt;99"</p>
+[2,2]
+[4,49]
+[51,74]
+[76,99]</p>
 <p>Example 2:</p>
 <p>Input: nums = [-1], lower = -1, upper = -1
 Output: []
