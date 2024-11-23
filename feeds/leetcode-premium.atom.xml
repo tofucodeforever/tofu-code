@@ -337,6 +337,87 @@ p != q&lt;/p&gt;
             &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
                 &lt;span class="n"&gt;nodes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;
                 &lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode Premium"></category><category term="least-common-ancestor"></category></entry><entry><title>Leetcode 1650. Lowest Common Ancestor of a Binary Tree III</title><link href="https://tofucode.com/posts/leetcode_1650_lowest-common-ancestor-of-a-binary-tree-iii.html" rel="alternate"></link><published>2024-11-22T00:00:00-08:00</published><updated>2024-11-22T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-22:/posts/leetcode_1650_lowest-common-ancestor-of-a-binary-tree-iii.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/"&gt;https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: True&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given two nodes of a binary tree p and q, return their lowest common ancestor (LCA).
+Each node will have a reference to its parent node. The definition for Node is below:&lt;/p&gt;
+&lt;p&gt;class Node {
+    public int val;
+    public …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/"&gt;https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: True&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given two nodes of a binary tree p and q, return their lowest common ancestor (LCA).
+Each node will have a reference to its parent node. The definition for Node is below:&lt;/p&gt;
+&lt;p&gt;class Node {
+    public int val;
+    public Node left;
+    public Node right;
+    public Node parent;
+}&lt;/p&gt;
+&lt;p&gt;According to the definition of LCA on Wikipedia: "The lowest common ancestor of two nodes p and q in a tree T is the lowest node that has both p and q as descendants (where we allow a node to be a descendant of itself)."
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+Output: 3
+Explanation: The LCA of nodes 5 and 1 is 3.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
+Output: 5
+Explanation: The LCA of nodes 5 and 4 is 5 since a node can be a descendant of itself according to the LCA definition.&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: root = [1,2], p = 1, q = 2
+Output: 1&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;The number of nodes in the tree is in the range [2, 105].
+-109 &amp;lt;= Node.val &amp;lt;= 109
+All Node.val are unique.
+p != q
+p and q exist in the tree.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Since there is already parent pointer in each node, this makes it an easier LCA problem&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 1650. Lowest Common Ancestor of a Binary Tree III&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_1650_lowest-common-ancestor-of-a-binary-tree-iii.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;# Definition for a Node.&lt;/span&gt;
+&lt;span class="sd"&gt;class Node:&lt;/span&gt;
+&lt;span class="sd"&gt;    def __init__(self, val):&lt;/span&gt;
+&lt;span class="sd"&gt;        self.val = val&lt;/span&gt;
+&lt;span class="sd"&gt;        self.left = None&lt;/span&gt;
+&lt;span class="sd"&gt;        self.right = None&lt;/span&gt;
+&lt;span class="sd"&gt;        self.parent = None&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;lowestCommonAncestor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Node&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Node&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Node&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        node -&amp;gt; parent&lt;/span&gt;
+
+&lt;span class="sd"&gt;        seen = set()&lt;/span&gt;
+&lt;span class="sd"&gt;        traverse p, and store into seen&lt;/span&gt;
+&lt;span class="sd"&gt;        traverse q, and return first that&amp;#39;s in seen&lt;/span&gt;
+
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;seen&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parent&lt;/span&gt;
+        &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;q&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;seen&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+            &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parent&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode Premium"></category><category term="least-common-ancestor"></category></entry><entry><title>Leetcode 2955. Number of Same-End Substrings</title><link href="https://tofucode.com/posts/leetcode_2955_number-of-same-end-substrings.html" rel="alternate"></link><published>2024-11-22T00:00:00-08:00</published><updated>2024-11-22T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-22:/posts/leetcode_2955_number-of-same-end-substrings.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/number-of-same-end-substrings/"&gt;https://leetcode.com/problems/number-of-same-end-substrings/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;p&gt;Premium: True&lt;/p&gt;
