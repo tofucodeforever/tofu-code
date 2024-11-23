@@ -1,8 +1,8 @@
 Title: Leetcode 3263. Convert Doubly Linked List to Array I
 Slug: leetcode_3263_convert-doubly-linked-list-to-array-i
 Status: published
-Date: 2024-08-26
-Category: Leetcode
+Date: 2024-11-22
+Category: Leetcode Premium
 Tags: linked-list
 Author: Zeph
 
@@ -10,7 +10,7 @@ Question Link : [https://leetcode.com/problems/convert-doubly-linked-list-to-arr
 
 Difficulty: Easy
 
-Premium: False
+Premium: True
 
 ### Question
 You are given the head of a doubly linked list, which contains nodes that have a next pointer and a previous pointer.
