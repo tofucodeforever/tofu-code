@@ -1,8 +1,8 @@
 Title: Leetcode 0270. Closest Binary Search Tree Value
 Slug: leetcode_0270_closest-binary-search-tree-value
 Status: published
-Date: 2024-09-16
-Category: Leetcode
+Date: 2024-11-22
+Category: Leetcode Premium
 Tags: bst, binary-search
 Author: Zeph
 
@@ -10,7 +10,7 @@ Question Link : [https://leetcode.com/problems/closest-binary-search-tree-value/
 
 Difficulty: Easy
 
-Premium: False
+Premium: True
 
 ### Question
 Given the root of a binary search tree and a target value, return the value in the BST that is closest to the target. If there are multiple answers, print the smallest.
