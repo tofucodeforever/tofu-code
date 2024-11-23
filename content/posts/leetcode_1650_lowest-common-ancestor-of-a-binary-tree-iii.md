@@ -1,8 +1,8 @@
 Title: Leetcode 1650. Lowest Common Ancestor of a Binary Tree III
 Slug: leetcode_1650_lowest-common-ancestor-of-a-binary-tree-iii
 Status: published
-Date: 2024-11-20
-Category: Leetcode
+Date: 2024-11-22
+Category: Leetcode Premium
 Tags: least-common-ancestor
 Author: Zeph
 
@@ -10,7 +10,7 @@ Question Link : [https://leetcode.com/problems/lowest-common-ancestor-of-a-binar
 
 Difficulty: Medium
 
-Premium: False
+Premium: True
 
 ### Question
 Given two nodes of a binary tree p and q, return their lowest common ancestor (LCA).

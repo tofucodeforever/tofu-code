@@ -139,7 +139,7 @@ Status: published
 | 1578 | [Minimum Time to Make Rope Colorful](https://tofucode.com/posts/leetcode_1578_minimum-time-to-make-rope-colorful.html) | pointers, array | |
 | 1644 | [Lowest Common Ancestor of a Binary Tree II](https://tofucode.com/posts/leetcode_1644_lowest-common-ancestor-of-a-binary-tree-ii.html) | least-common-ancestor | [3](#"[('facebook', 7), ('linkedin', 3), ('microsoft', 2)]") |
 | 1647 | [Minimum Deletions to Make Character Frequencies Unique](https://tofucode.com/posts/leetcode_1647_minimum-deletions-to-make-character-frequencies-unique.html) | hash-map-count | |
-| 1650 | [Lowest Common Ancestor of a Binary Tree III](https://tofucode.com/posts/leetcode_1650_lowest-common-ancestor-of-a-binary-tree-iii.html) | least-common-ancestor | [5](#"[('facebook', 118), ('amazon', 9), ('linkedin', 4), ('apple', 2), ('microsoft', 2)]") |
+| 1650 | [Lowest Common Ancestor of a Binary Tree III](https://tofucode.com/posts/leetcode_1650_lowest-common-ancestor-of-a-binary-tree-iii.html) | least-common-ancestor | [5](#"[('facebook', 86), ('amazon', 11), ('linkedin', 4), ('microsoft', 3), ('google', 2)]") |
 | 1657 | [Determine if Two Strings Are Close](https://tofucode.com/posts/leetcode_1657_determine-if-two-strings-are-close.html) | counting | [1](#"[('postmates', 0)]") |
 | 1662 | [Check If Two String Arrays are Equivalent](https://tofucode.com/posts/leetcode_1662_check-if-two-string-arrays-are-equivalent.html) | string | |
 | 1704 | [Determine if String Halves Are Alike](https://tofucode.com/posts/leetcode_1704_determine-if-string-halves-are-alike.html) | string | [0](#"[]") |
