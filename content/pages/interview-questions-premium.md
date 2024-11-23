@@ -128,7 +128,7 @@ Status: published
 | 1213 | [Intersection of Three Sorted Arrays](https://tofucode.com/posts/leetcode_1213_intersection-of-three-sorted-arrays.html) | pointers | [1](#"[('facebook', 4)]") |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://tofucode.com/posts/leetcode_1249_minimum-remove-to-make-valid-parentheses.html) | stack, parentheses | |
 | 1254 | [Number of Closed Islands](https://tofucode.com/posts/leetcode_1254_number-of-closed-islands.html) | dfs-bfs-grid | [6](#"[('google', 5), ('microsoft', 5), ('amazon', 2), ('apple', 2), ('bloomberg', 2), ('coupang', 2)]") |
-| 1257 | [Smallest Common Region](https://tofucode.com/posts/leetcode_1257_smallest-common-region.html) | least-common-ancestor | [2](#"[('airbnb', 4), ('tiktok', 2)]") |
+| 1257 | [Smallest Common Region](https://tofucode.com/posts/leetcode_1257_smallest-common-region.html) | least-common-ancestor | [2](#"[('airbnb', 2), ('tiktok', 2)]") |
 | 1339 | [Maximum Product of Splitted Binary Tree](https://tofucode.com/posts/leetcode_1339_maximum-product-of-splitted-binary-tree.html) | binary-tree | [4](#"[('two-sigma', 3), ('amazon', 2), ('bloomberg', 2), ('microsoft', 0)]") |
 | 1423 | [Maximum Points You Can Obtain from Cards](https://tofucode.com/posts/leetcode_1423_maximum-points-you-can-obtain-from-cards.html) | sliding-window, array | |
 | 1431 | [Kids With the Greatest Number of Candies](https://tofucode.com/posts/leetcode_1431_kids-with-the-greatest-number-of-candies.html) | simulation | [5](#"[('apple', 5), ('adobe', 2), ('amazon', 2), ('google', 2), ('uber', 2)]") |

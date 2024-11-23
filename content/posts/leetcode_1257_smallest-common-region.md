@@ -1,8 +1,8 @@
 Title: Leetcode 1257. Smallest Common Region
 Slug: leetcode_1257_smallest-common-region
 Status: published
-Date: 2024-11-20
-Category: Leetcode
+Date: 2024-11-22
+Category: Leetcode Premium
 Tags: least-common-ancestor
 Author: Zeph
 
@@ -10,7 +10,7 @@ Question Link : [https://leetcode.com/problems/smallest-common-region/](https://
 
 Difficulty: Medium
 
-Premium: False
+Premium: True
 
 ### Question
 You are given some lists of regions where the first region of each list includes all other regions in that list.
