@@ -92,6 +92,7 @@ Status: published
 | 0452 | [Minimum Number of Arrows to Burst Balloons](https://tofucode.com/posts/leetcode_0452_minimum-number-of-arrows-to-burst-balloons.html) | interval-merge | |
 | 0460 | [LFU Cache](https://tofucode.com/posts/leetcode_0460_lfu-cache.html) | lfu-cache | [19](#"[('google', 9), ('salesforce', 6), ('walmart-labs', 6), ('facebook', 5), ('microsoft', 5), ('amazon', 4), ('linkedin', 4), ('vmware', 4), ('adobe', 3), ('grab', 3), ('snapchat', 3), ('apple', 2), ('arcesium', 2), ('bloomberg', 2), ('bytedance', 2), ('inmobi', 2), ('oracle', 2), ('tableau', 2), ('uber', 2)]") |
 | 0462 | [Minimum Moves to Equal Array Elements II](https://tofucode.com/posts/leetcode_0462_minimum-moves-to-equal-array-elements-ii.html) | math | |
+| 0494 | [Target Sum](https://tofucode.com/posts/leetcode_0494_target-sum.html) | backtracking, dp, knapsack-1-0 | [8](#"[('facebook', 6), ('google', 6), ('microsoft', 6), ('apple', 3), ('yahoo', 3), ('amazon', 2), ('bloomberg', 2), ('salesforce', 2)]") |
 | 0495 | [Teemo Attacking](https://tofucode.com/posts/leetcode_0495_teemo-attacking.html) | greedy, interval-merge, simulation | |
 | 0501 | [Find Mode in Binary Search Tree](https://tofucode.com/posts/leetcode_0501_find-mode-in-binary-search-tree.html) | bst, binary-tree-traversal-inorder, dfs | [3](#"[('amazon', 4), ('bloomberg', 2), ('google', 2)]") |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion | |

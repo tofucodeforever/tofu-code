@@ -89,6 +89,7 @@ Status: published
 | 0452 | [Minimum Number of Arrows to Burst Balloons](https://tofucode.com/posts/leetcode_0452_minimum-number-of-arrows-to-burst-balloons.html) | interval-merge | |
 | 0460 | [LFU Cache](https://tofucode.com/posts/leetcode_0460_lfu-cache.html) | lfu-cache |  |
 | 0462 | [Minimum Moves to Equal Array Elements II](https://tofucode.com/posts/leetcode_0462_minimum-moves-to-equal-array-elements-ii.html) | math | |
+| 0494 | [Target Sum](https://tofucode.com/posts/leetcode_0494_target-sum.html) | backtracking, dp, knapsack-1-0 |  |
 | 0495 | [Teemo Attacking](https://tofucode.com/posts/leetcode_0495_teemo-attacking.html) | greedy, interval-merge, simulation | |
 | 0501 | [Find Mode in Binary Search Tree](https://tofucode.com/posts/leetcode_0501_find-mode-in-binary-search-tree.html) | bst, binary-tree-traversal-inorder, dfs |  |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion | |
