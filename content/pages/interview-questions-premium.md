@@ -87,6 +87,7 @@ Status: published
 | 0406 | [Queue Reconstruction by Height](https://tofucode.com/posts/leetcode_0406_queue-reconstruction-by-height.html) | sort | |
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp | |
 | 0415 | [Add Strings](https://tofucode.com/posts/leetcode_0415_add-strings.html) | string | [7](#"[('facebook', 19), ('wayfair', 5), ('avito', 4), ('amazon', 3), ('google', 3), ('tiktok', 3), ('airbnb', 0)]") |
+| 0416 | [Partition Equal Subset Sum](https://tofucode.com/posts/leetcode_0416_partition-equal-subset-sum.html) | knapsack-1-0 | [18](#"[('yahoo', 8), ('apple', 7), ('bloomberg', 6), ('google', 6), ('uber', 4), ('amazon', 3), ('adobe', 2), ('ebay', 2), ('epam-systems', 2), ('facebook', 2), ('flipkart', 2), ('ibm', 2), ('microsoft', 2), ('oracle', 2), ('servicenow', 2), ('tiktok', 2), ('walmart-labs', 2), ('zoho', 2)]") |
 | 0435 | [Non-overlapping Intervals](https://tofucode.com/posts/leetcode_0435_non-overlapping-intervals.html) | interval-merge, greedy | |
 | 0451 | [Sort Characters By Frequency](https://tofucode.com/posts/leetcode_0451_sort-characters-by-frequency.html) | counting | [9](#"[('microsoft', 7), ('facebook', 5), ('bloomberg', 4), ('google', 3), ('twitter', 3), ('adobe', 2), ('amazon', 2), ('apple', 2), ('salesforce', 2)]") |
 | 0452 | [Minimum Number of Arrows to Burst Balloons](https://tofucode.com/posts/leetcode_0452_minimum-number-of-arrows-to-burst-balloons.html) | interval-merge | |

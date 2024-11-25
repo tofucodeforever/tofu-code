@@ -84,6 +84,7 @@ Status: published
 | 0406 | [Queue Reconstruction by Height](https://tofucode.com/posts/leetcode_0406_queue-reconstruction-by-height.html) | sort | |
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp | |
 | 0415 | [Add Strings](https://tofucode.com/posts/leetcode_0415_add-strings.html) | string |  |
+| 0416 | [Partition Equal Subset Sum](https://tofucode.com/posts/leetcode_0416_partition-equal-subset-sum.html) | knapsack-1-0 |  |
 | 0435 | [Non-overlapping Intervals](https://tofucode.com/posts/leetcode_0435_non-overlapping-intervals.html) | interval-merge, greedy | |
 | 0451 | [Sort Characters By Frequency](https://tofucode.com/posts/leetcode_0451_sort-characters-by-frequency.html) | counting |  |
 | 0452 | [Minimum Number of Arrows to Burst Balloons](https://tofucode.com/posts/leetcode_0452_minimum-number-of-arrows-to-burst-balloons.html) | interval-merge | |
