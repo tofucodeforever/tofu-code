@@ -109,6 +109,7 @@ Status: published
 | 0704 | [Binary Search](https://tofucode.com/posts/leetcode_0704_binary-search.html) | binary-search | [13](#"[('uber', 7), ('facebook', 5), ('yahoo', 5), ('apple', 4), ('adobe', 3), ('amazon', 3), ('microsoft', 3), ('bloomberg', 2), ('cognizant', 2), ('google', 2), ('oracle', 2), ('tcs', 2), ('yandex', 2)]") |
 | 0740 | [Delete and Earn](https://tofucode.com/posts/leetcode_0740_delete-and-earn.html) | dp | |
 | 0746 | [Min Cost Climbing Stairs](https://tofucode.com/posts/leetcode_0746_min-cost-climbing-stairs.html) | dp | |
+| 0755 | [Pour Water](https://tofucode.com/posts/leetcode_0755_pour-water.html) | simulation, array | [2](#"[('airbnb', 3), ('amazon', 2)]") |
 | 0771 | [Jewels and Stones](https://tofucode.com/posts/leetcode_0771_jewels-and-stones.html) | set | [6](#"[('google', 4), ('apple', 3), ('adobe', 2), ('amazon', 2), ('microsoft', 2), ('yandex', 2)]") |
 | 0799 | [Champagne Tower](https://tofucode.com/posts/leetcode_0799_champagne-tower.html) | simulation | |
 | 0872 | [Leaf-Similar Trees](https://tofucode.com/posts/leetcode_0872_leaf-similar-trees.html) | binary-tree-traversal | [3](#"[('amazon', 4), ('google', 3), ('microsoft', 2)]") |
