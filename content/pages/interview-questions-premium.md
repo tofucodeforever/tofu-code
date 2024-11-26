@@ -176,6 +176,7 @@ Status: published
 | 2455 | [Average Value of Even Numbers That Are Divisible by Three](https://tofucode.com/posts/leetcode_2455_average-value-of-even-numbers-that-are-divisible-by-three.html) | math | |
 | 2456 | [Most Popular Video Creator](https://tofucode.com/posts/leetcode_2456_most-popular-video-creator.html) | hash-map-count | |
 | 2492 | [Minimum Score of a Path Between Two Cities](https://tofucode.com/posts/leetcode_2492_minimum-score-of-a-path-between-two-cities.html) | dfs, bfs, union-find | [1](#"[('unbxd', 0)]") |
+| 2924 | [Find Champion II](https://tofucode.com/posts/leetcode_2924_find-champion-ii.html) | graph | [1](#"[('google', 2)]") |
 | 2955 | [Number of Same-End Substrings](https://tofucode.com/posts/leetcode_2955_number-of-same-end-substrings.html) | math, binary-search, prefix-sum | [2](#"[('google', 2), ('sprinklr', 2)]") |
 | 3110 | [Score of a String](https://tofucode.com/posts/leetcode_3110_score-of-a-string.html) | string | [4](#"[('google', 4), ('microsoft', 4), ('amazon', 2), ('bloomberg', 2)]") |
 | 3263 | [Convert Doubly Linked List to Array I](https://tofucode.com/posts/leetcode_3263_convert-doubly-linked-list-to-array-i.html) | linked-list | [0](#"[]") |
