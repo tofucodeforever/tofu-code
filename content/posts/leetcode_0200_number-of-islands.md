@@ -1,7 +1,7 @@
 Title: Leetcode 0200. Number of Islands
 Slug: leetcode_0200_number-of-islands
 Status: published
-Date: 2023-04-05
+Date: 2024-11-26
 Category: Leetcode
 Tags: dfs-bfs-grid
 Author: Zeph
