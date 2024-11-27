@@ -102,6 +102,7 @@ Status: published
 | 0653 | [Two Sum IV - Input is a BST](https://tofucode.com/posts/leetcode_0653_two-sum-iv-input-is-a-bst.html) | k-sum, dfs | |
 | 0665 | [Non-decreasing Array](https://tofucode.com/posts/leetcode_0665_non-decreasing-array.html) | monotonic-stack | |
 | 0682 | [Baseball Game](https://tofucode.com/posts/leetcode_0682_baseball-game.html) | simulation | |
+| 0695 | [Max Area of Island](https://tofucode.com/posts/leetcode_0695_max-area-of-island.html) | dfs-bfs-grid |  |
 | 0700 | [Search in a Binary Search Tree](https://tofucode.com/posts/leetcode_0700_search-in-a-binary-search-tree.html) | bst | |
 | 0704 | [Binary Search](https://tofucode.com/posts/leetcode_0704_binary-search.html) | binary-search |  |
 | 0740 | [Delete and Earn](https://tofucode.com/posts/leetcode_0740_delete-and-earn.html) | dp | |

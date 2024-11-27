@@ -105,6 +105,7 @@ Status: published
 | 0653 | [Two Sum IV - Input is a BST](https://tofucode.com/posts/leetcode_0653_two-sum-iv-input-is-a-bst.html) | k-sum, dfs | |
 | 0665 | [Non-decreasing Array](https://tofucode.com/posts/leetcode_0665_non-decreasing-array.html) | monotonic-stack | |
 | 0682 | [Baseball Game](https://tofucode.com/posts/leetcode_0682_baseball-game.html) | simulation | |
+| 0695 | [Max Area of Island](https://tofucode.com/posts/leetcode_0695_max-area-of-island.html) | dfs-bfs-grid | [16](#"[('dropbox', 9), ('google', 7), ('salesforce', 4), ('amazon', 3), ('disney', 3), ('doordash', 3), ('facebook', 3), ('linkedin', 3), ('microsoft', 3), ('bloomberg', 2), ('intuit', 2), ('smartsheet', 2), ('tesla', 2), ('tiktok', 2), ('uber', 2), ('yahoo', 2)]") |
 | 0700 | [Search in a Binary Search Tree](https://tofucode.com/posts/leetcode_0700_search-in-a-binary-search-tree.html) | bst | |
 | 0704 | [Binary Search](https://tofucode.com/posts/leetcode_0704_binary-search.html) | binary-search | [13](#"[('uber', 7), ('facebook', 5), ('yahoo', 5), ('apple', 4), ('adobe', 3), ('amazon', 3), ('microsoft', 3), ('bloomberg', 2), ('cognizant', 2), ('google', 2), ('oracle', 2), ('tcs', 2), ('yandex', 2)]") |
 | 0740 | [Delete and Earn](https://tofucode.com/posts/leetcode_0740_delete-and-earn.html) | dp | |
