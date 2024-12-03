@@ -11,7 +11,7 @@ Status: published
 | 0009 | [Palindrome Number](https://tofucode.com/posts/leetcode_0009_palindrome-number.html) | palindrome, math |  |
 | 0011 | [Container With Most Water](https://tofucode.com/posts/leetcode_0011_container-with-most-water.html) | two-pointers |  |
 | 0019 | [Remove Nth Node From End of List](https://tofucode.com/posts/leetcode_0019_remove-nth-node-from-end-of-list.html) | linked-list |  |
-| 0020 | [Valid Parentheses](https://tofucode.com/posts/leetcode_0020_valid-parentheses.html) | stack, parentheses | |
+| 0020 | [Valid Parentheses](https://tofucode.com/posts/leetcode_0020_valid-parentheses.html) | stack, parentheses |  |
 | 0021 | [Merge Two Sorted Lists](https://tofucode.com/posts/leetcode_0021_merge-two-sorted-lists.html) | linked-list | |
 | 0026 | [Remove Duplicates from Sorted Array](https://tofucode.com/posts/leetcode_0026_remove-duplicates-from-sorted-array.html) | array-shift, two-pointers |  |
 | 0027 | [Remove Element](https://tofucode.com/posts/leetcode_0027_remove-element.html) | two-pointers |  |
