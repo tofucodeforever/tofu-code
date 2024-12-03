@@ -1,9 +1,9 @@
 Title: Leetcode 0019. Remove Nth Node From End of List
 Slug: leetcode_0019_remove-nth-node-from-end-of-list
 Status: published
-Date: 2024-11-22
+Date: 2024-12-02
 Category: Leetcode
-Tags: linked-list
+Tags: linked-list, two-pointers, trailing-pointer
 Author: Zeph
 
 Question Link : [https://leetcode.com/problems/remove-nth-node-from-end-of-list/](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
@@ -44,7 +44,7 @@ Follow up: Could you do this in one pass?
 
 ### Solution
 
-Use two pointers to mark out the ideal end location and remove the next node.
+It's much easier to use a dummery head so any pointers can start on the dummy head instead of the actual head as there are edge cases where we'd want to remove the head. Main idea for using a single loop is to have the marking pointer trail behind by n+1
 
 
 ### Code
@@ -60,38 +60,112 @@ Solution Link : https://tofucode.com/posts/leetcode_0019_remove-nth-node-from-en
 #         self.val = val
 #         self.next = next
 class Solution:
-    def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
-        '''
-        First move x, then start moving both x and p
-              p     x
-        n1 n2 n3 n4 n5
-              x->x
-        p->p
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        """
+        end pointer
+        mark pointer
+        target state:
+            when end is at the end, mark is just before the removal point
+            remove the next node of mark
 
-        x: goes through the whole list
-            * count: num of nodes up to x. 1, 2, ... total size of list
-        p: pointer to one node before the deletion
-            * Ideal Position: (position of x) - (position of p) == n
-            * So start moving p: count - 1 > n
+        n  remove node                mark             mark - end
+        1  last node                  second from last      1
+        2  second from last node      third from last       2
 
-        Time: O(n) - one pass
+        [1,2,3,4,5], n = 2
+        move end to position (3 moves dummy -> 3)
+             e
+
+        move end to the end (3 moves)
+                   e
+             m
+        remove next of m
+
+        Time : O(n)
         Space: O(1)
-        '''
+        """
         if not head:
             return None
 
-        count = 1
-        x = p = head
+        dummy = ListNode(0) # Create a dummy node
+        dummy.next = head
+        end = dummy
+        mark = dummy
 
-        while x.next:
-            x = x.next
+        # Move end n + 1 steps ahead
+        for i in range(n + 1):
+            end = end.next
+
+        # move both end and mark
+        while end:
+            end = end.next
+            mark = mark.next
+
+        # Remove next of marked node
+        mark.next = mark.next.next
+        return dummy.next
+
+
+class SolutionAlternative1:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        """
+        two loops:
+        1 to count the length
+        2 to stop at length - n
+
+        Time : O(n)
+        Space: O(1)
+        """
+        # edge case of no head
+        if not head:
+            return None
+
+        temp = head
+        count = 1 # start at 1 to include head
+
+        while temp.next:
+            temp = temp.next
             count += 1
-            if count - 1 > n:
-                p = p.next
 
+        # edge case to remove head
         if count == n:
             return head.next
-        p.next = p.next.next
+
+        mark = head # -1 below to include head
+        for i in range(count - n - 1):
+            mark = mark.next
+
+        mark.next = mark.next.next
         return head
+
+class SolutionAlternative1Improved1:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        """
+        fold two loops into one
+
+        Time : O(n)
+        Space: O(1)
+        """
+        # edge case of no head
+        if not head:
+            return None
+
+        temp = head
+        count = 1 # start at 1 to include head
+        mark = head # -1 below to include head
+
+        while temp.next:
+            temp = temp.next
+            count += 1
+            if count - 1 > n:
+                mark = mark.next
+
+        # edge case to remove head
+        if count == n:
+            return head.next
+
+        mark.next = mark.next.next
+        return head
+
 ```
 
