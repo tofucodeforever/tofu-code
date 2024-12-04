@@ -73,6 +73,7 @@ Status: published
 | 0251 | [Flatten 2D Vector](https://tofucode.com/posts/leetcode_0251_flatten-2d-vector.html) | iterator | [5](#"[('google', 3), ('airbnb', 2), ('amazon', 2), ('twitter', 2), ('zenefits', 2)]") |
 | 0263 | [Ugly Number](https://tofucode.com/posts/leetcode_0263_ugly-number.html) | math | |
 | 0270 | [Closest Binary Search Tree Value](https://tofucode.com/posts/leetcode_0270_closest-binary-search-tree-value.html) | bst, binary-search | [6](#"[('facebook', 10), ('oracle', 4), ('google', 3), ('amazon', 2), ('microsoft', 2), ('snapchat', 2)]") |
+| 0277 | [Find the Celebrity](https://tofucode.com/posts/leetcode_0277_find-the-celebrity.html) | greedy | [11](#"[('linkedin', 8), ('doordash', 3), ('toast', 3), ('amazon', 2), ('apple', 2), ('facebook', 2), ('google', 2), ('microsoft', 2), ('phonepe', 2), ('salesforce', 2), ('tiktok', 2)]") |
 | 0278 | [First Bad Version](https://tofucode.com/posts/leetcode_0278_first-bad-version.html) | binary-search | [13](#"[('adobe', 4), ('amazon', 2), ('apple', 2), ('bloomberg', 2), ('cisco', 2), ('expedia', 2), ('facebook', 2), ('google', 2), ('microsoft', 2), ('tiktok', 2), ('uber', 2), ('vmware', 2), ('yahoo', 2)]") |
 | 0283 | [Move Zeroes](https://tofucode.com/posts/leetcode_0283_move-zeroes.html) | array-shift, two-pointers | |
 | 0289 | [Game of Life](https://tofucode.com/posts/leetcode_0289_game-of-life.html) | simulation, state-changes | |
