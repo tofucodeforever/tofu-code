@@ -1,5 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode Premium</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode-premium.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2024-11-26T00:00:00-08:00</updated><entry><title>Leetcode 0755. Pour Water</title><link href="https://tofucode.com/posts/leetcode_0755_pour-water.html" rel="alternate"></link><published>2024-11-26T00:00:00-08:00</published><updated>2024-11-26T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-26:/posts/leetcode_0755_pour-water.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/pour-water/"&gt;https://leetcode.com/problems/pour-water/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode Premium</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode-premium.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2024-12-03T00:00:00-08:00</updated><entry><title>Leetcode 0277. Find the Celebrity</title><link href="https://tofucode.com/posts/leetcode_0277_find-the-celebrity.html" rel="alternate"></link><published>2024-12-03T00:00:00-08:00</published><updated>2024-12-03T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-12-03:/posts/leetcode_0277_find-the-celebrity.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/find-the-celebrity/"&gt;https://leetcode.com/problems/find-the-celebrity/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: True&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Suppose you are at a party with n people labeled from 0 to n - 1 and among them, there may exist one celebrity. The definition of a celebrity is that all the other n - 1 people know the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/find-the-celebrity/"&gt;https://leetcode.com/problems/find-the-celebrity/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: True&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Suppose you are at a party with n people labeled from 0 to n - 1 and among them, there may exist one celebrity. The definition of a celebrity is that all the other n - 1 people know the celebrity, but the celebrity does not know any of them.
+Now you want to find out who the celebrity is or verify that there is not one. You are only allowed to ask questions like: "Hi, A. Do you know B?" to get information about whether A knows B. You need to find out the celebrity (or verify there is not one) by asking as few questions as possible (in the asymptotic sense).
+You are given an integer n and a helper function bool knows(a, b) that tells you whether a knows b. Implement a function int findCelebrity(n). There will be exactly one celebrity if they are at the party.
+Return the celebrity's label if there is a celebrity at the party. If there is no celebrity, return -1.
+Note that the n x n 2D array graph given as input is not directly available to you, and instead only accessible through the helper function knows. graph[i][j] == 1 represents person i knows person j, wherease graph[i][j] == 0 represents person j does not know person i.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: graph = [[1,1,0],[0,1,0],[1,1,1]]
+Output: 1
+Explanation: There are three persons labeled with 0, 1 and 2. graph[i][j] = 1 means person i knows person j, otherwise graph[i][j] = 0 means person i does not know person j. The celebrity is the person labeled as 1 because both 0 and 2 know him but 1 does not know anybody.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: graph = [[1,0,1],[1,1,0],[0,1,1]]
+Output: -1
+Explanation: There is no celebrity.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;n == graph.length == graph[i].length
+2 &amp;lt;= n &amp;lt;= 100
+graph[i][j] is 0 or 1.
+graph[i][i] == 1&lt;/p&gt;
+&lt;p&gt;Follow up: If the maximum number of allowed calls to the API knows is 3 * n, could you find a solution without exceeding the maximum number of calls?&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;The brute force solution is easy to find. After that think about the information gain from a single knows() call and how to select the next pair of (a,b) for the next knows() call. greedily go through the list to find a potential candidate, and run another loop to verify.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0277. Find the Celebrity&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/find-the-celebrity/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0277_find-the-celebrity.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# The knows API is already defined for you.&lt;/span&gt;
+&lt;span class="c1"&gt;# return a bool, whether a knows b&lt;/span&gt;
+&lt;span class="c1"&gt;# def knows(a: int, b: int) -&amp;gt; bool:&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;findCelebrity&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        Ask:&lt;/span&gt;
+&lt;span class="sd"&gt;        n people: 0 ... n-1&lt;/span&gt;
+&lt;span class="sd"&gt;        knows(a, b): true a knows b&lt;/span&gt;
+&lt;span class="sd"&gt;        celebrity:&lt;/span&gt;
+&lt;span class="sd"&gt;            1. all others konw celebrity&lt;/span&gt;
+&lt;span class="sd"&gt;            2. celebrity knows no one&lt;/span&gt;
+&lt;span class="sd"&gt;        return that celebrity, else -1&lt;/span&gt;
+
+&lt;span class="sd"&gt;        knows(): a-&amp;gt;b:&lt;/span&gt;
+&lt;span class="sd"&gt;            true: a is not celebrity, b don&amp;#39;t know&lt;/span&gt;
+&lt;span class="sd"&gt;            false: b is not celebrity, a don&amp;#39;t know&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Proposal 1: brute force&lt;/span&gt;
+&lt;span class="sd"&gt;        build a graph from 0 to n-1 check all possibility: n x n&lt;/span&gt;
+&lt;span class="sd"&gt;        a knows b: a -&amp;gt; b&lt;/span&gt;
+&lt;span class="sd"&gt;        1. all other nodes have an edge to celebrity&lt;/span&gt;
+&lt;span class="sd"&gt;        2. celebrity node has zero out going edges&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n^2)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Proposal 2:&lt;/span&gt;
+&lt;span class="sd"&gt;        Greedy:&lt;/span&gt;
+&lt;span class="sd"&gt;        a -&amp;gt; b&lt;/span&gt;
+&lt;span class="sd"&gt;            true: b-&amp;gt;someone&lt;/span&gt;
+&lt;span class="sd"&gt;            false: a-&amp;gt;someone&lt;/span&gt;
+
+&lt;span class="sd"&gt;        loop 1. start with one candidate, depending on a -&amp;gt; b: update the candidate&lt;/span&gt;
+
+&lt;span class="sd"&gt;        loop 2. check that candidate is valid against all others&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;candidate&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;knows&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                &lt;span class="n"&gt;candidate&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;continue&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;knows&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;knows&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;candidate&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode Premium"></category><category term="greedy"></category></entry><entry><title>Leetcode 0755. Pour Water</title><link href="https://tofucode.com/posts/leetcode_0755_pour-water.html" rel="alternate"></link><published>2024-11-26T00:00:00-08:00</published><updated>2024-11-26T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-11-26:/posts/leetcode_0755_pour-water.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/pour-water/"&gt;https://leetcode.com/problems/pour-water/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;p&gt;Premium: True&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
