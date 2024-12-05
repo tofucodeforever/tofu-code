@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://tofucode.com/theme/pygments/monokai.min.css">
+
+    <script src="https://tofucode.com/theme/tipuesearch/jquery.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="https://tofucode.com/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="https://tofucode.com/theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://tofucode.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="TofuCode Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'G-DCBDZPQQD1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Zeph" />
+<meta name="description" content="Question Link : https://leetcode.com/problems/maximal-square/ Difficulty: Medium Premium: False Question Given an m x n binary matrix filled with 0&#39;s and 1&#39;s, find the largest square containing only 1&#39;s and return its area. Example 1: Input: matrix = [[&#34;1&#34;,&#34;0&#34;,&#34;1&#34;,&#34;0&#34;,&#34;0&#34;],[&#34;1&#34;,&#34;0&#34;,&#34;1&#34;,&#34;1&#34;,&#34;1&#34;],[&#34;1 …" />
+<meta name="keywords" content="dp-2d">
+
+
+<meta property="og:site_name" content="TofuCode"/>
+<meta property="og:title" content="Leetcode 0221. Maximal Square"/>
+<meta property="og:description" content="Question Link : https://leetcode.com/problems/maximal-square/ Difficulty: Medium Premium: False Question Given an m x n binary matrix filled with 0&#39;s and 1&#39;s, find the largest square containing only 1&#39;s and return its area. Example 1: Input: matrix = [[&#34;1&#34;,&#34;0&#34;,&#34;1&#34;,&#34;0&#34;,&#34;0&#34;],[&#34;1&#34;,&#34;0&#34;,&#34;1&#34;,&#34;1&#34;,&#34;1&#34;],[&#34;1 …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://tofucode.com/posts/leetcode_0221_maximal-square.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2024-12-04 00:00:00-08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://tofucode.com/author/zeph.html">
+<meta property="article:section" content="Leetcode"/>
+<meta property="article:tag" content="dp-2d"/>
+<meta property="og:image" content="">
+
+  <title>TofuCode &ndash; Leetcode 0221. Maximal Square</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://tofucode.com">
+        <img src="https://tofucode.com/theme/img/profile.png" alt="TofuCode" title="TofuCode">
+      </a>
+
+      <h1>
+        <a href="https://tofucode.com">TofuCode</a>
+      </h1>
+
+      
+      <ul class="list social">
+      </ul>
+
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="/pages/interview-questions.html" >Interview Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/category/leetcode.html" >Recent Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/tags.html" >Tags</a>
+            </li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="leetcode_0221_maximal-square">Leetcode 0221. Maximal Square</h1>
+    <p>
+      Posted on Wed 04 December 2024 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Question Link : <a href="https://leetcode.com/problems/maximal-square/">https://leetcode.com/problems/maximal-square/</a></p>
+<p>Difficulty: Medium</p>
+<p>Premium: False</p>
+<h3>Question</h3>
+<p>Given an m x n binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
+ 
+Example 1:</p>
+<p>Input: matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
+Output: 4</p>
+<p>Example 2:</p>
+<p>Input: matrix = [["0","1"],["1","0"]]
+Output: 1</p>
+<p>Example 3:</p>
+<p>Input: matrix = [["0"]]
+Output: 0</p>
+<p>Constraints:</p>
+<p>m == matrix.length
+n == matrix[i].length
+1 &lt;= m, n &lt;= 300
+matrix[i][j] is '0' or '1'.</p>
+<h3>Solution</h3>
+<p>Brute force solution is messy to write. To identify this is dp: think about the fact that a bigger square is formed based on smaller inner square: find the dp relationship here. </p>
+<h3>Code</h3>
+<div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Leetcode 0221. Maximal Square</span>
+<span class="sd">Question Link : https://leetcode.com/problems/maximal-square/</span>
+<span class="sd">Solution Link : https://tofucode.com/posts/leetcode_0221_maximal-square.html</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">maximalSquare</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">matrix</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        dp[i][j] = biggest square with lower right cornoer ending at i,j</span>
+
+<span class="sd">        matrix:</span>
+<span class="sd">        [1, 0, 1, 0, 0]</span>
+<span class="sd">        [1, 0, 1, 1, 1]</span>
+<span class="sd">        [1, 1, 1, 1, 1]</span>
+<span class="sd">        [1, 0, 0, 1, 0]</span>
+
+<span class="sd">        dp:</span>
+<span class="sd">        [1, 0, 1, 0, 0]</span>
+<span class="sd">        [1, 0, 1, 1, 1]</span>
+<span class="sd">        [1, 1, 1, 2, 2]</span>
+<span class="sd">        [1, 0, 0, 1, 0]</span>
+<span class="sd">        look up and left, and up-left</span>
+<span class="sd">        1 1 1 0</span>
+<span class="sd">        1 2 2 0</span>
+<span class="sd">        1 2 3 1</span>
+
+<span class="sd">        dp[i][j] =</span>
+<span class="sd">            1 if is 1 in matrix</span>
+<span class="sd">            then if there is a bigger square: take the min + 1</span>
+
+<span class="sd">        Time : O(mn)</span>
+<span class="sd">        Space: O(mn)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rows</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+        <span class="n">cols</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">if</span> <span class="n">matrix</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="n">dp</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;0&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">cols</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">)]</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
+                <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span>
+                    <span class="n">up</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+                    <span class="n">left</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+                    <span class="n">up_left</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+                    <span class="k">if</span> <span class="n">up</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">left</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">up_left</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">current</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">up</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">up_left</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+                        <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]))</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="o">**</span><span class="mi">2</span>
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://tofucode.com/tag/dp-2d.html">dp-2d</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p> Eat Tofu and be true </p>
+<p>&copy; 2024 TofuCode.com</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " TofuCode ",
+  "url" : "https://tofucode.com",
+  "image": "",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>
