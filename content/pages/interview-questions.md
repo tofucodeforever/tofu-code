@@ -71,6 +71,7 @@ Status: published
 | 0234 | [Palindrome Linked List](https://tofucode.com/posts/leetcode_0234_palindrome-linked-list.html) | palindrome-center-expansion, fast-slow-pointer | |
 | 0236 | [Lowest Common Ancestor of a Binary Tree](https://tofucode.com/posts/leetcode_0236_lowest-common-ancestor-of-a-binary-tree.html) | least-common-ancestor |  |
 | 0263 | [Ugly Number](https://tofucode.com/posts/leetcode_0263_ugly-number.html) | math | |
+| 0268 | [Missing Number](https://tofucode.com/posts/leetcode_0268_missing-number.html) | math |  |
 | 0278 | [First Bad Version](https://tofucode.com/posts/leetcode_0278_first-bad-version.html) | binary-search |  |
 | 0283 | [Move Zeroes](https://tofucode.com/posts/leetcode_0283_move-zeroes.html) | array-shift, two-pointers | |
 | 0289 | [Game of Life](https://tofucode.com/posts/leetcode_0289_game-of-life.html) | simulation, state-changes | |
