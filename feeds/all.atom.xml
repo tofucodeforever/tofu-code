@@ -23,7 +23,7 @@ Output: 4&lt;/p&gt;
 &lt;p&gt;1 &amp;lt;= k &amp;lt;= nums.length &amp;lt;= 105
 -104 &amp;lt;= nums[i] &amp;lt;= 104&lt;/p&gt;
 &lt;h3&gt;Solution&lt;/h3&gt;
-&lt;p&gt;Max heap or quick sort&lt;/p&gt;
+&lt;p&gt;The first solution that comes to mind should be a priority queue. Other sorting algorithms can also be used.&lt;/p&gt;
 &lt;h3&gt;Code&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;span class="sd"&gt;Leetcode 0215. Kth Largest Element in an Array&lt;/span&gt;
@@ -180,7 +180,7 @@ Output: 4&lt;/p&gt;
         &lt;span class="c1"&gt;# put the pivot in&lt;/span&gt;
         &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="k-most-points"></category><category term="bubble-sort"></category><category term="quick-sort"></category></entry><entry><title>Leetcode 0268. Missing Number</title><link href="https://tofucode.com/posts/leetcode_0268_missing-number.html" rel="alternate"></link><published>2024-12-09T00:00:00-08:00</published><updated>2024-12-09T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-12-09:/posts/leetcode_0268_missing-number.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/missing-number/"&gt;https://leetcode.com/problems/missing-number/&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="k-most-points"></category><category term="priority-queue"></category><category term="bubble-sort"></category><category term="quick-sort"></category><category term="counting-sort"></category></entry><entry><title>Leetcode 0268. Missing Number</title><link href="https://tofucode.com/posts/leetcode_0268_missing-number.html" rel="alternate"></link><published>2024-12-09T00:00:00-08:00</published><updated>2024-12-09T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-12-09:/posts/leetcode_0268_missing-number.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/missing-number/"&gt;https://leetcode.com/problems/missing-number/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
