@@ -3,7 +3,7 @@ Slug: leetcode_0215_kth-largest-element-in-an-array
 Status: published
 Date: 2024-12-10
 Category: Leetcode
-Tags: k-most-points, bubble-sort, quick-sort
+Tags: k-most-points, priority-queue, bubble-sort, quick-sort, counting-sort
 Author: Zeph
 
 Question Link : [https://leetcode.com/problems/kth-largest-element-in-an-array/](https://leetcode.com/problems/kth-largest-element-in-an-array/)
@@ -32,8 +32,7 @@ Constraints:
 
 ### Solution
 
-Max heap or quick sort
-
+The first solution that comes to mind should be a priority queue. Other sorting algorithms can also be used.
 
 ### Code
 ```python

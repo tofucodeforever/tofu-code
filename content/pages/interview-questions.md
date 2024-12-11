@@ -59,7 +59,7 @@ Status: published
 | 0208 | [Implement Trie (Prefix Tree)](https://tofucode.com/posts/leetcode_0208_implement-trie-prefix-tree.html) | trie-prefix-tree |  |
 | 0211 | [Design Add and Search Words Data Structure](https://tofucode.com/posts/leetcode_0211_design-add-and-search-words-data-structure.html) | trie-prefix-tree, dfs, recursion |  |
 | 0212 | [Word Search II](https://tofucode.com/posts/leetcode_0212_word-search-ii.html) | backtracking-with-matrix, trie-prefix-tree |  |
-| 0215 | [Kth Largest Element in an Array](https://tofucode.com/posts/leetcode_0215_kth-largest-element-in-an-array.html) | k-most-points, bubble-sort, quick-sort |  |
+| 0215 | [Kth Largest Element in an Array](https://tofucode.com/posts/leetcode_0215_kth-largest-element-in-an-array.html) | k-most-points, priority-queue, bubble-sort, quick-sort, counting-sort |  |
 | 0217 | [Contains Duplicate](https://tofucode.com/posts/leetcode_0217_contains-duplicate.html) | set |  |
 | 0221 | [Maximal Square](https://tofucode.com/posts/leetcode_0221_maximal-square.html) | dp-2d |  |
 | 0222 | [Count Complete Tree Nodes](https://tofucode.com/posts/leetcode_0222_count-complete-tree-nodes.html) | binary-tree | |
