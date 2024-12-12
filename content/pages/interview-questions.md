@@ -15,6 +15,7 @@ Status: published
 | 0021 | [Merge Two Sorted Lists](https://tofucode.com/posts/leetcode_0021_merge-two-sorted-lists.html) | linked-list | |
 | 0026 | [Remove Duplicates from Sorted Array](https://tofucode.com/posts/leetcode_0026_remove-duplicates-from-sorted-array.html) | array-shift, two-pointers |  |
 | 0027 | [Remove Element](https://tofucode.com/posts/leetcode_0027_remove-element.html) | two-pointers |  |
+| 0033 | [Search in Rotated Sorted Array](https://tofucode.com/posts/leetcode_0033_search-in-rotated-sorted-array.html) | binary-search |  |
 | 0034 | [Find First and Last Position of Element in Sorted Array](https://tofucode.com/posts/leetcode_0034_find-first-and-last-position-of-element-in-sorted-array.html) | binary-search |  |
 | 0035 | [Search Insert Position](https://tofucode.com/posts/leetcode_0035_search-insert-position.html) | binary-search |  |
 | 0039 | [Combination Sum](https://tofucode.com/posts/leetcode_0039_combination-sum.html) | backtracking |  |
