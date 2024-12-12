@@ -63,6 +63,65 @@ Output: 1&lt;/p&gt;
                 &lt;span class="n"&gt;left&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mid&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
 
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;left&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="binary-search"></category></entry><entry><title>Leetcode 0704. Binary Search</title><link href="https://tofucode.com/posts/leetcode_0704_binary-search.html" rel="alternate"></link><published>2024-12-11T00:00:00-08:00</published><updated>2024-12-11T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-12-11:/posts/leetcode_0704_binary-search.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/binary-search/"&gt;https://leetcode.com/problems/binary-search/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
+You must write an …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/binary-search/"&gt;https://leetcode.com/problems/binary-search/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
+You must write an algorithm with O(log n) runtime complexity.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: nums = [-1,0,3,5,9,12], target = 9
+Output: 4
+Explanation: 9 exists in nums and its index is 4&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: nums = [-1,0,3,5,9,12], target = 2
+Output: -1
+Explanation: 2 does not exist in nums so return -1&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= nums.length &amp;lt;= 104
+-104 &amp;lt; nums[i], target &amp;lt; 104
+All the integers in nums are unique.
+nums is sorted in ascending order.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Use Binary Search and reutnr -1 if not found.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0704. Binary Search&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/binary-search/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0704_binary-search.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;search&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        Binary search&lt;/span&gt;
+&lt;span class="sd"&gt;        But if nothing is found, we return -1&lt;/span&gt;
+
+&lt;span class="sd"&gt;        [-1,0,3,5,9,12], target = 9&lt;/span&gt;
+&lt;span class="sd"&gt;          l          r&lt;/span&gt;
+&lt;span class="sd"&gt;          l   m      r&lt;/span&gt;
+&lt;span class="sd"&gt;                l    r&lt;/span&gt;
+&lt;span class="sd"&gt;                 l m r&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(log n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;left&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="n"&gt;right&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;left&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;right&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;mid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;left&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;right&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;mid&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;left&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mid&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;right&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mid&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;left&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;left&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="binary-search"></category></entry><entry><title>Leetcode 0215. Kth Largest Element in an Array</title><link href="https://tofucode.com/posts/leetcode_0215_kth-largest-element-in-an-array.html" rel="alternate"></link><published>2024-12-10T00:00:00-08:00</published><updated>2024-12-10T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2024-12-10:/posts/leetcode_0215_kth-largest-element-in-an-array.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/kth-largest-element-in-an-array/"&gt;https://leetcode.com/problems/kth-largest-element-in-an-array/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
@@ -5093,63 +5152,7 @@ s consists only of lowercase English letters.&lt;/p&gt;
             &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="nb"&gt;abs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;ord&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="nb"&gt;ord&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
 
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="string"></category></entry><entry><title>Leetcode 0704. Binary Search</title><link href="https://tofucode.com/posts/leetcode_0704_binary-search.html" rel="alternate"></link><published>2023-11-11T00:00:00-08:00</published><updated>2023-11-11T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-11-11:/posts/leetcode_0704_binary-search.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/binary-search/"&gt;https://leetcode.com/problems/binary-search/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Difficulty: Easy&lt;/p&gt;
-&lt;p&gt;Premium: False&lt;/p&gt;
-&lt;h3&gt;Question&lt;/h3&gt;
-&lt;p&gt;Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
-You must write an …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/binary-search/"&gt;https://leetcode.com/problems/binary-search/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Difficulty: Easy&lt;/p&gt;
-&lt;p&gt;Premium: False&lt;/p&gt;
-&lt;h3&gt;Question&lt;/h3&gt;
-&lt;p&gt;Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
-You must write an algorithm with O(log n) runtime complexity.
- 
-Example 1:&lt;/p&gt;
-&lt;p&gt;Input: nums = [-1,0,3,5,9,12], target = 9
-Output: 4
-Explanation: 9 exists in nums and its index is 4&lt;/p&gt;
-&lt;p&gt;Example 2:&lt;/p&gt;
-&lt;p&gt;Input: nums = [-1,0,3,5,9,12], target = 2
-Output: -1
-Explanation: 2 does not exist in nums so return -1&lt;/p&gt;
-&lt;p&gt;Constraints:&lt;/p&gt;
-&lt;p&gt;1 &amp;lt;= nums.length &amp;lt;= 104
--104 &amp;lt; nums[i], target &amp;lt; 104
-All the integers in nums are unique.
-nums is sorted in ascending order.&lt;/p&gt;
-&lt;h3&gt;Solution&lt;/h3&gt;
-&lt;p&gt;Use Binary Search and reutnr -1 if not found.&lt;/p&gt;
-&lt;h3&gt;Code&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-&lt;span class="sd"&gt;Leetcode 0704. Binary Search&lt;/span&gt;
-&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/binary-search/&lt;/span&gt;
-&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0704_binary-search.html&lt;/span&gt;
-&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;search&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-&lt;span class="sd"&gt;        Binary search&lt;/span&gt;
-&lt;span class="sd"&gt;        Same as https://leetcode.com/problems/search-insert-position/&lt;/span&gt;
-&lt;span class="sd"&gt;        But if nothing is found, we return -1&lt;/span&gt;
-
-&lt;span class="sd"&gt;        Time : O(log n)&lt;/span&gt;
-&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
-&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-        &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-        &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-
-        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;mid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
-            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;mid&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;mid&lt;/span&gt;
-            &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;mid&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-                &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mid&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-                &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mid&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="binary-search"></category></entry><entry><title>Leetcode 1046. Last Stone Weight</title><link href="https://tofucode.com/posts/leetcode_1046_last-stone-weight.html" rel="alternate"></link><published>2023-04-24T00:00:00-07:00</published><updated>2023-04-24T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-04-24:/posts/leetcode_1046_last-stone-weight.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/last-stone-weight/"&gt;https://leetcode.com/problems/last-stone-weight/&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="string"></category></entry><entry><title>Leetcode 1046. Last Stone Weight</title><link href="https://tofucode.com/posts/leetcode_1046_last-stone-weight.html" rel="alternate"></link><published>2023-04-24T00:00:00-07:00</published><updated>2023-04-24T00:00:00-07:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2023-04-24:/posts/leetcode_1046_last-stone-weight.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/last-stone-weight/"&gt;https://leetcode.com/problems/last-stone-weight/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Easy&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
