@@ -1,7 +1,7 @@
 Title: Leetcode 0704. Binary Search
 Slug: leetcode_0704_binary-search
 Status: published
-Date: 2023-11-11
+Date: 2024-12-11
 Category: Leetcode
 Tags: binary-search
 Author: Zeph
@@ -52,23 +52,27 @@ class Solution:
     def search(self, nums: List[int], target: int) -> int:
         """
         Binary search
-        Same as https://leetcode.com/problems/search-insert-position/
         But if nothing is found, we return -1
+
+        [-1,0,3,5,9,12], target = 9
+          l          r
+          l   m      r
+                l    r
+                 l m r
 
         Time : O(log n)
         Space: O(1)
         """
-        l = 0
-        r = len(nums) - 1
-
-        while l <= r:
-            mid = (l + r) // 2
-            if nums[mid] == target:
-                return mid
-            elif nums[mid] > target:
-                r = mid - 1
+        left = 0
+        right = len(nums) - 1
+        while left < right:
+            mid = (left + right) // 2
+            if nums[mid] < target:
+                left = mid + 1
             else:
-                l = mid + 1
-        return -1
+                right = mid
+
+        return left if nums[left] == target else -1
+
 ```
 
