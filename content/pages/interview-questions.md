@@ -15,7 +15,7 @@ Status: published
 | 0021 | [Merge Two Sorted Lists](https://tofucode.com/posts/leetcode_0021_merge-two-sorted-lists.html) | linked-list | |
 | 0026 | [Remove Duplicates from Sorted Array](https://tofucode.com/posts/leetcode_0026_remove-duplicates-from-sorted-array.html) | array-shift, two-pointers |  |
 | 0027 | [Remove Element](https://tofucode.com/posts/leetcode_0027_remove-element.html) | two-pointers |  |
-| 0035 | [Search Insert Position](https://tofucode.com/posts/leetcode_0035_search-insert-position.html) | binary-search | |
+| 0035 | [Search Insert Position](https://tofucode.com/posts/leetcode_0035_search-insert-position.html) | binary-search |  |
 | 0039 | [Combination Sum](https://tofucode.com/posts/leetcode_0039_combination-sum.html) | backtracking |  |
 | 0049 | [Group Anagrams](https://tofucode.com/posts/leetcode_0049_group-anagrams.html) | hash-map, anagram | |
 | 0056 | [Merge Intervals](https://tofucode.com/posts/leetcode_0056_merge-intervals.html) | interval-merge | |

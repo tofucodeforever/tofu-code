@@ -1,7 +1,7 @@
 Title: Leetcode 0035. Search Insert Position
 Slug: leetcode_0035_search-insert-position
 Status: published
-Date: 2022-10-08
+Date: 2024-12-11
 Category: Leetcode
 Tags: binary-search
 Author: Zeph
@@ -9,6 +9,8 @@ Author: Zeph
 Question Link : [https://leetcode.com/problems/search-insert-position/](https://leetcode.com/problems/search-insert-position/)
 
 Difficulty: Easy
+
+Premium: False
 
 ### Question
 Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
@@ -49,30 +51,32 @@ Question Link : https://leetcode.com/problems/search-insert-position/
 Solution Link : https://tofucode.com/posts/leetcode_0035_search-insert-position.html
 '''
 
+
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
-        '''
-        binary search
+        """
+        Binary search: consider edge cases at the end
+        nums = [1,3,5,6], target = 7
 
-        while condition should be >= cause for the following case when r,l = 0,
-        l needs to be mid + 1 to give the current insert position
         [1,3,5,6]
-        2
+         l       r
+         l   m   r
+               l r
+                 l
 
         Time : O(log n)
         Space: O(1)
-        '''
-        l = 0
-        r = len(nums) - 1
-
-        while l <= r:
-            mid = (l + r) // 2
-            if nums[mid] == target:
-                return mid
-            elif nums[mid] > target:
-                r = mid - 1
+        """
+        left = 0
+        right = len(nums)
+        while left < right:
+            mid = (left + right) // 2
+            if nums[mid] < target:
+                left = mid + 1
             else:
-                l = mid + 1
-        return l
+                right = mid
+
+        return left
+
 ```
 
