@@ -50,7 +50,6 @@ Question Link : https://leetcode.com/problems/first-bad-version/
 Solution Link : https://tofucode.com/posts/leetcode_0278_first-bad-version.html
 '''
 
-
 # The isBadVersion API is already defined for you.
 # def isBadVersion(version: int) -> bool:
 
@@ -71,13 +70,13 @@ class Solution:
         left = 1
         right = n
 
-        while left <= right:
+        while left < right:
             mid = (left + right) // 2
             is_bad = isBadVersion(mid)
-            if is_bad:
-                right =  mid - 1
-            else:
+            if not is_bad:
                 left = mid + 1
+            else:
+                right = mid
 
         return left
 
