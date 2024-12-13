@@ -10,6 +10,7 @@ Status: published
 | 0005 | [Longest Palindromic Substring](https://tofucode.com/posts/leetcode_0005_longest-palindromic-substring.html) | palindrome |  |
 | 0009 | [Palindrome Number](https://tofucode.com/posts/leetcode_0009_palindrome-number.html) | palindrome, math |  |
 | 0011 | [Container With Most Water](https://tofucode.com/posts/leetcode_0011_container-with-most-water.html) | two-pointers |  |
+| 0015 | [3Sum](https://tofucode.com/posts/leetcode_0015_3sum.html) | k-sum |  |
 | 0019 | [Remove Nth Node From End of List](https://tofucode.com/posts/leetcode_0019_remove-nth-node-from-end-of-list.html) | linked-list, two-pointers, trailing-pointer |  |
 | 0020 | [Valid Parentheses](https://tofucode.com/posts/leetcode_0020_valid-parentheses.html) | stack, parentheses |  |
 | 0021 | [Merge Two Sorted Lists](https://tofucode.com/posts/leetcode_0021_merge-two-sorted-lists.html) | linked-list | |
