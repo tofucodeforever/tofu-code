@@ -71,6 +71,8 @@ ifdef PORT
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)
 else
 	@echo 'serving site at: http://localhost:8000'
+	@echo 'Run in chrome console to use the table locally:'
+	@echo 'document.querySelectorAll("a[href]").forEach(link => { if (link.href.includes("https://tofucode.com/")) { link.href = link.href.replace("https://tofucode.com/", "http://127.0.0.1:8000/"); link.target = "_blank"; }});'
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 endif
 
