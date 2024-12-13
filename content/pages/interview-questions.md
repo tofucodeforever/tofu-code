@@ -147,6 +147,7 @@ Status: published
 | 1647 | [Minimum Deletions to Make Character Frequencies Unique](https://tofucode.com/posts/leetcode_1647_minimum-deletions-to-make-character-frequencies-unique.html) | hash-map-count | |
 | 1657 | [Determine if Two Strings Are Close](https://tofucode.com/posts/leetcode_1657_determine-if-two-strings-are-close.html) | counting |  |
 | 1662 | [Check If Two String Arrays are Equivalent](https://tofucode.com/posts/leetcode_1662_check-if-two-string-arrays-are-equivalent.html) | string | |
+| 1673 | [Find the Most Competitive Subsequence](https://tofucode.com/posts/leetcode_1673_find-the-most-competitive-subsequence.html) | monotonic-stack |  |
 | 1704 | [Determine if String Halves Are Alike](https://tofucode.com/posts/leetcode_1704_determine-if-string-halves-are-alike.html) | string |  |
 | 1710 | [Maximum Units on a Truck](https://tofucode.com/posts/leetcode_1710_maximum-units-on-a-truck.html) | greedy | |
 | 1757 | [Recyclable and Low Fat Products](https://tofucode.com/posts/leetcode_1757_recyclable-and-low-fat-products.html) | sql |  |
