@@ -109,6 +109,7 @@ Status: published
 | 0501 | [Find Mode in Binary Search Tree](https://tofucode.com/posts/leetcode_0501_find-mode-in-binary-search-tree.html) | bst, binary-tree-traversal-inorder, dfs | [3](#"[('amazon', 4), ('bloomberg', 2), ('google', 2)]") |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion | |
 | 0543 | [Diameter of Binary Tree](https://tofucode.com/posts/leetcode_0543_diameter-of-binary-tree.html) | binary-tree-traversal | |
+| 0572 | [Subtree of Another Tree](https://tofucode.com/posts/leetcode_0572_subtree-of-another-tree.html) | tree-serialization, binary-tree | [8](#"[('uber', 4), ('amazon', 3), ('facebook', 3), ('ebay', 2), ('google', 2), ('microsoft', 2), ('morgan-stanley', 2), ('tiktok', 2)]") |
 | 0605 | [Can Place Flowers](https://tofucode.com/posts/leetcode_0605_can-place-flowers.html) | array | [7](#"[('linkedin', 15), ('amazon', 5), ('bloomberg', 4), ('facebook', 3), ('microsoft', 3), ('google', 2), ('yahoo', 2)]") |
 | 0606 | [Construct String from Binary Tree](https://tofucode.com/posts/leetcode_0606_construct-string-from-binary-tree.html) | recursion, binary-tree | |
 | 0621 | [Task Scheduler](https://tofucode.com/posts/leetcode_0621_task-scheduler.html) | greedy, math | [17](#"[('amazon', 46), ('tiktok', 13), ('doordash', 10), ('roblox', 10), ('apple', 5), ('bloomberg', 5), ('salesforce', 4), ('de-shaw', 3), ('facebook', 3), ('yahoo', 3), ('adobe', 2), ('google', 2), ('ibm', 2), ('microsoft', 2), ('oracle', 2), ('rubrik', 2), ('zeta', 2)]") |

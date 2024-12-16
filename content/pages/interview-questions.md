@@ -101,6 +101,7 @@ Status: published
 | 0501 | [Find Mode in Binary Search Tree](https://tofucode.com/posts/leetcode_0501_find-mode-in-binary-search-tree.html) | bst, binary-tree-traversal-inorder, dfs |  |
 | 0509 | [Fibonacci Number](https://tofucode.com/posts/leetcode_0509_fibonacci-number.html) | recursion | |
 | 0543 | [Diameter of Binary Tree](https://tofucode.com/posts/leetcode_0543_diameter-of-binary-tree.html) | binary-tree-traversal | |
+| 0572 | [Subtree of Another Tree](https://tofucode.com/posts/leetcode_0572_subtree-of-another-tree.html) | tree-serialization, binary-tree |  |
 | 0605 | [Can Place Flowers](https://tofucode.com/posts/leetcode_0605_can-place-flowers.html) | array |  |
 | 0606 | [Construct String from Binary Tree](https://tofucode.com/posts/leetcode_0606_construct-string-from-binary-tree.html) | recursion, binary-tree | |
 | 0621 | [Task Scheduler](https://tofucode.com/posts/leetcode_0621_task-scheduler.html) | greedy, math |  |
