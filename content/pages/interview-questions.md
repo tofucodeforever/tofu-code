@@ -56,6 +56,7 @@ Status: published
 | 0169 | [Majority Element](https://tofucode.com/posts/leetcode_0169_majority-element.html) | counting, boyer-moore-voting-algorithm | |
 | 0173 | [Binary Search Tree Iterator](https://tofucode.com/posts/leetcode_0173_binary-search-tree-iterator.html) | bst |  |
 | 0190 | [Reverse Bits](https://tofucode.com/posts/leetcode_0190_reverse-bits.html) | bits |  |
+| 0191 | [Number of 1 Bits](https://tofucode.com/posts/leetcode_0191_number-of-1-bits.html) | bits |  |
 | 0198 | [House Robber](https://tofucode.com/posts/leetcode_0198_house-robber.html) | dp |  |
 | 0200 | [Number of Islands](https://tofucode.com/posts/leetcode_0200_number-of-islands.html) | dfs-bfs-grid |  |
 | 0202 | [Happy Number](https://tofucode.com/posts/leetcode_0202_happy-number.html) | set, fast-slow-pointer |  |
