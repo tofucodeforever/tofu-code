@@ -41,6 +41,7 @@ Status: published
 | 0111 | [Minimum Depth of Binary Tree](https://tofucode.com/posts/leetcode_0111_minimum-depth-of-binary-tree.html) | bfs, binary-tree |  |
 | 0112 | [Path Sum](https://tofucode.com/posts/leetcode_0112_path-sum.html) | binary-tree, recursion | |
 | 0124 | [Binary Tree Maximum Path Sum](https://tofucode.com/posts/leetcode_0124_binary-tree-maximum-path-sum.html) | recursion, binary-tree |  |
+| 0125 | [Valid Palindrome](https://tofucode.com/posts/leetcode_0125_valid-palindrome.html) | palindrome |  |
 | 0129 | [Sum Root to Leaf Numbers](https://tofucode.com/posts/leetcode_0129_sum-root-to-leaf-numbers.html) | recursion, binary-tree |  |
 | 0133 | [Clone Graph](https://tofucode.com/posts/leetcode_0133_clone-graph.html) | dfs, bfs |  |
 | 0136 | [Single Number](https://tofucode.com/posts/leetcode_0136_single-number.html) | math | |
