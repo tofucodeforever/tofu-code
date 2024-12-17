@@ -85,6 +85,7 @@ Status: published
 | 0322 | [Coin Change](https://tofucode.com/posts/leetcode_0322_coin-change.html) | knapsack-unbounded, dp-2d |  |
 | 0328 | [Odd Even Linked List](https://tofucode.com/posts/leetcode_0328_odd-even-linked-list.html) | two-pointers |  |
 | 0334 | [Increasing Triplet Subsequence](https://tofucode.com/posts/leetcode_0334_increasing-triplet-subsequence.html) | array | |
+| 0338 | [Counting Bits](https://tofucode.com/posts/leetcode_0338_counting-bits.html) | bits, dp |  |
 | 0344 | [Reverse String](https://tofucode.com/posts/leetcode_0344_reverse-string.html) | string | |
 | 0345 | [Reverse Vowels of a String](https://tofucode.com/posts/leetcode_0345_reverse-vowels-of-a-string.html) | two-pointers, string | |
 | 0347 | [Top K Frequent Elements](https://tofucode.com/posts/leetcode_0347_top-k-frequent-elements.html) | k-most-points, bucket-sort, hash-map | |
