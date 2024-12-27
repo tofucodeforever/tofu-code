@@ -7,6 +7,7 @@ Status: published
 |----|----|----|----|
 | 0001 | [Two Sum](https://tofucode.com/posts/leetcode_0001_two-sum.html) | hash-map |  |
 | 0002 | [Add Two Numbers](https://tofucode.com/posts/leetcode_0002_add-two-numbers.html) | linked-list, dummy-list-head |  |
+| 0003 | [Longest Substring Without Repeating Characters](https://tofucode.com/posts/leetcode_0003_longest-substring-without-repeating-characters.html) | sliding-window |  |
 | 0005 | [Longest Palindromic Substring](https://tofucode.com/posts/leetcode_0005_longest-palindromic-substring.html) | palindrome |  |
 | 0009 | [Palindrome Number](https://tofucode.com/posts/leetcode_0009_palindrome-number.html) | palindrome, math |  |
 | 0011 | [Container With Most Water](https://tofucode.com/posts/leetcode_0011_container-with-most-water.html) | two-pointers |  |
