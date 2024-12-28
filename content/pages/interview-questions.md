@@ -22,6 +22,7 @@ Status: published
 | 0035 | [Search Insert Position](https://tofucode.com/posts/leetcode_0035_search-insert-position.html) | binary-search |  |
 | 0039 | [Combination Sum](https://tofucode.com/posts/leetcode_0039_combination-sum.html) | backtracking |  |
 | 0049 | [Group Anagrams](https://tofucode.com/posts/leetcode_0049_group-anagrams.html) | hash-map, anagram | |
+| 0054 | [Spiral Matrix](https://tofucode.com/posts/leetcode_0054_spiral-matrix.html) | matrix |  |
 | 0056 | [Merge Intervals](https://tofucode.com/posts/leetcode_0056_merge-intervals.html) | interval-merge | |
 | 0057 | [Insert Interval](https://tofucode.com/posts/leetcode_0057_insert-interval.html) | interval-merge | |
 | 0061 | [Rotate List](https://tofucode.com/posts/leetcode_0061_rotate-list.html) | linked-list, list-to-ring | |
