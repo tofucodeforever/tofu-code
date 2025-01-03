@@ -25,6 +25,7 @@ Status: published
 | 0049 | [Group Anagrams](https://tofucode.com/posts/leetcode_0049_group-anagrams.html) | hash-map, anagram | |
 | 0053 | [Maximum Subarray](https://tofucode.com/posts/leetcode_0053_maximum-subarray.html) | subset-sum, dp |  |
 | 0054 | [Spiral Matrix](https://tofucode.com/posts/leetcode_0054_spiral-matrix.html) | matrix |  |
+| 0055 | [Jump Game](https://tofucode.com/posts/leetcode_0055_jump-game.html) | dp, greedy |  |
 | 0056 | [Merge Intervals](https://tofucode.com/posts/leetcode_0056_merge-intervals.html) | interval-merge | |
 | 0057 | [Insert Interval](https://tofucode.com/posts/leetcode_0057_insert-interval.html) | interval-merge | |
 | 0061 | [Rotate List](https://tofucode.com/posts/leetcode_0061_rotate-list.html) | linked-list, list-to-ring | |
