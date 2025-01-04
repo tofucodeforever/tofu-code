@@ -151,6 +151,7 @@ Status: published
 | 1046 | [Last Stone Weight](https://tofucode.com/posts/leetcode_1046_last-stone-weight.html) | priority-queue |  |
 | 1094 | [Car Pooling](https://tofucode.com/posts/leetcode_1094_car-pooling.html) | interval-overlap | |
 | 1143 | [Longest Common Subsequence](https://tofucode.com/posts/leetcode_1143_longest-common-subsequence.html) | dp-2d |  |
+| 1162 | [As Far from Land as Possible](https://tofucode.com/posts/leetcode_1162_as-far-from-land-as-possible.html) | bfs-layered, bfs-grid |  |
 | 1207 | [Unique Number of Occurrences](https://tofucode.com/posts/leetcode_1207_unique-number-of-occurrences.html) | counting |  |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://tofucode.com/posts/leetcode_1249_minimum-remove-to-make-valid-parentheses.html) | stack, parentheses | |
 | 1254 | [Number of Closed Islands](https://tofucode.com/posts/leetcode_1254_number-of-closed-islands.html) | dfs-bfs-grid |  |
