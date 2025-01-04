@@ -71,6 +71,7 @@ Status: published
 | 0200 | [Number of Islands](https://tofucode.com/posts/leetcode_0200_number-of-islands.html) | dfs-bfs-grid |  |
 | 0202 | [Happy Number](https://tofucode.com/posts/leetcode_0202_happy-number.html) | set, fast-slow-pointer |  |
 | 0206 | [Reverse Linked List](https://tofucode.com/posts/leetcode_0206_reverse-linked-list.html) | linked-list | |
+| 0207 | [Course Schedule](https://tofucode.com/posts/leetcode_0207_course-schedule.html) | topological-sorting, bfs |  |
 | 0208 | [Implement Trie (Prefix Tree)](https://tofucode.com/posts/leetcode_0208_implement-trie-prefix-tree.html) | trie-prefix-tree |  |
 | 0211 | [Design Add and Search Words Data Structure](https://tofucode.com/posts/leetcode_0211_design-add-and-search-words-data-structure.html) | trie-prefix-tree, dfs, recursion |  |
 | 0212 | [Word Search II](https://tofucode.com/posts/leetcode_0212_word-search-ii.html) | backtracking-with-matrix, trie-prefix-tree |  |
