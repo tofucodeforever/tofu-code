@@ -1,5 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2025-01-03T00:00:00-08:00</updated><entry><title>Leetcode 0238. Product of Array Except Self</title><link href="https://tofucode.com/posts/leetcode_0238_product-of-array-except-self.html" rel="alternate"></link><published>2025-01-03T00:00:00-08:00</published><updated>2025-01-03T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2025-01-03:/posts/leetcode_0238_product-of-array-except-self.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/product-of-array-except-self/"&gt;https://leetcode.com/problems/product-of-array-except-self/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode - Leetcode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/leetcode.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2025-01-04T00:00:00-08:00</updated><entry><title>Leetcode 0207. Course Schedule</title><link href="https://tofucode.com/posts/leetcode_0207_course-schedule.html" rel="alternate"></link><published>2025-01-04T00:00:00-08:00</published><updated>2025-01-04T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2025-01-04:/posts/leetcode_0207_course-schedule.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/course-schedule/"&gt;https://leetcode.com/problems/course-schedule/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/course-schedule/"&gt;https://leetcode.com/problems/course-schedule/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.&lt;/p&gt;
+&lt;p&gt;For example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.&lt;/p&gt;
+&lt;p&gt;Return true if you can finish all courses. Otherwise, return false.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: numCourses = 2, prerequisites = [[1,0]]
+Output: true
+Explanation: There are a total of 2 courses to take. 
+To take course 1 you should have finished course 0. So it is possible.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: numCourses = 2, prerequisites = [[1,0],[0,1]]
+Output: false
+Explanation: There are a total of 2 courses to take. 
+To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= numCourses &amp;lt;= 2000
+0 &amp;lt;= prerequisites.length &amp;lt;= 5000
+prerequisites[i].length == 2
+0 &amp;lt;= ai, bi &amp;lt; numCourses
+All the pairs prerequisites[i] are unique.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Identify this problem as a topological sorting problem and use bfs.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0207. Course Schedule&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/course-schedule/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0207_course-schedule.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;canFinish&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;numCourses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;prerequisites&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        [0, 1], indicates that to take course 0 you have to first take course 1&lt;/span&gt;
+&lt;span class="sd"&gt;        1 -&amp;gt; 0&lt;/span&gt;
+
+&lt;span class="sd"&gt;        build a graph prerequisite -&amp;gt; next class&lt;/span&gt;
+&lt;span class="sd"&gt;        topo sort - bfs&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(m + n) nodes + edges&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(m + n)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="c1"&gt;# 1 init graph and in degrees&lt;/span&gt;
+        &lt;span class="n"&gt;graph&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; &lt;span class="c1"&gt;# node -&amp;gt; node&lt;/span&gt;
+        &lt;span class="n"&gt;in_degree&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; &lt;span class="c1"&gt;# node -&amp;gt; # of in coming edges&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;cla&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;numCourses&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;in_degree&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;cla&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;cla&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pre&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;prerequisites&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;graph&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;pre&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;graph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pre&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[])&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;cla&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+            &lt;span class="n"&gt;in_degree&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;cla&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# 2 find the nodes with zero degree&lt;/span&gt;
+        &lt;span class="n"&gt;queue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;deque&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;in_degree&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;in_degree&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# 3 bfs on the zero in degrees&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;queue&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;queue&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;popleft&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;next_class&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;graph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[]):&lt;/span&gt;
+                &lt;span class="n"&gt;in_degree&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;next_class&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;in_degree&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;next_class&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                    &lt;span class="n"&gt;queue&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;next_class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;numCourses&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="topological-sorting"></category><category term="bfs"></category></entry><entry><title>Leetcode 0238. Product of Array Except Self</title><link href="https://tofucode.com/posts/leetcode_0238_product-of-array-except-self.html" rel="alternate"></link><published>2025-01-03T00:00:00-08:00</published><updated>2025-01-03T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2025-01-03:/posts/leetcode_0238_product-of-array-except-self.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/product-of-array-except-self/"&gt;https://leetcode.com/problems/product-of-array-except-self/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
