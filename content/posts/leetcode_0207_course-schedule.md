@@ -3,7 +3,7 @@ Slug: leetcode_0207_course-schedule
 Status: published
 Date: 2025-01-04
 Category: Leetcode
-Tags: topological-sorting, bfs
+Tags: topological-sorting, bfs-layered
 Author: Zeph
 
 Question Link : [https://leetcode.com/problems/course-schedule/](https://leetcode.com/problems/course-schedule/)
@@ -92,6 +92,36 @@ class Solution:
 
         return len(result) == numCourses
 
+
+class SolutionAlternative1:
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        """
+        bfs processed per layer
+
+        Time : O(m + n) nodes + edges
+        Space: O(m + n)
+        """
+        graph = {} # node -> [children]
+        in_degree = {} # node -> number of in coming edges
+
+        for c, p in prerequisites:
+            graph[p] = graph.get(p, []) + [c]
+            in_degree[c] = in_degree.get(c, 0) + 1
+
+        layer = [i for i in range(numCourses) if not i in in_degree]
+        result = []
+
+        while layer:
+            temp = []
+            for node in layer:
+                result.append(node)
+                for child in graph.get(node, []):
+                    in_degree[child] -= 1
+                    if in_degree[child] == 0:
+                        temp.append(child)
+            layer = temp
+
+        return len(result) == numCourses
 
 ```
 
