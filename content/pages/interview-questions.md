@@ -55,6 +55,7 @@ Status: published
 | 0133 | [Clone Graph](https://tofucode.com/posts/leetcode_0133_clone-graph.html) | dfs, bfs |  |
 | 0136 | [Single Number](https://tofucode.com/posts/leetcode_0136_single-number.html) | math | |
 | 0138 | [Copy List with Random Pointer](https://tofucode.com/posts/leetcode_0138_copy-list-with-random-pointer.html) | linked-list, dummy-list-head, recursion | |
+| 0139 | [Word Break](https://tofucode.com/posts/leetcode_0139_word-break.html) | dfs, dp |  |
 | 0141 | [Linked List Cycle](https://tofucode.com/posts/leetcode_0141_linked-list-cycle.html) | linked-list, fast-slow-pointer | |
 | 0144 | [Binary Tree Preorder Traversal](https://tofucode.com/posts/leetcode_0144_binary-tree-preorder-traversal.html) | binary-tree-traversal-preorder |  |
 | 0145 | [Binary Tree Postorder Traversal](https://tofucode.com/posts/leetcode_0145_binary-tree-postorder-traversal.html) | binary-tree-traversal-postorder |  |
