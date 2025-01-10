@@ -114,7 +114,80 @@ The product of any subarray of nums is guaranteed to fit in a 32-bit integer.&lt
             &lt;span class="n"&gt;max_result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;max&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;max_result&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;left&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;right&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;max_result&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="dp"></category><category term="greedy"></category><category term="prefix-sum-subarray"></category></entry><entry><title>Leetcode 0102. Binary Tree Level Order Traversal</title><link href="https://tofucode.com/posts/leetcode_0102_binary-tree-level-order-traversal.html" rel="alternate"></link><published>2025-01-06T00:00:00-08:00</published><updated>2025-01-06T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2025-01-06:/posts/leetcode_0102_binary-tree-level-order-traversal.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/binary-tree-level-order-traversal/"&gt;https://leetcode.com/problems/binary-tree-level-order-traversal/&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="dp"></category><category term="greedy"></category><category term="prefix-sum-subarray"></category></entry><entry><title>Leetcode 0235. Lowest Common Ancestor of a Binary Search Tree</title><link href="https://tofucode.com/posts/leetcode_0235_lowest-common-ancestor-of-a-binary-search-tree.html" rel="alternate"></link><published>2025-01-09T00:00:00-08:00</published><updated>2025-01-09T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2025-01-09:/posts/leetcode_0235_lowest-common-ancestor-of-a-binary-search-tree.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"&gt;https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST.
+According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"&gt;https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST.
+According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
+Output: 6
+Explanation: The LCA of nodes 2 and 8 is 6.&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
+Output: 2
+Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA definition.&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
+&lt;p&gt;Input: root = [2,1], p = 2, q = 1
+Output: 2&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;The number of nodes in the tree is in the range [2, 105].
+-109 &amp;lt;= Node.val &amp;lt;= 109
+All Node.val are unique.
+p != q
+p and q will exist in the BST.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;To simplify the solution of finding LCA of just a binary tree, we'd want to use the fact that this is a bst: the trick is to iterate through the tree and compare the current node value VS that of p/q, depending on that we can move current node left or right &lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0235. Lowest Common Ancestor of a Binary Search Tree&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0235_lowest-common-ancestor-of-a-binary-search-tree.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;# Definition for a binary tree node.&lt;/span&gt;
+&lt;span class="c1"&gt;# class TreeNode:&lt;/span&gt;
+&lt;span class="c1"&gt;#     def __init__(self, x):&lt;/span&gt;
+&lt;span class="c1"&gt;#         self.val = x&lt;/span&gt;
+&lt;span class="c1"&gt;#         self.left = None&lt;/span&gt;
+&lt;span class="c1"&gt;#         self.right = None&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Solution&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;lowestCommonAncestor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;TreeNode&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;TreeNode&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;TreeNode&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;TreeNode&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        BST&lt;/span&gt;
+&lt;span class="sd"&gt;        traverse the tree.&lt;/span&gt;
+&lt;span class="sd"&gt;        LCA of p and q:&lt;/span&gt;
+&lt;span class="sd"&gt;            the LCA value would be between p value and q value&lt;/span&gt;
+&lt;span class="sd"&gt;            if current value &amp;lt; p/q value: go right&lt;/span&gt;
+&lt;span class="sd"&gt;            if current value &amp;gt; p/q value: go left&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;p_val&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;val&lt;/span&gt;
+        &lt;span class="n"&gt;q_val&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;val&lt;/span&gt;
+
+        &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;current_val&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;val&lt;/span&gt;
+
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;current_val&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;p_val&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;current_val&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;q_val&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="c1"&gt;# go right&lt;/span&gt;
+                &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;right&lt;/span&gt;
+            &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;current_val&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;p_val&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;current_val&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;q_val&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="c1"&gt;# go left&lt;/span&gt;
+                &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;left&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="c1"&gt;# return LCA - first node where p/q is on left/right&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="least-common-ancestor"></category><category term="bst"></category></entry><entry><title>Leetcode 0102. Binary Tree Level Order Traversal</title><link href="https://tofucode.com/posts/leetcode_0102_binary-tree-level-order-traversal.html" rel="alternate"></link><published>2025-01-06T00:00:00-08:00</published><updated>2025-01-06T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2025-01-06:/posts/leetcode_0102_binary-tree-level-order-traversal.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/binary-tree-level-order-traversal/"&gt;https://leetcode.com/problems/binary-tree-level-order-traversal/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
