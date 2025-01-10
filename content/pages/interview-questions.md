@@ -88,6 +88,7 @@ Status: published
 | 0227 | [Basic Calculator II](https://tofucode.com/posts/leetcode_0227_basic-calculator-ii.html) | calculator | |
 | 0232 | [Implement Queue using Stacks](https://tofucode.com/posts/leetcode_0232_implement-queue-using-stacks.html) | stack, queue |  |
 | 0234 | [Palindrome Linked List](https://tofucode.com/posts/leetcode_0234_palindrome-linked-list.html) | palindrome-center-expansion, fast-slow-pointer | |
+| 0235 | [Lowest Common Ancestor of a Binary Search Tree](https://tofucode.com/posts/leetcode_0235_lowest-common-ancestor-of-a-binary-search-tree.html) | least-common-ancestor, bst |  |
 | 0236 | [Lowest Common Ancestor of a Binary Tree](https://tofucode.com/posts/leetcode_0236_lowest-common-ancestor-of-a-binary-tree.html) | least-common-ancestor |  |
 | 0238 | [Product of Array Except Self](https://tofucode.com/posts/leetcode_0238_product-of-array-except-self.html) | math, subset-sum |  |
 | 0242 | [Valid Anagram](https://tofucode.com/posts/leetcode_0242_valid-anagram.html) | string |  |
