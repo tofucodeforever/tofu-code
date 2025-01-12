@@ -29,6 +29,7 @@ Status: published
 | 0056 | [Merge Intervals](https://tofucode.com/posts/leetcode_0056_merge-intervals.html) | interval-merge | |
 | 0057 | [Insert Interval](https://tofucode.com/posts/leetcode_0057_insert-interval.html) | interval-merge | |
 | 0061 | [Rotate List](https://tofucode.com/posts/leetcode_0061_rotate-list.html) | linked-list, list-to-ring | |
+| 0062 | [Unique Paths](https://tofucode.com/posts/leetcode_0062_unique-paths.html) | dp-2d |  |
 | 0064 | [Minimum Path Sum](https://tofucode.com/posts/leetcode_0064_minimum-path-sum.html) | dp-2d, dp |  |
 | 0070 | [Climbing Stairs](https://tofucode.com/posts/leetcode_0070_climbing-stairs.html) | dp | |
 | 0071 | [Simplify Path](https://tofucode.com/posts/leetcode_0071_simplify-path.html) | stack |  |

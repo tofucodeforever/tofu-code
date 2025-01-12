@@ -29,6 +29,7 @@ Status: published
 | 0056 | [Merge Intervals](https://tofucode.com/posts/leetcode_0056_merge-intervals.html) | interval-merge | |
 | 0057 | [Insert Interval](https://tofucode.com/posts/leetcode_0057_insert-interval.html) | interval-merge | |
 | 0061 | [Rotate List](https://tofucode.com/posts/leetcode_0061_rotate-list.html) | linked-list, list-to-ring | |
+| 0062 | [Unique Paths](https://tofucode.com/posts/leetcode_0062_unique-paths.html) | dp-2d | [17](#"[('adobe', 12), ('facebook', 9), ('amazon', 7), ('apple', 7), ('uber', 5), ('coupang', 4), ('google', 4), ('microsoft', 4), ('oracle', 4), ('yahoo', 4), ('goldman-sachs', 3), ('bloomberg', 2), ('bytedance', 2), ('de-shaw', 2), ('linkedin', 2), ('tcs', 2), ('tiktok', 2)]") |
 | 0064 | [Minimum Path Sum](https://tofucode.com/posts/leetcode_0064_minimum-path-sum.html) | dp-2d, dp | [16](#"[('google', 8), ('amazon', 7), ('apple', 5), ('bloomberg', 4), ('microsoft', 4), ('uber', 4), ('adobe', 3), ('oracle', 3), ('snapchat', 3), ('aqr-capital-management-llc', 2), ('bytedance', 2), ('goldman-sachs', 2), ('paypal', 2), ('servicenow', 2), ('square', 2), ('tesla', 2)]") |
 | 0070 | [Climbing Stairs](https://tofucode.com/posts/leetcode_0070_climbing-stairs.html) | dp | |
 | 0071 | [Simplify Path](https://tofucode.com/posts/leetcode_0071_simplify-path.html) | stack | [13](#"[('facebook', 47), ('amazon', 5), ('google', 4), ('apple', 3), ('microsoft', 3), ('uber', 3), ('wish', 3), ('yandex', 3), ('bloomberg', 2), ('oracle', 2), ('pinterest', 2), ('tcs', 2), ('vmware', 2)]") |
