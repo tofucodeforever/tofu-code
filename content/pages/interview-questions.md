@@ -37,6 +37,7 @@ Status: published
 | 0074 | [Search a 2D Matrix](https://tofucode.com/posts/leetcode_0074_search-a-2d-matrix.html) | binary-search | |
 | 0079 | [Word Search](https://tofucode.com/posts/leetcode_0079_word-search.html) | backtracking-with-matrix |  |
 | 0088 | [Merge Sorted Array](https://tofucode.com/posts/leetcode_0088_merge-sorted-array.html) | pointers |  |
+| 0091 | [Decode Ways](https://tofucode.com/posts/leetcode_0091_decode-ways.html) | dp, backtracking |  |
 | 0093 | [Restore IP Addresses](https://tofucode.com/posts/leetcode_0093_restore-ip-addresses.html) | backtracking |  |
 | 0094 | [Binary Tree Inorder Traversal](https://tofucode.com/posts/leetcode_0094_binary-tree-inorder-traversal.html) | binary-tree-traversal-inorder |  |
 | 0098 | [Validate Binary Search Tree](https://tofucode.com/posts/leetcode_0098_validate-binary-search-tree.html) | bst, recursion |  |
