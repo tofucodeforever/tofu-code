@@ -68,6 +68,7 @@ Status: published
 | 0146 | [LRU Cache](https://tofucode.com/posts/leetcode_0146_lru-cache.html) | lru-cache |  |
 | 0150 | [Evaluate Reverse Polish Notation](https://tofucode.com/posts/leetcode_0150_evaluate-reverse-polish-notation.html) | stack |  |
 | 0152 | [Maximum Product Subarray](https://tofucode.com/posts/leetcode_0152_maximum-product-subarray.html) | dp, greedy, prefix-sum-subarray |  |
+| 0153 | [Find Minimum in Rotated Sorted Array](https://tofucode.com/posts/leetcode_0153_find-minimum-in-rotated-sorted-array.html) | binary-search |  |
 | 0160 | [Intersection of Two Linked Lists](https://tofucode.com/posts/leetcode_0160_intersection-of-two-linked-lists.html) | linked-list | |
 | 0167 | [Two Sum II - Input Array Is Sorted](https://tofucode.com/posts/leetcode_0167_two-sum-ii-input-array-is-sorted.html) | k-sum | |
 | 0169 | [Majority Element](https://tofucode.com/posts/leetcode_0169_majority-element.html) | counting, boyer-moore-voting-algorithm | |
