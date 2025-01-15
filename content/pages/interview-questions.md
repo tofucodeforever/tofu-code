@@ -45,6 +45,7 @@ Status: published
 | 0101 | [Symmetric Tree](https://tofucode.com/posts/leetcode_0101_symmetric-tree.html) | binary-tree-traversal | |
 | 0102 | [Binary Tree Level Order Traversal](https://tofucode.com/posts/leetcode_0102_binary-tree-level-order-traversal.html) | binary-tree-traversal-level-order, bfs-layered, recursion |  |
 | 0104 | [Maximum Depth of Binary Tree](https://tofucode.com/posts/leetcode_0104_maximum-depth-of-binary-tree.html) | binary-tree-traversal | |
+| 0105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://tofucode.com/posts/leetcode_0105_construct-binary-tree-from-preorder-and-inorder-traversal.html) | binary-tree-traversal-inorder, binary-tree-traversal-preorder |  |
 | 0106 | [Construct Binary Tree from Inorder and Postorder Traversal](https://tofucode.com/posts/leetcode_0106_construct-binary-tree-from-inorder-and-postorder-traversal.html) | binary-tree-manipulation |  |
 | 0108 | [Convert Sorted Array to Binary Search Tree](https://tofucode.com/posts/leetcode_0108_convert-sorted-array-to-binary-search-tree.html) | bst |  |
 | 0111 | [Minimum Depth of Binary Tree](https://tofucode.com/posts/leetcode_0111_minimum-depth-of-binary-tree.html) | bfs, binary-tree |  |
