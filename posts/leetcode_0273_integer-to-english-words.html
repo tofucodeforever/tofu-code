@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://tofucode.com/theme/pygments/monokai.min.css">
+
+    <script src="https://tofucode.com/theme/tipuesearch/jquery.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="https://tofucode.com/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="https://tofucode.com/theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://tofucode.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="TofuCode Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'G-DCBDZPQQD1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Zeph" />
+<meta name="description" content="Question Link : https://leetcode.com/problems/integer-to-english-words/ Difficulty: Hard Premium: False Question Convert a non-negative integer num to its English words representation. Example 1: Input: num = 123 Output: &#34;One Hundred Twenty Three&#34; Example 2: Input: num = 12345 Output: &#34;Twelve Thousand Three Hundred Forty Five&#34; Example 3: Input: num = 1234567 Output …" />
+<meta name="keywords" content="string, recursion">
+
+
+<meta property="og:site_name" content="TofuCode"/>
+<meta property="og:title" content="Leetcode 0273. Integer to English Words"/>
+<meta property="og:description" content="Question Link : https://leetcode.com/problems/integer-to-english-words/ Difficulty: Hard Premium: False Question Convert a non-negative integer num to its English words representation. Example 1: Input: num = 123 Output: &#34;One Hundred Twenty Three&#34; Example 2: Input: num = 12345 Output: &#34;Twelve Thousand Three Hundred Forty Five&#34; Example 3: Input: num = 1234567 Output …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://tofucode.com/posts/leetcode_0273_integer-to-english-words.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2025-01-16 00:00:00-08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://tofucode.com/author/zeph.html">
+<meta property="article:section" content="Leetcode"/>
+<meta property="article:tag" content="string"/>
+<meta property="article:tag" content="recursion"/>
+<meta property="og:image" content="">
+
+  <title>TofuCode &ndash; Leetcode 0273. Integer to English Words</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://tofucode.com">
+        <img src="https://tofucode.com/theme/img/profile.png" alt="TofuCode" title="TofuCode">
+      </a>
+
+      <h1>
+        <a href="https://tofucode.com">TofuCode</a>
+      </h1>
+
+      
+      <ul class="list social">
+      </ul>
+
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="/pages/interview-questions.html" >Interview Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/category/leetcode.html" >Recent Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/tags.html" >Tags</a>
+            </li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="leetcode_0273_integer-to-english-words">Leetcode 0273. Integer to English Words</h1>
+    <p>
+      Posted on Thu 16 January 2025 in <a href="https://tofucode.com/category/leetcode.html">Leetcode</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Question Link : <a href="https://leetcode.com/problems/integer-to-english-words/">https://leetcode.com/problems/integer-to-english-words/</a></p>
+<p>Difficulty: Hard</p>
+<p>Premium: False</p>
+<h3>Question</h3>
+<p>Convert a non-negative integer num to its English words representation.
+ 
+Example 1:</p>
+<p>Input: num = 123
+Output: "One Hundred Twenty Three"</p>
+<p>Example 2:</p>
+<p>Input: num = 12345
+Output: "Twelve Thousand Three Hundred Forty Five"</p>
+<p>Example 3:</p>
+<p>Input: num = 1234567
+Output: "One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven"</p>
+<p>Constraints:</p>
+<p>0 &lt;= num &lt;= 231 - 1</p>
+<h3>Solution</h3>
+<p>The cleanest solution to write is with recursion. Trying to process the string iteratively also works with extra care to check for edge cases.</p>
+<h3>Code</h3>
+<div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Leetcode 0273. Integer to English Words</span>
+<span class="sd">Question Link : https://leetcode.com/problems/integer-to-english-words/</span>
+<span class="sd">Solution Link : https://tofucode.com/posts/leetcode_0273_integer-to-english-words.html</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">numberToWords</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Use recursion, note the strip() for when the last one is an empty string</span>
+
+<span class="sd">        Time : O(log n)</span>
+<span class="sd">        Space: O(log n)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;Zero&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">BILLION</span> <span class="o">=</span> <span class="mi">1000000000</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">MILLION</span> <span class="o">=</span> <span class="mi">1000000</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">THOUSAND</span> <span class="o">=</span> <span class="mi">1000</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">HUNDRED</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">TWENTY</span> <span class="o">=</span> <span class="mi">20</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tens</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Ten&quot;</span><span class="p">,</span> <span class="s2">&quot;Twenty&quot;</span><span class="p">,</span> <span class="s2">&quot;Thirty&quot;</span><span class="p">,</span> <span class="s2">&quot;Forty&quot;</span><span class="p">,</span> <span class="s2">&quot;Fifty&quot;</span><span class="p">,</span> <span class="s2">&quot;Sixty&quot;</span><span class="p">,</span> <span class="s2">&quot;Seventy&quot;</span><span class="p">,</span> <span class="s2">&quot;Eighty&quot;</span><span class="p">,</span> <span class="s2">&quot;Ninety&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ones</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;One&quot;</span><span class="p">,</span> <span class="s2">&quot;Two&quot;</span><span class="p">,</span> <span class="s2">&quot;Three&quot;</span><span class="p">,</span> <span class="s2">&quot;Four&quot;</span><span class="p">,</span> <span class="s2">&quot;Five&quot;</span><span class="p">,</span> <span class="s2">&quot;Six&quot;</span><span class="p">,</span> <span class="s2">&quot;Seven&quot;</span><span class="p">,</span> <span class="s2">&quot;Eight&quot;</span><span class="p">,</span> <span class="s2">&quot;Nine&quot;</span><span class="p">,</span> <span class="s2">&quot;Ten&quot;</span><span class="p">,</span> <span class="s2">&quot;Eleven&quot;</span><span class="p">,</span> <span class="s2">&quot;Twelve&quot;</span><span class="p">,</span> <span class="s2">&quot;Thirteen&quot;</span><span class="p">,</span> <span class="s2">&quot;Fourteen&quot;</span><span class="p">,</span> <span class="s2">&quot;Fifteen&quot;</span><span class="p">,</span>  <span class="s2">&quot;Sixteen&quot;</span><span class="p">,</span> <span class="s2">&quot;Seventeen&quot;</span><span class="p">,</span> <span class="s2">&quot;Eighteen&quot;</span><span class="p">,</span> <span class="s2">&quot;Nineteen&quot;</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">translate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">BILLION</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">num</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">BILLION</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; Billion &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">BILLION</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">MILLION</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">num</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">MILLION</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; Million &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">MILLION</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">THOUSAND</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">num</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">THOUSAND</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; Thousand &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">THOUSAND</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">HUNDRED</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">num</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">HUNDRED</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; Hundred &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">HUNDRED</span><span class="p">))</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">TWENTY</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tens</span><span class="p">[</span><span class="n">num</span> <span class="o">//</span> <span class="mi">10</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ones</span><span class="p">[</span><span class="n">num</span><span class="p">]</span>
+
+<span class="k">class</span> <span class="nc">SolutionAlternative1</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">numberToWords</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        1 234 567</span>
+<span class="sd">        One Million</span>
+<span class="sd">        Two Hundred Thirty Four Thousand</span>
+<span class="sd">        Five Hundred Sixty Seven</span>
+
+<span class="sd">        break into parts of 3:</span>
+<span class="sd">        567</span>
+<span class="sd">        234</span>
+<span class="sd">        1</span>
+<span class="sd">        translate eachand stick together</span>
+
+
+<span class="sd">        Time : O(d) # number of digits in num</span>
+<span class="sd">        Space: O(d)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;Zero&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">suffix</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Thousand&#39;</span><span class="p">,</span> <span class="s1">&#39;Million&#39;</span><span class="p">,</span> <span class="s1">&#39;Billion&#39;</span><span class="p">,</span> <span class="s1">&#39;Trillion&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_word_map</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNumMap</span><span class="p">()</span>
+
+        <span class="n">num_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+        <span class="n">parts</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">num_str</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">):</span>
+            <span class="n">parts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num_str</span><span class="p">[</span><span class="nb">max</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span> <span class="n">i</span><span class="p">])</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)):</span>
+            <span class="n">num</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNumberWords</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">suf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">suffix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+            <span class="k">if</span> <span class="n">num</span><span class="p">:</span>
+                <span class="n">r</span> <span class="o">+=</span> <span class="n">num</span>
+            <span class="k">if</span> <span class="n">num</span> <span class="ow">and</span> <span class="n">suf</span><span class="p">:</span>
+                <span class="n">r</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">suf</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">result</span> <span class="k">if</span> <span class="n">x</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">getNumberWords</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_word_map</span><span class="p">[</span><span class="n">s</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">translateTens</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">pre_hundred</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_word_map</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pre_hundred</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">pre_hundred</span><span class="p">:</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Hundred&#39;</span><span class="p">)</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">translateTens</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span>
+
+        <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">result</span> <span class="k">if</span> <span class="n">x</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">translateTens</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_word_map</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">one</span> <span class="o">=</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">10</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_word_map</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="o">-</span><span class="n">one</span><span class="p">)])</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_word_map</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">one</span><span class="p">)])</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+
+    <span class="k">def</span> <span class="nf">getNumMap</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;0&quot;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="s1">&#39;One&#39;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span> <span class="s1">&#39;Two&#39;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">:</span> <span class="s1">&#39;Three&#39;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">:</span> <span class="s1">&#39;Four&#39;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">:</span> <span class="s1">&#39;Five&#39;</span><span class="p">,</span>
+            <span class="s2">&quot;6&quot;</span><span class="p">:</span> <span class="s1">&#39;Six&#39;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">:</span> <span class="s1">&#39;Seven&#39;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">:</span> <span class="s1">&#39;Eight&#39;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">:</span> <span class="s1">&#39;Nine&#39;</span><span class="p">,</span>
+            <span class="s2">&quot;10&quot;</span><span class="p">:</span> <span class="s1">&#39;Ten&#39;</span><span class="p">,</span> <span class="s2">&quot;11&quot;</span><span class="p">:</span> <span class="s1">&#39;Eleven&#39;</span><span class="p">,</span> <span class="s2">&quot;12&quot;</span><span class="p">:</span> <span class="s1">&#39;Twelve&#39;</span><span class="p">,</span> <span class="s2">&quot;13&quot;</span><span class="p">:</span> <span class="s1">&#39;Thirteen&#39;</span><span class="p">,</span>
+            <span class="s2">&quot;14&quot;</span><span class="p">:</span> <span class="s1">&#39;Fourteen&#39;</span><span class="p">,</span> <span class="s2">&quot;15&quot;</span><span class="p">:</span> <span class="s1">&#39;Fifteen&#39;</span><span class="p">,</span> <span class="s2">&quot;16&quot;</span><span class="p">:</span> <span class="s1">&#39;Sixteen&#39;</span><span class="p">,</span> <span class="s2">&quot;17&quot;</span><span class="p">:</span> <span class="s1">&#39;Seventeen&#39;</span><span class="p">,</span>
+            <span class="s2">&quot;18&quot;</span><span class="p">:</span> <span class="s1">&#39;Eighteen&#39;</span><span class="p">,</span> <span class="s2">&quot;19&quot;</span><span class="p">:</span> <span class="s1">&#39;Nineteen&#39;</span><span class="p">,</span>
+            <span class="s2">&quot;20&quot;</span><span class="p">:</span> <span class="s1">&#39;Twenty&#39;</span><span class="p">,</span> <span class="s2">&quot;30&quot;</span><span class="p">:</span> <span class="s1">&#39;Thirty&#39;</span><span class="p">,</span> <span class="s2">&quot;40&quot;</span><span class="p">:</span> <span class="s1">&#39;Forty&#39;</span><span class="p">,</span> <span class="s2">&quot;50&quot;</span><span class="p">:</span> <span class="s1">&#39;Fifty&#39;</span><span class="p">,</span>
+            <span class="s2">&quot;60&quot;</span><span class="p">:</span> <span class="s1">&#39;Sixty&#39;</span><span class="p">,</span> <span class="s2">&quot;70&quot;</span><span class="p">:</span> <span class="s1">&#39;Seventy&#39;</span><span class="p">,</span> <span class="s2">&quot;80&quot;</span><span class="p">:</span> <span class="s1">&#39;Eighty&#39;</span><span class="p">,</span> <span class="s2">&quot;90&quot;</span><span class="p">:</span> <span class="s1">&#39;Ninety&#39;</span>
+    <span class="p">}</span>
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://tofucode.com/tag/string.html">string</a>
+      <a href="https://tofucode.com/tag/recursion.html">recursion</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p> Eat Tofu and be true </p>
+<p>&copy; 2025 TofuCode.com</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " TofuCode ",
+  "url" : "https://tofucode.com",
+  "image": "",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>
