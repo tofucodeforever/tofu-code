@@ -233,6 +233,7 @@ Status: published
 | 2832 | [Maximal Range That Each Element Is Maximum in It](https://tofucode.com/posts/leetcode_2832_maximal-range-that-each-element-is-maximum-in-it.html) | monotonic-stack | [1](#"[('amazon', 2)]") |
 | 2924 | [Find Champion II](https://tofucode.com/posts/leetcode_2924_find-champion-ii.html) | graph | [1](#"[('google', 2)]") |
 | 2955 | [Number of Same-End Substrings](https://tofucode.com/posts/leetcode_2955_number-of-same-end-substrings.html) | math, binary-search, prefix-sum | [2](#"[('google', 2), ('sprinklr', 2)]") |
+| 3043 | [Find the Length of the Longest Common Prefix](https://tofucode.com/posts/leetcode_3043_find-the-length-of-the-longest-common-prefix.html) | trie-prefix-tree | [11](#"[('facebook', 5), ('tiktok', 5), ('amazon', 4), ('google', 4), ('ziprecruiter', 3), ('capital-one', 2), ('coinbase', 2), ('databricks', 2), ('microsoft', 2), ('roblox', 2), ('uber', 2)]") |
 | 3110 | [Score of a String](https://tofucode.com/posts/leetcode_3110_score-of-a-string.html) | string | [4](#"[('google', 4), ('microsoft', 4), ('amazon', 2), ('bloomberg', 2)]") |
 | 3263 | [Convert Doubly Linked List to Array I](https://tofucode.com/posts/leetcode_3263_convert-doubly-linked-list-to-array-i.html) | linked-list | [0](#"[]") |
 | 3264 | [Final Array State After K Multiplication Operations I](https://tofucode.com/posts/leetcode_3264_final-array-state-after-k-multiplication-operations-i.html) | priority-queue | [1](#"[('amazon', 2)]") |

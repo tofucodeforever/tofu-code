@@ -213,6 +213,7 @@ Status: published
 | 2456 | [Most Popular Video Creator](https://tofucode.com/posts/leetcode_2456_most-popular-video-creator.html) | hash-map-count | |
 | 2492 | [Minimum Score of a Path Between Two Cities](https://tofucode.com/posts/leetcode_2492_minimum-score-of-a-path-between-two-cities.html) | dfs, bfs, union-find |  |
 | 2924 | [Find Champion II](https://tofucode.com/posts/leetcode_2924_find-champion-ii.html) | graph |  |
+| 3043 | [Find the Length of the Longest Common Prefix](https://tofucode.com/posts/leetcode_3043_find-the-length-of-the-longest-common-prefix.html) | trie-prefix-tree |  |
 | 3110 | [Score of a String](https://tofucode.com/posts/leetcode_3110_score-of-a-string.html) | string |  |
 | 3264 | [Final Array State After K Multiplication Operations I](https://tofucode.com/posts/leetcode_3264_final-array-state-after-k-multiplication-operations-i.html) | priority-queue |  |
 | 2460 | [Apply Operations to an Array](https://tofucode.com/posts/leetcode_2460_apply-operations-to-an-array.html) | two-pointers | |
