@@ -121,6 +121,7 @@ Status: published
 | 0413 | [Arithmetic Slices](https://tofucode.com/posts/leetcode_0413_arithmetic-slices.html) | dp | |
 | 0415 | [Add Strings](https://tofucode.com/posts/leetcode_0415_add-strings.html) | string |  |
 | 0416 | [Partition Equal Subset Sum](https://tofucode.com/posts/leetcode_0416_partition-equal-subset-sum.html) | knapsack-1-0 |  |
+| 0417 | [Pacific Atlantic Water Flow](https://tofucode.com/posts/leetcode_0417_pacific-atlantic-water-flow.html) | bfs-grid, reverse-thinking |  |
 | 0424 | [Longest Repeating Character Replacement](https://tofucode.com/posts/leetcode_0424_longest-repeating-character-replacement.html) | sliding-window |  |
 | 0435 | [Non-overlapping Intervals](https://tofucode.com/posts/leetcode_0435_non-overlapping-intervals.html) | interval-merge, greedy | |
 | 0451 | [Sort Characters By Frequency](https://tofucode.com/posts/leetcode_0451_sort-characters-by-frequency.html) | counting |  |
