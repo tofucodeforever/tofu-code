@@ -21,6 +21,7 @@ Status: published
 | 0034 | [Find First and Last Position of Element in Sorted Array](https://tofucode.com/posts/leetcode_0034_find-first-and-last-position-of-element-in-sorted-array.html) | binary-search |  |
 | 0035 | [Search Insert Position](https://tofucode.com/posts/leetcode_0035_search-insert-position.html) | binary-search |  |
 | 0039 | [Combination Sum](https://tofucode.com/posts/leetcode_0039_combination-sum.html) | backtracking |  |
+| 0042 | [Trapping Rain Water](https://tofucode.com/posts/leetcode_0042_trapping-rain-water.html) | pointers, reverse-thinking |  |
 | 0048 | [Rotate Image](https://tofucode.com/posts/leetcode_0048_rotate-image.html) | matrix, math |  |
 | 0049 | [Group Anagrams](https://tofucode.com/posts/leetcode_0049_group-anagrams.html) | hash-map, anagram | |
 | 0053 | [Maximum Subarray](https://tofucode.com/posts/leetcode_0053_maximum-subarray.html) | subset-sum, dp |  |
