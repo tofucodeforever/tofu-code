@@ -186,6 +186,7 @@ Status: published
 | 1710 | [Maximum Units on a Truck](https://tofucode.com/posts/leetcode_1710_maximum-units-on-a-truck.html) | greedy | |
 | 1757 | [Recyclable and Low Fat Products](https://tofucode.com/posts/leetcode_1757_recyclable-and-low-fat-products.html) | sql |  |
 | 1768 | [Merge Strings Alternately](https://tofucode.com/posts/leetcode_1768_merge-strings-alternately.html) | pointers |  |
+| 2043 | [Simple Bank System](https://tofucode.com/posts/leetcode_2043_simple-bank-system.html) | simulation |  |
 | 2095 | [Delete the Middle Node of a Linked List](https://tofucode.com/posts/leetcode_2095_delete-the-middle-node-of-a-linked-list.html) | fast-slow-pointer | |
 | 2131 | [Longest Palindrome by Concatenating Two Letter Words](https://tofucode.com/posts/leetcode_2131_longest-palindrome-by-concatenating-two-letter-words.html) | palindrome, string | |
 | 2182 | [Construct String With Repeat Limit](https://tofucode.com/posts/leetcode_2182_construct-string-with-repeat-limit.html) | priority-queue |  |

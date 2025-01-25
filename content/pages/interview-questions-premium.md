@@ -203,6 +203,7 @@ Status: published
 | 1757 | [Recyclable and Low Fat Products](https://tofucode.com/posts/leetcode_1757_recyclable-and-low-fat-products.html) | sql | [9](#"[('google', 33), ('amazon', 21), ('microsoft', 17), ('adobe', 5), ('apple', 3), ('bloomberg', 3), ('facebook', 2), ('uber', 2), ('yahoo', 2)]") |
 | 1768 | [Merge Strings Alternately](https://tofucode.com/posts/leetcode_1768_merge-strings-alternately.html) | pointers | [1](#"[('uber', 3)]") |
 | 1891 | [Cutting Ribbons](https://tofucode.com/posts/leetcode_1891_cutting-ribbons.html) | binary-search | [2](#"[('facebook', 3), ('google', 2)]") |
+| 2043 | [Simple Bank System](https://tofucode.com/posts/leetcode_2043_simple-bank-system.html) | simulation | [6](#"[('capital-one', 11), ('dropbox', 10), ('phonepe', 3), ('uber', 3), ('airbnb', 2), ('coinbase', 2)]") |
 | 2095 | [Delete the Middle Node of a Linked List](https://tofucode.com/posts/leetcode_2095_delete-the-middle-node-of-a-linked-list.html) | fast-slow-pointer | |
 | 2107 | [Number of Unique Flavors After Sharing K Candies](https://tofucode.com/posts/leetcode_2107_number-of-unique-flavors-after-sharing-k-candies.html) | sliding-window-fixed | [1](#"[('microsoft', 2)]") |
 | 2131 | [Longest Palindrome by Concatenating Two Letter Words](https://tofucode.com/posts/leetcode_2131_longest-palindrome-by-concatenating-two-letter-words.html) | palindrome, string | |
