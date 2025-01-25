@@ -146,6 +146,7 @@ Status: published
 | 0698 | [Partition to K Equal Sum Subsets](https://tofucode.com/posts/leetcode_0698_partition-to-k-equal-sum-subsets.html) | subset-sum, backtracking |  |
 | 0700 | [Search in a Binary Search Tree](https://tofucode.com/posts/leetcode_0700_search-in-a-binary-search-tree.html) | bst | |
 | 0704 | [Binary Search](https://tofucode.com/posts/leetcode_0704_binary-search.html) | binary-search |  |
+| 0713 | [Subarray Product Less Than K](https://tofucode.com/posts/leetcode_0713_subarray-product-less-than-k.html) | sliding-window |  |
 | 0740 | [Delete and Earn](https://tofucode.com/posts/leetcode_0740_delete-and-earn.html) | dp | |
 | 0746 | [Min Cost Climbing Stairs](https://tofucode.com/posts/leetcode_0746_min-cost-climbing-stairs.html) | dp | |
 | 0771 | [Jewels and Stones](https://tofucode.com/posts/leetcode_0771_jewels-and-stones.html) | set |  |
