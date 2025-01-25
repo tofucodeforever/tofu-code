@@ -164,6 +164,7 @@ Status: published
 | 0991 | [Broken Calculator](https://tofucode.com/posts/leetcode_0991_broken-calculator.html) | reverse-thinking, puzzle | |
 | 1020 | [Number of Enclaves](https://tofucode.com/posts/leetcode_1020_number-of-enclaves.html) | dfs-bfs-grid |  |
 | 1046 | [Last Stone Weight](https://tofucode.com/posts/leetcode_1046_last-stone-weight.html) | priority-queue |  |
+| 1091 | [Shortest Path in Binary Matrix](https://tofucode.com/posts/leetcode_1091_shortest-path-in-binary-matrix.html) | bfs-for-shortest-path, priority-queue |  |
 | 1094 | [Car Pooling](https://tofucode.com/posts/leetcode_1094_car-pooling.html) | interval-overlap | |
 | 1143 | [Longest Common Subsequence](https://tofucode.com/posts/leetcode_1143_longest-common-subsequence.html) | dp-2d |  |
 | 1162 | [As Far from Land as Possible](https://tofucode.com/posts/leetcode_1162_as-far-from-land-as-possible.html) | bfs-layered, bfs-grid |  |
