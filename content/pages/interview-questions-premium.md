@@ -95,6 +95,7 @@ Status: published
 | 0224 | [Basic Calculator](https://tofucode.com/posts/leetcode_0224_basic-calculator.html) | calculator, parentheses | |
 | 0226 | [Invert Binary Tree](https://tofucode.com/posts/leetcode_0226_invert-binary-tree.html) | binary-tree-manipulation | |
 | 0227 | [Basic Calculator II](https://tofucode.com/posts/leetcode_0227_basic-calculator-ii.html) | calculator | |
+| 0228 | [Summary Ranges](https://tofucode.com/posts/leetcode_0228_summary-ranges.html) | trailing-pointer | [9](#"[('yandex', 8), ('bloomberg', 5), ('facebook', 4), ('google', 4), ('netflix', 4), ('adobe', 3), ('amazon', 2), ('apple', 2), ('uber', 2)]") |
 | 0232 | [Implement Queue using Stacks](https://tofucode.com/posts/leetcode_0232_implement-queue-using-stacks.html) | stack, queue | [14](#"[('apple', 6), ('amazon', 3), ('bytedance', 3), ('ebay', 3), ('goldman-sachs', 3), ('vmware', 3), ('bloomberg', 2), ('de-shaw', 2), ('docusign', 2), ('google', 2), ('microsoft', 2), ('oracle', 2), ('qualcomm', 2), ('splunk', 2)]") |
 | 0234 | [Palindrome Linked List](https://tofucode.com/posts/leetcode_0234_palindrome-linked-list.html) | palindrome-center-expansion, fast-slow-pointer | |
 | 0235 | [Lowest Common Ancestor of a Binary Search Tree](https://tofucode.com/posts/leetcode_0235_lowest-common-ancestor-of-a-binary-search-tree.html) | least-common-ancestor, bst | [13](#"[('apple', 9), ('microsoft', 7), ('facebook', 5), ('linkedin', 5), ('bloomberg', 4), ('adobe', 3), ('amazon', 3), ('google', 3), ('yahoo', 3), ('yandex', 3), ('oracle', 2), ('samsung', 2), ('twitter', 2)]") |
