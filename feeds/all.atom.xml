@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2025-01-25T00:00:00-08:00</updated><entry><title>Leetcode 0713. Subarray Product Less Than K</title><link href="https://tofucode.com/posts/leetcode_0713_subarray-product-less-than-k.html" rel="alternate"></link><published>2025-01-25T00:00:00-08:00</published><updated>2025-01-25T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2025-01-25:/posts/leetcode_0713_subarray-product-less-than-k.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/subarray-product-less-than-k/"&gt;https://leetcode.com/problems/subarray-product-less-than-k/&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TofuCode</title><link href="https://tofucode.com/" rel="alternate"></link><link href="https://tofucode.com/feeds/all.atom.xml" rel="self"></link><id>https://tofucode.com/</id><updated>2025-01-26T00:00:00-08:00</updated><entry><title>Leetcode 0359. Logger Rate Limiter</title><link href="https://tofucode.com/posts/leetcode_0359_logger-rate-limiter.html" rel="alternate"></link><published>2025-01-26T00:00:00-08:00</published><updated>2025-01-26T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2025-01-26:/posts/leetcode_0359_logger-rate-limiter.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/logger-rate-limiter/"&gt;https://leetcode.com/problems/logger-rate-limiter/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: True&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Design a logger system that receives a stream of messages along with their timestamps. Each unique message should only be printed at most every 10 seconds (i.e. a message printed at timestamp t will prevent other identical …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/logger-rate-limiter/"&gt;https://leetcode.com/problems/logger-rate-limiter/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Easy&lt;/p&gt;
+&lt;p&gt;Premium: True&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;Design a logger system that receives a stream of messages along with their timestamps. Each unique message should only be printed at most every 10 seconds (i.e. a message printed at timestamp t will prevent other identical messages from being printed until timestamp t + 10).
+All messages will come in chronological order. Several messages may arrive at the same timestamp.
+Implement the Logger class:&lt;/p&gt;
+&lt;p&gt;Logger() Initializes the logger object.
+bool shouldPrintMessage(int timestamp, string message) Returns true if the message should be printed in the given timestamp, otherwise returns false.&lt;/p&gt;
+&lt;p&gt;Example 1:&lt;/p&gt;
+&lt;p&gt;Input
+["Logger", "shouldPrintMessage", "shouldPrintMessage", "shouldPrintMessage", "shouldPrintMessage", "shouldPrintMessage", "shouldPrintMessage"]
+[[], [1, "foo"], [2, "bar"], [3, "foo"], [8, "bar"], [10, "foo"], [11, "foo"]]
+Output
+[null, true, true, false, false, false, true]&lt;/p&gt;
+&lt;p&gt;Explanation
+Logger logger = new Logger();
+logger.shouldPrintMessage(1, "foo");  // return true, next allowed timestamp for "foo" is 1 + 10 = 11
+logger.shouldPrintMessage(2, "bar");  // return true, next allowed timestamp for "bar" is 2 + 10 = 12
+logger.shouldPrintMessage(3, "foo");  // 3 &amp;lt; 11, return false
+logger.shouldPrintMessage(8, "bar");  // 8 &amp;lt; 12, return false
+logger.shouldPrintMessage(10, "foo"); // 10 &amp;lt; 11, return false
+logger.shouldPrintMessage(11, "foo"); // 11 &amp;gt;= 11, return true, next allowed timestamp for "foo" is 11 + 10 = 21&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;0 &amp;lt;= timestamp &amp;lt;= 109
+Every timestamp will be passed in non-decreasing order (chronological order).
+1 &amp;lt;= message.length &amp;lt;= 30
+At most 104 calls will be made to shouldPrintMessage.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Use a hash map to store the last printed good message. &lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0359. Logger Rate Limiter&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/logger-rate-limiter/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0359_logger-rate-limiter.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Logger&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;    Time : O(1)&lt;/span&gt;
+&lt;span class="sd"&gt;    Space: O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;message_time_map&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; &lt;span class="c1"&gt;# message -&amp;gt; time mapping&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;shouldPrintMessage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;timestamp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;message_time_map&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;timestamp&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;message_time_map&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;message_time_map&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;timestamp&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# Your Logger object will be instantiated and called as such:&lt;/span&gt;
+&lt;span class="c1"&gt;# obj = Logger()&lt;/span&gt;
+&lt;span class="c1"&gt;# param_1 = obj.shouldPrintMessage(timestamp,message&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode Premium"></category><category term="hash-map"></category></entry><entry><title>Leetcode 0713. Subarray Product Less Than K</title><link href="https://tofucode.com/posts/leetcode_0713_subarray-product-less-than-k.html" rel="alternate"></link><published>2025-01-25T00:00:00-08:00</published><updated>2025-01-25T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2025-01-25:/posts/leetcode_0713_subarray-product-less-than-k.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/subarray-product-less-than-k/"&gt;https://leetcode.com/problems/subarray-product-less-than-k/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Medium&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
