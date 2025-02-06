@@ -52,6 +52,7 @@ Status: published
 | 0105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://tofucode.com/posts/leetcode_0105_construct-binary-tree-from-preorder-and-inorder-traversal.html) | binary-tree-traversal-inorder, binary-tree-traversal-preorder |  |
 | 0106 | [Construct Binary Tree from Inorder and Postorder Traversal](https://tofucode.com/posts/leetcode_0106_construct-binary-tree-from-inorder-and-postorder-traversal.html) | binary-tree-manipulation |  |
 | 0108 | [Convert Sorted Array to Binary Search Tree](https://tofucode.com/posts/leetcode_0108_convert-sorted-array-to-binary-search-tree.html) | bst |  |
+| 0110 | [Balanced Binary Tree](https://tofucode.com/posts/leetcode_0110_balanced-binary-tree.html) | binary-tree, recursion |  |
 | 0111 | [Minimum Depth of Binary Tree](https://tofucode.com/posts/leetcode_0111_minimum-depth-of-binary-tree.html) | bfs, binary-tree |  |
 | 0112 | [Path Sum](https://tofucode.com/posts/leetcode_0112_path-sum.html) | binary-tree, recursion | |
 | 0121 | [Best Time to Buy and Sell Stock](https://tofucode.com/posts/leetcode_0121_best-time-to-buy-and-sell-stock.html) | dp-stock |  |
