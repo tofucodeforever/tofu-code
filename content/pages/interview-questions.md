@@ -156,6 +156,7 @@ Status: published
 | 0746 | [Min Cost Climbing Stairs](https://tofucode.com/posts/leetcode_0746_min-cost-climbing-stairs.html) | dp | |
 | 0752 | [Open the Lock](https://tofucode.com/posts/leetcode_0752_open-the-lock.html) | bfs |  |
 | 0771 | [Jewels and Stones](https://tofucode.com/posts/leetcode_0771_jewels-and-stones.html) | set |  |
+| 0773 | [Sliding Puzzle](https://tofucode.com/posts/leetcode_0773_sliding-puzzle.html) | bfs |  |
 | 0799 | [Champagne Tower](https://tofucode.com/posts/leetcode_0799_champagne-tower.html) | simulation | |
 | 0827 | [Making A Large Island](https://tofucode.com/posts/leetcode_0827_making-a-large-island.html) | dfs-bfs-grid |  |
 | 0872 | [Leaf-Similar Trees](https://tofucode.com/posts/leetcode_0872_leaf-similar-trees.html) | binary-tree-traversal |  |
