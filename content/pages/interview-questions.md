@@ -154,6 +154,7 @@ Status: published
 | 0713 | [Subarray Product Less Than K](https://tofucode.com/posts/leetcode_0713_subarray-product-less-than-k.html) | sliding-window |  |
 | 0740 | [Delete and Earn](https://tofucode.com/posts/leetcode_0740_delete-and-earn.html) | dp | |
 | 0746 | [Min Cost Climbing Stairs](https://tofucode.com/posts/leetcode_0746_min-cost-climbing-stairs.html) | dp | |
+| 0752 | [Open the Lock](https://tofucode.com/posts/leetcode_0752_open-the-lock.html) | bfs |  |
 | 0771 | [Jewels and Stones](https://tofucode.com/posts/leetcode_0771_jewels-and-stones.html) | set |  |
 | 0799 | [Champagne Tower](https://tofucode.com/posts/leetcode_0799_champagne-tower.html) | simulation | |
 | 0827 | [Making A Large Island](https://tofucode.com/posts/leetcode_0827_making-a-large-island.html) | dfs-bfs-grid |  |

@@ -166,6 +166,7 @@ Status: published
 | 0713 | [Subarray Product Less Than K](https://tofucode.com/posts/leetcode_0713_subarray-product-less-than-k.html) | sliding-window | [16](#"[('servicenow', 14), ('facebook', 10), ('salesforce', 9), ('apple', 7), ('adobe', 5), ('airbnb', 4), ('wise', 4), ('yatra', 4), ('amazon', 3), ('ibm', 3), ('squarepoint-capital', 3), ('tiktok', 3), ('bloomberg', 2), ('flexport', 2), ('google', 2), ('sofi', 2)]") |
 | 0740 | [Delete and Earn](https://tofucode.com/posts/leetcode_0740_delete-and-earn.html) | dp | |
 | 0746 | [Min Cost Climbing Stairs](https://tofucode.com/posts/leetcode_0746_min-cost-climbing-stairs.html) | dp | |
+| 0752 | [Open the Lock](https://tofucode.com/posts/leetcode_0752_open-the-lock.html) | bfs | [16](#"[('amazon', 4), ('cars24', 3), ('facebook', 3), ('microsoft', 3), ('uber', 3), ('bloomberg', 2), ('bytedance', 2), ('coupang', 2), ('de-shaw', 2), ('ebay', 2), ('flipkart', 2), ('goldman-sachs', 2), ('google', 2), ('jpmorgan', 2), ('tiktok', 2), ('zepto', 2)]") |
 | 0755 | [Pour Water](https://tofucode.com/posts/leetcode_0755_pour-water.html) | simulation, array | [2](#"[('airbnb', 3), ('amazon', 2)]") |
 | 0771 | [Jewels and Stones](https://tofucode.com/posts/leetcode_0771_jewels-and-stones.html) | set | [6](#"[('google', 4), ('apple', 3), ('adobe', 2), ('amazon', 2), ('microsoft', 2), ('yandex', 2)]") |
 | 0799 | [Champagne Tower](https://tofucode.com/posts/leetcode_0799_champagne-tower.html) | simulation | |
