@@ -1,7 +1,7 @@
 Title: Leetcode 0224. Basic Calculator
 Slug: leetcode_0224_basic-calculator
 Status: published
-Date: 2022-11-20
+Date: 2025-02-08
 Category: Leetcode
 Tags: calculator, parentheses
 Author: Zeph
@@ -9,6 +9,8 @@ Author: Zeph
 Question Link : [https://leetcode.com/problems/basic-calculator/](https://leetcode.com/problems/basic-calculator/)
 
 Difficulty: Hard
+
+Premium: False
 
 ### Question
 Given a string s representing a valid expression, implement a basic calculator to evaluate it, and return the result of the evaluation.
@@ -42,7 +44,7 @@ Every number and running calculation will fit in a signed 32-bit integer.
 
 ### Solution
 
-We can use a stack like the case without parentheses. The tricky part is dealing with the sign before a parenthesis. An improved version can be just storing (), sign before (), and a number that was evaluated before. 
+We can use a stack like the case without parentheses. The tricky part is dealing with the sign before a parenthesis.
 
 
 ### Code
@@ -55,15 +57,19 @@ Solution Link : https://tofucode.com/posts/leetcode_0224_basic-calculator.html
 
 class Solution:
     def calculate(self, s: str) -> int:
-        '''
-        Similiar to withough ()
-        Use a stack to store () and numbers, when you hit a ), process till (
-        the special case was the -( case which needs an extra sign to change the processed result
-        This stores the sign information before the parenthesis
+        """
+        use a stack
+        store a sign
+        process the string by char:
+            if num: process number onto the stack with sign
+            if +-: update sign
+            if (: add to stack with sign
+            if ): process everything in (), check opening stack sign
+        return sum of stack
 
         Time : O(n)
         Space: O(n)
-        '''
+        """
         line = ''.join([c.strip() for c in s.strip()])
         stack = []
         i = 0
@@ -72,13 +78,12 @@ class Solution:
         while i < len(line):
             c = line[i]
             if c.isdigit():
-                j = i + 1
-                while j < len(line) and line[j].isdigit():
-                    j += 1
-                num = int(line[i:j])
+                num_str = self.parseNumStr(i, line)
+                num = int(num_str)
                 stack.append(sign * num)
+
                 sign = 1
-                i = j
+                i += len(num_str)
             elif c == '+':
                 sign = 1
                 i += 1
@@ -94,64 +99,22 @@ class Solution:
                 i += 1
             elif c == ')':
                 total = 0
-
                 while stack and stack[-1] != '(' and stack[-1] != '-(':
                     total += stack.pop()
-                last = stack.pop() # pop the (
 
+                last = stack.pop() # pop the (
                 if last == '-(':
                     total = -1 * total
                 stack.append(total)
                 i += 1
 
-        return sum([x for x in stack])
+        return sum(stack)
 
-class SolutionImproved1:
-    def calculate(self, s: str) -> int:
-        '''
-        Stack:
-            (: store the current result onto it for later, store the curent sign
-            insdie the (): evaluate as normal without the ()
-            ): calculate before the () and within ()
-
-        Time : O(n)
-        Space: O(n)
-        '''
-        stack = []
-        num = 0 # current number
-        res = 0 # current result
-        sign = 1
-
-        for ch in s:
-            if ch.isdigit():
-                num = (num * 10) + int(ch)
-            elif ch == '+':
-                res += sign * num
-                sign = 1
-                num = 0
-            elif ch == '-':
-                res += sign * num
-                sign = -1
-                num = 0
-            elif ch == '(':
-                # Push current result, sign
-                stack.append(res)
-                stack.append(sign)
-
-                # reset
-                sign = 1
-                res = 0
-            elif ch == ')':
-                res += sign * num # evaluate current number onto current result
-                last_sign = stack.pop() # last sign
-                last_num = stack.pop() # last number
-                res = last_num + last_sign * res #  last_sign * res is the current res with the sign before
-
-                # reset
-                sign = 1
-                num = 0
-
-        res += sign * num
-        return res
+    def parseNumStr(self, start_index, line):
+        """ parse the num and return the num as string """
+        i = start_index
+        while i < len(line) and line[i].isdigit():
+            i += 1
+        return line[start_index:i]
 ```
 

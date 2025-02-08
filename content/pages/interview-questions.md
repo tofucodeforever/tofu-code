@@ -95,7 +95,7 @@ Status: published
 | 0221 | [Maximal Square](https://tofucode.com/posts/leetcode_0221_maximal-square.html) | dp-2d |  |
 | 0222 | [Count Complete Tree Nodes](https://tofucode.com/posts/leetcode_0222_count-complete-tree-nodes.html) | binary-tree | |
 | 0223 | [Rectangle Area](https://tofucode.com/posts/leetcode_0223_rectangle-area.html) | math | |
-| 0224 | [Basic Calculator](https://tofucode.com/posts/leetcode_0224_basic-calculator.html) | calculator, parentheses | |
+| 0224 | [Basic Calculator](https://tofucode.com/posts/leetcode_0224_basic-calculator.html) | calculator, parentheses |  |
 | 0226 | [Invert Binary Tree](https://tofucode.com/posts/leetcode_0226_invert-binary-tree.html) | binary-tree-manipulation | |
 | 0227 | [Basic Calculator II](https://tofucode.com/posts/leetcode_0227_basic-calculator-ii.html) | calculator | |
 | 0228 | [Summary Ranges](https://tofucode.com/posts/leetcode_0228_summary-ranges.html) | trailing-pointer |  |
