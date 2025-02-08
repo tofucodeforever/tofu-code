@@ -3,7 +3,7 @@ Slug: leetcode_0385_mini-parser
 Status: published
 Date: 2025-02-07
 Category: Leetcode
-Tags: recursion, recursion
+Tags: recursion, serialization
 Author: Zeph
 
 Question Link : [https://leetcode.com/problems/mini-parser/](https://leetcode.com/problems/mini-parser/)
