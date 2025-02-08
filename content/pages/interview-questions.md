@@ -97,7 +97,7 @@ Status: published
 | 0223 | [Rectangle Area](https://tofucode.com/posts/leetcode_0223_rectangle-area.html) | math | |
 | 0224 | [Basic Calculator](https://tofucode.com/posts/leetcode_0224_basic-calculator.html) | calculator, parentheses |  |
 | 0226 | [Invert Binary Tree](https://tofucode.com/posts/leetcode_0226_invert-binary-tree.html) | binary-tree-manipulation | |
-| 0227 | [Basic Calculator II](https://tofucode.com/posts/leetcode_0227_basic-calculator-ii.html) | calculator | |
+| 0227 | [Basic Calculator II](https://tofucode.com/posts/leetcode_0227_basic-calculator-ii.html) | calculator |  |
 | 0228 | [Summary Ranges](https://tofucode.com/posts/leetcode_0228_summary-ranges.html) | trailing-pointer |  |
 | 0232 | [Implement Queue using Stacks](https://tofucode.com/posts/leetcode_0232_implement-queue-using-stacks.html) | stack, queue |  |
 | 0234 | [Palindrome Linked List](https://tofucode.com/posts/leetcode_0234_palindrome-linked-list.html) | palindrome-center-expansion, fast-slow-pointer | |

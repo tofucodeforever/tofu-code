@@ -1,14 +1,16 @@
 Title: Leetcode 0227. Basic Calculator II
 Slug: leetcode_0227_basic-calculator-ii
 Status: published
-Date: 2022-11-20
+Date: 2025-02-08
 Category: Leetcode
 Tags: calculator
 Author: Zeph
 
-Question Link : [https://leetcode.com/problems/basic-calculator-ii/](https://leetcode.com/problems/basic-calculator-ii/)
+Question Link : [https://leetcode.com/problems/basic-calculator-ii/n](https://leetcode.com/problems/basic-calculator-ii/n)
 
 Difficulty: Medium
+
+Premium: False
 
 ### Question
 Given a string s which represents an expression, evaluate this expression and return its value. 
@@ -50,15 +52,21 @@ Solution Link : https://tofucode.com/posts/leetcode_0227_basic-calculator-ii.htm
 
 class Solution:
     def calculate(self, s: str) -> int:
-        '''
-        Use a stack
-        number: add it in with a sign
-        + -: sign of 1/-1
-        * /: find the next number, calculate with the last number on stack, add back result
+        """
+        use a stack
+        store a sign
+        process the string by char:
+            if num: process number onto the stack with sign
+            if +-: update sign
+            if */:
+                process next number
+                pop last number
+                calculate and push back to stack
+        return sum of stack
 
         Time : O(n)
         Space: O(n)
-        '''
+        """
         line = ''.join([c.strip() for c in s.strip()])
         stack = []
         i = 0
@@ -67,13 +75,12 @@ class Solution:
         while i < len(line):
             c = line[i]
             if c.isdigit():
-                j = i + 1
-                while j < len(line) and line[j].isdigit():
-                    j += 1
-                num = int(line[i:j])
+                num_str = self.parseNumStr(i, line)
+                num = int(num_str)
                 stack.append(sign * num)
+
                 sign = 1
-                i = j
+                i += len(num_str)
             elif c == '+':
                 sign = 1
                 i += 1
@@ -82,65 +89,29 @@ class Solution:
                 i += 1
             elif c == '*' or c == '/':
                 last = stack.pop()
-                j = i + 1
-                while j < len(line) and line[j].isdigit():
-                    j += 1
-                num = int(line[i+1:j])
+                i += 1
+
+                num_str = self.parseNumStr(i, line)
+                num = int(num_str)
                 if c == '*':
                     stack.append(sign * last * num)
                 elif c == '/':
                     stack.append(sign * int(last / num))
+
                 sign = 1
-                i = j
+                i += len(num_str)
 
         return sum(stack)
 
-class SolutionImproved1:
-    def calculate(self, s: str) -> int:
-        '''
-        simplify stack to last number, and the toral result
+    def parseNumStr(self, start_index, line):
+        """ parse the num and return the num as string """
+        i = start_index
+        while i < len(line) and line[i].isdigit():
+            i += 1
+        return line[start_index:i]
 
-        Time : O(n)
-        Space: O(1)
-        '''
-        line = ''.join([c.strip() for c in s.strip()])
 
-        i = 0
-        sign = 1
-        last = 0
-        result = 0
 
-        while i < len(line):
-            c = line[i]
-            if c.isdigit():
-                j = i + 1
-                while j < len(line) and line[j].isdigit():
-                    j += 1
-                num = int(line[i:j])
-                last = num
-                i = j
-            elif c == '+':
-                result += sign * last
-                last = 0
-                sign = 1
-                i += 1
-            elif c == '-':
-                result += sign * last
-                last = 0
-                sign = -1
-                i += 1
-            elif c == '*' or c == '/':
-                j = i + 1
-                while j < len(line) and line[j].isdigit():
-                    j += 1
-                num = int(line[i+1:j])
-                if c == '*':
-                    last = last * num
-                elif c == '/':
-                    last = int(last / num)
-                i = j
 
-        result += sign * last
-        return result
 ```
 
