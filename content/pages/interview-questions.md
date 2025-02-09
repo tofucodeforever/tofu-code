@@ -189,6 +189,7 @@ Status: published
 | 1470 | [Shuffle the Array](https://tofucode.com/posts/leetcode_1470_shuffle-the-array.html) | array |  |
 | 1472 | [Design Browser History](https://tofucode.com/posts/leetcode_1472_design-browser-history.html) | stack |  |
 | 1544 | [Make The String Great](https://tofucode.com/posts/leetcode_1544_make-the-string-great.html) | stack | |
+| 1557 | [Minimum Number of Vertices to Reach All Nodes](https://tofucode.com/posts/leetcode_1557_minimum-number-of-vertices-to-reach-all-nodes.html) | topological-sorting |  |
 | 1578 | [Minimum Time to Make Rope Colorful](https://tofucode.com/posts/leetcode_1578_minimum-time-to-make-rope-colorful.html) | pointers, array | |
 | 1647 | [Minimum Deletions to Make Character Frequencies Unique](https://tofucode.com/posts/leetcode_1647_minimum-deletions-to-make-character-frequencies-unique.html) | hash-map-count | |
 | 1657 | [Determine if Two Strings Are Close](https://tofucode.com/posts/leetcode_1657_determine-if-two-strings-are-close.html) | counting |  |
