@@ -199,6 +199,7 @@ Status: published
 | 1254 | [Number of Closed Islands](https://tofucode.com/posts/leetcode_1254_number-of-closed-islands.html) | dfs-bfs-grid | [6](#"[('google', 5), ('microsoft', 5), ('amazon', 2), ('apple', 2), ('bloomberg', 2), ('coupang', 2)]") |
 | 1257 | [Smallest Common Region](https://tofucode.com/posts/leetcode_1257_smallest-common-region.html) | least-common-ancestor | [2](#"[('airbnb', 2), ('tiktok', 2)]") |
 | 1339 | [Maximum Product of Splitted Binary Tree](https://tofucode.com/posts/leetcode_1339_maximum-product-of-splitted-binary-tree.html) | binary-tree | [4](#"[('two-sigma', 3), ('amazon', 2), ('bloomberg', 2), ('microsoft', 0)]") |
+| 1387 | [Sort Integers by The Power Value](https://tofucode.com/posts/leetcode_1387_sort-integers-by-the-power-value.html) | cache | [3](#"[('bloomberg', 11), ('airbnb', 2), ('google', 2)]") |
 | 1423 | [Maximum Points You Can Obtain from Cards](https://tofucode.com/posts/leetcode_1423_maximum-points-you-can-obtain-from-cards.html) | sliding-window, array | |
 | 1431 | [Kids With the Greatest Number of Candies](https://tofucode.com/posts/leetcode_1431_kids-with-the-greatest-number-of-candies.html) | simulation | [5](#"[('apple', 5), ('adobe', 2), ('amazon', 2), ('google', 2), ('uber', 2)]") |
 | 1466 | [Reorder Routes to Make All Paths Lead to the City Zero](https://tofucode.com/posts/leetcode_1466_reorder-routes-to-make-all-paths-lead-to-the-city-zero.html) | dfs, bfs | [5](#"[('drw', 4), ('amazon', 3), ('american-express', 3), ('bloomberg', 2), ('grab', 2)]") |
