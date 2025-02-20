@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://tofucode.com/theme/pygments/monokai.min.css">
+
+    <script src="https://tofucode.com/theme/tipuesearch/jquery.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://tofucode.com/theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="https://tofucode.com/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="https://tofucode.com/theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://tofucode.com/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://tofucode.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="TofuCode Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'G-DCBDZPQQD1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Zeph" />
+<meta name="description" content="Question Link : https://leetcode.com/problems/design-file-system/ Difficulty: Medium Premium: True Question You are asked to design a file system that allows you to create new paths and associate them with different values. The format of a path is one or more concatenated strings of the form: / followed by one …" />
+<meta name="keywords" content="simulation, string">
+
+
+<meta property="og:site_name" content="TofuCode"/>
+<meta property="og:title" content="Leetcode 1166. Design File System"/>
+<meta property="og:description" content="Question Link : https://leetcode.com/problems/design-file-system/ Difficulty: Medium Premium: True Question You are asked to design a file system that allows you to create new paths and associate them with different values. The format of a path is one or more concatenated strings of the form: / followed by one …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://tofucode.com/posts/leetcode_1166_design-file-system.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2025-02-19 00:00:00-08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://tofucode.com/author/zeph.html">
+<meta property="article:section" content="Leetcode Premium"/>
+<meta property="article:tag" content="simulation"/>
+<meta property="article:tag" content="string"/>
+<meta property="og:image" content="">
+
+  <title>TofuCode &ndash; Leetcode 1166. Design File System</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://tofucode.com">
+        <img src="https://tofucode.com/theme/img/profile.png" alt="TofuCode" title="TofuCode">
+      </a>
+
+      <h1>
+        <a href="https://tofucode.com">TofuCode</a>
+      </h1>
+
+      
+      <ul class="list social">
+      </ul>
+
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="/pages/interview-questions.html" >Interview Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/category/leetcode.html" >Recent Questions</a>
+            </li>
+            <li>
+              <a target="_self" href="/tags.html" >Tags</a>
+            </li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="leetcode_1166_design-file-system">Leetcode 1166. Design File System</h1>
+    <p>
+      Posted on Wed 19 February 2025 in <a href="https://tofucode.com/category/leetcode-premium.html">Leetcode Premium</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Question Link : <a href="https://leetcode.com/problems/design-file-system/">https://leetcode.com/problems/design-file-system/</a></p>
+<p>Difficulty: Medium</p>
+<p>Premium: True</p>
+<h3>Question</h3>
+<p>You are asked to design a file system that allows you to create new paths and associate them with different values.
+The format of a path is one or more concatenated strings of the form: / followed by one or more lowercase English letters. For example, "/leetcode" and "/leetcode/problems" are valid paths while an empty string "" and "/" are not.
+Implement the FileSystem class:</p>
+<p>bool createPath(string path, int value) Creates a new path and associates a value to it if possible and returns true. Returns false if the path already exists or its parent path doesn't exist.
+int get(string path) Returns the value associated with path or returns -1 if the path doesn't exist.</p>
+<p>Example 1:</p>
+<p>Input: 
+["FileSystem","createPath","get"]
+[[],["/a",1],["/a"]]
+Output: 
+[null,true,1]
+Explanation: 
+FileSystem fileSystem = new FileSystem();</p>
+<p>fileSystem.createPath("/a", 1); // return true
+fileSystem.get("/a"); // return 1</p>
+<p>Example 2:</p>
+<p>Input: 
+["FileSystem","createPath","createPath","get","createPath","get"]
+[[],["/leet",1],["/leet/code",2],["/leet/code"],["/c/d",1],["/c"]]
+Output: 
+[null,true,true,2,false,-1]
+Explanation: 
+FileSystem fileSystem = new FileSystem();</p>
+<p>fileSystem.createPath("/leet", 1); // return true
+fileSystem.createPath("/leet/code", 2); // return true
+fileSystem.get("/leet/code"); // return 2
+fileSystem.createPath("/c/d", 1); // return false because the parent path "/c" doesn't exist.
+fileSystem.get("/c"); // return -1 because this path doesn't exist.</p>
+<p>Constraints:</p>
+<p>2 &lt;= path.length &lt;= 100
+1 &lt;= value &lt;= 109
+Each path is valid and consists of lowercase English letters and '/'.
+At most 104 calls in total will be made to createPath and get.</p>
+<h3>Solution</h3>
+<p>One main point to understand is that one would only need to check the current parent path and don't need to go through the whole path as the existance of the parent means that the parent was added with a valid grandparent path.</p>
+<h3>Code</h3>
+<div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Leetcode 1166. Design File System</span>
+<span class="sd">Question Link : https://leetcode.com/problems/design-file-system/</span>
+<span class="sd">Solution Link : https://tofucode.com/posts/leetcode_1166_design-file-system.html</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="k">class</span> <span class="nc">FileSystem</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        mapping of path -&gt; value</span>
+
+<span class="sd">        /a/b/c with 1</span>
+<span class="sd">        split by /</span>
+<span class="sd">        check if parent exist</span>
+
+<span class="sd">        /a -&gt; something</span>
+<span class="sd">        /a/b -&gt; something</span>
+<span class="sd">        /a/b/c -&gt; 1</span>
+<span class="sd">        check need to check the parent: cause grandparent must have been valid</span>
+
+<span class="sd">        Time : O(n) n length of a single path</span>
+<span class="sd">        Space: O(m) m total path</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">record</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># path -&gt; value</span>
+
+    <span class="k">def</span> <span class="nf">createPath</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">path</span> <span class="ow">or</span> <span class="n">path</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">record</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">parts</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="p">]</span>
+        <span class="n">parent</span> <span class="o">=</span> <span class="s1">&#39;/&#39;</span> <span class="c1"># init root path</span>
+        <span class="n">parent</span> <span class="o">+=</span> <span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">parts</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">parent</span> <span class="o">!=</span> <span class="s1">&#39;/&#39;</span> <span class="ow">and</span> <span class="n">parent</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">record</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">record</span><span class="p">[</span><span class="n">path</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="c1"># Your FileSystem object will be instantiated and called as such:</span>
+<span class="c1"># obj = FileSystem()</span>
+<span class="c1"># param_1 = obj.createPath(path,value)</span>
+<span class="c1"># param_2 = obj.get(path)</span>
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://tofucode.com/tag/simulation.html">simulation</a>
+      <a href="https://tofucode.com/tag/string.html">string</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p> Eat Tofu and be true </p>
+<p>&copy; 2025 TofuCode.com</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " TofuCode ",
+  "url" : "https://tofucode.com",
+  "image": "",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>
