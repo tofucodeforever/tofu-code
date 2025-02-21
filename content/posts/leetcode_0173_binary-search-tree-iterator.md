@@ -1,9 +1,9 @@
 Title: Leetcode 0173. Binary Search Tree Iterator
 Slug: leetcode_0173_binary-search-tree-iterator
 Status: published
-Date: 2024-09-29
+Date: 2025-02-21
 Category: Leetcode
-Tags: bst
+Tags: bst, iterator
 Author: Zeph
 
 Question Link : [https://leetcode.com/problems/binary-search-tree-iterator/](https://leetcode.com/problems/binary-search-tree-iterator/)

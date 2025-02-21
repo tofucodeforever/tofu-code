@@ -77,7 +77,7 @@ Status: published
 | 0160 | [Intersection of Two Linked Lists](https://tofucode.com/posts/leetcode_0160_intersection-of-two-linked-lists.html) | linked-list | |
 | 0167 | [Two Sum II - Input Array Is Sorted](https://tofucode.com/posts/leetcode_0167_two-sum-ii-input-array-is-sorted.html) | k-sum | |
 | 0169 | [Majority Element](https://tofucode.com/posts/leetcode_0169_majority-element.html) | counting, boyer-moore-voting-algorithm | |
-| 0173 | [Binary Search Tree Iterator](https://tofucode.com/posts/leetcode_0173_binary-search-tree-iterator.html) | bst |  |
+| 0173 | [Binary Search Tree Iterator](https://tofucode.com/posts/leetcode_0173_binary-search-tree-iterator.html) | bst, iterator |  |
 | 0188 | [Best Time to Buy and Sell Stock IV](https://tofucode.com/posts/leetcode_0188_best-time-to-buy-and-sell-stock-iv.html) | dp-stock, state-machine |  |
 | 0190 | [Reverse Bits](https://tofucode.com/posts/leetcode_0190_reverse-bits.html) | bits |  |
 | 0191 | [Number of 1 Bits](https://tofucode.com/posts/leetcode_0191_number-of-1-bits.html) | bits |  |
