@@ -122,7 +122,109 @@ At most 105 calls will be made to hasNext, and next.&lt;/p&gt;
         &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
             &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
             &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;left&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="bst"></category><category term="iterator"></category></entry><entry><title>Leetcode 0224. Basic Calculator</title><link href="https://tofucode.com/posts/leetcode_0224_basic-calculator.html" rel="alternate"></link><published>2025-02-08T00:00:00-08:00</published><updated>2025-02-08T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2025-02-08:/posts/leetcode_0224_basic-calculator.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/basic-calculator/"&gt;https://leetcode.com/problems/basic-calculator/&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="bst"></category><category term="iterator"></category></entry><entry><title>Leetcode 0341. Flatten Nested List Iterator</title><link href="https://tofucode.com/posts/leetcode_0341_flatten-nested-list-iterator.html" rel="alternate"></link><published>2025-02-21T00:00:00-08:00</published><updated>2025-02-21T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2025-02-21:/posts/leetcode_0341_flatten-nested-list-iterator.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/flatten-nested-list-iterator/"&gt;https://leetcode.com/problems/flatten-nested-list-iterator/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given a nested list of integers nestedList. Each element is either an integer or a list whose elements may also be integers or other lists. Implement an iterator to flatten it.
+Implement the NestedIterator class:&lt;/p&gt;
+&lt;p&gt;NestedIterator …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/flatten-nested-list-iterator/"&gt;https://leetcode.com/problems/flatten-nested-list-iterator/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Difficulty: Medium&lt;/p&gt;
+&lt;p&gt;Premium: False&lt;/p&gt;
+&lt;h3&gt;Question&lt;/h3&gt;
+&lt;p&gt;You are given a nested list of integers nestedList. Each element is either an integer or a list whose elements may also be integers or other lists. Implement an iterator to flatten it.
+Implement the NestedIterator class:&lt;/p&gt;
+&lt;p&gt;NestedIterator(List&lt;NestedInteger&gt; nestedList) Initializes the iterator with the nested list nestedList.
+int next() Returns the next integer in the nested list.
+boolean hasNext() Returns true if there are still some integers in the nested list and false otherwise.&lt;/p&gt;
+&lt;p&gt;Your code will be tested with the following pseudocode:&lt;/p&gt;
+&lt;p&gt;initialize iterator with nestedList
+res = []
+while iterator.hasNext()
+    append iterator.next() to the end of res
+return res&lt;/p&gt;
+&lt;p&gt;If res matches the expected flattened list, then your code will be judged as correct.
+ 
+Example 1:&lt;/p&gt;
+&lt;p&gt;Input: nestedList = [[1,1],2,[1,1]]
+Output: [1,1,2,1,1]
+Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: [1,1,2,1,1].&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input: nestedList = [1,[4,[6]]]
+Output: [1,4,6]
+Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: [1,4,6].&lt;/p&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;p&gt;1 &amp;lt;= nestedList.length &amp;lt;= 500
+The values of the integers in the nested list is in the range [-106, 106].&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;This is similar to the bst iterator question in that we want to maintain a good top of the stack. Slight care should be taken to note when to reverse the lists so we can pop() from the end in correct order.&lt;/p&gt;
+&lt;h3&gt;Code&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;Leetcode 0341. Flatten Nested List Iterator&lt;/span&gt;
+&lt;span class="sd"&gt;Question Link : https://leetcode.com/problems/flatten-nested-list-iterator/&lt;/span&gt;
+&lt;span class="sd"&gt;Solution Link : https://tofucode.com/posts/leetcode_0341_flatten-nested-list-iterator.html&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# This is the interface that allows for creating nested lists.&lt;/span&gt;
+&lt;span class="c1"&gt;# You should not implement it, or speculate about its implementation&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;#class NestedInteger:&lt;/span&gt;
+&lt;span class="c1"&gt;#    def isInteger(self) -&amp;gt; bool:&lt;/span&gt;
+&lt;span class="c1"&gt;#        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;#        @return True if this NestedInteger holds a single integer, rather than a nested list.&lt;/span&gt;
+&lt;span class="c1"&gt;#        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;#    def getInteger(self) -&amp;gt; int:&lt;/span&gt;
+&lt;span class="c1"&gt;#        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;#        @return the single integer that this NestedInteger holds, if it holds a single integer&lt;/span&gt;
+&lt;span class="c1"&gt;#        Return None if this NestedInteger holds a nested list&lt;/span&gt;
+&lt;span class="c1"&gt;#        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;#    def getList(self) -&amp;gt; [NestedInteger]:&lt;/span&gt;
+&lt;span class="c1"&gt;#        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;#        @return the nested list that this NestedInteger holds, if it holds a nested list&lt;/span&gt;
+&lt;span class="c1"&gt;#        Return None if this NestedInteger holds a single integer&lt;/span&gt;
+&lt;span class="c1"&gt;#        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;NestedIterator&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nestedList&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NestedInteger&lt;/span&gt;&lt;span class="p"&gt;]):&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        stack&lt;/span&gt;
+&lt;span class="sd"&gt;        [[1,2],3,[4,5]]&lt;/span&gt;
+
+&lt;span class="sd"&gt;        flip&lt;/span&gt;
+&lt;span class="sd"&gt;        [4,5], 2, [1,2]&lt;/span&gt;
+
+&lt;span class="sd"&gt;        iterate from the end with pop()&lt;/span&gt;
+&lt;span class="sd"&gt;        flatten and reverse&lt;/span&gt;
+&lt;span class="sd"&gt;        [4,5], 2, [1,2]&lt;/span&gt;
+&lt;span class="sd"&gt;        [4,5], 2, 2, 1&lt;/span&gt;
+&lt;span class="sd"&gt;        5, 4, 2, 2, 1&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Time : O(n)&lt;/span&gt;
+&lt;span class="sd"&gt;        Space: O(n) with reverse and store&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nestedList&lt;/span&gt;&lt;span class="p"&gt;[::&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;next&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# self.flattenTop() # don&amp;#39;t need if hasNext() is always checked first&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getInteger&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hasNext&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flattenTop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;flattenTop&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isInteger&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+            &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+            &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;extend&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getList&lt;/span&gt;&lt;span class="p"&gt;()[::&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# Your NestedIterator object will be instantiated and called as such:&lt;/span&gt;
+&lt;span class="c1"&gt;# i, v = NestedIterator(nestedList), []&lt;/span&gt;
+&lt;span class="c1"&gt;# while i.hasNext(): v.append(i.next())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Leetcode"></category><category term="iterator"></category></entry><entry><title>Leetcode 0224. Basic Calculator</title><link href="https://tofucode.com/posts/leetcode_0224_basic-calculator.html" rel="alternate"></link><published>2025-02-08T00:00:00-08:00</published><updated>2025-02-08T00:00:00-08:00</updated><author><name>Zeph</name></author><id>tag:tofucode.com,2025-02-08:/posts/leetcode_0224_basic-calculator.html</id><summary type="html">&lt;p&gt;Question Link : &lt;a href="https://leetcode.com/problems/basic-calculator/"&gt;https://leetcode.com/problems/basic-calculator/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Difficulty: Hard&lt;/p&gt;
 &lt;p&gt;Premium: False&lt;/p&gt;
 &lt;h3&gt;Question&lt;/h3&gt;
