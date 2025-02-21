@@ -126,6 +126,7 @@ Status: published
 | 0328 | [Odd Even Linked List](https://tofucode.com/posts/leetcode_0328_odd-even-linked-list.html) | two-pointers | [13](#"[('microsoft', 7), ('amazon', 6), ('adobe', 3), ('apple', 3), ('google', 3), ('bloomberg', 2), ('bytedance', 2), ('ebay', 2), ('facebook', 2), ('oracle', 2), ('tiktok', 2), ('vmware', 2), ('yahoo', 2)]") |
 | 0334 | [Increasing Triplet Subsequence](https://tofucode.com/posts/leetcode_0334_increasing-triplet-subsequence.html) | array | |
 | 0338 | [Counting Bits](https://tofucode.com/posts/leetcode_0338_counting-bits.html) | bits, dp | [9](#"[('adobe', 8), ('bloomberg', 7), ('uber', 5), ('amazon', 4), ('google', 3), ('yahoo', 3), ('facebook', 2), ('microsoft', 2), ('nvidia', 2)]") |
+| 0341 | [Flatten Nested List Iterator](https://tofucode.com/posts/leetcode_0341_flatten-nested-list-iterator.html) | iterator | [16](#"[('apple', 7), ('netflix', 7), ('twitter', 5), ('yandex', 5), ('facebook', 4), ('bloomberg', 3), ('google', 3), ('microsoft', 3), ('openai', 3), ('airbnb', 2), ('amazon', 2), ('de-shaw', 2), ('linkedin', 2), ('mixpanel', 2), ('tesla', 2), ('walmart-labs', 2)]") |
 | 0344 | [Reverse String](https://tofucode.com/posts/leetcode_0344_reverse-string.html) | string | |
 | 0345 | [Reverse Vowels of a String](https://tofucode.com/posts/leetcode_0345_reverse-vowels-of-a-string.html) | two-pointers, string | |
 | 0347 | [Top K Frequent Elements](https://tofucode.com/posts/leetcode_0347_top-k-frequent-elements.html) | k-most-points, bucket-sort, hash-map | |
