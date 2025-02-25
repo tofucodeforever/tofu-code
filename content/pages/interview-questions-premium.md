@@ -208,6 +208,7 @@ Status: published
 | 1470 | [Shuffle the Array](https://tofucode.com/posts/leetcode_1470_shuffle-the-array.html) | array | [7](#"[('amazon', 4), ('uber', 3), ('adobe', 2), ('apple', 2), ('bloomberg', 2), ('google', 2), ('microsoft', 2)]") |
 | 1472 | [Design Browser History](https://tofucode.com/posts/leetcode_1472_design-browser-history.html) | stack | [8](#"[('roblox', 8), ('bloomberg', 7), ('amazon', 5), ('doordash', 3), ('google', 2), ('microsoft', 2), ('oracle', 2), ('wish', 2)]") |
 | 1544 | [Make The String Great](https://tofucode.com/posts/leetcode_1544_make-the-string-great.html) | stack | |
+| 1554 | [Strings Differ by One Character](https://tofucode.com/posts/leetcode_1554_strings-differ-by-one-character.html) | string, rolling-hash | [1](#"[('airbnb', 2)]") |
 | 1557 | [Minimum Number of Vertices to Reach All Nodes](https://tofucode.com/posts/leetcode_1557_minimum-number-of-vertices-to-reach-all-nodes.html) | topological-sorting | [4](#"[('google', 4), ('microsoft', 4), ('adobe', 3), ('airbnb', 2)]") |
 | 1578 | [Minimum Time to Make Rope Colorful](https://tofucode.com/posts/leetcode_1578_minimum-time-to-make-rope-colorful.html) | pointers, array | |
 | 1644 | [Lowest Common Ancestor of a Binary Tree II](https://tofucode.com/posts/leetcode_1644_lowest-common-ancestor-of-a-binary-tree-ii.html) | least-common-ancestor | [3](#"[('facebook', 7), ('linkedin', 3), ('microsoft', 2)]") |
