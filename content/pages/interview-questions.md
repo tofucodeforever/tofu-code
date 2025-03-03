@@ -60,6 +60,7 @@ Status: published
 | 0123 | [Best Time to Buy and Sell Stock III](https://tofucode.com/posts/leetcode_0123_best-time-to-buy-and-sell-stock-iii.html) | dp-stock, state-machine |  |
 | 0124 | [Binary Tree Maximum Path Sum](https://tofucode.com/posts/leetcode_0124_binary-tree-maximum-path-sum.html) | recursion, binary-tree |  |
 | 0125 | [Valid Palindrome](https://tofucode.com/posts/leetcode_0125_valid-palindrome.html) | palindrome |  |
+| 0127 | [Word Ladder](https://tofucode.com/posts/leetcode_0127_word-ladder.html) | bfs |  |
 | 0128 | [Longest Consecutive Sequence](https://tofucode.com/posts/leetcode_0128_longest-consecutive-sequence.html) | set |  |
 | 0129 | [Sum Root to Leaf Numbers](https://tofucode.com/posts/leetcode_0129_sum-root-to-leaf-numbers.html) | recursion, binary-tree |  |
 | 0133 | [Clone Graph](https://tofucode.com/posts/leetcode_0133_clone-graph.html) | dfs, bfs |  |
