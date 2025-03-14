@@ -175,6 +175,7 @@ Status: published
 | 0983 | [Minimum Cost For Tickets](https://tofucode.com/posts/leetcode_0983_minimum-cost-for-tickets.html) | dp, knapsack-unbounded |  |
 | 0991 | [Broken Calculator](https://tofucode.com/posts/leetcode_0991_broken-calculator.html) | reverse-thinking, puzzle | |
 | 1020 | [Number of Enclaves](https://tofucode.com/posts/leetcode_1020_number-of-enclaves.html) | dfs-bfs-grid |  |
+| 1041 | [Robot Bounded In Circle](https://tofucode.com/posts/leetcode_1041_robot-bounded-in-circle.html) | math, simulation |  |
 | 1046 | [Last Stone Weight](https://tofucode.com/posts/leetcode_1046_last-stone-weight.html) | priority-queue |  |
 | 1091 | [Shortest Path in Binary Matrix](https://tofucode.com/posts/leetcode_1091_shortest-path-in-binary-matrix.html) | bfs-for-shortest-path, priority-queue |  |
 | 1094 | [Car Pooling](https://tofucode.com/posts/leetcode_1094_car-pooling.html) | interval-overlap | |
